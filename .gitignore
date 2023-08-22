@@ -48,6 +48,8 @@
 /apps/files_external/3rdparty/irodsphp/prods/tutorials
 /apps/files_external/3rdparty/irodsphp/prods/test*
 /apps/files_external/tests/config.*.php
+/apps/demoapp/*
+/apps/tldrive/*
 
 # apps modules
 /apps/*/node_modules

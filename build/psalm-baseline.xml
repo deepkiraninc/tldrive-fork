@@ -1911,11 +1911,6 @@
       <code><![CDATA[$this->create('core_ajax_update', '/core/ajax/update.php')]]></code>
     </InvalidScope>
   </file>
-  <file src="core/templates/layout.public.php">
-    <UndefinedInterfaceMethod>
-      <code>getIcon</code>
-    </UndefinedInterfaceMethod>
-  </file>
   <file src="lib/autoloader.php">
     <RedundantCondition>
       <code><![CDATA[$this->memoryCache]]></code>

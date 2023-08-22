@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+<?php
+$allowed_hosts = array('drive.teamlocus.com','drive.bnpmail.com');
+if (isset($_SERVER['HTTP_HOST']) && in_array($_SERVER['HTTP_HOST'], $allowed_hosts)) {
+	$registration = "https://drive.teamlocus.com/index.php/apps/registration/";
+} else {
+	$registration = "https://drive.tasktower.com/index.php/apps/registration/";
+}
+?>
 <html class="ng-csp" data-placeholder-focus="false" lang="<?php p($_['language']); ?>" data-locale="<?php p($_['locale']); ?>" translate="no" >
 <head data-requesttoken="<?php p($_['requesttoken']); ?>">
 	<meta charset="utf-8">
@@ -39,23 +47,30 @@ p($theme->getTitle());
 	<header id="header">
 		<div class="header-left">
 			<div class="logo logo-icon svg"></div>
-			<span id="nextcloud" class="header-appname">
+			<span id="nextcloud" >
+				<h1 class="header-appname">
 				<?php if (isset($template) && $template->getHeaderTitle() !== '') { ?>
 					<?php p($template->getHeaderTitle()); ?>
 				<?php } else { ?>
 					<?php	p($theme->getName()); ?>
 				<?php } ?>
+				</h1>
+				<?php if (isset($template) && $template->getHeaderDetails() !== '') { ?>
+					<div class="header-shared-by">
+						<?php p($template->getHeaderDetails()); ?>
+					</div>
+				<?php } ?>
 			</span>
-			<?php if (isset($template) && $template->getHeaderDetails() !== '') { ?>
-				<div class="header-shared-by">
-					<?php p($template->getHeaderDetails()); ?>
-				</div>
-			<?php } ?>
+			
+			<div class="showtitle-visually">
+				<h1> <?php	p($theme->getName()); ?> </h1>
+			</div>
 		</div>
 
 		<div class="header-right">
 		<?php
 /** @var \OCP\AppFramework\Http\Template\PublicTemplateResponse $template */
+/*
 if (isset($template) && $template->getActionCount() !== 0) {
 	$primary = $template->getPrimaryAction();
 	$others = $template->getOtherActions(); ?>
@@ -72,7 +87,7 @@ if (isset($template) && $template->getActionCount() !== 0) {
 				<div id="header-actions-menu" class="popovermenu menu">
 					<ul>
 						<?php
-							/** @var \OCP\AppFramework\Http\Template\IMenuAction $action */
+							/** @var \OCP\AppFramework\Http\Template\IMenuAction $action * /
 							foreach ($others as $action) {
 								print_unescaped($action->render());
 							}
@@ -82,7 +97,7 @@ if (isset($template) && $template->getActionCount() !== 0) {
 			</div>
 			<?php } ?>
 		<?php
-} ?>
+}*/ ?>
 		</div>
 	</header>
 	<main id="content" class="app-<?php p($_['appid']) ?>">
@@ -102,7 +117,7 @@ if (isset($template) && $template->getActionCount() !== 0) {
 if ($_['showSimpleSignUpLink']) {
 	?>
 			<p>
-				<a href="https://nextcloud.com/signup/" target="_blank" rel="noreferrer noopener">
+				<a href="<?php echo $registration; ?>" target="_blank" rel="noreferrer noopener">
 					<?php p($l->t('Get your own free account')); ?>
 				</a>
 			</p>

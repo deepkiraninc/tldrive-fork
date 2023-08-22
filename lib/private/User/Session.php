@@ -555,8 +555,27 @@ class Session implements IUserSession, Emitter {
 			$userFolder = \OC::$server->getUserFolder($user);
 
 			try {
+				// TODO: lock necessary?
+				$dir1 = "_private_".$user;
+				$dir2 = "_smartbox_".$user;
+				$dir3 = "_teamshare_".$user;
+				$dir4 = "_tasksharebox_".$user;
+				
+				if(!\OC\Files\Filesystem::file_exists($dir1)) {
+					\OC\Files\Filesystem::mkdir($dir1);
+				}
+				if(!\OC\Files\Filesystem::file_exists($dir2)) {
+					\OC\Files\Filesystem::mkdir($dir2);
+				}
+				if(!\OC\Files\Filesystem::file_exists($dir3)) {
+					\OC\Files\Filesystem::mkdir($dir3);
+				}
+				//if(!\OC\Files\Filesystem::file_exists($dir4)) {
+				//	\OC\Files\Filesystem::mkdir($dir4);
+				//}
+
 				// copy skeleton
-				\OC_Util::copySkeleton($user, $userFolder);
+				//\OC_Util::copySkeleton($user, $userFolder);
 			} catch (NotPermittedException $ex) {
 				// read only uses
 			}

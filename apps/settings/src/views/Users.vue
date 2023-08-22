@@ -88,7 +88,7 @@
 						:key="group.id"
 						:active="selectedGroupDecoded === group.id"
 						:name="group.title"
-						:count="group.count" />
+						:count="group.count?group.count:0" />
 				</template>
 
 				<template #footer>

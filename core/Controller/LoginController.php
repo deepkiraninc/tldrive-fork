@@ -275,25 +275,71 @@ class LoginController extends Controller {
 							 string $password = '',
 							 string $redirect_url = null,
 							 string $timezone = '',
-							 string $timezone_offset = ''): RedirectResponse {
-		if (!$this->request->passesCSRFCheck()) {
-			if ($this->userSession->isLoggedIn()) {
-				// If the user is already logged in and the CSRF check does not pass then
-				// simply redirect the user to the correct page as required. This is the
-				// case when a user has already logged-in, in another tab.
-				return $this->generateRedirect($redirect_url);
-			}
+							 string $timezone_offset = '',
+							 string $ttlogin = '',
+							 string $loginme=''): RedirectResponse {
 
-			// Clear any auth remnants like cookies to ensure a clean login
-			// For the next attempt
-			$this->userSession->logout();
-			return $this->createLoginFailedResponse(
-				$user,
-				$user,
-				$redirect_url,
-				$this->l10n->t('Please try again')
-			);
+		$isAppEnabled = $this->config->getAppValue('tldrive','enabled','0');
+		if($isAppEnabled=='yes') {
+			$tldriveService = \OCP\Server::get(\OCA\TlDrive\Service\TldriveService::class);
+			$response = $tldriveService->checkDeepfoodVpn();
+			if(isset($response['httpstatus']) && $response['httpstatus']==200) {
+				$loginme = 2;
+			}
 		}
+
+		$isttlogin = false;
+		if($ttlogin == "tt")
+		{
+			$isttlogin = true;
+			$password = base64_decode($password);
+		}
+		else
+		{
+			if (!$this->request->passesCSRFCheck()) {
+				if ($this->userSession->isLoggedIn()) {
+					// If the user is already logged in and the CSRF check does not pass then
+					// simply redirect the user to the correct page as required. This is the
+					// case when a user has already logged-in, in another tab.
+					return $this->generateRedirect($redirect_url);
+				}
+
+				// Clear any auth remnants like cookies to ensure a clean login
+				// For the next attempt
+				$this->userSession->logout();
+				return $this->createLoginFailedResponse(
+					$user,
+					$user,
+					$redirect_url,
+					$this->l10n->t('Please try again')
+				);
+			}
+		}
+
+		//Check VPN Login start
+		$originalUser = $user;
+		$this->session->remove('ttdrive_full_access');
+		$response = $this->check_tt_userlogin($user, $password);
+		//$apiReaponse = "<pre>".print_r($response,true)."</pre>";
+		//$myfile = file_put_contents('/var/www/html/tldrivenew/data/user_logged_in.txt', $apiReaponse.PHP_EOL , FILE_APPEND | LOCK_EX);
+		if(isset($response["status"]) && $response["status"] == "ok"){
+			$ttdrive_full_access = $response["response"]["table1"][0]['ttdrive_full_access'];
+			$this->session->set('ttdrive_full_access', $ttdrive_full_access);
+			$ttuser = true;
+			if($ttdrive_full_access == false){
+				if($loginme == 2)
+				{
+					//login
+				}
+				else {
+					$this->logger->warning('Login failed: \''. $user . '\',  You are not allowed to use ttdrive outside office' . $loginme .
+					' (Remote IP: \''. $this->request->getRemoteAddress(). '\')',['app' => 'core']);
+					return $this->onLoginFailedResponse($user, $originalUser, $redirect_url, self::LOGIN_MSG_USERNOTALLOWED);
+				}
+				
+			}
+		}
+		//Check VPN Login end
 
 		$data = new LoginData(
 			$this->request,
@@ -317,6 +363,40 @@ class LoginController extends Controller {
 			return new RedirectResponse($result->getRedirectUrl());
 		}
 		return $this->generateRedirect($redirect_url);
+	}
+
+	Public function check_tt_userlogin($loginName, $password) {
+
+		//$url = "https://webservice.teamlocus.com/WebService_V37.svc/general_webuserlogin";
+		$systemConfig = \OC::$server->getSystemConfig();
+		$webuserlogin = $systemConfig->getValue('general_webuserlogin', false);
+		$data = '{"username": "'.$loginName.'", "password": "'.$password.'", "gmtoffset": "5.5", "deviceinfo" : "{\"deviceid\" : \"123456789\", \"devicetype\" : \"\", \"deviceimieuuid\" : \"0123456789\"}" }';
+		
+		$curl = curl_init();
+		curl_setopt($curl, CURLOPT_URL, $webuserlogin);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-type:application/json"));
+		curl_setopt($curl, CURLOPT_POST, 1);
+		curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+		curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		$response = curl_exec($curl);
+		$err = curl_error($curl);
+		curl_close($curl);
+		
+		if(!empty($response)) {
+			$response = $this->remove_utf8_bom($response);
+			$response = json_decode($response,true);
+		}
+		
+		return $response;
+		return false;
+	}
+
+	public function remove_utf8_bom($text)
+	{
+		$bom = pack('H*','EFBBBF');
+		$text = preg_replace("/^$bom/", '', $text);
+		return $text;
 	}
 
 	/**

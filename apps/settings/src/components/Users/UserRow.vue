@@ -68,36 +68,6 @@
 			</template>
 		</td>
 
-		<td class="row__cell"
-			:class="{ 'row__cell--obfuscated': hasObfuscated }">
-			<template v-if="idState.editing && settings.canChangePassword && user.backendCapabilities.setPassword">
-				<label class="hidden-visually"
-					:for="'password' + uniqueId">
-					{{ t('settings', 'Add new password') }}
-				</label>
-				<NcTextField :id="'password' + uniqueId"
-					:show-trailing-button="true"
-					class="user-row-text-field"
-					:class="{'icon-loading-small': idState.loading.password}"
-					:disabled="idState.loading.password || isLoadingField"
-					:minlength="minPasswordLength"
-					maxlength="469"
-					:placeholder="t('settings', 'Add new password')"
-					trailing-button-icon="arrowRight"
-					:value.sync="idState.editedPassword"
-					autocapitalize="off"
-					autocomplete="new-password"
-					autocorrect="off"
-					required
-					spellcheck="false"
-					type="password"
-					@trailing-button-click="updatePassword" />
-			</template>
-			<span v-else-if="isObfuscated">
-				{{ t('settings', 'You do not have permissions to see the details of this user') }}
-			</span>
-		</td>
-
 		<td class="row__cell">
 			<template v-if="idState.editing">
 				<label class="hidden-visually"
@@ -330,7 +300,11 @@ export default {
 		}),
 		UserRowMixin,
 	],
-
+	data() {
+		return {
+			managerLabel: t('settings', 'Set user manager')
+		}
+	},
 	props: {
 		user: {
 			type: Object,
@@ -470,24 +444,24 @@ export default {
 					text: t('settings', 'Delete user'),
 					action: this.deleteUser,
 				},
-				{
+				/*{
 					icon: 'icon-delete',
 					text: t('settings', 'Wipe all devices'),
 					action: this.wipeUserDevices,
-				},
+				},*/
 				{
 					icon: this.user.enabled ? 'icon-close' : 'icon-add',
 					text: this.user.enabled ? t('settings', 'Disable user') : t('settings', 'Enable user'),
 					action: this.enableDisableUser,
 				},
 			]
-			if (this.user.email !== null && this.user.email !== '') {
+			/*if (this.user.email !== null && this.user.email !== '') {
 				actions.push({
 					icon: 'icon-mail',
 					text: t('settings', 'Resend welcome email'),
 					action: this.sendWelcomeMail,
 				})
-			}
+			}*/
 			return actions.concat(this.externalActions)
 		},
 

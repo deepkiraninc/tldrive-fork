@@ -22,7 +22,7 @@
  *
  */
 
-if ($_['passwordChangeSupported']) {
+if ($_['passwordChangeSupported'] && false) {
 	\OCP\Util::addScript('settings', 'vue-settings-personal-password');
 }
 ?>

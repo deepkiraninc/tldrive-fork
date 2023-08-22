@@ -286,6 +286,20 @@ class ViewController extends Controller {
 		$params['appContents'] = $contentItems;
 		$params['hiddenFields'] = $event->getHiddenFields();
 
+		$tldriveFullAccess = \OC::$server->getSession()->get('ttdrive_full_access');
+		if($tldriveFullAccess == false) {
+			$isAppEnabled = $this->config->getAppValue('tldrive','enabled','0');
+			if($isAppEnabled=='yes') {
+				$tldriveService = \OCP\Server::get(\OCA\TlDrive\Service\TldriveService::class);
+				$response = $tldriveService->checkDeepfoodVpn();
+				if(isset($response['httpstatus']) && $response['httpstatus']!=200) {
+					//logout
+					$logoutUrl = \OC_User::getLogoutUrl($this->urlGenerator);
+					return new RedirectResponse($logoutUrl);
+				}
+			}
+		}
+
 		$response = new TemplateResponse(
 			Application::APP_ID,
 			'index',

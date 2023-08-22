@@ -58,7 +58,10 @@ $maxUploadFilesize = min($upload_max_filesize, $post_max_size);
 	<div id="files-public-content">
 		<div id="preview">
 			<?php if (isset($_['folder'])): ?>
-				<?php print_unescaped($_['folder']); ?>
+				<?php echo "<br /><br />"; //print_unescaped($_['folder']); ?>
+				<div style="text-align: center;">
+					<div id="imgframe"></div>
+				</div>
 			<?php else: ?>
 				<!-- preview frame to open file in with viewer -->
 				<div id="imgframe"></div>
@@ -74,19 +77,31 @@ $maxUploadFilesize = min($upload_max_filesize, $post_max_size);
 							</a>
 						<?php } ?>
 					</div>
-				<?php elseif ($_['previewURL'] === $_['downloadURL'] && !$_['hideDownload']): ?>
+				<?php /*elseif ($_['previewURL'] === $_['downloadURL'] && !$_['hideDownload']): ?>
 					<div class="directDownload">
 						<div>
-							<?php p($_['filename'])?>&nbsp;(<?php p($_['fileSize']) ?>)
+							<!-- <?php //p($_['filename'])?>&nbsp;(<?php //p($_['fileSize']) ?>) -->
 						</div>
 						<a href="<?php p($_['downloadURL']); ?>" id="downloadFile" class="button">
 							<span class="icon icon-download"></span>
-							<?php p($l->t('Download'))?>
+							<?php p($l->t('Download %s',array($_['filename'])))?> (<?php p($_['fileSize']) ?>)
 						</a>
 					</div>
-				<?php endif; ?>
+				<?php */ endif; ?>
+
+
 			<?php endif; ?>
 		</div>
+	</div>
+	<div style="text-align: center;">
+		<?php if (/*$_['previewURL'] === $_['downloadURL'] &&*/ !$_['hideDownload']): ?>
+			<div class="directDownload">
+				<a href="<?php p($_['downloadURL']); ?>" id="downloadFile" class="button">
+					<span class="icon icon-download"></span>
+					<?php p($l->t('Download %s', array($_['filename'])))?> (<?php p($_['fileSize']) ?>)
+				</a>
+			</div>
+		<?php endif; ?>
 	</div>
 <?php } else { ?>
 	<input type="hidden" id="upload-only-interface" value="1"/>

@@ -65,6 +65,10 @@ p($theme->getTitle());
 				</a>
 
 				<nav id="header-left__appmenu"></nav>
+
+				<div class="showtitle-visually">
+					<h1> <?php	p($theme->getName()); ?> </h1>
+				</div>
 			</div>
 
 			<div class="header-right">

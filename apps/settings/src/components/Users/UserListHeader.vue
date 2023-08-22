@@ -38,11 +38,6 @@
 			</span>
 		</th>
 		<th class="header__cell"
-			:class="{ 'header__cell--obfuscated': hasObfuscated }"
-			scope="col">
-			<span>{{ passwordLabel }}</span>
-		</th>
-		<th class="header__cell"
 			scope="col">
 			<span>{{ t('settings', 'Email') }}</span>
 		</th>
