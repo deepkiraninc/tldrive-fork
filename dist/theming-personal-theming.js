@@ -1,3 +1,3538 @@
-/*! For license information please see theming-personal-theming.js.LICENSE.txt */
-!function(){var e,r={69867:function(e,t,r){var n=r(25108);!function(t,r){e.exports=r()}(self,(()=>(()=>{var e={4462:(e,t,r)=>{"use strict";r.d(t,{default:()=>w});const o={name:"NcButton",props:{disabled:{type:Boolean,default:!1},type:{type:String,validator:e=>-1!==["primary","secondary","tertiary","tertiary-no-background","tertiary-on-primary","error","warning","success"].indexOf(e),default:"secondary"},nativeType:{type:String,validator:e=>-1!==["submit","reset","button"].indexOf(e),default:"button"},wide:{type:Boolean,default:!1},ariaLabel:{type:String,default:null},href:{type:String,default:null},to:{type:[String,Object],default:null},exact:{type:Boolean,default:!1},ariaHidden:{type:Boolean,default:null}},render(e){var t,r,o,a,i,s=this;const l=null===(t=this.$slots.default)||void 0===t||null===(r=t[0])||void 0===r||null===(o=r.text)||void 0===o||null===(a=o.trim)||void 0===a?void 0:a.call(o),c=!!l,u=null===(i=this.$slots)||void 0===i?void 0:i.icon;l||this.ariaLabel||n.warn("You need to fill either the text or the ariaLabel props in the button component.",{text:l,ariaLabel:this.ariaLabel},this);const d=function(){let{navigate:t,isActive:r,isExactActive:n}=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};return e(s.to||!s.href?"button":"a",{class:["button-vue",{"button-vue--icon-only":u&&!c,"button-vue--text-only":c&&!u,"button-vue--icon-and-text":u&&c,["button-vue--vue-".concat(s.type)]:s.type,"button-vue--wide":s.wide,active:r,"router-link-exact-active":n}],attrs:{"aria-label":s.ariaLabel,disabled:s.disabled,type:s.href?null:s.nativeType,role:s.href?"button":null,href:!s.to&&s.href?s.href:null,...s.$attrs},on:{...s.$listeners,click:e=>{var r,n;null===(r=s.$listeners)||void 0===r||null===(n=r.click)||void 0===n||n.call(r,e),null==t||t(e)}}},[e("span",{class:"button-vue__wrapper"},[u?e("span",{class:"button-vue__icon",attrs:{"aria-hidden":s.ariaHidden}},[s.$slots.icon]):null,c?e("span",{class:"button-vue__text"},[l]):null])])};return this.to?e("router-link",{props:{custom:!0,to:this.to,exact:this.exact},scopedSlots:{default:d}}):d()}};var a=r(3379),i=r.n(a),s=r(7795),l=r.n(s),c=r(569),u=r.n(c),d=r(3565),p=r.n(d),h=r(9216),m=r.n(h),g=r(4589),f=r.n(g),v=r(7196),b={};b.styleTagTransform=f(),b.setAttributes=p(),b.insert=u().bind(null,"head"),b.domAPI=l(),b.insertStyleElement=m(),i()(v.Z,b),v.Z&&v.Z.locals&&v.Z.locals;var A=r(1900),y=r(2102),C=r.n(y),k=(0,A.Z)(o,void 0,void 0,!1,null,"4d05be2c",null);"function"==typeof C()&&C()(k);const w=k.exports},2297:(e,t,r)=>{"use strict";r.d(t,{default:()=>_});var o=r(9454),a=r(4505),i=r(1206);const s={name:"NcPopover",components:{Dropdown:o.Dropdown},inheritAttrs:!1,props:{popoverBaseClass:{type:String,default:""},focusTrap:{type:Boolean,default:!0},setReturnFocus:{default:void 0,type:[HTMLElement,SVGElement,String,Boolean]}},emits:["after-show","after-hide"],beforeDestroy(){this.clearFocusTrap()},methods:{async useFocusTrap(){var e,t;if(await this.$nextTick(),!this.focusTrap)return;const r=null===(e=this.$refs.popover)||void 0===e||null===(t=e.$refs.popperContent)||void 0===t?void 0:t.$el;r&&(this.$focusTrap=(0,a.createFocusTrap)(r,{escapeDeactivates:!1,allowOutsideClick:!0,setReturnFocus:this.setReturnFocus,trapStack:(0,i.L)()}),this.$focusTrap.activate())},clearFocusTrap(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{var t;null===(t=this.$focusTrap)||void 0===t||t.deactivate(e),this.$focusTrap=null}catch(e){n.warn(e)}},afterShow(){this.$nextTick((()=>{this.$emit("after-show"),this.useFocusTrap()}))},afterHide(){this.$emit("after-hide"),this.clearFocusTrap()}}},l=s;var c=r(3379),u=r.n(c),d=r(7795),p=r.n(d),h=r(569),m=r.n(h),g=r(3565),f=r.n(g),v=r(9216),b=r.n(v),A=r(4589),y=r.n(A),C=r(1625),k={};k.styleTagTransform=y(),k.setAttributes=f(),k.insert=m().bind(null,"head"),k.domAPI=p(),k.insertStyleElement=b(),u()(C.Z,k),C.Z&&C.Z.locals&&C.Z.locals;var w=r(1900),S=r(2405),x=r.n(S),j=(0,w.Z)(l,(function(){var e=this;return(0,e._self._c)("Dropdown",e._g(e._b({ref:"popover",attrs:{distance:10,"arrow-padding":10,"no-auto-focus":!0,"popper-class":e.popoverBaseClass},on:{"apply-show":e.afterShow,"apply-hide":e.afterHide},scopedSlots:e._u([{key:"popper",fn:function(){return[e._t("default")]},proxy:!0}],null,!0)},"Dropdown",e.$attrs,!1),e.$listeners),[e._t("trigger")],2)}),[],!1,null,null,null);"function"==typeof x()&&x()(j);const _=j.exports},932:(e,t,r)=>{"use strict";r.d(t,{t:()=>a});const n=(0,r(7931).getGettextBuilder)().detectLocale();[{locale:"ar",translations:{"{tag} (invisible)":"{tag} (غير مرئي)","{tag} (restricted)":"{tag} (مقيد)",Actions:"الإجراءات",Activities:"النشاطات","Animals & Nature":"الحيوانات والطبيعة","Anything shared with the same group of people will show up here":"أي مادة تمت مشاركتها مع نفس المجموعة من الأشخاص سيتم عرضها هنا","Avatar of {displayName}":"صورة {displayName} الرمزية","Avatar of {displayName}, {status}":"صورة {displayName} الرمزية، {status}","Cancel changes":"إلغاء التغييرات","Change title":"تغيير العنوان",Choose:"إختيار","Clear text":"مسح النص",Close:"أغلق","Close modal":"قفل الشرط","Close navigation":"إغلاق المتصفح","Close sidebar":"قفل الشريط الجانبي","Confirm changes":"تأكيد التغييرات",Custom:"مخصص","Edit item":"تعديل عنصر","Error getting related resources":"خطأ في تحصيل مصادر ذات صلة","External documentation for {title}":"الوثائق الخارجية لـ{title}",Favorite:"مفضلة",Flags:"الأعلام","Food & Drink":"الطعام والشراب","Frequently used":"كثيرا ما تستخدم",Global:"عالمي","Go back to the list":"العودة إلى القائمة","Hide password":"إخفاء كلمة السر","Message limit of {count} characters reached":"تم الوصول إلى الحد الأقصى لعدد الأحرف في الرسالة: {count} حرف","More items …":"عناصر أخرى ...",Next:"التالي","No emoji found":"لم يتم العثور على أي رمز تعبيري","No results":"ليس هناك أية نتيجة",Objects:"الأشياء",Open:"فتح",'Open link to "{resourceTitle}"':'فتح رابط إلى "{resourceTitle}"',"Open navigation":"فتح المتصفح","Password is secure":"كلمة السر مُؤمّنة","Pause slideshow":"إيقاف العرض مؤقتًا","People & Body":"الناس والجسم","Pick an emoji":"اختر رمزًا تعبيريًا","Please select a time zone:":"الرجاء تحديد المنطقة الزمنية:",Previous:"السابق","Related resources":"مصادر ذات صلة",Search:"بحث","Search results":"نتائج البحث","Select a tag":"اختر علامة",Settings:"الإعدادات","Settings navigation":"إعدادات المتصفح","Show password":"أعرض كلمة السر","Smileys & Emotion":"الوجوه و الرموز التعبيرية","Start slideshow":"بدء العرض",Submit:"إرسال",Symbols:"الرموز","Travel & Places":"السفر والأماكن","Type to search time zone":"اكتب للبحث عن منطقة زمنية","Unable to search the group":"تعذر البحث في المجموعة","Undo changes":"التراجع عن التغييرات","Write message, @ to mention someone, : for emoji autocompletion …":"اكتب رسالة، @ للإشارة إلى شخص ما، : للإكمال التلقائي للرموز التعبيرية ..."}},{locale:"br",translations:{"{tag} (invisible)":"{tag} (diwelus)","{tag} (restricted)":"{tag} (bevennet)",Actions:"Oberioù",Activities:"Oberiantizoù","Animals & Nature":"Loened & Natur",Choose:"Dibab",Close:"Serriñ",Custom:"Personelañ",Flags:"Bannieloù","Food & Drink":"Boued & Evajoù","Frequently used":"Implijet alies",Next:"Da heul","No emoji found":"Emoji ebet kavet","No results":"Disoc'h ebet",Objects:"Traoù","Pause slideshow":"Arsav an diaporama","People & Body":"Tud & Korf","Pick an emoji":"Choaz un emoji",Previous:"A-raok",Search:"Klask","Search results":"Disoc'hoù an enklask","Select a tag":"Choaz ur c'hlav",Settings:"Arventennoù","Smileys & Emotion":"Smileyioù & Fromoù","Start slideshow":"Kregiñ an diaporama",Symbols:"Arouezioù","Travel & Places":"Beaj & Lec'hioù","Unable to search the group":"Dibosupl eo klask ar strollad"}},{locale:"ca",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (restringit)",Actions:"Accions",Activities:"Activitats","Animals & Nature":"Animals i natura","Anything shared with the same group of people will show up here":"Qualsevol cosa compartida amb el mateix grup de persones es mostrarà aquí","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}","Cancel changes":"Cancel·la els canvis","Change title":"Canviar títol",Choose:"Tria","Clear text":"Netejar text",Close:"Tanca","Close modal":"Tancar el mode","Close navigation":"Tanca la navegació","Close sidebar":"Tancar la barra lateral","Confirm changes":"Confirmeu els canvis",Custom:"Personalitzat","Edit item":"Edita l'element","Error getting related resources":"Error obtenint els recursos relacionats","Error parsing svg":"Error en l'anàlisi del svg","External documentation for {title}":"Documentació externa per a {title}",Favorite:"Preferit",Flags:"Marques","Food & Drink":"Menjar i begudes","Frequently used":"Utilitzats recentment",Global:"Global","Go back to the list":"Torna a la llista","Hide password":"Amagar contrasenya","Message limit of {count} characters reached":"S'ha arribat al límit de {count} caràcters per missatge","More items …":"Més artícles...",Next:"Següent","No emoji found":"No s'ha trobat cap emoji","No results":"Sense resultats",Objects:"Objectes",Open:"Obrir",'Open link to "{resourceTitle}"':'Obrir enllaç a "{resourceTitle}"',"Open navigation":"Obre la navegació","Password is secure":"Contrasenya segura<br>","Pause slideshow":"Atura la presentació","People & Body":"Persones i cos","Pick an emoji":"Trieu un emoji","Please select a time zone:":"Seleccioneu una zona horària:",Previous:"Anterior","Related resources":"Recursos relacionats",Search:"Cerca","Search results":"Resultats de cerca","Select a tag":"Seleccioneu una etiqueta",Settings:"Paràmetres","Settings navigation":"Navegació d'opcions","Show password":"Mostrar contrasenya","Smileys & Emotion":"Cares i emocions","Start slideshow":"Inicia la presentació",Submit:"Envia",Symbols:"Símbols","Travel & Places":"Viatges i llocs","Type to search time zone":"Escriviu per cercar la zona horària","Unable to search the group":"No es pot cercar el grup","Undo changes":"Desfés els canvis",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Escriu missatge, fes servir "@" per esmentar algú, fes servir ":" per autocompletar emojis...'}},{locale:"cs_CZ",translations:{"{tag} (invisible)":"{tag} (neviditelné)","{tag} (restricted)":"{tag} (omezené)",Actions:"Akce",Activities:"Aktivity","Animals & Nature":"Zvířata a příroda","Anything shared with the same group of people will show up here":"Cokoli nasdíleného stejné skupině lidí se zobrazí zde","Avatar of {displayName}":"Zástupný obrázek uživatele {displayName}","Avatar of {displayName}, {status}":"Zástupný obrázek uživatele {displayName}, {status}","Cancel changes":"Zrušit změny","Change title":"Změnit nadpis",Choose:"Zvolit","Clear text":"Čitelný text",Close:"Zavřít","Close modal":"Zavřít dialogové okno","Close navigation":"Zavřít navigaci","Close sidebar":"Zavřít postranní panel","Confirm changes":"Potvrdit změny",Custom:"Uživatelsky určené","Edit item":"Upravit položku","Error getting related resources":"Chyba při získávání souvisejících prostředků","Error parsing svg":"Chyba při zpracovávání svg","External documentation for {title}":"Externí dokumentace k {title}",Favorite:"Oblíbené",Flags:"Příznaky","Food & Drink":"Jídlo a pití","Frequently used":"Často používané",Global:"Globální","Go back to the list":"Jít zpět na seznam","Hide password":"Skrýt heslo","Message limit of {count} characters reached":"Dosaženo limitu počtu ({count}) znaků zprávy","More items …":"Další položky…",Next:"Následující","No emoji found":"Nenalezeno žádné emoji","No results":"Nic nenalezeno",Objects:"Objekty",Open:"Otevřít",'Open link to "{resourceTitle}"':"Otevřít odkaz na „{resourceTitle}“","Open navigation":"Otevřít navigaci","Password is secure":"Heslo je bezpečné","Pause slideshow":"Pozastavit prezentaci","People & Body":"Lidé a tělo","Pick an emoji":"Vybrat emoji","Please select a time zone:":"Vyberte časovou zónu:",Previous:"Předchozí","Related resources":"Související prostředky",Search:"Hledat","Search results":"Výsledky hledání","Select a tag":"Vybrat štítek",Settings:"Nastavení","Settings navigation":"Pohyb po nastavení","Show password":"Zobrazit heslo","Smileys & Emotion":"Úsměvy a emoce","Start slideshow":"Spustit prezentaci",Submit:"Odeslat",Symbols:"Symboly","Travel & Places":"Cestování a místa","Type to search time zone":"Psaním vyhledejte časovou zónu","Unable to search the group":"Nedaří se hledat skupinu","Undo changes":"Vzít změny zpět",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':"Napište zprávu – pokud chcete někoho zmínit, napište před jeho uživatelským jménem „@“ (zavináč); automatické doplňování emotikonů zahájíte napsáním „:“ (dvojtečky)…"}},{locale:"da",translations:{"{tag} (invisible)":"{tag} (usynlig)","{tag} (restricted)":"{tag} (begrænset)",Actions:"Handlinger",Activities:"Aktiviteter","Animals & Nature":"Dyr & Natur","Anything shared with the same group of people will show up here":"Alt der deles med samme gruppe af personer vil vises her","Avatar of {displayName}":"Avatar af {displayName}","Avatar of {displayName}, {status}":"Avatar af {displayName}, {status}","Cancel changes":"Annuller ændringer","Change title":"Ret titel",Choose:"Vælg","Clear text":"Ryd tekst",Close:"Luk","Close modal":"Luk vindue","Close navigation":"Luk navigation","Close sidebar":"Luk sidepanel","Confirm changes":"Bekræft ændringer",Custom:"Brugerdefineret","Edit item":"Rediger emne","Error getting related resources":"Kunne ikke hente tilknyttede data","Error parsing svg":"Fejl ved analysering af svg","External documentation for {title}":"Ekstern dokumentation for {title}",Favorite:"Favorit",Flags:"Flag","Food & Drink":"Mad & Drikke","Frequently used":"Ofte brugt",Global:"Global","Go back to the list":"Tilbage til listen","Hide password":"Skjul kodeord","Message limit of {count} characters reached":"Begrænsning på {count} tegn er nået","More items …":"Mere ...",Next:"Videre","No emoji found":"Ingen emoji fundet","No results":"Ingen resultater",Objects:"Objekter",Open:"Åbn",'Open link to "{resourceTitle}"':'Åbn link til "{resourceTitle}"',"Open navigation":"Åbn navigation","Password is secure":"Kodeordet er sikkert","Pause slideshow":"Suspender fremvisning","People & Body":"Mennesker & Menneskekroppen","Pick an emoji":"Vælg en emoji","Please select a time zone:":"Vælg venligst en tidszone:",Previous:"Forrige","Related resources":"Relaterede emner",Search:"Søg","Search results":"Søgeresultater","Select a tag":"Vælg et mærke",Settings:"Indstillinger","Settings navigation":"Naviger i indstillinger","Show password":"Vis kodeord","Smileys & Emotion":"Smileys & Emotion","Start slideshow":"Start fremvisning",Submit:"Send",Symbols:"Symboler","Travel & Places":"Rejser & Rejsemål","Type to search time zone":"Indtast for at søge efter tidszone","Unable to search the group":"Kan ikke søge på denne gruppe","Undo changes":"Fortryd ændringer",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Skriv besked, brug "@" for at nævne nogen, brug ":" til emoji-autofuldførelse ...'}},{locale:"de",translations:{"{tag} (invisible)":"{tag} (unsichtbar)","{tag} (restricted)":"{tag} (eingeschränkt)",Actions:"Aktionen",Activities:"Aktivitäten","Animals & Nature":"Tiere & Natur","Anything shared with the same group of people will show up here":"Alles, das mit derselben Gruppe von Personen geteilt wird, wird hier angezeigt","Avatar of {displayName}":"Avatar von {displayName}","Avatar of {displayName}, {status}":"Avatar von {displayName}, {status}","Cancel changes":"Änderungen verwerfen","Change title":"Titel ändern",Choose:"Auswählen","Clear text":"Klartext",Close:"Schließen","Close modal":"Modal schließen","Close navigation":"Navigation schließen","Close sidebar":"Seitenleiste schließen","Confirm changes":"Änderungen bestätigen",Custom:"Benutzerdefiniert","Edit item":"Objekt bearbeiten","Error getting related resources":"Fehler beim Abrufen verwandter Ressourcen","Error parsing svg":"Fehler beim Einlesen der SVG","External documentation for {title}":"Externe Dokumentation für {title}",Favorite:"Favorit",Flags:"Flaggen","Food & Drink":"Essen & Trinken","Frequently used":"Häufig verwendet",Global:"Global","Go back to the list":"Zurück zur Liste","Hide password":"Passwort verbergen","Message limit of {count} characters reached":"Nachrichtenlimit von {count} Zeichen erreicht","More items …":"Weitere Elemente …",Next:"Weiter","No emoji found":"Kein Emoji gefunden","No results":"Keine Ergebnisse",Objects:"Gegenstände",Open:"Öffnen",'Open link to "{resourceTitle}"':'Link zu "{resourceTitle}" öffnen',"Open navigation":"Navigation öffnen","Password is secure":"Passwort ist sicher","Pause slideshow":"Diashow pausieren","People & Body":"Menschen & Körper","Pick an emoji":"Ein Emoji auswählen","Please select a time zone:":"Bitte wählen Sie eine Zeitzone:",Previous:"Vorherige","Related resources":"Verwandte Ressourcen",Search:"Suche","Search results":"Suchergebnisse","Select a tag":"Schlagwort auswählen",Settings:"Einstellungen","Settings navigation":"Einstellungen für die Navigation","Show password":"Passwort anzeigen","Smileys & Emotion":"Smileys & Emotionen","Start slideshow":"Diashow starten",Submit:"Einreichen",Symbols:"Symbole","Travel & Places":"Reisen & Orte","Type to search time zone":"Tippen, um Zeitzone zu suchen","Unable to search the group":"Die Gruppe konnte nicht durchsucht werden","Undo changes":"Änderungen rückgängig machen",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Nachricht schreiben, "@" um jemanden zu erwähnen, ":" für die automatische Vervollständigung von Emojis …'}},{locale:"de_DE",translations:{"{tag} (invisible)":"{tag} (unsichtbar)","{tag} (restricted)":"{tag} (eingeschränkt)",Actions:"Aktionen",Activities:"Aktivitäten","Animals & Nature":"Tiere & Natur","Anything shared with the same group of people will show up here":"Alles, das mit derselben Gruppe von Personen geteilt wird, wird hier angezeigt","Avatar of {displayName}":"Avatar von {displayName}","Avatar of {displayName}, {status}":"Avatar von {displayName}, {status}","Cancel changes":"Änderungen verwerfen","Change title":"Titel ändern",Choose:"Auswählen","Clear text":"Klartext",Close:"Schließen","Close modal":"Modal schließen","Close navigation":"Navigation schließen","Close sidebar":"Seitenleiste schließen","Confirm changes":"Änderungen bestätigen",Custom:"Benutzerdefiniert","Edit item":"Objekt bearbeiten","Error getting related resources":"Fehler beim Abrufen verwandter Ressourcen","Error parsing svg":"Fehler beim Einlesen der SVG","External documentation for {title}":"Externe Dokumentation für {title}",Favorite:"Favorit",Flags:"Flaggen","Food & Drink":"Essen & Trinken","Frequently used":"Häufig verwendet",Global:"Global","Go back to the list":"Zurück zur Liste","Hide password":"Passwort verbergen","Message limit of {count} characters reached":"Nachrichtenlimit von {count} Zeichen erreicht","More items …":"Weitere Elemente …",Next:"Weiter","No emoji found":"Kein Emoji gefunden","No results":"Keine Ergebnisse",Objects:"Objekte",Open:"Öffnen",'Open link to "{resourceTitle}"':'Link zu "{resourceTitle}" öffnen',"Open navigation":"Navigation öffnen","Password is secure":"Passwort ist sicher","Pause slideshow":"Diashow pausieren","People & Body":"Menschen & Körper","Pick an emoji":"Ein Emoji auswählen","Please select a time zone:":"Bitte eine Zeitzone auswählen:",Previous:"Vorherige","Related resources":"Verwandte Ressourcen",Search:"Suche","Search results":"Suchergebnisse","Select a tag":"Schlagwort auswählen",Settings:"Einstellungen","Settings navigation":"Einstellungen für die Navigation","Show password":"Passwort anzeigen","Smileys & Emotion":"Smileys & Emotionen","Start slideshow":"Diashow starten",Submit:"Einreichen",Symbols:"Symbole","Travel & Places":"Reisen & Orte","Type to search time zone":"Tippen, um eine Zeitzone zu suchen","Unable to search the group":"Die Gruppe kann nicht durchsucht werden","Undo changes":"Änderungen rückgängig machen",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Nachricht schreiben, "@" um jemanden zu erwähnen, ":" für die automatische Vervollständigung von Emojis …'}},{locale:"el",translations:{"{tag} (invisible)":"{tag} (αόρατο)","{tag} (restricted)":"{tag} (περιορισμένο)",Actions:"Ενέργειες",Activities:"Δραστηριότητες","Animals & Nature":"Ζώα & Φύση","Anything shared with the same group of people will show up here":"Οτιδήποτε μοιράζεται με την ίδια ομάδα ατόμων θα εμφανίζεται εδώ","Avatar of {displayName}":"Άβαταρ του {displayName}","Avatar of {displayName}, {status}":"Άβαταρ του {displayName}, {status}","Cancel changes":"Ακύρωση αλλαγών","Change title":"Αλλαγή τίτλου",Choose:"Επιλογή","Clear text":"Εκκαθάριση κειμένου",Close:"Κλείσιμο","Close modal":"Βοηθητικό κλείσιμο","Close navigation":"Κλείσιμο πλοήγησης","Close sidebar":"Κλείσιμο πλευρικής μπάρας","Confirm changes":"Επιβεβαίωση αλλαγών",Custom:"Προσαρμογή","Edit item":"Επεξεργασία","Error getting related resources":"Σφάλμα λήψης σχετικών πόρων","Error parsing svg":"Σφάλμα ανάλυσης svg","External documentation for {title}":"Εξωτερική τεκμηρίωση για {title}",Favorite:"Αγαπημένα",Flags:"Σημαίες","Food & Drink":"Φαγητό & Ποτό","Frequently used":"Συχνά χρησιμοποιούμενο",Global:"Καθολικό","Go back to the list":"Επιστροφή στην αρχική λίστα ","Hide password":"Απόκρυψη κωδικού πρόσβασης","Message limit of {count} characters reached":"Συμπληρώθηκε το όριο των {count} χαρακτήρων του μηνύματος","More items …":"Περισσότερα στοιχεία …",Next:"Επόμενο","No emoji found":"Δεν βρέθηκε emoji","No results":"Κανένα αποτέλεσμα",Objects:"Αντικείμενα",Open:"Άνοιγμα",'Open link to "{resourceTitle}"':'Άνοιγμα συνδέσμου στο "{resourceTitle}"',"Open navigation":"Άνοιγμα πλοήγησης","Password is secure":"Ο κωδικός πρόσβασης είναι ασφαλής","Pause slideshow":"Παύση προβολής διαφανειών","People & Body":"Άνθρωποι & Σώμα","Pick an emoji":"Επιλέξτε ένα emoji","Please select a time zone:":"Παρακαλούμε επιλέξτε μια ζώνη ώρας:",Previous:"Προηγούμενο","Related resources":"Σχετικοί πόροι",Search:"Αναζήτηση","Search results":"Αποτελέσματα αναζήτησης","Select a tag":"Επιλογή ετικέτας",Settings:"Ρυθμίσεις","Settings navigation":"Πλοήγηση ρυθμίσεων","Show password":"Εμφάνιση κωδικού πρόσβασης","Smileys & Emotion":"Φατσούλες & Συναίσθημα","Start slideshow":"Έναρξη προβολής διαφανειών",Submit:"Υποβολή",Symbols:"Σύμβολα","Travel & Places":"Ταξίδια & Τοποθεσίες","Type to search time zone":"Πληκτρολογήστε για αναζήτηση ζώνης ώρας","Unable to search the group":"Δεν είναι δυνατή η αναζήτηση της ομάδας","Undo changes":"Αναίρεση Αλλαγών",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Γράψτε μήνυμα, χρησιμοποιείστε "@" για να αναφέρετε κάποιον, χρησιμοποιείστε ":" για αυτόματη συμπλήρωση emoji …'}},{locale:"en_GB",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (restricted)",Actions:"Actions",Activities:"Activities","Animals & Nature":"Animals & Nature","Anything shared with the same group of people will show up here":"Anything shared with the same group of people will show up here","Avatar of {displayName}":"Avatar of {displayName}","Avatar of {displayName}, {status}":"Avatar of {displayName}, {status}","Cancel changes":"Cancel changes","Change title":"Change title",Choose:"Choose","Clear text":"Clear text",Close:"Close","Close modal":"Close modal","Close navigation":"Close navigation","Close sidebar":"Close sidebar","Confirm changes":"Confirm changes",Custom:"Custom","Edit item":"Edit item","Error getting related resources":"Error getting related resources","Error parsing svg":"Error parsing svg","External documentation for {title}":"External documentation for {title}",Favorite:"Favourite",Flags:"Flags","Food & Drink":"Food & Drink","Frequently used":"Frequently used",Global:"Global","Go back to the list":"Go back to the list","Hide password":"Hide password","Message limit of {count} characters reached":"Message limit of {count} characters reached","More items …":"More items …",Next:"Next","No emoji found":"No emoji found","No results":"No results",Objects:"Objects",Open:"Open",'Open link to "{resourceTitle}"':'Open link to "{resourceTitle}"',"Open navigation":"Open navigation","Password is secure":"Password is secure","Pause slideshow":"Pause slideshow","People & Body":"People & Body","Pick an emoji":"Pick an emoji","Please select a time zone:":"Please select a time zone:",Previous:"Previous","Related resources":"Related resources",Search:"Search","Search results":"Search results","Select a tag":"Select a tag",Settings:"Settings","Settings navigation":"Settings navigation","Show password":"Show password","Smileys & Emotion":"Smileys & Emotion","Start slideshow":"Start slideshow",Submit:"Submit",Symbols:"Symbols","Travel & Places":"Travel & Places","Type to search time zone":"Type to search time zone","Unable to search the group":"Unable to search the group","Undo changes":"Undo changes",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Write message, use "@" to mention someone, use ":" for emoji autocompletion …'}},{locale:"eo",translations:{"{tag} (invisible)":"{tag} (kaŝita)","{tag} (restricted)":"{tag} (limigita)",Actions:"Agoj",Activities:"Aktiveco","Animals & Nature":"Bestoj & Naturo",Choose:"Elektu",Close:"Fermu",Custom:"Propra",Flags:"Flagoj","Food & Drink":"Manĝaĵo & Trinkaĵo","Frequently used":"Ofte uzataj","Message limit of {count} characters reached":"La limo je {count} da literoj atingita",Next:"Sekva","No emoji found":"La emoĝio forestas","No results":"La rezulto forestas",Objects:"Objektoj","Pause slideshow":"Payzi bildprezenton","People & Body":"Homoj & Korpo","Pick an emoji":"Elekti emoĝion ",Previous:"Antaŭa",Search:"Serĉi","Search results":"Serĉrezultoj","Select a tag":"Elektu etikedon",Settings:"Agordo","Settings navigation":"Agorda navigado","Smileys & Emotion":"Ridoj kaj Emocioj","Start slideshow":"Komenci bildprezenton",Symbols:"Signoj","Travel & Places":"Vojaĵoj & Lokoj","Unable to search the group":"Ne eblas serĉi en la grupo","Write message, @ to mention someone …":"Mesaĝi, uzu @ por mencii iun ..."}},{locale:"es",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (restringido)",Actions:"Acciones",Activities:"Actividades","Animals & Nature":"Animales y naturaleza","Anything shared with the same group of people will show up here":"Cualquier cosa que sea compartida con el mismo grupo de personas se mostrará aquí","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}","Cancel changes":"Cancelar cambios","Change title":"Cambiar título",Choose:"Elegir","Clear text":"Limpiar texto",Close:"Cerrar","Close modal":"Cerrar modal","Close navigation":"Cerrar navegación","Close sidebar":"Cerrar barra lateral","Confirm changes":"Confirmar cambios",Custom:"Personalizado","Edit item":"Editar elemento","Error getting related resources":"Se encontró un error al obtener los recursos relacionados","Error parsing svg":"Error procesando svg","External documentation for {title}":"Documentacion externa de {title}",Favorite:"Favorito",Flags:"Banderas","Food & Drink":"Comida y bebida","Frequently used":"Usado con frecuenca",Global:"Global","Go back to the list":"Volver a la lista","Hide password":"Ocultar contraseña","Message limit of {count} characters reached":"El mensaje ha alcanzado el límite de {count} caracteres","More items …":"Más ítems...",Next:"Siguiente","No emoji found":"No hay ningún emoji","No results":" Ningún resultado",Objects:"Objetos",Open:"Abrir",'Open link to "{resourceTitle}"':'Abrir enlace a "{resourceTitle}"',"Open navigation":"Abrir navegación","Password is secure":"La contraseña es segura","Pause slideshow":"Pausar la presentación ","People & Body":"Personas y cuerpos","Pick an emoji":"Elegir un emoji","Please select a time zone:":"Por favor elige un huso de horario:",Previous:"Anterior","Related resources":"Recursos relacionados",Search:"Buscar","Search results":"Resultados de la búsqueda","Select a tag":"Seleccione una etiqueta",Settings:"Ajustes","Settings navigation":"Navegación por ajustes","Show password":"Mostrar contraseña","Smileys & Emotion":"Smileys y emoticonos","Start slideshow":"Iniciar la presentación",Submit:"Enviar",Symbols:"Símbolos","Travel & Places":"Viajes y lugares","Type to search time zone":"Escribe para buscar un huso de horario","Unable to search the group":"No es posible buscar en el grupo","Undo changes":"Deshacer cambios",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Escribir mensaje, utilice "@" para mencionar a alguien, utilice ":" para autocompletado de emojis ...'}},{locale:"eu",translations:{"{tag} (invisible)":"{tag} (ikusezina)","{tag} (restricted)":"{tag} (mugatua)",Actions:"Ekintzak",Activities:"Jarduerak","Animals & Nature":"Animaliak eta Natura","Anything shared with the same group of people will show up here":"Pertsona-talde berarekin partekatutako edozer agertuko da hemen","Avatar of {displayName}":"{displayName}-(e)n irudia","Avatar of {displayName}, {status}":"{displayName} -(e)n irudia, {status}","Cancel changes":"Ezeztatu aldaketak","Change title":"Aldatu titulua",Choose:"Aukeratu","Clear text":"Garbitu testua",Close:"Itxi","Close modal":"Itxi modala","Close navigation":"Itxi nabigazioa","Close sidebar":"Itxi albo-barra","Confirm changes":"Baieztatu aldaketak",Custom:"Pertsonalizatua","Edit item":"Editatu elementua","Error getting related resources":"Errorea erlazionatutako baliabideak lortzerakoan","Error parsing svg":"Errore bat gertatu da svg-a analizatzean","External documentation for {title}":"Kanpoko dokumentazioa {title}(r)entzat",Favorite:"Gogokoa",Flags:"Banderak","Food & Drink":"Janaria eta edariak","Frequently used":"Askotan erabilia",Global:"Globala","Go back to the list":"Bueltatu zerrendara","Hide password":"Ezkutatu pasahitza","Message limit of {count} characters reached":"Mezuaren {count} karaketere-limitera heldu zara","More items …":"Elementu gehiago …",Next:"Hurrengoa","No emoji found":"Ez da emojirik aurkitu","No results":"Emaitzarik ez",Objects:"Objektuak",Open:"Ireki",'Open link to "{resourceTitle}"':'Ireki esteka: "{resourceTitle}"',"Open navigation":"Ireki nabigazioa","Password is secure":"Pasahitza segurua da","Pause slideshow":"Pausatu diaporama","People & Body":"Jendea eta gorputza","Pick an emoji":"Hautatu emoji bat","Please select a time zone:":"Mesedez hautatu ordu-zona bat:",Previous:"Aurrekoa","Related resources":"Erlazionatutako baliabideak",Search:"Bilatu","Search results":"Bilaketa emaitzak","Select a tag":"Hautatu etiketa bat",Settings:"Ezarpenak","Settings navigation":"Nabigazio ezarpenak","Show password":"Erakutsi pasahitza","Smileys & Emotion":"Smileyak eta emozioa","Start slideshow":"Hasi diaporama",Submit:"Bidali",Symbols:"Sinboloak","Travel & Places":"Bidaiak eta lekuak","Type to search time zone":"Idatzi ordu-zona bat bilatzeko","Unable to search the group":"Ezin izan da taldea bilatu","Undo changes":"Aldaketak desegin",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Idatzi mezua, erabili "@" norbait aipatzeko, erabili ":" emojiak automatikoki osatzeko...'}},{locale:"fi_FI",translations:{"{tag} (invisible)":"{tag} (näkymätön)","{tag} (restricted)":"{tag} (rajoitettu)",Actions:"Toiminnot",Activities:"Aktiviteetit","Animals & Nature":"Eläimet & luonto","Avatar of {displayName}":"Käyttäjän {displayName} avatar","Avatar of {displayName}, {status}":"Käyttäjän {displayName} avatar, {status}","Cancel changes":"Peruuta muutokset",Choose:"Valitse",Close:"Sulje","Close navigation":"Sulje navigaatio","Confirm changes":"Vahvista muutokset",Custom:"Mukautettu","Edit item":"Muokkaa kohdetta","External documentation for {title}":"Ulkoinen dokumentaatio kohteelle {title}",Flags:"Liput","Food & Drink":"Ruoka & juoma","Frequently used":"Usein käytetyt",Global:"Yleinen","Go back to the list":"Siirry takaisin listaan","Message limit of {count} characters reached":"Viestin merkken enimmäisimäärä {count} täynnä ",Next:"Seuraava","No emoji found":"Emojia ei löytynyt","No results":"Ei tuloksia",Objects:"Esineet & asiat","Open navigation":"Avaa navigaatio","Pause slideshow":"Keskeytä diaesitys","People & Body":"Ihmiset & keho","Pick an emoji":"Valitse emoji","Please select a time zone:":"Valitse aikavyöhyke:",Previous:"Edellinen",Search:"Etsi","Search results":"Hakutulokset","Select a tag":"Valitse tagi",Settings:"Asetukset","Settings navigation":"Asetusnavigaatio","Smileys & Emotion":"Hymiöt & tunteet","Start slideshow":"Aloita diaesitys",Submit:"Lähetä",Symbols:"Symbolit","Travel & Places":"Matkustus & kohteet","Type to search time zone":"Kirjoita etsiäksesi aikavyöhyke","Unable to search the group":"Ryhmää ei voi hakea","Undo changes":"Kumoa muutokset","Write message, @ to mention someone, : for emoji autocompletion …":"Kirjoita viesti, @ mainitaksesi käyttäjän, : emojin automaattitäydennykseen…"}},{locale:"fr",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (restreint)",Actions:"Actions",Activities:"Activités","Animals & Nature":"Animaux & Nature","Anything shared with the same group of people will show up here":"Tout ce qui est partagé avec le même groupe de personnes apparaîtra ici","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}","Cancel changes":"Annuler les modifications","Change title":"Modifier le titre",Choose:"Choisir","Clear text":"Effacer le texte",Close:"Fermer","Close modal":"Fermer la fenêtre","Close navigation":"Fermer la navigation","Close sidebar":"Fermer la barre latérale","Confirm changes":"Confirmer les modifications",Custom:"Personnalisé","Edit item":"Éditer l'élément","Error getting related resources":"Erreur à la récupération des ressources liées","Error parsing svg":"Erreur d'analyse SVG","External documentation for {title}":"Documentation externe pour {title}",Favorite:"Favori",Flags:"Drapeaux","Food & Drink":"Nourriture & Boissons","Frequently used":"Utilisés fréquemment",Global:"Global","Go back to the list":"Retourner à la liste","Hide password":"Cacher le mot de passe","Message limit of {count} characters reached":"Limite de messages de {count} caractères atteinte","More items …":"Plus d'éléments...",Next:"Suivant","No emoji found":"Pas d’émoji trouvé","No results":"Aucun résultat",Objects:"Objets",Open:"Ouvrir",'Open link to "{resourceTitle}"':'Ouvrir le lien vers "{resourceTitle}"',"Open navigation":"Ouvrir la navigation","Password is secure":"Le mot de passe est sécurisé","Pause slideshow":"Mettre le diaporama en pause","People & Body":"Personnes & Corps","Pick an emoji":"Choisissez un émoji","Please select a time zone:":"Sélectionnez un fuseau horaire : ",Previous:"Précédent","Related resources":"Ressources liées",Search:"Chercher","Search results":"Résultats de recherche","Select a tag":"Sélectionnez une balise",Settings:"Paramètres","Settings navigation":"Navigation dans les paramètres","Show password":"Afficher le mot de passe","Smileys & Emotion":"Smileys & Émotions","Start slideshow":"Démarrer le diaporama",Submit:"Valider",Symbols:"Symboles","Travel & Places":"Voyage & Lieux","Type to search time zone":"Saisissez les premiers lettres pour rechercher un fuseau horaire","Unable to search the group":"Impossible de chercher le groupe","Undo changes":"Annuler les changements",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Écrire un message, utiliser "@" pour mentionner une personne, ":" pour l\'autocomplétion des émojis...'}},{locale:"gl",translations:{"{tag} (invisible)":"{tag} (invisíbel)","{tag} (restricted)":"{tag} (restrinxido)",Actions:"Accións",Activities:"Actividades","Animals & Nature":"Animais e natureza","Cancel changes":"Cancelar os cambios",Choose:"Escoller",Close:"Pechar","Confirm changes":"Confirma os cambios",Custom:"Personalizado","External documentation for {title}":"Documentación externa para {title}",Flags:"Bandeiras","Food & Drink":"Comida e bebida","Frequently used":"Usado con frecuencia","Message limit of {count} characters reached":"Acadouse o límite de {count} caracteres por mensaxe",Next:"Seguinte","No emoji found":"Non se atopou ningún «emoji»","No results":"Sen resultados",Objects:"Obxectos","Pause slideshow":"Pausar o diaporama","People & Body":"Persoas e corpo","Pick an emoji":"Escolla un «emoji»",Previous:"Anterir",Search:"Buscar","Search results":"Resultados da busca","Select a tag":"Seleccione unha etiqueta",Settings:"Axustes","Settings navigation":"Navegación polos axustes","Smileys & Emotion":"Sorrisos e emocións","Start slideshow":"Iniciar o diaporama",Submit:"Enviar",Symbols:"Símbolos","Travel & Places":"Viaxes e lugares","Unable to search the group":"Non foi posíbel buscar o grupo","Write message, @ to mention someone …":"Escriba a mensaxe, @ para mencionar a alguén…"}},{locale:"he",translations:{"{tag} (invisible)":"{tag} (נסתר)","{tag} (restricted)":"{tag} (מוגבל)",Actions:"פעולות",Activities:"פעילויות","Animals & Nature":"חיות וטבע",Choose:"בחירה",Close:"סגירה",Custom:"בהתאמה אישית",Flags:"דגלים","Food & Drink":"מזון ומשקאות","Frequently used":"בשימוש תדיר",Next:"הבא","No emoji found":"לא נמצא אמוג׳י","No results":"אין תוצאות",Objects:"חפצים","Pause slideshow":"השהיית מצגת","People & Body":"אנשים וגוף","Pick an emoji":"נא לבחור אמוג׳י",Previous:"הקודם",Search:"חיפוש","Search results":"תוצאות חיפוש","Select a tag":"בחירת תגית",Settings:"הגדרות","Smileys & Emotion":"חייכנים ורגשונים","Start slideshow":"התחלת המצגת",Symbols:"סמלים","Travel & Places":"טיולים ומקומות","Unable to search the group":"לא ניתן לחפש בקבוצה"}},{locale:"hu_HU",translations:{"{tag} (invisible)":"{tag} (láthatatlan)","{tag} (restricted)":"{tag} (korlátozott)",Actions:"Műveletek",Activities:"Tevékenységek","Animals & Nature":"Állatok és természet","Anything shared with the same group of people will show up here":"Minden, amit ugyanazzal a csoporttal oszt meg, itt fog megjelenni","Avatar of {displayName}":"{displayName} profilképe","Avatar of {displayName}, {status}":"{displayName} profilképe, {status}","Cancel changes":"Változtatások elvetése","Change title":"Cím megváltoztatása",Choose:"Válassszon","Clear text":"Szöveg törlése",Close:"Bezárás","Close modal":"Ablak bezárása","Close navigation":"Navigáció bezárása","Close sidebar":"Oldalsáv bezárása","Confirm changes":"Változtatások megerősítése",Custom:"Egyéni","Edit item":"Elem szerkesztése","Error getting related resources":"Hiba a kapcsolódó erőforrások lekérésekor","Error parsing svg":"Hiba az SVG feldolgozásakor","External documentation for {title}":"Külső dokumentáció ehhez: {title}",Favorite:"Kedvenc",Flags:"Zászlók","Food & Drink":"Étel és ital","Frequently used":"Gyakran használt",Global:"Globális","Go back to the list":"Ugrás vissza a listához","Hide password":"Jelszó elrejtése","Message limit of {count} characters reached":"{count} karakteres üzenetkorlát elérve","More items …":"További elemek...",Next:"Következő","No emoji found":"Nem található emodzsi","No results":"Nincs találat",Objects:"Tárgyak",Open:"Megnyitás",'Open link to "{resourceTitle}"':"A(z) „{resourceTitle}” hivatkozásának megnyitása","Open navigation":"Navigáció megnyitása","Password is secure":"A jelszó biztonságos","Pause slideshow":"Diavetítés szüneteltetése","People & Body":"Emberek és test","Pick an emoji":"Válasszon egy emodzsit","Please select a time zone:":"Válasszon időzónát:",Previous:"Előző","Related resources":"Kapcsolódó erőforrások",Search:"Keresés","Search results":"Találatok","Select a tag":"Válasszon címkét",Settings:"Beállítások","Settings navigation":"Navigáció a beállításokban","Show password":"Jelszó megjelenítése","Smileys & Emotion":"Mosolyok és érzelmek","Start slideshow":"Diavetítés indítása",Submit:"Beküldés",Symbols:"Szimbólumok","Travel & Places":"Utazás és helyek","Type to search time zone":"Gépeljen az időzóna kereséséhez","Unable to search the group":"A csoport nem kereshető","Undo changes":"Változtatások visszavonása",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':"Írjon egy üzenetet, használja a „@”-ot valaki megemlítéséhet, illetve a „:”-ot az emodzsik automatikus kiegészítéséhez…"}},{locale:"is",translations:{"{tag} (invisible)":"{tag} (ósýnilegt)","{tag} (restricted)":"{tag} (takmarkað)",Actions:"Aðgerðir",Activities:"Aðgerðir","Animals & Nature":"Dýr og náttúra",Choose:"Velja",Close:"Loka",Custom:"Sérsniðið",Flags:"Flögg","Food & Drink":"Matur og drykkur","Frequently used":"Oftast notað",Next:"Næsta","No emoji found":"Ekkert tjáningartákn fannst","No results":"Engar niðurstöður",Objects:"Hlutir","Pause slideshow":"Gera hlé á skyggnusýningu","People & Body":"Fólk og líkami","Pick an emoji":"Veldu tjáningartákn",Previous:"Fyrri",Search:"Leita","Search results":"Leitarniðurstöður","Select a tag":"Veldu merki",Settings:"Stillingar","Smileys & Emotion":"Broskallar og tilfinningar","Start slideshow":"Byrja skyggnusýningu",Symbols:"Tákn","Travel & Places":"Staðir og ferðalög","Unable to search the group":"Get ekki leitað í hópnum"}},{locale:"it",translations:{"{tag} (invisible)":"{tag} (invisibile)","{tag} (restricted)":"{tag} (limitato)",Actions:"Azioni",Activities:"Attività","Animals & Nature":"Animali e natura","Anything shared with the same group of people will show up here":"Tutto ciò che è stato condiviso con lo stesso gruppo di persone viene visualizzato qui","Avatar of {displayName}":"Avatar di {displayName}","Avatar of {displayName}, {status}":"Avatar di {displayName}, {status}","Cancel changes":"Annulla modifiche","Change title":"Modifica il titolo",Choose:"Scegli","Clear text":"Cancella il testo",Close:"Chiudi","Close modal":"Chiudi il messaggio modale","Close navigation":"Chiudi la navigazione","Close sidebar":"Chiudi la barra laterale","Confirm changes":"Conferma modifiche",Custom:"Personalizzato","Edit item":"Modifica l'elemento","Error getting related resources":"Errore nell'ottenere risorse correlate","Error parsing svg":"Errore nell'analizzare l'svg","External documentation for {title}":"Documentazione esterna per {title}",Favorite:"Preferito",Flags:"Bandiere","Food & Drink":"Cibo e bevande","Frequently used":"Usati di frequente",Global:"Globale","Go back to the list":"Torna all'elenco","Hide password":"Nascondi la password","Message limit of {count} characters reached":"Limite dei messaggi di {count} caratteri raggiunto","More items …":"Più elementi ...",Next:"Successivo","No emoji found":"Nessun emoji trovato","No results":"Nessun risultato",Objects:"Oggetti",Open:"Apri",'Open link to "{resourceTitle}"':'Apri il link a "{resourceTitle}"',"Open navigation":"Apri la navigazione","Password is secure":"La password è sicura","Pause slideshow":"Presentazione in pausa","People & Body":"Persone e corpo","Pick an emoji":"Scegli un emoji","Please select a time zone:":"Si prega di selezionare un fuso orario:",Previous:"Precedente","Related resources":"Risorse correlate",Search:"Cerca","Search results":"Risultati di ricerca","Select a tag":"Seleziona un'etichetta",Settings:"Impostazioni","Settings navigation":"Navigazione delle impostazioni","Show password":"Mostra la password","Smileys & Emotion":"Faccine ed emozioni","Start slideshow":"Avvia presentazione",Submit:"Invia",Symbols:"Simboli","Travel & Places":"Viaggi e luoghi","Type to search time zone":"Digita per cercare un fuso orario","Unable to search the group":"Impossibile cercare il gruppo","Undo changes":"Cancella i cambiamenti",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Scrivi un messaggio, "@" per menzionare qualcuno, ":" per il completamento automatico delle emoji ...'}},{locale:"ja_JP",translations:{"{tag} (invisible)":"{タグ} (不可視)","{tag} (restricted)":"{タグ} (制限付)",Actions:"操作",Activities:"アクティビティ","Animals & Nature":"動物と自然","Anything shared with the same group of people will show up here":"同じグループで共有しているものは、全てここに表示されます","Avatar of {displayName}":"{displayName} のアバター","Avatar of {displayName}, {status}":"{displayName}, {status} のアバター","Cancel changes":"変更をキャンセル","Change title":"タイトルを変更",Choose:"選択","Clear text":"テキストをクリア",Close:"閉じる","Close modal":"モーダルを閉じる","Close navigation":"ナビゲーションを閉じる","Close sidebar":"サイドバーを閉じる","Confirm changes":"変更を承認",Custom:"カスタム","Edit item":"編集","Error getting related resources":"関連リソースの取得エラー","Error parsing svg":"svgの解析エラー","External documentation for {title}":"{title} のための添付文書",Favorite:"お気に入り",Flags:"国旗","Food & Drink":"食べ物と飲み物","Frequently used":"よく使うもの",Global:"全体","Go back to the list":"リストに戻る","Hide password":"パスワードを非表示","Message limit of {count} characters reached":"{count} 文字のメッセージ上限に達しています","More items …":"他のアイテム",Next:"次","No emoji found":"絵文字が見つかりません","No results":"なし",Objects:"物",Open:"開く",'Open link to "{resourceTitle}"':'"{resourceTitle}"のリンクを開く',"Open navigation":"ナビゲーションを開く","Password is secure":"パスワードは保護されています","Pause slideshow":"スライドショーを一時停止","People & Body":"様々な人と体の部位","Pick an emoji":"絵文字を選択","Please select a time zone:":"タイムゾーンを選んで下さい：",Previous:"前","Related resources":"関連リソース",Search:"検索","Search results":"検索結果","Select a tag":"タグを選択",Settings:"設定","Settings navigation":"ナビゲーション設定","Show password":"パスワードを表示","Smileys & Emotion":"感情表現","Start slideshow":"スライドショーを開始",Submit:"提出",Symbols:"記号","Travel & Places":"旅行と場所","Type to search time zone":"タイムゾーン検索のため入力してください","Unable to search the group":"グループを検索できません","Undo changes":"変更を取り消し",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'メッセージを記入、"@"でメンション、"："で絵文字の自動補完 ...'}},{locale:"lt_LT",translations:{"{tag} (invisible)":"{tag} (nematoma)","{tag} (restricted)":"{tag} (apribota)",Actions:"Veiksmai",Activities:"Veiklos","Animals & Nature":"Gyvūnai ir gamta",Choose:"Pasirinkti",Close:"Užverti",Custom:"Tinkinti","External documentation for {title}":"Išorinė {title} dokumentacija",Flags:"Vėliavos","Food & Drink":"Maistas ir gėrimai","Frequently used":"Dažniausiai naudoti","Message limit of {count} characters reached":"Pasiekta {count} simbolių žinutės riba",Next:"Kitas","No emoji found":"Nerasta jaustukų","No results":"Nėra rezultatų",Objects:"Objektai","Pause slideshow":"Pristabdyti skaidrių rodymą","People & Body":"Žmonės ir kūnas","Pick an emoji":"Pasirinkti jaustuką",Previous:"Ankstesnis",Search:"Ieškoti","Search results":"Paieškos rezultatai","Select a tag":"Pasirinkti žymę",Settings:"Nustatymai","Settings navigation":"Naršymas nustatymuose","Smileys & Emotion":"Šypsenos ir emocijos","Start slideshow":"Pradėti skaidrių rodymą",Submit:"Pateikti",Symbols:"Simboliai","Travel & Places":"Kelionės ir vietos","Unable to search the group":"Nepavyko atlikti paiešką grupėje","Write message, @ to mention someone …":"Rašykite žinutę, naudokite @ norėdami kažką paminėti…"}},{locale:"lv",translations:{"{tag} (invisible)":"{tag} (neredzams)","{tag} (restricted)":"{tag} (ierobežots)",Choose:"Izvēlēties",Close:"Aizvērt",Next:"Nākamais","No results":"Nav rezultātu","Pause slideshow":"Pauzēt slaidrādi",Previous:"Iepriekšējais","Select a tag":"Izvēlēties birku",Settings:"Iestatījumi","Start slideshow":"Sākt slaidrādi"}},{locale:"mk",translations:{"{tag} (invisible)":"{tag} (невидливо)","{tag} (restricted)":"{tag} (ограничено)",Actions:"Акции",Activities:"Активности","Animals & Nature":"Животни & Природа","Avatar of {displayName}":"Аватар на {displayName}","Avatar of {displayName}, {status}":"Аватар на {displayName}, {status}","Cancel changes":"Откажи ги промените","Change title":"Промени наслов",Choose:"Избери",Close:"Затвори","Close modal":"Затвори модал","Close navigation":"Затвори навигација","Confirm changes":"Потврди ги промените",Custom:"Прилагодени","Edit item":"Уреди","External documentation for {title}":"Надворешна документација за {title}",Favorite:"Фаворити",Flags:"Знамиња","Food & Drink":"Храна & Пијалоци","Frequently used":"Најчесто користени",Global:"Глобално","Go back to the list":"Врати се на листата",items:"ставки","Message limit of {count} characters reached":"Ограничувањето на должината на пораката од {count} карактери е надминато","More {dashboardItemType} …":"Повеќе {dashboardItemType} …",Next:"Следно","No emoji found":"Не се пронајдени емотикони","No results":"Нема резултати",Objects:"Објекти",Open:"Отвори","Open navigation":"Отвори навигација","Pause slideshow":"Пузирај слајдшоу","People & Body":"Луѓе & Тело","Pick an emoji":"Избери емотикон","Please select a time zone:":"Изберете временска зона:",Previous:"Предходно",Search:"Барај","Search results":"Резултати од барувањето","Select a tag":"Избери ознака",Settings:"Параметри","Settings navigation":"Параметри за навигација","Smileys & Emotion":"Смешковци & Емотикони","Start slideshow":"Стартувај слајдшоу",Submit:"Испрати",Symbols:"Симболи","Travel & Places":"Патувања & Места","Type to search time zone":"Напишете за да пребарате временска зона","Unable to search the group":"Неможе да се принајде групата","Undo changes":"Врати ги промените","Write message, @ to mention someone, : for emoji autocompletion …":"Напиши порака, @ за да спомнете некого, : за емотинони автоатско комплетирање ..."}},{locale:"my",translations:{"{tag} (invisible)":"{tag} (ကွယ်ဝှက်ထား)","{tag} (restricted)":"{tag} (ကန့်သတ်)",Actions:"လုပ်ဆောင်ချက်များ",Activities:"ပြုလုပ်ဆောင်တာများ","Animals & Nature":"တိရစ္ဆာန်များနှင့် သဘာဝ","Avatar of {displayName}":"{displayName} ၏ ကိုယ်ပွား","Cancel changes":"ပြောင်းလဲမှုများ ပယ်ဖျက်ရန်",Choose:"ရွေးချယ်ရန်",Close:"ပိတ်ရန်","Confirm changes":"ပြောင်းလဲမှုများ အတည်ပြုရန်",Custom:"အလိုကျချိန်ညှိမှု","External documentation for {title}":"{title} အတွက် ပြင်ပ စာရွက်စာတမ်း",Flags:"အလံများ","Food & Drink":"အစားအသောက်","Frequently used":"မကြာခဏအသုံးပြုသော",Global:"ကမ္ဘာလုံးဆိုင်ရာ","Message limit of {count} characters reached":"ကန့်သတ် စာလုံးရေ {count} လုံး ပြည့်ပါပြီ",Next:"နောက်သို့ဆက်ရန်","No emoji found":"အီမိုဂျီ ရှာဖွေမတွေ့နိုင်ပါ","No results":"ရလဒ်မရှိပါ",Objects:"အရာဝတ္ထုများ","Pause slideshow":"စလိုက်ရှိုး ခေတ္တရပ်ရန်","People & Body":"လူပုဂ္ဂိုလ်များနှင့် ခန္ဓာကိုယ်","Pick an emoji":"အီမိုဂျီရွေးရန်","Please select a time zone:":"ဒေသစံတော်ချိန် ရွေးချယ်ပေးပါ",Previous:"ယခင်",Search:"ရှာဖွေရန်","Search results":"ရှာဖွေမှု ရလဒ်များ","Select a tag":"tag ရွေးချယ်ရန်",Settings:"ချိန်ညှိချက်များ","Settings navigation":"ချိန်ညှိချက်အညွှန်း","Smileys & Emotion":"စမိုင်လီများနှင့် အီမိုရှင်း","Start slideshow":"စလိုက်ရှိုးအား စတင်ရန်",Submit:"တင်သွင်းရန်",Symbols:"သင်္ကေတများ","Travel & Places":"ခရီးသွားလာခြင်းနှင့် နေရာများ","Type to search time zone":"ဒေသစံတော်ချိန်များ ရှာဖွေရန် စာရိုက်ပါ","Unable to search the group":"အဖွဲ့အား ရှာဖွေ၍ မရနိုင်ပါ","Write message, @ to mention someone …":"စာရေးသားရန်၊ တစ်စုံတစ်ဦးအား @ အသုံးပြု ရည်ညွှန်းရန်..."}},{locale:"nb_NO",translations:{"{tag} (invisible)":"{tag} (usynlig)","{tag} (restricted)":"{tag} (beskyttet)",Actions:"Handlinger",Activities:"Aktiviteter","Animals & Nature":"Dyr og natur","Anything shared with the same group of people will show up here":"Alt som er delt med den samme gruppen vil vises her","Avatar of {displayName}":"Avataren til {displayName}","Avatar of {displayName}, {status}":"{displayName}'s avatar, {status}","Cancel changes":"Avbryt endringer","Change title":"Endre tittel",Choose:"Velg","Clear text":"Fjern tekst",Close:"Lukk","Close modal":"Lukk modal","Close navigation":"Lukk navigasjon","Close sidebar":"Lukk sidepanel","Confirm changes":"Bekreft endringer",Custom:"Tilpasset","Edit item":"Rediger","Error getting related resources":"Feil ved henting av relaterte ressurser","Error parsing svg":"Feil ved parsing av svg","External documentation for {title}":"Ekstern dokumentasjon for {title}",Favorite:"Favoritt",Flags:"Flagg","Food & Drink":"Mat og drikke","Frequently used":"Ofte brukt",Global:"Global","Go back to the list":"Gå tilbake til listen","Hide password":"Skjul passord","Message limit of {count} characters reached":"Karakter begrensing {count} nådd i melding","More items …":"Flere gjenstander...",Next:"Neste","No emoji found":"Fant ingen emoji","No results":"Ingen resultater",Objects:"Objekter",Open:"Åpne",'Open link to "{resourceTitle}"':'Åpne link til "{resourceTitle}"',"Open navigation":"Åpne navigasjon","Password is secure":"Passordet er sikkert","Pause slideshow":"Pause lysbildefremvisning","People & Body":"Mennesker og kropp","Pick an emoji":"Velg en emoji","Please select a time zone:":"Vennligst velg tidssone",Previous:"Forrige","Related resources":"Relaterte ressurser",Search:"Søk","Search results":"Søkeresultater","Select a tag":"Velg en merkelapp",Settings:"Innstillinger","Settings navigation":"Navigasjonsinstillinger","Show password":"Vis passord","Smileys & Emotion":"Smilefjes og følelser","Start slideshow":"Start lysbildefremvisning",Submit:"Send",Symbols:"Symboler","Travel & Places":"Reise og steder","Type to search time zone":"Tast for å søke etter tidssone","Unable to search the group":"Kunne ikke søke i gruppen","Undo changes":"Tilbakestill endringer",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Skriv melding, bruk "@" for å nevne noen, bruk ":" for autofullføring av emoji...'}},{locale:"nl",translations:{"{tag} (invisible)":"{tag} (onzichtbaar)","{tag} (restricted)":"{tag} (beperkt)",Actions:"Acties",Activities:"Activiteiten","Animals & Nature":"Dieren & Natuur","Avatar of {displayName}":"Avatar van {displayName}","Avatar of {displayName}, {status}":"Avatar van {displayName}, {status}","Cancel changes":"Wijzigingen annuleren",Choose:"Kies",Close:"Sluiten","Close navigation":"Navigatie sluiten","Confirm changes":"Wijzigingen bevestigen",Custom:"Aangepast","Edit item":"Item bewerken","External documentation for {title}":"Externe documentatie voor {title}",Flags:"Vlaggen","Food & Drink":"Eten & Drinken","Frequently used":"Vaak gebruikt",Global:"Globaal","Go back to the list":"Ga terug naar de lijst","Message limit of {count} characters reached":"Berichtlimiet van {count} karakters bereikt",Next:"Volgende","No emoji found":"Geen emoji gevonden","No results":"Geen resultaten",Objects:"Objecten","Open navigation":"Navigatie openen","Pause slideshow":"Pauzeer diavoorstelling","People & Body":"Mensen & Lichaam","Pick an emoji":"Kies een emoji","Please select a time zone:":"Selecteer een tijdzone:",Previous:"Vorige",Search:"Zoeken","Search results":"Zoekresultaten","Select a tag":"Selecteer een label",Settings:"Instellingen","Settings navigation":"Instellingen navigatie","Smileys & Emotion":"Smileys & Emotie","Start slideshow":"Start diavoorstelling",Submit:"Verwerken",Symbols:"Symbolen","Travel & Places":"Reizen & Plaatsen","Type to search time zone":"Type om de tijdzone te zoeken","Unable to search the group":"Kan niet in de groep zoeken","Undo changes":"Wijzigingen ongedaan maken","Write message, @ to mention someone, : for emoji autocompletion …":"Schrijf bericht, @ om iemand te noemen, : voor emoji auto-aanvullen ..."}},{locale:"oc",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (limit)",Actions:"Accions",Choose:"Causir",Close:"Tampar",Next:"Seguent","No results":"Cap de resultat","Pause slideshow":"Metre en pausa lo diaporama",Previous:"Precedent","Select a tag":"Seleccionar una etiqueta",Settings:"Paramètres","Start slideshow":"Lançar lo diaporama"}},{locale:"pl",translations:{"{tag} (invisible)":"{tag} (niewidoczna)","{tag} (restricted)":"{tag} (ograniczona)",Actions:"Działania",Activities:"Aktywność","Animals & Nature":"Zwierzęta i natura","Anything shared with the same group of people will show up here":"Tutaj pojawi się wszystko, co zostało udostępnione tej samej grupie osób","Avatar of {displayName}":"Awatar {displayName}","Avatar of {displayName}, {status}":"Awatar {displayName}, {status}","Cancel changes":"Anuluj zmiany","Change title":"Zmień tytuł",Choose:"Wybierz","Clear text":"Wyczyść tekst",Close:"Zamknij","Close modal":"Zamknij modal","Close navigation":"Zamknij nawigację","Close sidebar":"Zamknij pasek boczny","Confirm changes":"Potwierdź zmiany",Custom:"Zwyczajne","Edit item":"Edytuj element","Error getting related resources":"Błąd podczas pobierania powiązanych zasobów","Error parsing svg":"Błąd podczas analizowania svg","External documentation for {title}":"Dokumentacja zewnętrzna dla {title}",Favorite:"Ulubiony",Flags:"Flagi","Food & Drink":"Jedzenie i picie","Frequently used":"Często używane",Global:"Globalnie","Go back to the list":"Powrót do listy","Hide password":"Ukryj hasło","Message limit of {count} characters reached":"Przekroczono limit wiadomości wynoszący {count} znaków","More items …":"Więcej pozycji…",Next:"Następny","No emoji found":"Nie znaleziono emoji","No results":"Brak wyników",Objects:"Obiekty",Open:"Otwórz",'Open link to "{resourceTitle}"':'Otwórz link do "{resourceTitle}"',"Open navigation":"Otwórz nawigację","Password is secure":"Hasło jest bezpieczne","Pause slideshow":"Wstrzymaj pokaz slajdów","People & Body":"Ludzie i ciało","Pick an emoji":"Wybierz emoji","Please select a time zone:":"Wybierz strefę czasową:",Previous:"Poprzedni","Related resources":"Powiązane zasoby",Search:"Szukaj","Search results":"Wyniki wyszukiwania","Select a tag":"Wybierz etykietę",Settings:"Ustawienia","Settings navigation":"Ustawienia nawigacji","Show password":"Pokaż hasło","Smileys & Emotion":"Buźki i emotikony","Start slideshow":"Rozpocznij pokaz slajdów",Submit:"Wyślij",Symbols:"Symbole","Travel & Places":"Podróże i miejsca","Type to search time zone":"Wpisz, aby wyszukać strefę czasową","Unable to search the group":"Nie można przeszukać grupy","Undo changes":"Cofnij zmiany",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Napisz wiadomość, "@" aby o kimś wspomnieć, ":" dla autouzupełniania emoji…'}},{locale:"pt_BR",translations:{"{tag} (invisible)":"{tag} (invisível)","{tag} (restricted)":"{tag} (restrito) ",Actions:"Ações",Activities:"Atividades","Animals & Nature":"Animais & Natureza","Anything shared with the same group of people will show up here":"Qualquer coisa compartilhada com o mesmo grupo de pessoas aparecerá aqui","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}","Cancel changes":"Cancelar alterações","Change title":"Alterar título",Choose:"Escolher","Clear text":"Limpar texto",Close:"Fechar","Close modal":"Fechar modal","Close navigation":"Fechar navegação","Close sidebar":"Fechar barra lateral","Confirm changes":"Confirmar alterações",Custom:"Personalizado","Edit item":"Editar item","Error getting related resources":"Erro ao obter recursos relacionados","Error parsing svg":"Erro ao analisar svg","External documentation for {title}":"Documentação externa para {title}",Favorite:"Favorito",Flags:"Bandeiras","Food & Drink":"Comida & Bebida","Frequently used":"Mais usados",Global:"Global","Go back to the list":"Volte para a lista","Hide password":"Ocultar a senha","Message limit of {count} characters reached":"Limite de mensagem de {count} caracteres atingido","More items …":"Mais itens …",Next:"Próximo","No emoji found":"Nenhum emoji encontrado","No results":"Sem resultados",Objects:"Objetos",Open:"Aberto",'Open link to "{resourceTitle}"':'Abrir link para "{resourceTitle}"',"Open navigation":"Abrir navegação","Password is secure":"A senha é segura","Pause slideshow":"Pausar apresentação de slides","People & Body":"Pessoas & Corpo","Pick an emoji":"Escolha um emoji","Please select a time zone:":"Selecione um fuso horário: ",Previous:"Anterior","Related resources":"Recursos relacionados",Search:"Pesquisar","Search results":"Resultados da pesquisa","Select a tag":"Selecionar uma tag",Settings:"Configurações","Settings navigation":"Navegação de configurações","Show password":"Mostrar senha","Smileys & Emotion":"Smiles & Emoções","Start slideshow":"Iniciar apresentação de slides",Submit:"Enviar",Symbols:"Símbolo","Travel & Places":"Viagem & Lugares","Type to search time zone":"Digite para pesquisar o fuso horário ","Unable to search the group":"Não foi possível pesquisar o grupo","Undo changes":"Desfazer modificações",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Escreva mensagens, use "@" para mencionar algum, use ":" for autocompletar emoji …'}},{locale:"pt_PT",translations:{"{tag} (invisible)":"{tag} (invisivel)","{tag} (restricted)":"{tag} (restrito)",Actions:"Ações",Choose:"Escolher",Close:"Fechar",Next:"Seguinte","No results":"Sem resultados","Pause slideshow":"Pausar diaporama",Previous:"Anterior","Select a tag":"Selecionar uma etiqueta",Settings:"Definições","Start slideshow":"Iniciar diaporama","Unable to search the group":"Não é possível pesquisar o grupo"}},{locale:"ro",translations:{"{tag} (invisible)":"{tag} (invizibil)","{tag} (restricted)":"{tag} (restricționat)",Actions:"Acțiuni",Activities:"Activități","Animals & Nature":"Animale și natură","Anything shared with the same group of people will show up here":"Tot ceea ce este partajat cu același grup de persoane va fi afișat aici","Avatar of {displayName}":"Avatarul lui {displayName}","Avatar of {displayName}, {status}":"Avatarul lui {displayName}, {status}","Cancel changes":"Anulează modificările","Change title":"Modificați titlul",Choose:"Alegeți","Clear text":"Șterge textul",Close:"Închideți","Close modal":"Închideți modulul","Close navigation":"Închideți navigarea","Close sidebar":"Închide bara laterală","Confirm changes":"Confirmați modificările",Custom:"Personalizat","Edit item":"Editați elementul","Error getting related resources":" Eroare la returnarea resurselor legate","Error parsing svg":"Eroare de analizare a svg","External documentation for {title}":"Documentație externă pentru {title}",Favorite:"Favorit",Flags:"Marcaje","Food & Drink":"Alimente și băuturi","Frequently used":"Utilizate frecvent",Global:"Global","Go back to the list":"Întoarceți-vă la listă","Hide password":"Ascunde parola","Message limit of {count} characters reached":"Limita mesajului de {count} caractere a fost atinsă","More items …":"Mai multe articole ...",Next:"Următorul","No emoji found":"Nu s-a găsit niciun emoji","No results":"Nu există rezultate",Objects:"Obiecte",Open:"Deschideți",'Open link to "{resourceTitle}"':'Deschide legătura la "{resourceTitle}"',"Open navigation":"Deschideți navigația","Password is secure":"Parola este sigură","Pause slideshow":"Pauză prezentare de diapozitive","People & Body":"Oameni și corp","Pick an emoji":"Alege un emoji","Please select a time zone:":"Vă rugăm să selectați un fus orar:",Previous:"Anterior","Related resources":"Resurse legate",Search:"Căutare","Search results":"Rezultatele căutării","Select a tag":"Selectați o etichetă",Settings:"Setări","Settings navigation":"Navigare setări","Show password":"Arată parola","Smileys & Emotion":"Zâmbete și emoții","Start slideshow":"Începeți prezentarea de diapozitive",Submit:"Trimiteți",Symbols:"Simboluri","Travel & Places":"Călătorii și locuri","Type to search time zone":"Tastați pentru a căuta fusul orar","Unable to search the group":"Imposibilitatea de a căuta în grup","Undo changes":"Anularea modificărilor",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Scrie un mesaj, folosește "@" pentru a menționa pe cineva, folosește ":" pentru autocompletarea cu emoji ...'}},{locale:"ru",translations:{"{tag} (invisible)":"{tag} (невидимое)","{tag} (restricted)":"{tag} (ограниченное)",Actions:"Действия ",Activities:"События","Animals & Nature":"Животные и природа ","Avatar of {displayName}":"Аватар {displayName}","Avatar of {displayName}, {status}":"Фотография {displayName}, {status}","Cancel changes":"Отменить изменения",Choose:"Выберите",Close:"Закрыть","Close modal":"Закрыть модальное окно","Close navigation":"Закрыть навигацию","Confirm changes":"Подтвердить изменения",Custom:"Пользовательское","Edit item":"Изменить элемент","External documentation for {title}":"Внешняя документация для {title}",Flags:"Флаги","Food & Drink":"Еда, напиток","Frequently used":"Часто используемый",Global:"Глобальный","Go back to the list":"Вернуться к списку",items:"элементов","Message limit of {count} characters reached":"Достигнуто ограничение на количество символов в {count}","More {dashboardItemType} …":"Больше {dashboardItemType} …",Next:"Следующее","No emoji found":"Эмодзи не найдено","No results":"Результаты отсуствуют",Objects:"Объекты",Open:"Открыть","Open navigation":"Открыть навигацию","Pause slideshow":"Приостановить показ слйдов","People & Body":"Люди и тело","Pick an emoji":"Выберите эмодзи","Please select a time zone:":"Пожалуйста, выберите часовой пояс:",Previous:"Предыдущее",Search:"Поиск","Search results":"Результаты поиска","Select a tag":"Выберите метку",Settings:"Параметры","Settings navigation":"Навигация по настройкам","Smileys & Emotion":"Смайлики и эмоции","Start slideshow":"Начать показ слайдов",Submit:"Утвердить",Symbols:"Символы","Travel & Places":"Путешествия и места","Type to search time zone":"Введите для поиска часового пояса","Unable to search the group":"Невозможно найти группу","Undo changes":"Отменить изменения","Write message, @ to mention someone, : for emoji autocompletion …":"Напишите сообщение, @ - чтобы упомянуть кого-то, : - для автозаполнения эмодзи …"}},{locale:"sk_SK",translations:{"{tag} (invisible)":"{tag} (neviditeľný)","{tag} (restricted)":"{tag} (obmedzený)",Actions:"Akcie",Activities:"Aktivity","Animals & Nature":"Zvieratá a príroda","Avatar of {displayName}":"Avatar {displayName}","Avatar of {displayName}, {status}":"Avatar {displayName}, {status}","Cancel changes":"Zrušiť zmeny",Choose:"Vybrať",Close:"Zatvoriť","Close navigation":"Zavrieť navigáciu","Confirm changes":"Potvrdiť zmeny",Custom:"Zvyk","Edit item":"Upraviť položku","External documentation for {title}":"Externá dokumentácia pre {title}",Flags:"Vlajky","Food & Drink":"Jedlo a nápoje","Frequently used":"Často používané",Global:"Globálne","Go back to the list":"Naspäť na zoznam","Message limit of {count} characters reached":"Limit správy na {count} znakov dosiahnutý",Next:"Ďalší","No emoji found":"Nenašli sa žiadne emodži","No results":"Žiadne výsledky",Objects:"Objekty","Open navigation":"Otvoriť navigáciu","Pause slideshow":"Pozastaviť prezentáciu","People & Body":"Ľudia a telo","Pick an emoji":"Vyberte si emodži","Please select a time zone:":"Prosím vyberte časovú zónu:",Previous:"Predchádzajúci",Search:"Hľadať","Search results":"Výsledky vyhľadávania","Select a tag":"Vybrať štítok",Settings:"Nastavenia","Settings navigation":"Navigácia v nastaveniach","Smileys & Emotion":"Smajlíky a emócie","Start slideshow":"Začať prezentáciu",Submit:"Odoslať",Symbols:"Symboly","Travel & Places":"Cestovanie a miesta","Type to search time zone":"Začníte písať pre vyhľadávanie časovej zóny","Unable to search the group":"Skupinu sa nepodarilo nájsť","Undo changes":"Vrátiť zmeny","Write message, @ to mention someone, : for emoji autocompletion …":"Napíšte správu, @ ak chcete niekoho spomenúť, : pre automatické dopĺňanie emotikonov…"}},{locale:"sl",translations:{"{tag} (invisible)":"{tag} (nevidno)","{tag} (restricted)":"{tag} (omejeno)",Actions:"Dejanja",Activities:"Dejavnosti","Animals & Nature":"Živali in Narava","Avatar of {displayName}":"Podoba {displayName}","Avatar of {displayName}, {status}":"Prikazna slika {displayName}, {status}","Cancel changes":"Prekliči spremembe","Change title":"Spremeni naziv",Choose:"Izbor","Clear text":"Počisti besedilo",Close:"Zapri","Close modal":"Zapri pojavno okno","Close navigation":"Zapri krmarjenje","Close sidebar":"Zapri stransko vrstico","Confirm changes":"Potrdi spremembe",Custom:"Po meri","Edit item":"Uredi predmet","Error getting related resources":"Napaka pridobivanja povezanih virov","External documentation for {title}":"Zunanja dokumentacija za {title}",Favorite:"Priljubljeno",Flags:"Zastavice","Food & Drink":"Hrana in Pijača","Frequently used":"Pogostost uporabe",Global:"Splošno","Go back to the list":"Vrni se na seznam","Hide password":"Skrij geslo","Message limit of {count} characters reached":"Dosežena omejitev {count} znakov na sporočilo.","More items …":"Več predmetov ...",Next:"Naslednji","No emoji found":"Ni najdenih izraznih ikon","No results":"Ni zadetkov",Objects:"Predmeti",Open:"Odpri",'Open link to "{resourceTitle}"':"Odpri povezavo do »{resourceTitle}«","Open navigation":"Odpri krmarjenje","Password is secure":"Geslo je varno","Pause slideshow":"Ustavi predstavitev","People & Body":"Ljudje in Telo","Pick a date":"Izbor datuma","Pick a date and a time":"Izbor datuma in časa","Pick a month":"Izbor meseca","Pick a time":"Izbor časa","Pick a week":"Izbor tedna","Pick a year":"Izbor leta","Pick an emoji":"Izbor izrazne ikone","Please select a time zone:":"Izbor časovnega pasu:",Previous:"Predhodni","Related resources":"Povezani viri",Search:"Iskanje","Search results":"Zadetki iskanja","Select a tag":"Izbor oznake",Settings:"Nastavitve","Settings navigation":"Krmarjenje nastavitev","Show password":"Pokaži geslo","Smileys & Emotion":"Izrazne ikone","Start slideshow":"Začni predstavitev",Submit:"Pošlji",Symbols:"Simboli","Travel & Places":"Potovanja in Kraji","Type to search time zone":"Vpišite niz za iskanje časovnega pasu","Unable to search the group":"Ni mogoče iskati po skupini","Undo changes":"Razveljavi spremembe","Write message, @ to mention someone, : for emoji autocompletion …":"Napišite sporočilo, za omembo pred ime postavite@, začnite z : za vstavljanje izraznih ikon …"}},{locale:"sr",translations:{"{tag} (invisible)":"{tag} (nevidljivo)","{tag} (restricted)":"{tag} (ograničeno)",Actions:"Radnje",Activities:"Aktivnosti","Animals & Nature":"Životinje i Priroda","Avatar of {displayName}":"Avatar za {displayName}","Avatar of {displayName}, {status}":"Avatar za {displayName}, {status}","Cancel changes":"Otkaži izmene","Change title":"Izmeni naziv",Choose:"Изаберите",Close:"Затвори","Close modal":"Zatvori modal","Close navigation":"Zatvori navigaciju","Close sidebar":"Zatvori bočnu traku","Confirm changes":"Potvrdite promene",Custom:"Po meri","Edit item":"Uredi stavku","External documentation for {title}":"Eksterna dokumentacija za {title}",Favorite:"Omiljeni",Flags:"Zastave","Food & Drink":"Hrana i Piće","Frequently used":"Često korišćeno",Global:"Globalno","Go back to the list":"Natrag na listu",items:"stavke","Message limit of {count} characters reached":"Dostignuto je ograničenje za poruke od {count} znakova","More {dashboardItemType} …":"Više  {dashboardItemType} …",Next:"Следеће","No emoji found":"Nije pronađen nijedan emodži","No results":"Нема резултата",Objects:"Objekti",Open:"Otvori","Open navigation":"Otvori navigaciju","Pause slideshow":"Паузирај слајд шоу","People & Body":"Ljudi i Telo","Pick an emoji":"Izaberi emodži","Please select a time zone:":"Molimo izaberite vremensku zonu:",Previous:"Претходно",Search:"Pretraži","Search results":"Rezultati pretrage","Select a tag":"Изаберите ознаку",Settings:"Поставке","Settings navigation":"Navigacija u podešavanjima","Smileys & Emotion":"Smajli i Emocije","Start slideshow":"Покрени слајд шоу",Submit:"Prihvati",Symbols:"Simboli","Travel & Places":"Putovanja i Mesta","Type to search time zone":"Ukucaj da pretražiš vremenske zone","Unable to search the group":"Nije moguće pretražiti grupu","Undo changes":"Poništi promene","Write message, @ to mention someone, : for emoji autocompletion …":"Napišite poruku, @ da pomenete nekoga, : za automatsko dovršavanje emodžija…"}},{locale:"sv",translations:{"{tag} (invisible)":"{tag} (osynlig)","{tag} (restricted)":"{tag} (begränsad)",Actions:"Åtgärder",Activities:"Aktiviteter","Animals & Nature":"Djur & Natur","Anything shared with the same group of people will show up here":"Något som delats med samma grupp av personer kommer att visas här","Avatar of {displayName}":"{displayName}s avatar","Avatar of {displayName}, {status}":"{displayName}s avatar, {status}","Cancel changes":"Avbryt ändringar","Change title":"Ändra titel",Choose:"Välj","Clear text":"Ta bort text",Close:"Stäng","Close modal":"Stäng modal","Close navigation":"Stäng navigering","Close sidebar":"Stäng sidopanel","Confirm changes":"Bekräfta ändringar",Custom:"Anpassad","Edit item":"Ändra","Error getting related resources":"Problem att hämta relaterade resurser","Error parsing svg":"Fel vid inläsning av svg","External documentation for {title}":"Extern dokumentation för {title}",Favorite:"Favorit",Flags:"Flaggor","Food & Drink":"Mat & Dryck","Frequently used":"Används ofta",Global:"Global","Go back to the list":"Gå tillbaka till listan","Hide password":"Göm lössenordet","Message limit of {count} characters reached":"Meddelandegräns {count} tecken används","More items …":"Fler objekt",Next:"Nästa","No emoji found":"Hittade inga emojis","No results":"Inga resultat",Objects:"Objekt",Open:"Öppna",'Open link to "{resourceTitle}"':'Öppna länk till "{resourceTitle}"',"Open navigation":"Öppna navigering","Password is secure":"Lössenordet är säkert","Pause slideshow":"Pausa bildspelet","People & Body":"Kropp & Själ","Pick an emoji":"Välj en emoji","Please select a time zone:":"Välj tidszon:",Previous:"Föregående","Related resources":"Relaterade resurser",Search:"Sök","Search results":"Sökresultat","Select a tag":"Välj en tag",Settings:"Inställningar","Settings navigation":"Inställningsmeny","Show password":"Visa lössenordet","Smileys & Emotion":"Selfies & Känslor","Start slideshow":"Starta bildspelet",Submit:"Skicka",Symbols:"Symboler","Travel & Places":"Resor & Sevärdigheter","Type to search time zone":"Skriv för att välja tidszon","Unable to search the group":"Kunde inte söka i gruppen","Undo changes":"Ångra ändringar",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Skriv meddelande, använd "@" för att nämna någon, använd ":" för automatiska emojiförslag ...'}},{locale:"tr",translations:{"{tag} (invisible)":"{tag} (görünmez)","{tag} (restricted)":"{tag} (kısıtlı)",Actions:"İşlemler",Activities:"Etkinlikler","Animals & Nature":"Hayvanlar ve Doğa","Anything shared with the same group of people will show up here":"Aynı kişi grubu ile paylaşılan herşey burada görüntülenir","Avatar of {displayName}":"{displayName} avatarı","Avatar of {displayName}, {status}":"{displayName}, {status} avatarı","Cancel changes":"Değişiklikleri iptal et","Change title":"Başlığı değiştir",Choose:"Seçin","Clear text":"Metni temizle",Close:"Kapat","Close modal":"Üste açılan pencereyi kapat","Close navigation":"Gezinmeyi kapat","Close sidebar":"Yan çubuğu kapat","Confirm changes":"Değişiklikleri onayla",Custom:"Özel","Edit item":"Ögeyi düzenle","Error getting related resources":"İlgili kaynaklar alınırken sorun çıktı","Error parsing svg":"svg işlenirken sorun çıktı","External documentation for {title}":"{title} için dış belgeler",Favorite:"Sık kullanılanlara ekle",Flags:"Bayraklar","Food & Drink":"Yeme ve İçme","Frequently used":"Sık kullanılanlar",Global:"Evrensel","Go back to the list":"Listeye dön","Hide password":"Parolayı gizle","Message limit of {count} characters reached":"{count} karakter ileti sınırına ulaşıldı","More items …":"Diğer ögeler…",Next:"Sonraki","No emoji found":"Herhangi bir emoji bulunamadı","No results":"Herhangi bir sonuç bulunamadı",Objects:"Nesneler",Open:"Aç",'Open link to "{resourceTitle}"':'"{resourceTitle}" bağlantısını aç',"Open navigation":"Gezinmeyi aç","Password is secure":"Parola güvenli","Pause slideshow":"Slayt sunumunu duraklat","People & Body":"İnsanlar ve Beden","Pick an emoji":"Bir emoji seçin","Please select a time zone:":"Lütfen bir saat dilimi seçin:",Previous:"Önceki","Related resources":"İlgili kaynaklar",Search:"Arama","Search results":"Arama sonuçları","Select a tag":"Bir etiket seçin",Settings:"Ayarlar","Settings navigation":"Gezinme ayarları","Show password":"Parolayı görüntüle","Smileys & Emotion":"İfadeler ve Duygular","Start slideshow":"Slayt sunumunu başlat",Submit:"Gönder",Symbols:"Simgeler","Travel & Places":"Gezi ve Yerler","Type to search time zone":"Saat dilimi aramak için yazmaya başlayın","Unable to search the group":"Grupta arama yapılamadı","Undo changes":"Değişiklikleri geri al",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'İleti yazın, birini anmak için @, otomatik emoji tamamlamak için ":" kullanın…'}},{locale:"uk",translations:{"{tag} (invisible)":"{tag} (невидимий)","{tag} (restricted)":"{tag} (обмежений)",Actions:"Дії",Activities:"Діяльність","Animals & Nature":"Тварини та природа","Avatar of {displayName}":"Аватар {displayName}","Avatar of {displayName}, {status}":"Аватар {displayName}, {status}","Cancel changes":"Скасувати зміни","Change title":"Змінити назву",Choose:"ВиберітьВиберіть","Clear text":"Очистити текст",Close:"Закрити","Close modal":"Закрити модаль","Close navigation":"Закрити навігацію","Close sidebar":"Закрити бічну панель","Confirm changes":"Підтвердити зміни",Custom:"Власне","Edit item":"Редагувати елемент","External documentation for {title}":"Зовнішня документація для {title}",Favorite:"Улюблений",Flags:"Прапори","Food & Drink":"Їжа та напої","Frequently used":"Найчастіші",Global:"Глобальний","Go back to the list":"Повернутися до списку","Hide password":"Приховати пароль",items:"елементи","Message limit of {count} characters reached":"Вичерпано ліміт у {count} символів для повідомлення","More {dashboardItemType} …":"Більше {dashboardItemType}…",Next:"Вперед","No emoji found":"Емоційки відсутні","No results":"Відсутні результати",Objects:"Об'єкти",Open:"Відкрити","Open navigation":"Відкрити навігацію","Password is secure":"Пароль безпечний","Pause slideshow":"Пауза у показі слайдів","People & Body":"Люди та жести","Pick an emoji":"Виберіть емоційку","Please select a time zone:":"Виберіть часовий пояс:",Previous:"Назад",Search:"Пошук","Search results":"Результати пошуку","Select a tag":"Виберіть позначку",Settings:"Налаштування","Settings navigation":"Навігація у налаштуваннях","Show password":"Показати пароль","Smileys & Emotion":"Смайли та емоції","Start slideshow":"Почати показ слайдів",Submit:"Надіслати",Symbols:"Символи","Travel & Places":"Поїздки та місця","Type to search time zone":"Введіть для пошуку часовий пояс","Unable to search the group":"Неможливо шукати в групі","Undo changes":"Скасувати зміни","Write message, @ to mention someone, : for emoji autocompletion …":"Напишіть повідомлення, @, щоб згадати когось, : для автозаповнення емодзі…"}},{locale:"zh_CN",translations:{"{tag} (invisible)":"{tag} （不可见）","{tag} (restricted)":"{tag} （受限）",Actions:"行为",Activities:"活动","Animals & Nature":"动物 & 自然","Anything shared with the same group of people will show up here":"与同组用户分享的所有内容都会显示于此","Avatar of {displayName}":"{displayName}的头像","Avatar of {displayName}, {status}":"{displayName}的头像，{status}","Cancel changes":"取消更改","Change title":"更改标题",Choose:"选择","Clear text":"清除文本",Close:"关闭","Close modal":"关闭窗口","Close navigation":"关闭导航","Close sidebar":"关闭侧边栏","Confirm changes":"确认更改",Custom:"自定义","Edit item":"编辑项目","Error getting related resources":"获取相关资源时出错","Error parsing svg":"解析 svg 时出错","External documentation for {title}":"{title}的外部文档",Favorite:"喜爱",Flags:"旗帜","Food & Drink":"食物 & 饮品","Frequently used":"经常使用",Global:"全局","Go back to the list":"返回至列表","Hide password":"隐藏密码","Message limit of {count} characters reached":"已达到 {count} 个字符的消息限制","More items …":"更多项目…",Next:"下一个","No emoji found":"表情未找到","No results":"无结果",Objects:"物体",Open:"打开",'Open link to "{resourceTitle}"':'打开"{resourceTitle}"的连接',"Open navigation":"开启导航","Password is secure":"密码安全","Pause slideshow":"暂停幻灯片","People & Body":"人 & 身体","Pick an emoji":"选择一个表情","Please select a time zone:":"请选择一个时区：",Previous:"上一个","Related resources":"相关资源",Search:"搜索","Search results":"搜索结果","Select a tag":"选择一个标签",Settings:"设置","Settings navigation":"设置向导","Show password":"显示密码","Smileys & Emotion":"笑脸 & 情感","Start slideshow":"开始幻灯片",Submit:"提交",Symbols:"符号","Travel & Places":"旅游 & 地点","Type to search time zone":"打字以搜索时区","Unable to search the group":"无法搜索分组","Undo changes":"撤销更改",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'写信息，使用"@"来提及某人，使用":"进行表情符号自动完成 ...'}},{locale:"zh_HK",translations:{"{tag} (invisible)":"{tag} (隱藏)","{tag} (restricted)":"{tag} (受限)",Actions:"動作",Activities:"活動","Animals & Nature":"動物與自然","Anything shared with the same group of people will show up here":"與同一組人共享的任何內容都會顯示在此處","Avatar of {displayName}":"{displayName} 的頭像","Avatar of {displayName}, {status}":"{displayName} 的頭像，{status}","Cancel changes":"取消更改","Change title":"更改標題",Choose:"選擇","Clear text":"清除文本",Close:"關閉","Close modal":"關閉模態","Close navigation":"關閉導航","Close sidebar":"關閉側邊欄","Confirm changes":"確認更改",Custom:"自定義","Edit item":"編輯項目","Error getting related resources":"獲取相關資源出錯","Error parsing svg":"解析 svg 時出錯","External documentation for {title}":"{title} 的外部文檔",Favorite:"喜愛",Flags:"旗幟","Food & Drink":"食物與飲料","Frequently used":"經常使用",Global:"全球的","Go back to the list":"返回清單","Hide password":"隱藏密碼","Message limit of {count} characters reached":"已達到訊息最多 {count} 字元限制","More items …":"更多項目 …",Next:"下一個","No emoji found":"未找到表情符號","No results":"無結果",Objects:"物件",Open:"打開",'Open link to "{resourceTitle}"':"打開指向 “{resourceTitle}” 的鏈結","Open navigation":"開啟導航","Password is secure":"密碼是安全的","Pause slideshow":"暫停幻燈片","People & Body":"人物","Pick an emoji":"選擇表情符號","Please select a time zone:":"請選擇時區：",Previous:"上一個","Related resources":"相關資源",Search:"搜尋","Search results":"搜尋結果","Select a tag":"選擇標籤",Settings:"設定","Settings navigation":"設定值導覽","Show password":"顯示密碼","Smileys & Emotion":"表情","Start slideshow":"開始幻燈片",Submit:"提交",Symbols:"標誌","Travel & Places":"旅遊與景點","Type to search time zone":"鍵入以搜索時區","Unable to search the group":"無法搜尋群組","Undo changes":"取消更改",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'寫訊息，使用 "@" 來指代某人，使用 ":" 用於表情符號自動填充 ...'}},{locale:"zh_TW",translations:{"{tag} (invisible)":"{tag} (隱藏)","{tag} (restricted)":"{tag} (受限)",Actions:"動作",Activities:"活動","Animals & Nature":"動物與自然",Choose:"選擇",Close:"關閉",Custom:"自定義",Flags:"旗幟","Food & Drink":"食物與飲料","Frequently used":"最近使用","Message limit of {count} characters reached":"已達到訊息最多 {count} 字元限制",Next:"下一個","No emoji found":"未找到表情符號","No results":"無結果",Objects:"物件","Pause slideshow":"暫停幻燈片","People & Body":"人物","Pick an emoji":"選擇表情符號",Previous:"上一個",Search:"搜尋","Search results":"搜尋結果","Select a tag":"選擇標籤",Settings:"設定","Settings navigation":"設定值導覽","Smileys & Emotion":"表情","Start slideshow":"開始幻燈片",Symbols:"標誌","Travel & Places":"旅遊與景點","Unable to search the group":"無法搜尋群組","Write message, @ to mention someone …":"輸入訊息時可使用 @ 來標示某人..."}}].forEach((e=>{const t={};for(const r in e.translations)e.translations[r].pluralId?t[r]={msgid:r,msgid_plural:e.translations[r].pluralId,msgstr:e.translations[r].msgstr}:t[r]={msgid:r,msgstr:[e.translations[r]]};n.addTranslation(e.locale,{translations:{"":t}})}));const o=n.build(),a=(o.ngettext.bind(o),o.gettext.bind(o))},6609:(e,t,r)=>{"use strict";function n(e,t,r){this.r=e,this.g=t,this.b=r}function o(e,t,r){const o=[];o.push(t);const a=function(e,t){const r=new Array(3);return r[0]=(t[1].r-t[0].r)/e,r[1]=(t[1].g-t[0].g)/e,r[2]=(t[1].b-t[0].b)/e,r}(e,[t,r]);for(let r=1;r<e;r++){const e=parseInt(t.r+a[0]*r,10),i=parseInt(t.g+a[1]*r,10),s=parseInt(t.b+a[2]*r,10);o.push(new n(e,i,s))}return o}r.d(t,{Z:()=>a});const a=function(e){e||(e=6);const t=new n(182,70,157),r=new n(221,203,85),a=new n(0,130,201),i=o(e,t,r),s=o(e,r,a),l=o(e,a,t);return i.concat(s).concat(l)}},1206:(e,t,r)=>{"use strict";r.d(t,{L:()=>n}),r(4505);const n=function(){return Object.assign(window,{_nc_focus_trap:window._nc_focus_trap||[]}),window._nc_focus_trap}},7196:(e,t,r)=>{"use strict";r.d(t,{Z:()=>s});var n=r(7537),o=r.n(n),a=r(3645),i=r.n(a)()(o());i.push([e.id,".material-design-icon[data-v-4d05be2c]{display:flex;align-self:center;justify-self:center;align-items:center;justify-content:center}.button-vue[data-v-4d05be2c]{position:relative;width:fit-content;overflow:hidden;border:0;padding:0;font-size:var(--default-font-size);font-weight:bold;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:22px;transition-property:color,border-color,background-color;transition-duration:.1s;transition-timing-function:linear;color:var(--color-primary-element-light-text);background-color:var(--color-primary-element-light)}.button-vue *[data-v-4d05be2c],.button-vue span[data-v-4d05be2c]{cursor:pointer}.button-vue[data-v-4d05be2c]:focus{outline:none}.button-vue[data-v-4d05be2c]:disabled{cursor:default;opacity:.5;filter:saturate(0.7)}.button-vue:disabled *[data-v-4d05be2c]{cursor:default}.button-vue[data-v-4d05be2c]:hover:not(:disabled){background-color:var(--color-primary-element-light-hover)}.button-vue[data-v-4d05be2c]:active{background-color:var(--color-primary-element-light)}.button-vue__wrapper[data-v-4d05be2c]{display:inline-flex;align-items:center;justify-content:center;width:100%}.button-vue__icon[data-v-4d05be2c]{height:44px;width:44px;min-height:44px;min-width:44px;display:flex;justify-content:center;align-items:center}.button-vue__text[data-v-4d05be2c]{font-weight:bold;margin-bottom:1px;padding:2px 0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.button-vue--icon-only[data-v-4d05be2c]{width:44px !important}.button-vue--text-only[data-v-4d05be2c]{padding:0 12px}.button-vue--text-only .button-vue__text[data-v-4d05be2c]{margin-left:4px;margin-right:4px}.button-vue--icon-and-text[data-v-4d05be2c]{padding:0 16px 0 4px}.button-vue--wide[data-v-4d05be2c]{width:100%}.button-vue[data-v-4d05be2c]:focus-visible{outline:2px solid var(--color-main-text) !important}.button-vue:focus-visible.button-vue--vue-tertiary-on-primary[data-v-4d05be2c]{outline:2px solid var(--color-primary-element-text);border-radius:var(--border-radius);background-color:rgba(0,0,0,0)}.button-vue--vue-primary[data-v-4d05be2c]{background-color:var(--color-primary-element);color:var(--color-primary-element-text)}.button-vue--vue-primary[data-v-4d05be2c]:hover:not(:disabled){background-color:var(--color-primary-element-hover)}.button-vue--vue-primary[data-v-4d05be2c]:active{background-color:var(--color-primary-element)}.button-vue--vue-secondary[data-v-4d05be2c]{color:var(--color-primary-element-light-text);background-color:var(--color-primary-element-light)}.button-vue--vue-secondary[data-v-4d05be2c]:hover:not(:disabled){color:var(--color-primary-element-light-text);background-color:var(--color-primary-element-light-hover)}.button-vue--vue-tertiary[data-v-4d05be2c]{color:var(--color-main-text);background-color:rgba(0,0,0,0)}.button-vue--vue-tertiary[data-v-4d05be2c]:hover:not(:disabled){background-color:var(--color);background-color:var(--color-background-hover)}.button-vue--vue-tertiary-no-background[data-v-4d05be2c]{color:var(--color-main-text);background-color:rgba(0,0,0,0)}.button-vue--vue-tertiary-no-background[data-v-4d05be2c]:hover:not(:disabled){background-color:rgba(0,0,0,0)}.button-vue--vue-tertiary-on-primary[data-v-4d05be2c]{color:var(--color-primary-element-text);background-color:rgba(0,0,0,0)}.button-vue--vue-tertiary-on-primary[data-v-4d05be2c]:hover:not(:disabled){background-color:rgba(0,0,0,0)}.button-vue--vue-success[data-v-4d05be2c]{background-color:var(--color-success);color:#fff}.button-vue--vue-success[data-v-4d05be2c]:hover:not(:disabled){background-color:var(--color-success-hover)}.button-vue--vue-success[data-v-4d05be2c]:active{background-color:var(--color-success)}.button-vue--vue-warning[data-v-4d05be2c]{background-color:var(--color-warning);color:#fff}.button-vue--vue-warning[data-v-4d05be2c]:hover:not(:disabled){background-color:var(--color-warning-hover)}.button-vue--vue-warning[data-v-4d05be2c]:active{background-color:var(--color-warning)}.button-vue--vue-error[data-v-4d05be2c]{background-color:var(--color-error);color:#fff}.button-vue--vue-error[data-v-4d05be2c]:hover:not(:disabled){background-color:var(--color-error-hover)}.button-vue--vue-error[data-v-4d05be2c]:active{background-color:var(--color-error)}","",{version:3,sources:["webpack://./src/assets/material-icons.css","webpack://./src/components/NcButton/NcButton.vue","webpack://./src/assets/variables.scss"],names:[],mappings:"AAGA,uCACC,YAAA,CACA,iBAAA,CACA,mBAAA,CACA,kBAAA,CACA,sBAAA,CCLD,6BACC,iBAAA,CACA,iBAAA,CACA,eAAA,CACA,QAAA,CACA,SAAA,CACA,kCAAA,CACA,gBAAA,CACA,eCcgB,CDbhB,cCagB,CDZhB,YAAA,CACA,kBAAA,CACA,sBAAA,CAGA,cAAA,CAKA,kBAAA,CACA,uDAAA,CACA,uBAAA,CACA,iCAAA,CAkBA,6CAAA,CACA,mDAAA,CA1BA,iEAEC,cAAA,CAQD,mCACC,YAAA,CAGD,sCACC,cAAA,CAIA,UCIiB,CDFjB,oBAAA,CALA,wCACC,cAAA,CAUF,kDACC,yDAAA,CAKD,oCACC,mDAAA,CAGD,sCACC,mBAAA,CACA,kBAAA,CACA,sBAAA,CACA,UAAA,CAGD,mCACC,WCvCe,CDwCf,UCxCe,CDyCf,eCzCe,CD0Cf,cC1Ce,CD2Cf,YAAA,CACA,sBAAA,CACA,kBAAA,CAGD,mCACC,gBAAA,CACA,iBAAA,CACA,aAAA,CACA,kBAAA,CACA,sBAAA,CACA,eAAA,CAID,wCACC,qBAAA,CAID,wCACC,cAAA,CACA,0DACC,eAAA,CACA,gBAAA,CAKF,4CACC,oBAAA,CAID,mCACC,UAAA,CAGD,2CACC,mDAAA,CACA,+EACC,mDAAA,CACA,kCAAA,CACA,8BAAA,CAOF,0CACC,6CAAA,CACA,uCAAA,CACA,+DACC,mDAAA,CAID,iDACC,6CAAA,CAKF,4CACC,6CAAA,CACA,mDAAA,CACA,iEACC,6CAAA,CACA,yDAAA,CAKF,2CACC,4BAAA,CACA,8BAAA,CACA,gEACC,6BAAA,CACA,8CAAA,CAKF,yDACC,4BAAA,CACA,8BAAA,CACA,8EACC,8BAAA,CAKF,sDACC,uCAAA,CACA,8BAAA,CAEA,2EACC,8BAAA,CAKF,0CACC,qCAAA,CACA,UAAA,CACA,+DACC,2CAAA,CAID,iDACC,qCAAA,CAKF,0CACC,qCAAA,CACA,UAAA,CACA,+DACC,2CAAA,CAID,iDACC,qCAAA,CAKF,wCACC,mCAAA,CACA,UAAA,CACA,6DACC,yCAAA,CAID,+CACC,mCAAA",sourcesContent:["/*\n* Ensure proper alignment of the vue material icons\n*/\n.material-design-icon {\n\tdisplay: flex;\n\talign-self: center;\n\tjustify-self: center;\n\talign-items: center;\n\tjustify-content: center;\n}\n","@use 'sass:math'; $scope_version:\"f7c85e6\"; @import 'variables'; @import 'material-icons';\n\n\n.button-vue {\n\tposition: relative;\n\twidth: fit-content;\n\toverflow: hidden;\n\tborder: 0;\n\tpadding: 0;\n\tfont-size: var(--default-font-size);\n\tfont-weight: bold;\n\tmin-height: $clickable-area;\n\tmin-width: $clickable-area;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\n\t// Cursor pointer on element and all children\n\tcursor: pointer;\n\t& *,\n\tspan {\n\t\tcursor: pointer;\n\t}\n\tborder-radius: math.div($clickable-area, 2);\n\ttransition-property: color, border-color, background-color;\n\ttransition-duration: 0.1s;\n\ttransition-timing-function: linear;\n\n\t// No outline feedback for focus. Handled with a toggled class in js (see data)\n\t&:focus {\n\t\toutline: none;\n\t}\n\n\t&:disabled {\n\t\tcursor: default;\n\t\t& * {\n\t\t\tcursor: default;\n\t\t}\n\t\topacity: $opacity_disabled;\n\t\t// Gives a wash out effect\n\t\tfilter: saturate($opacity_normal);\n\t}\n\n\t// Default button type\n\tcolor: var(--color-primary-element-light-text);\n\tbackground-color: var(--color-primary-element-light);\n\t&:hover:not(:disabled) {\n\t\tbackground-color: var(--color-primary-element-light-hover);\n\t}\n\n\t// Back to the default color for this button when active\n\t// TODO: add ripple effect\n\t&:active {\n\t\tbackground-color: var(--color-primary-element-light);\n\t}\n\n\t&__wrapper {\n\t\tdisplay: inline-flex;\n\t\talign-items: center;\n\t\tjustify-content: center;\n\t\twidth: 100%;\n\t}\n\n\t&__icon {\n\t\theight: $clickable-area;\n\t\twidth: $clickable-area;\n\t\tmin-height: $clickable-area;\n\t\tmin-width: $clickable-area;\n\t\tdisplay: flex;\n\t\tjustify-content: center;\n\t\talign-items: center;\n\t}\n\n\t&__text {\n\t\tfont-weight: bold;\n\t\tmargin-bottom: 1px;\n\t\tpadding: 2px 0;\n\t\twhite-space: nowrap;\n\t\ttext-overflow: ellipsis;\n\t\toverflow: hidden;\n\t}\n\n\t// Icon-only button\n\t&--icon-only {\n\t\twidth: $clickable-area !important;\n\t}\n\n\t// Text-only button\n\t&--text-only {\n\t\tpadding: 0 12px;\n\t\t& .button-vue__text {\n\t\t\tmargin-left: 4px;\n\t\t\tmargin-right: 4px;\n\t\t}\n\t}\n\n\t// Icon and text button\n\t&--icon-and-text {\n\t\tpadding: 0 16px 0 4px;\n\t}\n\n\t// Wide button spans the whole width of the container\n\t&--wide {\n\t\twidth: 100%;\n\t}\n\n\t&:focus-visible {\n\t\toutline: 2px solid var(--color-main-text) !important;\n\t\t&.button-vue--vue-tertiary-on-primary {\n\t\t\toutline: 2px solid var(--color-primary-element-text);\n\t\t\tborder-radius: var(--border-radius);\n\t\t\tbackground-color: transparent;\n\t\t}\n\t}\n\n\t// Button types\n\n\t// Primary\n\t&--vue-primary {\n\t\tbackground-color: var(--color-primary-element);\n\t\tcolor: var(--color-primary-element-text);\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color-primary-element-hover);\n\t\t}\n\t\t// Back to the default color for this button when active\n\t\t// TODO: add ripple effect\n\t\t&:active {\n\t\t\tbackground-color: var(--color-primary-element);\n\t\t}\n\t}\n\n\t// Secondary\n\t&--vue-secondary {\n\t\tcolor: var(--color-primary-element-light-text);\n\t\tbackground-color: var(--color-primary-element-light);\n\t\t&:hover:not(:disabled) {\n\t\t\tcolor: var(--color-primary-element-light-text);\n\t\t\tbackground-color: var(--color-primary-element-light-hover);\n\t\t}\n\t}\n\n\t// Tertiary\n\t&--vue-tertiary {\n\t\tcolor: var(--color-main-text);\n\t\tbackground-color: transparent;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color);\n\t\t\tbackground-color: var(--color-background-hover);\n\t\t}\n\t}\n\n\t// Tertiary, no background\n\t&--vue-tertiary-no-background {\n\t\tcolor: var(--color-main-text);\n\t\tbackground-color: transparent;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: transparent;\n\t\t}\n\t}\n\n\t// Tertiary on primary color (like the header)\n\t&--vue-tertiary-on-primary {\n\t\tcolor: var(--color-primary-element-text);\n\t\tbackground-color: transparent;\n\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: transparent;\n\t\t}\n\t}\n\n\t// Success\n\t&--vue-success {\n\t\tbackground-color: var(--color-success);\n\t\tcolor: white;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color-success-hover);\n\t\t}\n\t\t// Back to the default color for this button when active\n\t\t// : add ripple effect\n\t\t&:active {\n\t\t\tbackground-color: var(--color-success);\n\t\t}\n\t}\n\n\t// Warning\n\t&--vue-warning {\n\t\tbackground-color: var(--color-warning);\n\t\tcolor: white;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color-warning-hover);\n\t\t}\n\t\t// Back to the default color for this button when active\n\t\t// TODO: add ripple effect\n\t\t&:active {\n\t\t\tbackground-color: var(--color-warning);\n\t\t}\n\t}\n\n\t// Error\n\t&--vue-error {\n\t\tbackground-color: var(--color-error);\n\t\tcolor: white;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color-error-hover);\n\t\t}\n\t\t// Back to the default color for this button when active\n\t\t// TODO: add ripple effect\n\t\t&:active {\n\t\t\tbackground-color: var(--color-error);\n\t\t}\n\t}\n}\n\n","/**\n * @copyright Copyright (c) 2019 John Molakvoæ <skjnldsv@protonmail.com>\n *\n * @author John Molakvoæ <skjnldsv@protonmail.com>\n *\n * @license GNU AGPL version 3 or any later version\n *\n * This program is free software: you can redistribute it and/or modify\n * it under the terms of the GNU Affero General Public License as\n * published by the Free Software Foundation, either version 3 of the\n * License, or (at your option) any later version.\n *\n * This program is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n * GNU Affero General Public License for more details.\n *\n * You should have received a copy of the GNU Affero General Public License\n * along with this program. If not, see <http://www.gnu.org/licenses/>.\n *\n */\n\n// https://uxplanet.org/7-rules-for-mobile-ui-button-design-e9cf2ea54556\n// recommended is 48px\n// 44px is what we choose and have very good visual-to-usability ratio\n$clickable-area: 44px;\n\n// background icon size\n// also used for the scss icon font\n$icon-size: 16px;\n\n// icon padding for a $clickable-area width and a $icon-size icon\n// ( 44px - 16px ) / 2\n$icon-margin: math.div($clickable-area - $icon-size, 2);\n\n// transparency background for icons\n$icon-focus-bg: rgba(127, 127, 127, .25);\n\n// popovermenu arrow width from the triangle center\n$arrow-width: 9px;\n\n// opacities\n$opacity_disabled: .5;\n$opacity_normal: .7;\n$opacity_full: 1;\n\n// menu round background hover feedback\n// good looking on dark AND white bg\n$action-background-hover: rgba(127, 127, 127, .25);\n\n// various structure data used in the \n// `AppNavigation` component\n$header-height: 50px;\n$navigation-width: 300px;\n\n// mobile breakpoint\n$breakpoint-mobile: 1024px;\n\n// top-bar spacing\n$topbar-margin: 4px;\n\n// navigation spacing\n$app-navigation-settings-margin: 3px;\n"],sourceRoot:""}]);const s=i},3246:(e,t,r)=>{"use strict";r.d(t,{Z:()=>s});var n=r(7537),o=r.n(n),a=r(3645),i=r.n(a)()(o());i.push([e.id,".material-design-icon[data-v-6cccc0ac]{display:flex;align-self:center;justify-self:center;align-items:center;justify-content:center}.color-picker[data-v-6cccc0ac]{display:flex;overflow:hidden;align-content:flex-end;flex-direction:column;justify-content:space-between;box-sizing:content-box !important;width:176px;padding:8px;border-radius:3px}.color-picker--advanced-fields[data-v-6cccc0ac]{width:264px}.color-picker__simple[data-v-6cccc0ac]{display:grid;grid-template-columns:repeat(auto-fit, 44px);grid-auto-rows:44px}.color-picker__simple-color-circle[data-v-6cccc0ac]{display:flex;align-items:center;justify-content:center;width:34px;height:34px;min-height:34px;margin:auto;padding:0;color:#fff;border:1px solid rgba(0,0,0,.25);border-radius:50%;font-size:16px}.color-picker__simple-color-circle[data-v-6cccc0ac]:hover{opacity:.6}.color-picker__simple-color-circle--active[data-v-6cccc0ac]{width:38px;height:38px;min-height:38px;transition:all 100ms ease-in-out;opacity:1 !important}.color-picker__advanced[data-v-6cccc0ac]{box-shadow:none !important}.color-picker__navigation[data-v-6cccc0ac]{display:flex;flex-direction:row;justify-content:space-between;margin-top:10px}[data-v-6cccc0ac]  .vc-chrome{width:unset;background-color:var(--color-main-background)}[data-v-6cccc0ac]  .vc-chrome-color-wrap{width:30px;height:30px}[data-v-6cccc0ac]  .vc-chrome-active-color{width:34px;height:34px;border-radius:17px}[data-v-6cccc0ac]  .vc-chrome-body{padding:14px 0 0 0;background-color:var(--color-main-background)}[data-v-6cccc0ac]  .vc-chrome-body .vc-input__input{box-shadow:none}[data-v-6cccc0ac]  .vc-chrome-toggle-btn{filter:var(--background-invert-if-dark)}[data-v-6cccc0ac]  .vc-chrome-saturation-wrap{border-radius:3px}[data-v-6cccc0ac]  .vc-chrome-saturation-circle{width:20px;height:20px}.slide-enter[data-v-6cccc0ac]{transform:translateX(-50%);opacity:0}.slide-enter-to[data-v-6cccc0ac]{transform:translateX(0);opacity:1}.slide-leave[data-v-6cccc0ac]{transform:translateX(0);opacity:1}.slide-leave-to[data-v-6cccc0ac]{transform:translateX(-50%);opacity:0}.slide-enter-active[data-v-6cccc0ac],.slide-leave-active[data-v-6cccc0ac]{transition:all 50ms ease-in-out}","",{version:3,sources:["webpack://./src/assets/material-icons.css","webpack://./src/components/NcColorPicker/NcColorPicker.vue","webpack://./src/assets/variables.scss"],names:[],mappings:"AAGA,uCACC,YAAA,CACA,iBAAA,CACA,mBAAA,CACA,kBAAA,CACA,sBAAA,CCND,+BACC,YAAA,CACA,eAAA,CACA,sBAAA,CACA,qBAAA,CACA,6BAAA,CACA,iCAAA,CACA,WAAA,CACA,WAAA,CACA,iBAAA,CAEA,gDACC,WAAA,CAGD,uCACC,YAAA,CACA,4CAAA,CACA,mBCKe,CDHf,oDACC,YAAA,CACA,kBAAA,CACA,sBAAA,CACA,UAAA,CACA,WAAA,CACA,eAAA,CACA,WAAA,CACA,SAAA,CACA,UAAA,CACA,gCAAA,CACA,iBAAA,CACA,cAAA,CACA,0DACC,UAAA,CAED,4DACC,UAAA,CACA,WAAA,CACA,eAAA,CACA,gCAAA,CACA,oBAAA,CAKH,yCACC,0BAAA,CAGD,2CACC,YAAA,CACA,kBAAA,CACA,6BAAA,CACA,eAAA,CAKD,8BACC,WAAA,CACA,6CAAA,CAEA,yCACC,UAAA,CACA,WAAA,CAGD,2CACC,UAAA,CACA,WAAA,CACA,kBAAA,CAGD,mCACC,kBAAA,CACA,6CAAA,CACA,oDACC,eAAA,CAIF,yCACC,uCAAA,CAIA,8CACC,iBAAA,CAGD,gDACC,UAAA,CACA,WAAA,CAOH,8BACC,0BAAA,CACA,SAAA,CAED,iCACC,uBAAA,CACA,SAAA,CAED,8BACC,uBAAA,CACA,SAAA,CAED,iCACC,0BAAA,CACA,SAAA,CAED,0EAEC,+BAAA",sourcesContent:["/*\n* Ensure proper alignment of the vue material icons\n*/\n.material-design-icon {\n\tdisplay: flex;\n\talign-self: center;\n\tjustify-self: center;\n\talign-items: center;\n\tjustify-content: center;\n}\n","@use 'sass:math'; $scope_version:\"f7c85e6\"; @import 'variables'; @import 'material-icons';\n\n.color-picker {\n\tdisplay: flex;\n\toverflow: hidden;\n\talign-content: flex-end;\n\tflex-direction: column;\n\tjustify-content: space-between;\n\tbox-sizing: content-box !important;\n\twidth: 176px;\n\tpadding: 8px;\n\tborder-radius: 3px;\n\n\t&--advanced-fields {\n\t\twidth: 264px;\n\t}\n\n\t&__simple {\n\t\tdisplay: grid;\n\t\tgrid-template-columns: repeat(auto-fit, $clickable-area);\n\t\tgrid-auto-rows: $clickable-area;\n\n\t\t&-color-circle {\n\t\t\tdisplay: flex;\n\t\t\talign-items: center;\n\t\t\tjustify-content: center;\n\t\t\twidth: 34px;\n\t\t\theight: 34px;\n\t\t\tmin-height: 34px;\n\t\t\tmargin: auto;\n\t\t\tpadding: 0;\n\t\t\tcolor: white;\n\t\t\tborder: 1px solid rgba(0, 0, 0, 0.25);\n\t\t\tborder-radius: 50%;\n\t\t\tfont-size: 16px;\n\t\t\t&:hover {\n\t\t\t\topacity: .6;\n\t\t\t}\n\t\t\t&--active {\n\t\t\t\twidth: 38px;\n\t\t\t\theight: 38px;\n\t\t\t\tmin-height: 38px;\n\t\t\t\ttransition: all 100ms ease-in-out;\n\t\t\t\topacity: 1 !important;\n\t\t\t}\n\t\t}\n\t}\n\n\t&__advanced {\n\t\tbox-shadow: none !important;\n\t}\n\n\t&__navigation {\n\t\tdisplay: flex;\n\t\tflex-direction: row;\n\t\tjustify-content: space-between;\n\t\tmargin-top: 10px;\n\t}\n}\n\n:deep() .vc {\n\t&-chrome {\n\t\twidth: unset;\n\t\tbackground-color: var(--color-main-background);\n\n\t\t&-color-wrap {\n\t\t\twidth: 30px;\n\t\t\theight: 30px;\n\t\t}\n\n\t\t&-active-color {\n\t\t\twidth: 34px;\n\t\t\theight: 34px;\n\t\t\tborder-radius: 17px;\n\t\t}\n\n\t\t&-body {\n\t\t\tpadding: 14px 0 0 0;\n\t\t\tbackground-color: var(--color-main-background);\n\t\t\t.vc-input__input {\n\t\t\t\tbox-shadow: none;\n\t\t\t}\n\t\t}\n\n\t\t&-toggle-btn {\n\t\t\tfilter: var(--background-invert-if-dark);\n\t\t}\n\n\t\t&-saturation {\n\t\t\t&-wrap {\n\t\t\t\tborder-radius: 3px;\n\t\t\t}\n\n\t\t\t&-circle {\n\t\t\t\twidth: 20px;\n\t\t\t\theight: 20px;\n\t\t\t}\n\t\t}\n\t}\n}\n\n.slide {\n\t&-enter {\n\t\ttransform: translateX(-50%);\n\t\topacity: 0;\n\t}\n\t&-enter-to {\n\t\ttransform: translateX(0);\n\t\topacity: 1;\n\t}\n\t&-leave {\n\t\ttransform: translateX(0);\n\t\topacity: 1;\n\t}\n\t&-leave-to {\n\t\ttransform: translateX(-50%);\n\t\topacity: 0;\n\t}\n\t&-enter-active,\n\t&-leave-active {\n\t\ttransition: all 50ms ease-in-out;\n\t}\n}\n\n","/**\n * @copyright Copyright (c) 2019 John Molakvoæ <skjnldsv@protonmail.com>\n *\n * @author John Molakvoæ <skjnldsv@protonmail.com>\n *\n * @license GNU AGPL version 3 or any later version\n *\n * This program is free software: you can redistribute it and/or modify\n * it under the terms of the GNU Affero General Public License as\n * published by the Free Software Foundation, either version 3 of the\n * License, or (at your option) any later version.\n *\n * This program is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n * GNU Affero General Public License for more details.\n *\n * You should have received a copy of the GNU Affero General Public License\n * along with this program. If not, see <http://www.gnu.org/licenses/>.\n *\n */\n\n// https://uxplanet.org/7-rules-for-mobile-ui-button-design-e9cf2ea54556\n// recommended is 48px\n// 44px is what we choose and have very good visual-to-usability ratio\n$clickable-area: 44px;\n\n// background icon size\n// also used for the scss icon font\n$icon-size: 16px;\n\n// icon padding for a $clickable-area width and a $icon-size icon\n// ( 44px - 16px ) / 2\n$icon-margin: math.div($clickable-area - $icon-size, 2);\n\n// transparency background for icons\n$icon-focus-bg: rgba(127, 127, 127, .25);\n\n// popovermenu arrow width from the triangle center\n$arrow-width: 9px;\n\n// opacities\n$opacity_disabled: .5;\n$opacity_normal: .7;\n$opacity_full: 1;\n\n// menu round background hover feedback\n// good looking on dark AND white bg\n$action-background-hover: rgba(127, 127, 127, .25);\n\n// various structure data used in the \n// `AppNavigation` component\n$header-height: 50px;\n$navigation-width: 300px;\n\n// mobile breakpoint\n$breakpoint-mobile: 1024px;\n\n// top-bar spacing\n$topbar-margin: 4px;\n\n// navigation spacing\n$app-navigation-settings-margin: 3px;\n"],sourceRoot:""}]);const s=i},1625:(e,t,r)=>{"use strict";r.d(t,{Z:()=>s});var n=r(7537),o=r.n(n),a=r(3645),i=r.n(a)()(o());i.push([e.id,".material-design-icon{display:flex;align-self:center;justify-self:center;align-items:center;justify-content:center}.resize-observer{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;border:none;background-color:rgba(0,0,0,0);pointer-events:none;display:block;overflow:hidden;opacity:0}.resize-observer object{display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:-1}.v-popper--theme-dropdown.v-popper__popper{z-index:100000;top:0;left:0;display:block !important;filter:drop-shadow(0 1px 10px var(--color-box-shadow))}.v-popper--theme-dropdown.v-popper__popper .v-popper__inner{padding:0;color:var(--color-main-text);border-radius:var(--border-radius-large);overflow:hidden;background:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper .v-popper__arrow-container{position:absolute;z-index:1;width:0;height:0;border-style:solid;border-color:rgba(0,0,0,0);border-width:10px}.v-popper--theme-dropdown.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-container{bottom:-10px;border-bottom-width:0;border-top-color:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-container{top:-10px;border-top-width:0;border-bottom-color:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-container{left:-10px;border-left-width:0;border-right-color:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-container{right:-10px;border-right-width:0;border-left-color:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper[aria-hidden=true]{visibility:hidden;transition:opacity var(--animation-quick),visibility var(--animation-quick);opacity:0}.v-popper--theme-dropdown.v-popper__popper[aria-hidden=false]{visibility:visible;transition:opacity var(--animation-quick);opacity:1}","",{version:3,sources:["webpack://./src/assets/material-icons.css","webpack://./src/components/NcPopover/NcPopover.vue"],names:[],mappings:"AAGA,sBACC,YAAA,CACA,iBAAA,CACA,mBAAA,CACA,kBAAA,CACA,sBAAA,CCLD,iBACC,iBAAA,CACA,KAAA,CACA,MAAA,CACA,UAAA,CACA,UAAA,CACA,WAAA,CACA,WAAA,CACA,8BAAA,CACA,mBAAA,CACA,aAAA,CACA,eAAA,CACA,SAAA,CAGD,wBACC,aAAA,CACA,iBAAA,CACA,KAAA,CACA,MAAA,CACA,WAAA,CACA,UAAA,CACA,eAAA,CACA,mBAAA,CACA,UAAA,CAMA,2CACC,cAAA,CACA,KAAA,CACA,MAAA,CACA,wBAAA,CAEA,sDAAA,CAEA,4DACC,SAAA,CACA,4BAAA,CACA,wCAAA,CACA,eAAA,CACA,uCAAA,CAGD,sEACC,iBAAA,CACA,SAAA,CACA,OAAA,CACA,QAAA,CACA,kBAAA,CACA,0BAAA,CACA,iBA1BW,CA6BZ,kGACC,YAAA,CACA,qBAAA,CACA,6CAAA,CAGD,qGACC,SAAA,CACA,kBAAA,CACA,gDAAA,CAGD,oGACC,UAAA,CACA,mBAAA,CACA,+CAAA,CAGD,mGACC,WAAA,CACA,oBAAA,CACA,8CAAA,CAGD,6DACC,iBAAA,CACA,2EAAA,CACA,SAAA,CAGD,8DACC,kBAAA,CACA,yCAAA,CACA,SAAA",sourcesContent:["/*\n* Ensure proper alignment of the vue material icons\n*/\n.material-design-icon {\n\tdisplay: flex;\n\talign-self: center;\n\tjustify-self: center;\n\talign-items: center;\n\tjustify-content: center;\n}\n","@use 'sass:math'; $scope_version:\"f7c85e6\"; @import 'variables'; @import 'material-icons';\n\n\n.resize-observer {\n\tposition:absolute;\n\ttop:0;\n\tleft:0;\n\tz-index:-1;\n\twidth:100%;\n\theight:100%;\n\tborder:none;\n\tbackground-color:transparent;\n\tpointer-events:none;\n\tdisplay:block;\n\toverflow:hidden;\n\topacity:0\n}\n\n.resize-observer object {\n\tdisplay:block;\n\tposition:absolute;\n\ttop:0;\n\tleft:0;\n\theight:100%;\n\twidth:100%;\n\toverflow:hidden;\n\tpointer-events:none;\n\tz-index:-1\n}\n\n$arrow-width: 10px;\n\n.v-popper--theme-dropdown {\n\t&.v-popper__popper {\n\t\tz-index: 100000;\n\t\ttop: 0;\n\t\tleft: 0;\n\t\tdisplay: block !important;\n\n\t\tfilter: drop-shadow(0 1px 10px var(--color-box-shadow));\n\n\t\t.v-popper__inner {\n\t\t\tpadding: 0;\n\t\t\tcolor: var(--color-main-text);\n\t\t\tborder-radius: var(--border-radius-large);\n\t\t\toverflow: hidden;\n\t\t\tbackground: var(--color-main-background);\n\t\t}\n\n\t\t.v-popper__arrow-container {\n\t\t\tposition: absolute;\n\t\t\tz-index: 1;\n\t\t\twidth: 0;\n\t\t\theight: 0;\n\t\t\tborder-style: solid;\n\t\t\tborder-color: transparent;\n\t\t\tborder-width: $arrow-width;\n\t\t}\n\n\t\t&[data-popper-placement^='top'] .v-popper__arrow-container {\n\t\t\tbottom: -$arrow-width;\n\t\t\tborder-bottom-width: 0;\n\t\t\tborder-top-color: var(--color-main-background);\n\t\t}\n\n\t\t&[data-popper-placement^='bottom'] .v-popper__arrow-container {\n\t\t\ttop: -$arrow-width;\n\t\t\tborder-top-width: 0;\n\t\t\tborder-bottom-color: var(--color-main-background);\n\t\t}\n\n\t\t&[data-popper-placement^='right'] .v-popper__arrow-container {\n\t\t\tleft: -$arrow-width;\n\t\t\tborder-left-width: 0;\n\t\t\tborder-right-color: var(--color-main-background);\n\t\t}\n\n\t\t&[data-popper-placement^='left'] .v-popper__arrow-container {\n\t\t\tright: -$arrow-width;\n\t\t\tborder-right-width: 0;\n\t\t\tborder-left-color: var(--color-main-background);\n\t\t}\n\n\t\t&[aria-hidden='true'] {\n\t\t\tvisibility: hidden;\n\t\t\ttransition: opacity var(--animation-quick), visibility var(--animation-quick);\n\t\t\topacity: 0;\n\t\t}\n\n\t\t&[aria-hidden='false'] {\n\t\t\tvisibility: visible;\n\t\t\ttransition: opacity var(--animation-quick);\n\t\t\topacity: 1;\n\t\t}\n\t}\n}\n\n"],sourceRoot:""}]);const s=i},3645:e=>{"use strict";e.exports=function(e){var t=[];return t.toString=function(){return this.map((function(t){var r="",n=void 0!==t[5];return t[4]&&(r+="@supports (".concat(t[4],") {")),t[2]&&(r+="@media ".concat(t[2]," {")),n&&(r+="@layer".concat(t[5].length>0?" ".concat(t[5]):""," {")),r+=e(t),n&&(r+="}"),t[2]&&(r+="}"),t[4]&&(r+="}"),r})).join("")},t.i=function(e,r,n,o,a){"string"==typeof e&&(e=[[null,e,void 0]]);var i={};if(n)for(var s=0;s<this.length;s++){var l=this[s][0];null!=l&&(i[l]=!0)}for(var c=0;c<e.length;c++){var u=[].concat(e[c]);n&&i[u[0]]||(void 0!==a&&(void 0===u[5]||(u[1]="@layer".concat(u[5].length>0?" ".concat(u[5]):""," {").concat(u[1],"}")),u[5]=a),r&&(u[2]?(u[1]="@media ".concat(u[2]," {").concat(u[1],"}"),u[2]=r):u[2]=r),o&&(u[4]?(u[1]="@supports (".concat(u[4],") {").concat(u[1],"}"),u[4]=o):u[4]="".concat(o)),t.push(u))}},t}},7537:e=>{"use strict";e.exports=function(e){var t=e[1],r=e[3];if(!r)return t;if("function"==typeof btoa){var n=btoa(unescape(encodeURIComponent(JSON.stringify(r)))),o="sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(n),a="/*# ".concat(o," */");return[t].concat([a]).join("\n")}return[t].join("\n")}},3379:e=>{"use strict";var t=[];function r(e){for(var r=-1,n=0;n<t.length;n++)if(t[n].identifier===e){r=n;break}return r}function n(e,n){for(var a={},i=[],s=0;s<e.length;s++){var l=e[s],c=n.base?l[0]+n.base:l[0],u=a[c]||0,d="".concat(c," ").concat(u);a[c]=u+1;var p=r(d),h={css:l[1],media:l[2],sourceMap:l[3],supports:l[4],layer:l[5]};if(-1!==p)t[p].references++,t[p].updater(h);else{var m=o(h,n);n.byIndex=s,t.splice(s,0,{identifier:d,updater:m,references:1})}i.push(d)}return i}function o(e,t){var r=t.domAPI(t);return r.update(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap&&t.supports===e.supports&&t.layer===e.layer)return;r.update(e=t)}else r.remove()}}e.exports=function(e,o){var a=n(e=e||[],o=o||{});return function(e){e=e||[];for(var i=0;i<a.length;i++){var s=r(a[i]);t[s].references--}for(var l=n(e,o),c=0;c<a.length;c++){var u=r(a[c]);0===t[u].references&&(t[u].updater(),t.splice(u,1))}a=l}}},569:e=>{"use strict";var t={};e.exports=function(e,r){var n=function(e){if(void 0===t[e]){var r=document.querySelector(e);if(window.HTMLIFrameElement&&r instanceof window.HTMLIFrameElement)try{r=r.contentDocument.head}catch(e){r=null}t[e]=r}return t[e]}(e);if(!n)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");n.appendChild(r)}},9216:e=>{"use strict";e.exports=function(e){var t=document.createElement("style");return e.setAttributes(t,e.attributes),e.insert(t,e.options),t}},3565:(e,t,r)=>{"use strict";e.exports=function(e){var t=r.nc;t&&e.setAttribute("nonce",t)}},7795:e=>{"use strict";e.exports=function(e){if("undefined"==typeof document)return{update:function(){},remove:function(){}};var t=e.insertStyleElement(e);return{update:function(r){!function(e,t,r){var n="";r.supports&&(n+="@supports (".concat(r.supports,") {")),r.media&&(n+="@media ".concat(r.media," {"));var o=void 0!==r.layer;o&&(n+="@layer".concat(r.layer.length>0?" ".concat(r.layer):""," {")),n+=r.css,o&&(n+="}"),r.media&&(n+="}"),r.supports&&(n+="}");var a=r.sourceMap;a&&"undefined"!=typeof btoa&&(n+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(a))))," */")),t.styleTagTransform(n,e,t.options)}(t,e,r)},remove:function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(t)}}}},4589:e=>{"use strict";e.exports=function(e,t){if(t.styleSheet)t.styleSheet.cssText=e;else{for(;t.firstChild;)t.removeChild(t.firstChild);t.appendChild(document.createTextNode(e))}}},2102:()=>{},1554:()=>{},2405:()=>{},1900:(e,t,r)=>{"use strict";function n(e,t,r,n,o,a,i,s){var l,c="function"==typeof e?e.options:e;if(t&&(c.render=t,c.staticRenderFns=r,c._compiled=!0),n&&(c.functional=!0),a&&(c._scopeId="data-v-"+a),i?(l=function(e){(e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),o&&o.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(i)},c._ssrRegister=l):o&&(l=s?function(){o.call(this,(c.functional?this.parent:this).$root.$options.shadowRoot)}:o),l)if(c.functional){c._injectStyles=l;var u=c.render;c.render=function(e,t){return l.call(t),u(e,t)}}else{var d=c.beforeCreate;c.beforeCreate=d?[].concat(d,l):[l]}return{exports:e,options:c}}r.d(t,{Z:()=>n})},7931:e=>{"use strict";e.exports=r(23955)},9454:e=>{"use strict";e.exports=r(73045)},4505:e=>{"use strict";e.exports=r(15303)},6921:e=>{"use strict";e.exports=r(32219)},6915:e=>{"use strict";e.exports=r(80419)},1441:e=>{"use strict";e.exports=r(89115)}},t={};function o(r){var n=t[r];if(void 0!==n)return n.exports;var a=t[r]={id:r,exports:{}};return e[r](a,a.exports,o),a.exports}o.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return o.d(t,{a:t}),t},o.d=(e,t)=>{for(var r in t)o.o(t,r)&&!o.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},o.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),o.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},o.nc=void 0;var a={};return(()=>{"use strict";o.r(a),o.d(a,{default:()=>D});var e=o(4462),t=o(2297),n=o(932),i=o(6609),s=o(6921),l=o.n(s),c=o(6915),u=o.n(c),d=o(1441),p=o.n(d);const h=r(94023),m=function(e){const t=e.toString(16);return 1===t.length?"0"+t:t},g={name:"NcColorPicker",components:{ArrowLeft:l(),Check:u(),Chrome:h.Chrome,DotsHorizontal:p(),NcButton:e.default,NcPopover:t.default},props:{value:{type:String,required:!0},advancedFields:{type:Boolean,default:!1},palette:{type:Array,default:()=>(0,i.Z)(4).map((e=>"#"+m(e.r)+m(e.g)+m(e.b))),validator:e=>e.every((e=>/^#([a-f0-9]{3}|[a-f0-9]{6})$/i.test(e)))}},emits:["submit","close","update:open","update:value","input"],data(){return{currentColor:this.value,advanced:!1,ariaBack:(0,n.t)("Back"),ariaMore:(0,n.t)("More options")}},watch:{value(e){this.currentColor=e}},methods:{t:n.t,handleConfirm(){this.$emit("submit",this.currentColor),this.handleClose(),this.advanced=!1},handleClose(){this.$emit("close"),this.$emit("update:open",!1)},handleBack(){this.advanced=!1},handleMoreSettings(){this.advanced=!0},pickColor(e){"string"!=typeof e&&(e=this.currentColor.hex),this.currentColor=e,this.$emit("update:value",e),this.$emit("input",e)}}};var f=o(3379),v=o.n(f),b=o(7795),A=o.n(b),y=o(569),C=o.n(y),k=o(3565),w=o.n(k),S=o(9216),x=o.n(S),j=o(4589),_=o.n(j),P=o(3246),N={};N.styleTagTransform=_(),N.setAttributes=w(),N.insert=C().bind(null,"head"),N.domAPI=A(),N.insertStyleElement=x(),v()(P.Z,N),P.Z&&P.Z.locals&&P.Z.locals;var z=o(1900),E=o(1554),O=o.n(E),T=(0,z.Z)(g,(function(){var e=this,t=e._self._c;return t("NcPopover",e._g(e._b({on:{"apply-hide":e.handleClose},scopedSlots:e._u([{key:"trigger",fn:function(){return[e._t("default")]},proxy:!0}],null,!0)},"NcPopover",e.$attrs,!1),e.$listeners),[e._v(" "),t("div",{staticClass:"color-picker",class:{"color-picker--advanced-fields":e.advanced&&e.advancedFields}},[t("transition",{attrs:{name:"slide",mode:"out-in"}},[e.advanced?e._e():t("div",{staticClass:"color-picker__simple"},e._l(e.palette,(function(r,n){return t("button",{key:n,staticClass:"color-picker__simple-color-circle",class:{"color-picker__simple-color-circle--active":r===e.currentColor},style:{"background-color":r},attrs:{type:"button"},on:{click:function(t){return e.pickColor(r)}}},[r===e.currentColor?t("Check",{attrs:{size:20}}):e._e()],1)})),0),e._v(" "),e.advanced?t("Chrome",{staticClass:"color-picker__advanced",attrs:{"disable-alpha":!0,"disable-fields":!e.advancedFields},on:{input:e.pickColor},model:{value:e.currentColor,callback:function(t){e.currentColor=t},expression:"currentColor"}}):e._e()],1),e._v(" "),t("div",{staticClass:"color-picker__navigation"},[e.advanced?t("NcButton",{attrs:{type:"tertiary","aria-label":e.ariaBack},on:{click:e.handleBack},scopedSlots:e._u([{key:"icon",fn:function(){return[t("ArrowLeft",{attrs:{size:20}})]},proxy:!0}],null,!1,1821202730)}):e._e(),e._v(" "),e.advanced?e._e():t("NcButton",{attrs:{type:"tertiary","aria-label":e.ariaMore},on:{click:e.handleMoreSettings},scopedSlots:e._u([{key:"icon",fn:function(){return[t("DotsHorizontal",{attrs:{size:20}})]},proxy:!0}],null,!1,1056868794)}),e._v(" "),e.advanced?t("NcButton",{attrs:{type:"primary"},on:{click:e.handleConfirm}},[e._v("\n\t\t\t\t"+e._s(e.t("Choose"))+"\n\t\t\t")]):e._e()],1)],1)])}),[],!1,null,"6cccc0ac",null);"function"==typeof O()&&O()(T);const D=T.exports})(),a})()))},68453:function(e,r,n){"use strict";var o=n(20144),a=n(79753),i=n(43554),s=n(48033),l=n(20571),c=n.n(l),u=n(13299),d=n.n(u),p=n(80419),h=n(82675),m={name:"ImageEditIcon",emits:["click"],props:{title:{type:String},fillColor:{type:String,default:"currentColor"},size:{type:Number,default:24}}},g=n(51900),f=(0,g.Z)(m,(function(){var e=this,t=e._self._c;return t("span",e._b({staticClass:"material-design-icon image-edit-icon",attrs:{"aria-hidden":!e.title,"aria-label":e.title,role:"img"},on:{click:function(t){return e.$emit("click",t)}}},"span",e.$attrs,!1),[t("svg",{staticClass:"material-design-icon__svg",attrs:{fill:e.fillColor,width:e.size,height:e.size,viewBox:"0 0 24 24"}},[t("path",{attrs:{d:"M22.7 14.3L21.7 15.3L19.7 13.3L20.7 12.3C20.8 12.2 20.9 12.1 21.1 12.1C21.2 12.1 21.4 12.2 21.5 12.3L22.8 13.6C22.9 13.8 22.9 14.1 22.7 14.3M13 19.9V22H15.1L21.2 15.9L19.2 13.9L13 19.9M21 5C21 3.9 20.1 3 19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H11V19.1L12.1 18H5L8.5 13.5L11 16.5L14.5 12L16.1 14.1L21 9.1V5Z"}},[e.title?t("title",[e._v(e._s(e.title))]):e._e()])])])}),[],!1,null,null,null).exports,v=n(20296),b=n.n(v),A=n(69867),y=n.n(A),C=n(1082),k=n.n(C),w=(n(97248),n(3255)),S=n(77958),x=n(25108);function j(e){return j="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},j(e)}function _(){_=function(){return e};var e={},t=Object.prototype,r=t.hasOwnProperty,n=Object.defineProperty||function(e,t,r){e[t]=r.value},o="function"==typeof Symbol?Symbol:{},a=o.iterator||"@@iterator",i=o.asyncIterator||"@@asyncIterator",s=o.toStringTag||"@@toStringTag";function l(e,t,r){return Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}),e[t]}try{l({},"")}catch(e){l=function(e,t,r){return e[t]=r}}function c(e,t,r,o){var a=t&&t.prototype instanceof p?t:p,i=Object.create(a.prototype),s=new x(o||[]);return n(i,"_invoke",{value:C(e,r,s)}),i}function u(e,t,r){try{return{type:"normal",arg:e.call(t,r)}}catch(e){return{type:"throw",arg:e}}}e.wrap=c;var d={};function p(){}function h(){}function m(){}var g={};l(g,a,(function(){return this}));var f=Object.getPrototypeOf,v=f&&f(f(P([])));v&&v!==t&&r.call(v,a)&&(g=v);var b=m.prototype=p.prototype=Object.create(g);function A(e){["next","throw","return"].forEach((function(t){l(e,t,(function(e){return this._invoke(t,e)}))}))}function y(e,t){function o(n,a,i,s){var l=u(e[n],e,a);if("throw"!==l.type){var c=l.arg,d=c.value;return d&&"object"==j(d)&&r.call(d,"__await")?t.resolve(d.__await).then((function(e){o("next",e,i,s)}),(function(e){o("throw",e,i,s)})):t.resolve(d).then((function(e){c.value=e,i(c)}),(function(e){return o("throw",e,i,s)}))}s(l.arg)}var a;n(this,"_invoke",{value:function(e,r){function n(){return new t((function(t,n){o(e,r,t,n)}))}return a=a?a.then(n,n):n()}})}function C(e,t,r){var n="suspendedStart";return function(o,a){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw a;return{value:void 0,done:!0}}for(r.method=o,r.arg=a;;){var i=r.delegate;if(i){var s=k(i,r);if(s){if(s===d)continue;return s}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var l=u(e,t,r);if("normal"===l.type){if(n=r.done?"completed":"suspendedYield",l.arg===d)continue;return{value:l.arg,done:r.done}}"throw"===l.type&&(n="completed",r.method="throw",r.arg=l.arg)}}}function k(e,t){var r=t.method,n=e.iterator[r];if(void 0===n)return t.delegate=null,"throw"===r&&e.iterator.return&&(t.method="return",t.arg=void 0,k(e,t),"throw"===t.method)||"return"!==r&&(t.method="throw",t.arg=new TypeError("The iterator does not provide a '"+r+"' method")),d;var o=u(n,e.iterator,t.arg);if("throw"===o.type)return t.method="throw",t.arg=o.arg,t.delegate=null,d;var a=o.arg;return a?a.done?(t[e.resultName]=a.value,t.next=e.nextLoc,"return"!==t.method&&(t.method="next",t.arg=void 0),t.delegate=null,d):a:(t.method="throw",t.arg=new TypeError("iterator result is not an object"),t.delegate=null,d)}function w(e){var t={tryLoc:e[0]};1 in e&&(t.catchLoc=e[1]),2 in e&&(t.finallyLoc=e[2],t.afterLoc=e[3]),this.tryEntries.push(t)}function S(e){var t=e.completion||{};t.type="normal",delete t.arg,e.completion=t}function x(e){this.tryEntries=[{tryLoc:"root"}],e.forEach(w,this),this.reset(!0)}function P(e){if(e){var t=e[a];if(t)return t.call(e);if("function"==typeof e.next)return e;if(!isNaN(e.length)){var n=-1,o=function t(){for(;++n<e.length;)if(r.call(e,n))return t.value=e[n],t.done=!1,t;return t.value=void 0,t.done=!0,t};return o.next=o}}return{next:N}}function N(){return{value:void 0,done:!0}}return h.prototype=m,n(b,"constructor",{value:m,configurable:!0}),n(m,"constructor",{value:h,configurable:!0}),h.displayName=l(m,s,"GeneratorFunction"),e.isGeneratorFunction=function(e){var t="function"==typeof e&&e.constructor;return!!t&&(t===h||"GeneratorFunction"===(t.displayName||t.name))},e.mark=function(e){return Object.setPrototypeOf?Object.setPrototypeOf(e,m):(e.__proto__=m,l(e,s,"GeneratorFunction")),e.prototype=Object.create(b),e},e.awrap=function(e){return{__await:e}},A(y.prototype),l(y.prototype,i,(function(){return this})),e.AsyncIterator=y,e.async=function(t,r,n,o,a){void 0===a&&(a=Promise);var i=new y(c(t,r,n,o),a);return e.isGeneratorFunction(r)?i:i.next().then((function(e){return e.done?e.value:i.next()}))},A(b),l(b,s,"Generator"),l(b,a,(function(){return this})),l(b,"toString",(function(){return"[object Generator]"})),e.keys=function(e){var t=Object(e),r=[];for(var n in t)r.push(n);return r.reverse(),function e(){for(;r.length;){var n=r.pop();if(n in t)return e.value=n,e.done=!1,e}return e.done=!0,e}},e.values=P,x.prototype={constructor:x,reset:function(e){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(S),!e)for(var t in this)"t"===t.charAt(0)&&r.call(this,t)&&!isNaN(+t.slice(1))&&(this[t]=void 0)},stop:function(){this.done=!0;var e=this.tryEntries[0].completion;if("throw"===e.type)throw e.arg;return this.rval},dispatchException:function(e){if(this.done)throw e;var t=this;function n(r,n){return i.type="throw",i.arg=e,t.next=r,n&&(t.method="next",t.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var a=this.tryEntries[o],i=a.completion;if("root"===a.tryLoc)return n("end");if(a.tryLoc<=this.prev){var s=r.call(a,"catchLoc"),l=r.call(a,"finallyLoc");if(s&&l){if(this.prev<a.catchLoc)return n(a.catchLoc,!0);if(this.prev<a.finallyLoc)return n(a.finallyLoc)}else if(s){if(this.prev<a.catchLoc)return n(a.catchLoc,!0)}else{if(!l)throw new Error("try statement without catch or finally");if(this.prev<a.finallyLoc)return n(a.finallyLoc)}}}},abrupt:function(e,t){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var a=o;break}}a&&("break"===e||"continue"===e)&&a.tryLoc<=t&&t<=a.finallyLoc&&(a=null);var i=a?a.completion:{};return i.type=e,i.arg=t,a?(this.method="next",this.next=a.finallyLoc,d):this.complete(i)},complete:function(e,t){if("throw"===e.type)throw e.arg;return"break"===e.type||"continue"===e.type?this.next=e.arg:"return"===e.type?(this.rval=this.arg=e.arg,this.method="return",this.next="end"):"normal"===e.type&&t&&(this.next=t),d},finish:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var r=this.tryEntries[t];if(r.finallyLoc===e)return this.complete(r.completion,r.afterLoc),S(r),d}},catch:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var r=this.tryEntries[t];if(r.tryLoc===e){var n=r.completion;if("throw"===n.type){var o=n.arg;S(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(e,t,r){return this.delegate={iterator:P(e),resultName:t,nextLoc:r},"next"===this.method&&(this.arg=void 0),d}},e}function P(e,t,r,n,o,a,i){try{var s=e[a](i),l=s.value}catch(e){return void r(e)}s.done?t(l):Promise.resolve(l).then(n,o)}function N(e){return function(){var t=this,r=arguments;return new Promise((function(n,o){var a=e.apply(t,r);function i(e){P(a,n,o,i,s,"next",e)}function s(e){P(a,n,o,i,s,"throw",e)}i(void 0)}))}}function z(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}var E=(0,i.j)("theming","backgroundImage"),O=(0,i.j)("theming","shippedBackgrounds"),T=(0,i.j)("theming","themingDefaultBackground"),D=(0,i.j)("theming","defaultShippedBackground"),F=function(e){return(0,a.generateFilePath)("theming","","img/background/")+e},B=(0,w.fn)(t("theming","Select a background from your files")).setMultiSelect(!1).setModal(!0).setType(1).setMimeTypeFilter(["image/png","image/gif","image/jpeg","image/svg+xml","image/svg"]).build(),M={name:"BackgroundSettings",components:{Check:p.default,Close:h.default,ImageEdit:f,NcColorPicker:y()},data:function(){return{loading:!1,Theming:(0,i.j)("theming","data",{}),backgroundImage:E}},computed:{shippedBackgrounds:function(){var e=this;return Object.keys(O).map((function(e){return{name:e,url:F(e),preview:F("preview/"+e),details:O[e]}})).filter((function(t){return!(!e.isGlobalBackgroundDeleted&&!e.isGlobalBackgroundDefault)||t.name!==D}))},isGlobalBackgroundDefault:function(){return!!T},isGlobalBackgroundDeleted:function(){return"backgroundColor"===T},isBackgroundDisabled:function(){return"disabled"===this.backgroundImage||!this.backgroundImage}},methods:{invertTextColor:function(e){return this.calculateLuma(e)>.6},calculateLuma:function(e){var t,r,n=(t=this.hexToRGB(e),r=3,function(e){if(Array.isArray(e))return e}(t)||function(e,t){var r=null==e?null:"undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"];if(null!=r){var n,o,a,i,s=[],l=!0,c=!1;try{if(a=(r=r.call(e)).next,0===t){if(Object(r)!==r)return;l=!1}else for(;!(l=(n=a.call(r)).done)&&(s.push(n.value),s.length!==t);l=!0);}catch(e){c=!0,o=e}finally{try{if(!l&&null!=r.return&&(i=r.return(),Object(i)!==i))return}finally{if(c)throw o}}return s}}(t,r)||function(e,t){if(e){if("string"==typeof e)return z(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);return"Object"===r&&e.constructor&&(r=e.constructor.name),"Map"===r||"Set"===r?Array.from(e):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?z(e,t):void 0}}(t,r)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}());return(.2126*n[0]+.7152*n[1]+.0722*n[2])/255},hexToRGB:function(e){var t=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);return t?[parseInt(t[1],16),parseInt(t[2],16),parseInt(t[3],16)]:null},update:function(e){var t=this;return N(_().mark((function r(){return _().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:t.backgroundImage=e.backgroundImage,t.Theming.color=e.backgroundColor,t.$emit("update:background"),t.loading=!1;case 4:case"end":return r.stop()}}),r)})))()},setDefault:function(){var e=this;return N(_().mark((function t(){var r;return _().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return e.loading="default",t.next=3,s.Z.post((0,a.generateUrl)("/apps/theming/background/default"));case 3:r=t.sent,e.update(r.data);case 5:case"end":return t.stop()}}),t)})))()},setShipped:function(e){var t=this;return N(_().mark((function r(){var n;return _().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return t.loading=e,r.next=3,s.Z.post((0,a.generateUrl)("/apps/theming/background/shipped"),{value:e});case 3:n=r.sent,t.update(n.data);case 5:case"end":return r.stop()}}),r)})))()},setFile:function(e){var t=arguments,r=this;return N(_().mark((function n(){var o,i;return _().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:return o=t.length>1&&void 0!==t[1]?t[1]:null,r.loading="custom",n.next=4,s.Z.post((0,a.generateUrl)("/apps/theming/background/custom"),{value:e,color:o});case 4:i=n.sent,r.update(i.data);case 6:case"end":return n.stop()}}),n)})))()},removeBackground:function(){var e=this;return N(_().mark((function t(){var r;return _().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return e.loading="remove",t.next=3,s.Z.delete((0,a.generateUrl)("/apps/theming/background/custom"));case 3:r=t.sent,e.update(r.data);case 5:case"end":return t.stop()}}),t)})))()},pickColor:function(e){var t=this;return N(_().mark((function r(){var n,o,i,l;return _().wrap((function(r){for(;;)switch(r.prev=r.next){case 0:return t.loading="color",i=(null==e||null===(n=e.target)||void 0===n||null===(n=n.dataset)||void 0===n?void 0:n.color)||(null===(o=t.Theming)||void 0===o?void 0:o.color)||"#0082c9",r.next=4,s.Z.post((0,a.generateUrl)("/apps/theming/background/color"),{color:i});case 4:l=r.sent,t.update(l.data);case 6:case"end":return r.stop()}}),r)})))()},debouncePickColor:b()((function(){this.pickColor.apply(this,arguments)}),200),pickFile:function(){var e=this;return N(_().mark((function t(){var r,n,o,i,l,c,u;return _().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:return t.next=2,B.pick();case 2:return r=t.sent,e.loading="custom",n=null,o=null,t.prev=6,l=(0,a.generateRemoteUrl)("dav/files/"+(0,S.ts)().uid+r),t.next=10,s.Z.get(l,{responseType:"blob"});case 10:return n=t.sent,c=URL.createObjectURL(n.data),t.next=14,e.getColorPaletteFromBlob(c);case 14:u=t.sent,o=null==u||null===(i=u.DarkVibrant)||void 0===i?void 0:i.hex,e.setFile(r,o),x.debug("Extracted colour",o,"from custom image",r,u),t.next=24;break;case 20:t.prev=20,t.t0=t.catch(6),e.setFile(r),x.error("Unable to extract colour from custom image",{error:t.t0,path:r,response:n,color:o});case 24:case"end":return t.stop()}}),t,null,[[6,20]])})))()},getColorPaletteFromBlob:function(e){return new Promise((function(t,r){new(k())(e).getPalette((function(e,n){e&&r(e),t(n)}))}))}}},L=M,I=n(93379),G=n.n(I),U=n(7795),R=n.n(U),q=n(90569),V=n.n(q),H=n(3565),$=n.n(H),W=n(19216),Z=n.n(W),K=n(44589),Y=n.n(K),Q=n(85981),J={};J.styleTagTransform=Y(),J.setAttributes=$(),J.insert=V().bind(null,"head"),J.domAPI=R(),J.insertStyleElement=Z(),G()(Q.Z,J),Q.Z&&Q.Z.locals&&Q.Z.locals;var X=(0,g.Z)(L,(function(){var e=this,t=e._self._c;return t("div",{staticClass:"background-selector",attrs:{"data-user-theming-background-settings":""}},[t("button",{staticClass:"background background__filepicker",class:{"icon-loading":"custom"===e.loading,"background--active":"custom"===e.backgroundImage},attrs:{"data-color-bright":e.invertTextColor(e.Theming.color),"data-user-theming-background-custom":"",tabindex:"0"},on:{click:e.pickFile}},[e._v("\n\t\t"+e._s(e.t("theming","Custom background"))+"\n\t\t"),"custom"!==e.backgroundImage?t("ImageEdit",{attrs:{size:26}}):e._e(),e._v(" "),t("Check",{attrs:{size:44}})],1),e._v(" "),t("button",{staticClass:"background background__default",class:{"icon-loading":"default"===e.loading,"background--active":"default"===e.backgroundImage},style:{"--border-color":e.Theming.defaultColor},attrs:{"data-color-bright":e.invertTextColor(e.Theming.defaultColor),"data-user-theming-background-default":"",tabindex:"0"},on:{click:e.setDefault}},[e._v("\n\t\t"+e._s(e.t("theming","Default background"))+"\n\t\t"),t("Check",{attrs:{size:44}})],1),e._v(" "),t("NcColorPicker",{on:{input:e.debouncePickColor},model:{value:e.Theming.color,callback:function(t){e.$set(e.Theming,"color",t)},expression:"Theming.color"}},[t("button",{staticClass:"background background__color",style:{backgroundColor:e.Theming.color,"--border-color":e.Theming.color},attrs:{"data-color":e.Theming.color,"data-color-bright":e.invertTextColor(e.Theming.color),"data-user-theming-background-color":"",tabindex:"0"}},[e._v("\n\t\t\t"+e._s(e.t("theming","Change color"))+"\n\t\t")])]),e._v(" "),t("button",{staticClass:"background background__delete",class:{"background--active":e.isBackgroundDisabled},attrs:{"data-user-theming-background-clear":"",tabindex:"0"},on:{click:e.removeBackground}},[e._v("\n\t\t"+e._s(e.t("theming","No background"))+"\n\t\t"),e.isBackgroundDisabled?e._e():t("Close",{attrs:{size:32}}),e._v(" "),t("Check",{attrs:{size:44}})],1),e._v(" "),e._l(e.shippedBackgrounds,(function(r){return t("button",{key:r.name,staticClass:"background background__shipped",class:{"icon-loading":e.loading===r.name,"background--active":e.backgroundImage===r.name},style:{backgroundImage:"url("+r.preview+")","--border-color":r.details.primary_color},attrs:{title:r.details.attribution,"aria-label":r.details.attribution,"data-color-bright":"dark"===r.details.theming,"data-user-theming-background-shipped":r.name,tabindex:"0"},on:{click:function(t){return e.setShipped(r.name)}}},[t("Check",{attrs:{size:44}})],1)}))],2)}),[],!1,null,"1fb175fc",null).exports,ee=n(25108),te={name:"ItemPreview",components:{NcCheckboxRadioSwitch:c()},props:{enforced:{type:Boolean,default:!1},selected:{type:Boolean,default:!1},theme:{type:Object,required:!0},type:{type:String,default:""},unique:{type:Boolean,default:!1}},computed:{switchType:function(){return this.unique?"switch":"radio"},name:function(){return this.unique?null:this.type},img:function(){return(0,a.generateFilePath)("theming","img",this.theme.id+".jpg")},checked:{get:function(){return this.selected},set:function(e){ee.debug("Changed theme",this.theme.id,e),this.unique?this.$emit("change",{enabled:!0===e,id:this.theme.id}):this.$emit("change",{enabled:!0,id:this.theme.id})}}},methods:{onToggle:function(){"radio"!==this.switchType?this.checked=!this.checked:this.checked=!0}}},re=n(22465),ne={};ne.styleTagTransform=Y(),ne.setAttributes=$(),ne.insert=V().bind(null,"head"),ne.domAPI=R(),ne.insertStyleElement=Z(),G()(re.Z,ne),re.Z&&re.Z.locals&&re.Z.locals;var oe=(0,g.Z)(te,(function(){var e=this,t=e._self._c;return t("div",{staticClass:"theming__preview",class:"theming__preview--"+e.theme.id},[t("div",{staticClass:"theming__preview-image",style:{backgroundImage:"url("+e.img+")"},on:{click:e.onToggle}}),e._v(" "),t("div",{staticClass:"theming__preview-description"},[t("h3",[e._v(e._s(e.theme.title))]),e._v(" "),t("p",{staticClass:"theming__preview-explanation"},[e._v(e._s(e.theme.description))]),e._v(" "),e.enforced?t("span",{staticClass:"theming__preview-warning",attrs:{role:"note"}},[e._v("\n\t\t\t"+e._s(e.t("theming","Theme selection is enforced"))+"\n\t\t")]):e._e(),e._v(" "),t("NcCheckboxRadioSwitch",{staticClass:"theming__preview-toggle",attrs:{checked:e.checked,disabled:e.enforced,name:e.name,type:e.switchType},on:{"update:checked":function(t){e.checked=t}}},[e._v("\n\t\t\t"+e._s(e.theme.enableLabel)+"\n\t\t")])],1)])}),[],!1,null,"1a08e35a",null).exports,ae=n(25108);function ie(e){return ie="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},ie(e)}function se(){se=function(){return e};var e={},t=Object.prototype,r=t.hasOwnProperty,n=Object.defineProperty||function(e,t,r){e[t]=r.value},o="function"==typeof Symbol?Symbol:{},a=o.iterator||"@@iterator",i=o.asyncIterator||"@@asyncIterator",s=o.toStringTag||"@@toStringTag";function l(e,t,r){return Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}),e[t]}try{l({},"")}catch(e){l=function(e,t,r){return e[t]=r}}function c(e,t,r,o){var a=t&&t.prototype instanceof p?t:p,i=Object.create(a.prototype),s=new x(o||[]);return n(i,"_invoke",{value:C(e,r,s)}),i}function u(e,t,r){try{return{type:"normal",arg:e.call(t,r)}}catch(e){return{type:"throw",arg:e}}}e.wrap=c;var d={};function p(){}function h(){}function m(){}var g={};l(g,a,(function(){return this}));var f=Object.getPrototypeOf,v=f&&f(f(j([])));v&&v!==t&&r.call(v,a)&&(g=v);var b=m.prototype=p.prototype=Object.create(g);function A(e){["next","throw","return"].forEach((function(t){l(e,t,(function(e){return this._invoke(t,e)}))}))}function y(e,t){function o(n,a,i,s){var l=u(e[n],e,a);if("throw"!==l.type){var c=l.arg,d=c.value;return d&&"object"==ie(d)&&r.call(d,"__await")?t.resolve(d.__await).then((function(e){o("next",e,i,s)}),(function(e){o("throw",e,i,s)})):t.resolve(d).then((function(e){c.value=e,i(c)}),(function(e){return o("throw",e,i,s)}))}s(l.arg)}var a;n(this,"_invoke",{value:function(e,r){function n(){return new t((function(t,n){o(e,r,t,n)}))}return a=a?a.then(n,n):n()}})}function C(e,t,r){var n="suspendedStart";return function(o,a){if("executing"===n)throw new Error("Generator is already running");if("completed"===n){if("throw"===o)throw a;return{value:void 0,done:!0}}for(r.method=o,r.arg=a;;){var i=r.delegate;if(i){var s=k(i,r);if(s){if(s===d)continue;return s}}if("next"===r.method)r.sent=r._sent=r.arg;else if("throw"===r.method){if("suspendedStart"===n)throw n="completed",r.arg;r.dispatchException(r.arg)}else"return"===r.method&&r.abrupt("return",r.arg);n="executing";var l=u(e,t,r);if("normal"===l.type){if(n=r.done?"completed":"suspendedYield",l.arg===d)continue;return{value:l.arg,done:r.done}}"throw"===l.type&&(n="completed",r.method="throw",r.arg=l.arg)}}}function k(e,t){var r=t.method,n=e.iterator[r];if(void 0===n)return t.delegate=null,"throw"===r&&e.iterator.return&&(t.method="return",t.arg=void 0,k(e,t),"throw"===t.method)||"return"!==r&&(t.method="throw",t.arg=new TypeError("The iterator does not provide a '"+r+"' method")),d;var o=u(n,e.iterator,t.arg);if("throw"===o.type)return t.method="throw",t.arg=o.arg,t.delegate=null,d;var a=o.arg;return a?a.done?(t[e.resultName]=a.value,t.next=e.nextLoc,"return"!==t.method&&(t.method="next",t.arg=void 0),t.delegate=null,d):a:(t.method="throw",t.arg=new TypeError("iterator result is not an object"),t.delegate=null,d)}function w(e){var t={tryLoc:e[0]};1 in e&&(t.catchLoc=e[1]),2 in e&&(t.finallyLoc=e[2],t.afterLoc=e[3]),this.tryEntries.push(t)}function S(e){var t=e.completion||{};t.type="normal",delete t.arg,e.completion=t}function x(e){this.tryEntries=[{tryLoc:"root"}],e.forEach(w,this),this.reset(!0)}function j(e){if(e){var t=e[a];if(t)return t.call(e);if("function"==typeof e.next)return e;if(!isNaN(e.length)){var n=-1,o=function t(){for(;++n<e.length;)if(r.call(e,n))return t.value=e[n],t.done=!1,t;return t.value=void 0,t.done=!0,t};return o.next=o}}return{next:_}}function _(){return{value:void 0,done:!0}}return h.prototype=m,n(b,"constructor",{value:m,configurable:!0}),n(m,"constructor",{value:h,configurable:!0}),h.displayName=l(m,s,"GeneratorFunction"),e.isGeneratorFunction=function(e){var t="function"==typeof e&&e.constructor;return!!t&&(t===h||"GeneratorFunction"===(t.displayName||t.name))},e.mark=function(e){return Object.setPrototypeOf?Object.setPrototypeOf(e,m):(e.__proto__=m,l(e,s,"GeneratorFunction")),e.prototype=Object.create(b),e},e.awrap=function(e){return{__await:e}},A(y.prototype),l(y.prototype,i,(function(){return this})),e.AsyncIterator=y,e.async=function(t,r,n,o,a){void 0===a&&(a=Promise);var i=new y(c(t,r,n,o),a);return e.isGeneratorFunction(r)?i:i.next().then((function(e){return e.done?e.value:i.next()}))},A(b),l(b,s,"Generator"),l(b,a,(function(){return this})),l(b,"toString",(function(){return"[object Generator]"})),e.keys=function(e){var t=Object(e),r=[];for(var n in t)r.push(n);return r.reverse(),function e(){for(;r.length;){var n=r.pop();if(n in t)return e.value=n,e.done=!1,e}return e.done=!0,e}},e.values=j,x.prototype={constructor:x,reset:function(e){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(S),!e)for(var t in this)"t"===t.charAt(0)&&r.call(this,t)&&!isNaN(+t.slice(1))&&(this[t]=void 0)},stop:function(){this.done=!0;var e=this.tryEntries[0].completion;if("throw"===e.type)throw e.arg;return this.rval},dispatchException:function(e){if(this.done)throw e;var t=this;function n(r,n){return i.type="throw",i.arg=e,t.next=r,n&&(t.method="next",t.arg=void 0),!!n}for(var o=this.tryEntries.length-1;o>=0;--o){var a=this.tryEntries[o],i=a.completion;if("root"===a.tryLoc)return n("end");if(a.tryLoc<=this.prev){var s=r.call(a,"catchLoc"),l=r.call(a,"finallyLoc");if(s&&l){if(this.prev<a.catchLoc)return n(a.catchLoc,!0);if(this.prev<a.finallyLoc)return n(a.finallyLoc)}else if(s){if(this.prev<a.catchLoc)return n(a.catchLoc,!0)}else{if(!l)throw new Error("try statement without catch or finally");if(this.prev<a.finallyLoc)return n(a.finallyLoc)}}}},abrupt:function(e,t){for(var n=this.tryEntries.length-1;n>=0;--n){var o=this.tryEntries[n];if(o.tryLoc<=this.prev&&r.call(o,"finallyLoc")&&this.prev<o.finallyLoc){var a=o;break}}a&&("break"===e||"continue"===e)&&a.tryLoc<=t&&t<=a.finallyLoc&&(a=null);var i=a?a.completion:{};return i.type=e,i.arg=t,a?(this.method="next",this.next=a.finallyLoc,d):this.complete(i)},complete:function(e,t){if("throw"===e.type)throw e.arg;return"break"===e.type||"continue"===e.type?this.next=e.arg:"return"===e.type?(this.rval=this.arg=e.arg,this.method="return",this.next="end"):"normal"===e.type&&t&&(this.next=t),d},finish:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var r=this.tryEntries[t];if(r.finallyLoc===e)return this.complete(r.completion,r.afterLoc),S(r),d}},catch:function(e){for(var t=this.tryEntries.length-1;t>=0;--t){var r=this.tryEntries[t];if(r.tryLoc===e){var n=r.completion;if("throw"===n.type){var o=n.arg;S(r)}return o}}throw new Error("illegal catch attempt")},delegateYield:function(e,t,r){return this.delegate={iterator:j(e),resultName:t,nextLoc:r},"next"===this.method&&(this.arg=void 0),d}},e}function le(e,t,r,n,o,a,i){try{var s=e[a](i),l=s.value}catch(e){return void r(e)}s.done?t(l):Promise.resolve(l).then(n,o)}function ce(e){return function(){var t=this,r=arguments;return new Promise((function(n,o){var a=e.apply(t,r);function i(e){le(a,n,o,i,s,"next",e)}function s(e){le(a,n,o,i,s,"throw",e)}i(void 0)}))}}function ue(e){return function(e){if(Array.isArray(e))return de(e)}(e)||function(e){if("undefined"!=typeof Symbol&&null!=e[Symbol.iterator]||null!=e["@@iterator"])return Array.from(e)}(e)||function(e,t){if(e){if("string"==typeof e)return de(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);return"Object"===r&&e.constructor&&(r=e.constructor.name),"Map"===r||"Set"===r?Array.from(e):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?de(e,t):void 0}}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()}function de(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}var pe=(0,i.j)("theming","themes",[]),he=(0,i.j)("theming","enforceTheme",""),me=(0,i.j)("theming","shortcutsDisabled",!1),ge=(0,i.j)("theming","isUserThemingDisabled");ae.debug("Available themes",pe);var fe={name:"UserThemes",components:{ItemPreview:oe,NcCheckboxRadioSwitch:c(),NcSettingsSection:d(),BackgroundSettings:X},data:function(){return{availableThemes:pe,enforceTheme:he,shortcutsDisabled:me,isUserThemingDisabled:ge}},computed:{themes:function(){return this.availableThemes.filter((function(e){return 1===e.type}))},fonts:function(){return this.availableThemes.filter((function(e){return 2===e.type}))},selectedTheme:function(){return this.themes.find((function(e){return!0===e.enabled}))||this.themes[0]},description:function(){return t("theming","Universal access is very important to us. We follow web standards and check to make everything usable also without mouse, and assistive software such as screenreaders. We aim to be compliant with the {guidelines}Web Content Accessibility Guidelines{linkend} 2.1 on AA level, with the high contrast theme even on AAA level.").replace("{guidelines}",this.guidelinesLink).replace("{linkend}","</a>")},guidelinesLink:function(){return'<a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/" rel="noreferrer nofollow">'},descriptionDetail:function(){return t("theming","If you find any issues, do not hesitate to report them on {issuetracker}our issue tracker{linkend}. And if you want to get involved, come join {designteam}our design team{linkend}!").replace("{issuetracker}",this.issuetrackerLink).replace("{designteam}",this.designteamLink).replace(/\{linkend\}/g,"</a>")},issuetrackerLink:function(){return'<a target="_blank" href="https://github.com/nextcloud/server/issues/" rel="noreferrer nofollow">'},designteamLink:function(){return'<a target="_blank" href="https://nextcloud.com/design" rel="noreferrer nofollow">'}},watch:{shortcutsDisabled:function(e){this.changeShortcutsDisabled(e)}},methods:{refreshGlobalStyles:function(){ue(document.head.querySelectorAll("link.theme")).forEach((function(e){var t=new URL(e.href);t.searchParams.set("v",Date.now());var r=e.cloneNode();r.href=t.toString(),r.onload=function(){return e.remove()},document.head.append(r)}))},updateBackground:function(e){this.background="custom"===e.type||"default"===e.type?e.type:e.value,this.refreshGlobalStyles()},changeTheme:function(e){var t=e.enabled,r=e.id;this.themes.forEach((function(e){e.id===r&&t?e.enabled=!0:e.enabled=!1})),this.updateBodyAttributes(),this.selectItem(t,r)},changeFont:function(e){var t=e.enabled,r=e.id;this.fonts.forEach((function(e){e.id===r&&t?e.enabled=!0:e.enabled=!1})),this.updateBodyAttributes(),this.selectItem(t,r)},changeShortcutsDisabled:function(e){return ce(se().mark((function t(){return se().wrap((function(t){for(;;)switch(t.prev=t.next){case 0:if(!e){t.next=5;break}return t.next=3,(0,s.Z)({url:(0,a.generateOcsUrl)("apps/provisioning_api/api/v1/config/users/{appId}/{configKey}",{appId:"theming",configKey:"shortcuts_disabled"}),data:{configValue:"yes"},method:"POST"});case 3:t.next=7;break;case 5:return t.next=7,(0,s.Z)({url:(0,a.generateOcsUrl)("apps/provisioning_api/api/v1/config/users/{appId}/{configKey}",{appId:"theming",configKey:"shortcuts_disabled"}),method:"DELETE"});case 7:case"end":return t.stop()}}),t)})))()},updateBodyAttributes:function(){var e=this.themes.filter((function(e){return!0===e.enabled})).map((function(e){return e.id})),t=this.fonts.filter((function(e){return!0===e.enabled})).map((function(e){return e.id}));this.themes.forEach((function(e){document.body.toggleAttribute("data-theme-".concat(e.id),e.enabled)})),this.fonts.forEach((function(e){document.body.toggleAttribute("data-theme-".concat(e.id),e.enabled)})),document.body.setAttribute("data-themes",[].concat(ue(e),ue(t)).join(","))},selectItem:function(e,r){return ce(se().mark((function n(){return se().wrap((function(n){for(;;)switch(n.prev=n.next){case 0:if(n.prev=0,!e){n.next=6;break}return n.next=4,(0,s.Z)({url:(0,a.generateOcsUrl)("apps/theming/api/v1/theme/{themeId}/enable",{themeId:r}),method:"PUT"});case 4:n.next=8;break;case 6:return n.next=8,(0,s.Z)({url:(0,a.generateOcsUrl)("apps/theming/api/v1/theme/{themeId}",{themeId:r}),method:"DELETE"});case 8:n.next=14;break;case 10:n.prev=10,n.t0=n.catch(0),ae.error(n.t0,n.t0.response),OC.Notification.showTemporary(t("theming",n.t0.response.data.ocs.meta.message+". Unable to apply the setting."));case 14:case"end":return n.stop()}}),n,null,[[0,10]])})))()}}},ve=n(62782),be={};be.styleTagTransform=Y(),be.setAttributes=$(),be.insert=V().bind(null,"head"),be.domAPI=R(),be.insertStyleElement=Z(),G()(ve.Z,be),ve.Z&&ve.Z.locals&&ve.Z.locals;var Ae=(0,g.Z)(fe,(function(){var e=this,t=e._self._c;return t("section",[t("NcSettingsSection",{staticClass:"theming",attrs:{name:e.t("theming","Appearance and accessibility"),"limit-width":!1}},[t("p",{domProps:{innerHTML:e._s(e.description)}}),e._v(" "),t("p",{domProps:{innerHTML:e._s(e.descriptionDetail)}}),e._v(" "),t("div",{staticClass:"theming__preview-list"},e._l(e.themes,(function(r){return t("ItemPreview",{key:r.id,attrs:{enforced:r.id===e.enforceTheme,selected:e.selectedTheme.id===r.id,theme:r,unique:1===e.themes.length,type:"theme"},on:{change:e.changeTheme}})})),1),e._v(" "),t("div",{staticClass:"theming__preview-list"},e._l(e.fonts,(function(r){return t("ItemPreview",{key:r.id,attrs:{selected:r.enabled,theme:r,unique:1===e.fonts.length,type:"font"},on:{change:e.changeFont}})})),1)]),e._v(" "),t("NcSettingsSection",{attrs:{name:e.t("theming","Keyboard shortcuts")}},[t("p",[e._v(e._s(e.t("theming","In some cases keyboard shortcuts can interfere with accessibility tools. In order to allow focusing on your tool correctly you can disable all keyboard shortcuts here. This will also disable all available shortcuts in apps.")))]),e._v(" "),t("NcCheckboxRadioSwitch",{staticClass:"theming__preview-toggle",attrs:{checked:e.shortcutsDisabled,name:"shortcuts_disabled",type:"switch"},on:{"update:checked":function(t){e.shortcutsDisabled=t},change:e.changeShortcutsDisabled}},[e._v("\n\t\t\t"+e._s(e.t("theming","Disable all keyboard shortcuts"))+"\n\t\t")])],1),e._v(" "),t("NcSettingsSection",{staticClass:"background",attrs:{name:e.t("theming","Background"),"data-user-theming-background-disabled":""}},[e.isUserThemingDisabled?[t("p",[e._v(e._s(e.t("theming","Customization has been disabled by your administrator")))])]:[t("p",[e._v(e._s(e.t("theming","Set a custom background")))]),e._v(" "),t("BackgroundSettings",{staticClass:"background__grid",on:{"update:background":e.refreshGlobalStyles}})]],2)],1)}),[],!1,null,"12a60840",null).exports;function ye(e,t){(null==t||t>e.length)&&(t=e.length);for(var r=0,n=new Array(t);r<t;r++)n[r]=e[r];return n}o.default.prototype.OC=OC,o.default.prototype.t=t;var Ce=new(o.default.extend(Ae));Ce.$mount("#theming"),Ce.$on("update:background",(function(){var e;(e=document.head.querySelectorAll("link.theme"),function(e){if(Array.isArray(e))return ye(e)}(e)||function(e){if("undefined"!=typeof Symbol&&null!=e[Symbol.iterator]||null!=e["@@iterator"])return Array.from(e)}(e)||function(e,t){if(e){if("string"==typeof e)return ye(e,t);var r=Object.prototype.toString.call(e).slice(8,-1);return"Object"===r&&e.constructor&&(r=e.constructor.name),"Map"===r||"Set"===r?Array.from(e):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?ye(e,t):void 0}}(e)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()).forEach((function(e){var t=new URL(e.href);t.searchParams.set("v",Date.now());var r=e.cloneNode();r.href=t.toString(),r.onload=function(){return e.remove()},document.head.append(r)}))}))},62782:function(e,t,r){"use strict";var n=r(87537),o=r.n(n),a=r(23645),i=r.n(a)()(o());i.push([e.id,".theming p[data-v-12a60840]{max-width:800px}.theming[data-v-12a60840] a{font-weight:bold}.theming[data-v-12a60840] a:hover,.theming[data-v-12a60840] a:focus{text-decoration:underline}.theming__preview-list[data-v-12a60840]{--gap: 30px;display:grid;margin-top:var(--gap);column-gap:var(--gap);row-gap:var(--gap);grid-template-columns:1fr 1fr}.background__grid[data-v-12a60840]{margin-top:30px}@media(max-width: 1440px){.theming__preview-list[data-v-12a60840]{display:flex;flex-direction:column}}","",{version:3,sources:["webpack://./apps/theming/src/UserThemes.vue"],names:[],mappings:"AAGC,4BACC,eAAA,CAID,4BACC,gBAAA,CAEA,oEAEC,yBAAA,CAIF,wCACC,WAAA,CAEA,YAAA,CACA,qBAAA,CACA,qBAAA,CACA,kBAAA,CACA,6BAAA,CAKD,mCACC,eAAA,CAIF,0BACC,wCACC,YAAA,CACA,qBAAA,CAAA",sourcesContent:["\n.theming {\n\t// Limit width of settings sections for readability\n\tp {\n\t\tmax-width: 800px;\n\t}\n\n\t// Proper highlight for links and focus feedback\n\t&::v-deep a {\n\t\tfont-weight: bold;\n\n\t\t&:hover,\n\t\t&:focus {\n\t\t\ttext-decoration: underline;\n\t\t}\n\t}\n\n\t&__preview-list {\n\t\t--gap: 30px;\n\n\t\tdisplay: grid;\n\t\tmargin-top: var(--gap);\n\t\tcolumn-gap: var(--gap);\n\t\trow-gap: var(--gap);\n\t\tgrid-template-columns: 1fr 1fr;\n\t}\n}\n\n.background {\n\t&__grid {\n\t\tmargin-top: 30px;\n\t}\n}\n\n@media (max-width: 1440px) {\n\t.theming__preview-list {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t}\n}\n"],sourceRoot:""}]),t.Z=i},85981:function(e,t,r){"use strict";var n=r(87537),o=r.n(n),a=r(23645),i=r.n(a)()(o());i.push([e.id,".background-selector[data-v-1fb175fc]{display:flex;flex-wrap:wrap;justify-content:center}.background-selector .background[data-v-1fb175fc]{overflow:hidden;width:176px;height:96px;margin:8px;text-align:center;border:2px solid var(--color-main-background);border-radius:var(--border-radius-large);background-position:center center;background-size:cover}.background-selector .background__filepicker.background--active[data-v-1fb175fc]{color:#fff;background-image:var(--image-background)}.background-selector .background__default[data-v-1fb175fc]{background-color:var(--color-primary-default);background-image:var(--image-background-plain, var(--image-background-default))}.background-selector .background__filepicker[data-v-1fb175fc],.background-selector .background__default[data-v-1fb175fc],.background-selector .background__color[data-v-1fb175fc]{border-color:var(--color-border)}.background-selector .background__color[data-v-1fb175fc]{color:var(--color-primary-text);background-color:var(--color-primary-default)}.background-selector .background__default[data-v-1fb175fc],.background-selector .background__shipped[data-v-1fb175fc]{color:#fff}.background-selector .background[data-color-bright][data-v-1fb175fc]{color:#000}.background-selector .background--active[data-v-1fb175fc],.background-selector .background[data-v-1fb175fc]:hover,.background-selector .background[data-v-1fb175fc]:focus{border:2px solid var(--border-color, var(--color-primary-element)) !important}.background-selector .background span[data-v-1fb175fc]{margin:4px}.background-selector .background .check-icon[data-v-1fb175fc]{display:none}.background-selector .background--active:not(.icon-loading) .check-icon[data-v-1fb175fc]{display:block !important}","",{version:3,sources:["webpack://./apps/theming/src/components/BackgroundSettings.vue"],names:[],mappings:"AACA,sCACC,YAAA,CACA,cAAA,CACA,sBAAA,CAEA,kDACC,eAAA,CACA,WAAA,CACA,WAAA,CACA,UAAA,CACA,iBAAA,CACA,6CAAA,CACA,wCAAA,CACA,iCAAA,CACA,qBAAA,CAGC,iFACC,UAAA,CACA,wCAAA,CAIF,2DACC,6CAAA,CACA,+EAAA,CAGD,kLACC,gCAAA,CAGD,yDACC,+BAAA,CACA,6CAAA,CAID,sHAEC,UAAA,CAID,qEACC,UAAA,CAGD,0KAIC,6EAAA,CAID,uDACC,UAAA,CAGD,8DACC,YAAA,CAIA,yFAEC,wBAAA",sourcesContent:["\n.background-selector {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: center;\n\n\t.background {\n\t\toverflow: hidden;\n\t\twidth: 176px;\n\t\theight: 96px;\n\t\tmargin: 8px;\n\t\ttext-align: center;\n\t\tborder: 2px solid var(--color-main-background);\n\t\tborder-radius: var(--border-radius-large);\n\t\tbackground-position: center center;\n\t\tbackground-size: cover;\n\n\t\t&__filepicker {\n\t\t\t&.background--active {\n\t\t\t\tcolor: white;\n\t\t\t\tbackground-image: var(--image-background);\n\t\t\t}\n\t\t}\n\n\t\t&__default {\n\t\t\tbackground-color: var(--color-primary-default);\n\t\t\tbackground-image: var(--image-background-plain, var(--image-background-default));\n\t\t}\n\n\t\t&__filepicker, &__default, &__color {\n\t\t\tborder-color: var(--color-border);\n\t\t}\n\n\t\t&__color {\n\t\t\tcolor: var(--color-primary-text);\n\t\t\tbackground-color: var(--color-primary-default);\n\t\t}\n\n\t\t// Over a background image\n\t\t&__default,\n\t\t&__shipped {\n\t\t\tcolor: white;\n\t\t}\n\n\t\t// Text and svg icon dark on bright background\n\t\t&[data-color-bright] {\n\t\t\tcolor: black;\n\t\t}\n\n\t\t&--active,\n\t\t&:hover,\n\t\t&:focus {\n\t\t\t// Use theme color primary, see inline css variable in template\n\t\t\tborder: 2px solid var(--border-color, var(--color-primary-element)) !important;\n\t\t}\n\n\t\t// Icon\n\t\tspan {\n\t\t\tmargin: 4px;\n\t\t}\n\n\t\t.check-icon {\n\t\t\tdisplay: none;\n\t\t}\n\n\t\t&--active:not(.icon-loading) {\n\t\t\t.check-icon {\n\t\t\t\t// Show checkmark\n\t\t\t\tdisplay: block !important;\n\t\t\t}\n\t\t}\n\t}\n}\n\n"],sourceRoot:""}]),t.Z=i},22465:function(e,t,r){"use strict";var n=r(87537),o=r.n(n),a=r(23645),i=r.n(a)()(o());i.push([e.id,".theming__preview[data-v-1a08e35a]{--ratio: 16;position:relative;display:flex;justify-content:flex-start;max-width:800px}.theming__preview[data-v-1a08e35a],.theming__preview *[data-v-1a08e35a]{user-select:none}.theming__preview-image[data-v-1a08e35a]{flex-basis:calc(16px*var(--ratio));flex-shrink:0;height:calc(10px*var(--ratio));margin-right:var(--gap);cursor:pointer;border-radius:var(--border-radius);background-repeat:no-repeat;background-position:top left;background-size:cover}.theming__preview-explanation[data-v-1a08e35a]{margin-bottom:10px}.theming__preview-description[data-v-1a08e35a]{display:flex;flex-direction:column}.theming__preview-description h3[data-v-1a08e35a]{font-weight:bold;margin-bottom:0}.theming__preview-description label[data-v-1a08e35a]{padding:12px 0}.theming__preview--default[data-v-1a08e35a]{grid-column:span 2}.theming__preview-warning[data-v-1a08e35a]{color:var(--color-warning)}@media(max-width: 682.6666666667px){.theming__preview[data-v-1a08e35a]{flex-direction:column}.theming__preview-image[data-v-1a08e35a]{margin:0}}","",{version:3,sources:["webpack://./apps/theming/src/components/ItemPreview.vue"],names:[],mappings:"AAGA,mCAEC,WAAA,CAEA,iBAAA,CACA,YAAA,CACA,0BAAA,CACA,eAAA,CAEA,wEAEC,gBAAA,CAGD,yCACC,kCAAA,CACA,aAAA,CACA,8BAAA,CACA,uBAAA,CACA,cAAA,CACA,kCAAA,CACA,2BAAA,CACA,4BAAA,CACA,qBAAA,CAGD,+CACC,kBAAA,CAGD,+CACC,YAAA,CACA,qBAAA,CAEA,kDACC,gBAAA,CACA,eAAA,CAGD,qDACC,cAAA,CAIF,4CACC,kBAAA,CAGD,2CACC,0BAAA,CAIF,oCACC,mCACC,qBAAA,CAEA,yCACC,QAAA,CAAA",sourcesContent:["\n@use 'sass:math';\n\n.theming__preview {\n\t// We make previews on 16/10 screens\n\t--ratio: 16;\n\n\tposition: relative;\n\tdisplay: flex;\n\tjustify-content: flex-start;\n\tmax-width: 800px;\n\n\t&,\n\t* {\n\t\tuser-select: none;\n\t}\n\n\t&-image {\n\t\tflex-basis: calc(16px * var(--ratio));\n\t\tflex-shrink: 0;\n\t\theight: calc(10px * var(--ratio));\n\t\tmargin-right: var(--gap);\n\t\tcursor: pointer;\n\t\tborder-radius: var(--border-radius);\n\t\tbackground-repeat: no-repeat;\n\t\tbackground-position: top left;\n\t\tbackground-size: cover;\n\t}\n\n\t&-explanation {\n\t\tmargin-bottom: 10px;\n\t}\n\n\t&-description {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\n\t\th3 {\n\t\t\tfont-weight: bold;\n\t\t\tmargin-bottom: 0;\n\t\t}\n\n\t\tlabel {\n\t\t\tpadding: 12px 0;\n\t\t}\n\t}\n\n\t&--default {\n\t\tgrid-column: span 2;\n\t}\n\n\t&-warning {\n\t\tcolor: var(--color-warning);\n\t}\n}\n\n@media (max-width: math.div(1024px, 1.5)) {\n\t.theming__preview {\n\t\tflex-direction: column;\n\n\t\t&-image {\n\t\t\tmargin: 0;\n\t\t}\n\t}\n}\n\n"],sourceRoot:""}]),t.Z=i},89881:function(e,t,r){var n=r(47816),o=r(99291)(n);e.exports=o},80760:function(e,t,r){var n=r(89881);e.exports=function(e,t){var r=[];return n(e,(function(e,n,o){t(e,n,o)&&r.push(e)})),r}},47816:function(e,t,r){var n=r(28483),o=r(3674);e.exports=function(e,t){return e&&n(e,t,o)}},99291:function(e,t,r){var n=r(98612);e.exports=function(e,t){return function(r,o){if(null==r)return r;if(!n(r))return e(r,o);for(var a=r.length,i=t?a:-1,s=Object(r);(t?i--:++i<a)&&!1!==o(s[i],i,s););return r}}},91747:function(e,t,r){var n=r(5976),o=r(77813),a=r(16612),i=r(81704),s=Object.prototype,l=s.hasOwnProperty,c=n((function(e,t){e=Object(e);var r=-1,n=t.length,c=n>2?t[2]:void 0;for(c&&a(t[0],t[1],c)&&(n=1);++r<n;)for(var u=t[r],d=i(u),p=-1,h=d.length;++p<h;){var m=d[p],g=e[m];(void 0===g||o(g,s[m])&&!l.call(e,m))&&(e[m]=u[m])}return e}));e.exports=c},63105:function(e,t,r){var n=r(34963),o=r(80760),a=r(67206),i=r(1469);e.exports=function(e,t){return(i(e)?n:o)(e,a(t,3))}},1082:function(e,t,r){"use strict";var n=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}},o=n(r(8110)),a=n(r(21904));o.default.DefaultOpts.ImageClass=a.default,e.exports=o.default},31564:function(e,t,r){"use strict";var n=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var o=n(r(8110)),a=r(66678),i=function(){function e(e,t){void 0===t&&(t={}),this._src=e,this._opts=t,this._opts.filters=a(o.default.DefaultOpts.filters)}return e.prototype.maxColorCount=function(e){return this._opts.colorCount=e,this},e.prototype.maxDimension=function(e){return this._opts.maxDimension=e,this},e.prototype.addFilter=function(e){return this._opts.filters.push(e),this},e.prototype.removeFilter=function(e){var t=this._opts.filters.indexOf(e);return t>0&&this._opts.filters.splice(t),this},e.prototype.clearFilters=function(){return this._opts.filters=[],this},e.prototype.quality=function(e){return this._opts.quality=e,this},e.prototype.useImageClass=function(e){return this._opts.ImageClass=e,this},e.prototype.useGenerator=function(e){return this._opts.generator=e,this},e.prototype.useQuantizer=function(e){return this._opts.quantizer=e,this},e.prototype.build=function(){return new o.default(this._src,this._opts)},e.prototype.getPalette=function(e){return this.build().getPalette(e)},e.prototype.getSwatches=function(e){return this.build().getPalette(e)},e}();t.default=i},97248:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.Swatch=void 0;var n=r(67294),o=r(63105),a=function(){function e(e,t){this._rgb=e,this._population=t}return e.applyFilter=function(e,t){return"function"==typeof t?o(e,(function(e){var r=e.r,n=e.g,o=e.b;return t(r,n,o,255)})):e},Object.defineProperty(e.prototype,"r",{get:function(){return this._rgb[0]},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"g",{get:function(){return this._rgb[1]},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"b",{get:function(){return this._rgb[2]},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"rgb",{get:function(){return this._rgb},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"hsl",{get:function(){if(!this._hsl){var e=this._rgb,t=e[0],r=e[1],o=e[2];this._hsl=n.rgbToHsl(t,r,o)}return this._hsl},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"hex",{get:function(){if(!this._hex){var e=this._rgb,t=e[0],r=e[1],o=e[2];this._hex=n.rgbToHex(t,r,o)}return this._hex},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"population",{get:function(){return this._population},enumerable:!1,configurable:!0}),e.prototype.toJSON=function(){return{rgb:this.rgb,population:this.population}},e.prototype.getRgb=function(){return this._rgb},e.prototype.getHsl=function(){return this.hsl},e.prototype.getPopulation=function(){return this._population},e.prototype.getHex=function(){return this.hex},e.prototype.getYiq=function(){if(!this._yiq){var e=this._rgb;this._yiq=(299*e[0]+587*e[1]+114*e[2])/1e3}return this._yiq},Object.defineProperty(e.prototype,"titleTextColor",{get:function(){return this._titleTextColor||(this._titleTextColor=this.getYiq()<200?"#fff":"#000"),this._titleTextColor},enumerable:!1,configurable:!0}),Object.defineProperty(e.prototype,"bodyTextColor",{get:function(){return this._bodyTextColor||(this._bodyTextColor=this.getYiq()<150?"#fff":"#000"),this._bodyTextColor},enumerable:!1,configurable:!0}),e.prototype.getTitleTextColor=function(){return this.titleTextColor},e.prototype.getBodyTextColor=function(){return this.bodyTextColor},e}();t.Swatch=a},68498:function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e,t,r,n){return n>=125&&!(e>250&&t>250&&r>250)}},63096:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.combineFilters=void 0;var n=r(68498);Object.defineProperty(t,"Default",{enumerable:!0,get:function(){return n.default}}),t.combineFilters=function(e){return Array.isArray(e)&&0!==e.length?function(t,r,n,o){if(0===o)return!1;for(var a=0;a<e.length;a++)if(!e[a](t,r,n,o))return!1;return!0}:null}},73977:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=r(97248),o=r(67294),a=r(91747),i={targetDarkLuma:.26,maxDarkLuma:.45,minLightLuma:.55,targetLightLuma:.74,minNormalLuma:.3,targetNormalLuma:.5,maxNormalLuma:.7,targetMutesSaturation:.3,maxMutesSaturation:.4,targetVibrantSaturation:1,minVibrantSaturation:.35,weightSaturation:3,weightLuma:6.5,weightPopulation:.5};function s(e,t,r,n,o,a,i,s,l,c){var u=null,d=0;return t.forEach((function(t){var p=t.getHsl(),h=p[1],m=p[2];if(h>=s&&h<=l&&m>=o&&m<=a&&!function(e,t){return e.Vibrant===t||e.DarkVibrant===t||e.LightVibrant===t||e.Muted===t||e.DarkMuted===t||e.LightMuted===t}(e,t)){var g=function(e,t,r,n,o,a,i){function s(e,t){return 1-Math.abs(e-t)}return function(){for(var e=[],t=0;t<arguments.length;t++)e[t]=arguments[t];for(var r=0,n=0,o=0;o<e.length;o+=2){var a=e[o],i=e[o+1];r+=a*i,n+=i}return r/n}(s(e,t),i.weightSaturation,s(r,n),i.weightLuma,o/a,i.weightPopulation)}(h,i,m,n,t.getPopulation(),r,c);(null===u||g>d)&&(u=t,d=g)}})),u}t.default=function(e,t){t=a({},t,i);var r=function(e){var t=0;return e.forEach((function(e){t=Math.max(t,e.getPopulation())})),t}(e),l=function(e,t,r){var n={};return n.Vibrant=s(n,e,t,r.targetNormalLuma,r.minNormalLuma,r.maxNormalLuma,r.targetVibrantSaturation,r.minVibrantSaturation,1,r),n.LightVibrant=s(n,e,t,r.targetLightLuma,r.minLightLuma,1,r.targetVibrantSaturation,r.minVibrantSaturation,1,r),n.DarkVibrant=s(n,e,t,r.targetDarkLuma,0,r.maxDarkLuma,r.targetVibrantSaturation,r.minVibrantSaturation,1,r),n.Muted=s(n,e,t,r.targetNormalLuma,r.minNormalLuma,r.maxNormalLuma,r.targetMutesSaturation,0,r.maxMutesSaturation,r),n.LightMuted=s(n,e,t,r.targetLightLuma,r.minLightLuma,1,r.targetMutesSaturation,0,r.maxMutesSaturation,r),n.DarkMuted=s(n,e,t,r.targetDarkLuma,0,r.maxDarkLuma,r.targetMutesSaturation,0,r.maxMutesSaturation,r),n}(e,r,t);return function(e,t,r){if(null===e.Vibrant&&null===e.DarkVibrant&&null===e.LightVibrant){if(null===e.DarkVibrant&&null!==e.DarkMuted){var a=e.DarkMuted.getHsl(),i=a[0],s=a[1],l=a[2];l=r.targetDarkLuma,e.DarkVibrant=new n.Swatch(o.hslToRgb(i,s,l),0)}if(null===e.LightVibrant&&null!==e.LightMuted){var c=e.LightMuted.getHsl();i=c[0],s=c[1],l=c[2],l=r.targetDarkLuma,e.DarkVibrant=new n.Swatch(o.hslToRgb(i,s,l),0)}}if(null===e.Vibrant&&null!==e.DarkVibrant){var u=e.DarkVibrant.getHsl();i=u[0],s=u[1],l=u[2],l=r.targetNormalLuma,e.Vibrant=new n.Swatch(o.hslToRgb(i,s,l),0)}else if(null===e.Vibrant&&null!==e.LightVibrant){var d=e.LightVibrant.getHsl();i=d[0],s=d[1],l=d[2],l=r.targetNormalLuma,e.Vibrant=new n.Swatch(o.hslToRgb(i,s,l),0)}if(null===e.DarkVibrant&&null!==e.Vibrant){var p=e.Vibrant.getHsl();i=p[0],s=p[1],l=p[2],l=r.targetDarkLuma,e.DarkVibrant=new n.Swatch(o.hslToRgb(i,s,l),0)}if(null===e.LightVibrant&&null!==e.Vibrant){var h=e.Vibrant.getHsl();i=h[0],s=h[1],l=h[2],l=r.targetLightLuma,e.LightVibrant=new n.Swatch(o.hslToRgb(i,s,l),0)}if(null===e.Muted&&null!==e.Vibrant){var m=e.Vibrant.getHsl();i=m[0],s=m[1],l=m[2],l=r.targetMutesSaturation,e.Muted=new n.Swatch(o.hslToRgb(i,s,l),0)}if(null===e.DarkMuted&&null!==e.DarkVibrant){var g=e.DarkVibrant.getHsl();i=g[0],s=g[1],l=g[2],l=r.targetMutesSaturation,e.DarkMuted=new n.Swatch(o.hslToRgb(i,s,l),0)}if(null===e.LightMuted&&null!==e.LightVibrant){var f=e.LightVibrant.getHsl();i=f[0],s=f[1],l=f[2],l=r.targetMutesSaturation,e.LightMuted=new n.Swatch(o.hslToRgb(i,s,l),0)}}(l,0,t),l}},77234:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=r(73977);Object.defineProperty(t,"Default",{enumerable:!0,get:function(){return n.default}})},83614:function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.ImageBase=void 0;var r=function(){function e(){}return e.prototype.scaleDown=function(e){var t=this.getWidth(),r=this.getHeight(),n=1;if(e.maxDimension>0){var o=Math.max(t,r);o>e.maxDimension&&(n=e.maxDimension/o)}else n=1/e.quality;n<1&&this.resize(t*n,r*n,n)},e.prototype.applyFilter=function(e){var t=this.getImageData();if("function"==typeof e)for(var r=t.data,n=r.length/4,o=void 0,a=0;a<n;a++)e(r[0+(o=4*a)],r[o+1],r[o+2],r[o+3])||(r[o+3]=0);return Promise.resolve(t)},e}();t.ImageBase=r},21904:function(e,t,r){"use strict";var n,o=this&&this.__extends||(n=function(e,t){return n=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,t){e.__proto__=t}||function(e,t){for(var r in t)t.hasOwnProperty(r)&&(e[r]=t[r])},n(e,t)},function(e,t){function r(){this.constructor=e}n(e,t),e.prototype=null===t?Object.create(t):(r.prototype=t.prototype,new r)}),a=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),i=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),s=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.hasOwnProperty.call(e,r)&&a(t,e,r);return i(t,e),t};Object.defineProperty(t,"__esModule",{value:!0});var l=r(83614),c=s(r(8575)),u=function(e){function t(){return null!==e&&e.apply(this,arguments)||this}return o(t,e),t.prototype._initCanvas=function(){var e=this.image,t=this._canvas=document.createElement("canvas"),r=this._context=t.getContext("2d");t.className="vibrant-canvas",t.style.display="none",this._width=t.width=e.width,this._height=t.height=e.height,r.drawImage(e,0,0),document.body.appendChild(t)},t.prototype.load=function(e){var t,r,n,o,a,i,s=this,l=null,u=null;if("string"==typeof e)l=document.createElement("img"),a=e,null===(i=c.parse(a)).protocol&&null===i.host&&null===i.port||(t=window.location.href,r=e,n=c.parse(t),o=c.parse(r),n.protocol===o.protocol&&n.hostname===o.hostname&&n.port===o.port)||(l.crossOrigin="anonymous"),u=l.src=e;else{if(!(e instanceof HTMLImageElement))return Promise.reject(new Error("Cannot load buffer as an image in browser"));l=e,u=e.src}return this.image=l,new Promise((function(e,t){var r=function(){s._initCanvas(),e(s)};l.complete?r():(l.onload=r,l.onerror=function(e){return t(new Error("Fail to load image: "+u))})}))},t.prototype.clear=function(){this._context.clearRect(0,0,this._width,this._height)},t.prototype.update=function(e){this._context.putImageData(e,0,0)},t.prototype.getWidth=function(){return this._width},t.prototype.getHeight=function(){return this._height},t.prototype.resize=function(e,t,r){var n=this,o=n._canvas,a=n._context,i=n.image;this._width=o.width=e,this._height=o.height=t,a.scale(r,r),a.drawImage(i,0,0)},t.prototype.getPixelCount=function(){return this._width*this._height},t.prototype.getImageData=function(){return this._context.getImageData(0,0,this._width,this._height)},t.prototype.remove=function(){this._canvas&&this._canvas.parentNode&&this._canvas.parentNode.removeChild(this._canvas)},t}(l.ImageBase);t.default=u},14853:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.WebWorker=void 0;var n=r(20628);Object.defineProperty(t,"MMCQ",{enumerable:!0,get:function(){return n.default}}),t.WebWorker=null},20628:function(e,t,r){"use strict";var n=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var o=r(97248),a=n(r(5828)),i=n(r(37514));function s(e,t){for(var r=e.size();e.size()<t;){var n=e.pop();if(!(n&&n.count()>0))break;var o=n.split(),a=o[0],i=o[1];if(e.push(a),i&&i.count()>0&&e.push(i),e.size()===r)break;r=e.size()}}t.default=function(e,t){if(0===e.length||t.colorCount<2||t.colorCount>256)throw new Error("Wrong MMCQ parameters");var r=a.default.build(e),n=r.hist,l=(Object.keys(n).length,new i.default((function(e,t){return e.count()-t.count()})));l.push(r),s(l,.75*t.colorCount);var c=new i.default((function(e,t){return e.count()*e.volume()-t.count()*t.volume()}));return c.contents=l.contents,s(c,t.colorCount-c.size()),function(e){for(var t=[];e.size();){var r=e.pop(),n=r.avg();n[0],n[1],n[2],t.push(new o.Swatch(n,r.count()))}return t}(c)}},37514:function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=function(){function e(e){this._comparator=e,this.contents=[],this._sorted=!1}return e.prototype._sort=function(){this._sorted||(this.contents.sort(this._comparator),this._sorted=!0)},e.prototype.push=function(e){this.contents.push(e),this._sorted=!1},e.prototype.peek=function(e){return this._sort(),e="number"==typeof e?e:this.contents.length-1,this.contents[e]},e.prototype.pop=function(){return this._sort(),this.contents.pop()},e.prototype.size=function(){return this.contents.length},e.prototype.map=function(e){return this._sort(),this.contents.map(e)},e}();t.default=r},5828:function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=r(67294),o=function(){function e(e,t,r,n,o,a,i){this._volume=-1,this._count=-1,this.dimension={r1:e,r2:t,g1:r,g2:n,b1:o,b2:a},this.hist=i}return e.build=function(t,r){var o,a,i,s,l,c,u,d,p,h=1<<3*n.SIGBITS,m=new Uint32Array(h);o=i=l=0,a=s=c=Number.MAX_VALUE;for(var g=t.length/4,f=0;f<g;){var v=4*f;f++,u=t[v+0],d=t[v+1],p=t[v+2],0!==t[v+3]&&(u>>=n.RSHIFT,d>>=n.RSHIFT,p>>=n.RSHIFT,m[n.getColorIndex(u,d,p)]+=1,u>o&&(o=u),u<a&&(a=u),d>i&&(i=d),d<s&&(s=d),p>l&&(l=p),p<c&&(c=p))}return new e(a,o,s,i,c,l,m)},e.prototype.invalidate=function(){this._volume=this._count=-1,this._avg=null},e.prototype.volume=function(){if(this._volume<0){var e=this.dimension,t=e.r1,r=e.r2,n=e.g1,o=e.g2,a=e.b1,i=e.b2;this._volume=(r-t+1)*(o-n+1)*(i-a+1)}return this._volume},e.prototype.count=function(){if(this._count<0){for(var e=this.hist,t=this.dimension,r=t.r1,o=t.r2,a=t.g1,i=t.g2,s=t.b1,l=t.b2,c=0,u=r;u<=o;u++)for(var d=a;d<=i;d++)for(var p=s;p<=l;p++)c+=e[n.getColorIndex(u,d,p)];this._count=c}return this._count},e.prototype.clone=function(){var t=this.hist,r=this.dimension;return new e(r.r1,r.r2,r.g1,r.g2,r.b1,r.b2,t)},e.prototype.avg=function(){if(!this._avg){var e=this.hist,t=this.dimension,r=t.r1,o=t.r2,a=t.g1,i=t.g2,s=t.b1,l=t.b2,c=0,u=1<<8-n.SIGBITS,d=void 0,p=void 0,h=void 0;d=p=h=0;for(var m=r;m<=o;m++)for(var g=a;g<=i;g++)for(var f=s;f<=l;f++){var v=e[n.getColorIndex(m,g,f)];c+=v,d+=v*(m+.5)*u,p+=v*(g+.5)*u,h+=v*(f+.5)*u}this._avg=c?[~~(d/c),~~(p/c),~~(h/c)]:[~~(u*(r+o+1)/2),~~(u*(a+i+1)/2),~~(u*(s+l+1)/2)]}return this._avg},e.prototype.contains=function(e){var t=e[0],r=e[1],o=e[2],a=this.dimension,i=a.r1,s=a.r2,l=a.g1,c=a.g2,u=a.b1,d=a.b2;return t>>=n.RSHIFT,r>>=n.RSHIFT,o>>=n.RSHIFT,t>=i&&t<=s&&r>=l&&r<=c&&o>=u&&o<=d},e.prototype.split=function(){var e=this.hist,t=this.dimension,r=t.r1,o=t.r2,a=t.g1,i=t.g2,s=t.b1,l=t.b2,c=this.count();if(!c)return[];if(1===c)return[this.clone()];var u,d,p=o-r+1,h=i-a+1,m=l-s+1,g=Math.max(p,h,m),f=null;u=d=0;var v=null;if(g===p){v="r",f=new Uint32Array(o+1);for(var b=r;b<=o;b++){u=0;for(var A=a;A<=i;A++)for(var y=s;y<=l;y++)u+=e[n.getColorIndex(b,A,y)];d+=u,f[b]=d}}else if(g===h)for(v="g",f=new Uint32Array(i+1),A=a;A<=i;A++){for(u=0,b=r;b<=o;b++)for(y=s;y<=l;y++)u+=e[n.getColorIndex(b,A,y)];d+=u,f[A]=d}else for(v="b",f=new Uint32Array(l+1),y=s;y<=l;y++){for(u=0,b=r;b<=o;b++)for(A=a;A<=i;A++)u+=e[n.getColorIndex(b,A,y)];d+=u,f[y]=d}for(var C=-1,k=new Uint32Array(f.length),w=0;w<f.length;w++){var S=f[w];C<0&&S>d/2&&(C=w),k[w]=d-S}var x=this;return function(e){var t=e+"1",r=e+"2",n=x.dimension[t],o=x.dimension[r],a=x.clone(),i=x.clone(),s=C-n,l=o-C;for(s<=l?(o=Math.min(o-1,~~(C+l/2)),o=Math.max(0,o)):(o=Math.max(n,~~(C-1-s/2)),o=Math.min(x.dimension[r],o));!f[o];)o++;for(var c=k[o];!c&&f[o-1];)c=k[--o];return a.dimension[r]=o,i.dimension[t]=o+1,[a,i]}(v)},e}();t.default=o},67294:function(e,t){"use strict";function r(e){var t=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);return null===t?null:[t[1],t[2],t[3]].map((function(e){return parseInt(e,16)}))}function n(e,t,r){return t/=255,r/=255,e=(e/=255)>.04045?Math.pow((e+.005)/1.055,2.4):e/12.92,t=t>.04045?Math.pow((t+.005)/1.055,2.4):t/12.92,r=r>.04045?Math.pow((r+.005)/1.055,2.4):r/12.92,[.4124*(e*=100)+.3576*(t*=100)+.1805*(r*=100),.2126*e+.7152*t+.0722*r,.0193*e+.1192*t+.9505*r]}function o(e,t,r){return t/=100,r/=108.883,e=(e/=95.047)>.008856?Math.pow(e,1/3):7.787*e+16/116,[116*(t=t>.008856?Math.pow(t,1/3):7.787*t+16/116)-16,500*(e-t),200*(t-(r=r>.008856?Math.pow(r,1/3):7.787*r+16/116))]}function a(e,t,r){var a=n(e,t,r);return o(a[0],a[1],a[2])}function i(e,t){var r=e[0],n=e[1],o=e[2],a=t[0],i=t[1],s=t[2],l=r-a,c=n-i,u=o-s,d=Math.sqrt(n*n+o*o),p=a-r,h=Math.sqrt(i*i+s*s)-d,m=Math.sqrt(l*l+c*c+u*u),g=Math.sqrt(m)>Math.sqrt(Math.abs(p))+Math.sqrt(Math.abs(h))?Math.sqrt(m*m-p*p-h*h):0;return p/=1,h/=1*(1+.045*d),g/=1*(1+.015*d),Math.sqrt(p*p+h*h+g*g)}function s(e,t){return i(a.apply(void 0,e),a.apply(void 0,t))}Object.defineProperty(t,"__esModule",{value:!0}),t.getColorIndex=t.getColorDiffStatus=t.hexDiff=t.rgbDiff=t.deltaE94=t.rgbToCIELab=t.xyzToCIELab=t.rgbToXyz=t.hslToRgb=t.rgbToHsl=t.rgbToHex=t.hexToRgb=t.defer=t.RSHIFT=t.SIGBITS=t.DELTAE94_DIFF_STATUS=void 0,t.DELTAE94_DIFF_STATUS={NA:0,PERFECT:1,CLOSE:2,GOOD:10,SIMILAR:50},t.SIGBITS=5,t.RSHIFT=8-t.SIGBITS,t.defer=function(){var e,t,r=new Promise((function(r,n){e=r,t=n}));return{resolve:e,reject:t,promise:r}},t.hexToRgb=r,t.rgbToHex=function(e,t,r){return"#"+((1<<24)+(e<<16)+(t<<8)+r).toString(16).slice(1,7)},t.rgbToHsl=function(e,t,r){e/=255,t/=255,r/=255;var n,o,a=Math.max(e,t,r),i=Math.min(e,t,r),s=(a+i)/2;if(a===i)n=o=0;else{var l=a-i;switch(o=s>.5?l/(2-a-i):l/(a+i),a){case e:n=(t-r)/l+(t<r?6:0);break;case t:n=(r-e)/l+2;break;case r:n=(e-t)/l+4}n/=6}return[n,o,s]},t.hslToRgb=function(e,t,r){var n,o,a;function i(e,t,r){return r<0&&(r+=1),r>1&&(r-=1),r<1/6?e+6*(t-e)*r:r<.5?t:r<2/3?e+(t-e)*(2/3-r)*6:e}if(0===t)n=o=a=r;else{var s=r<.5?r*(1+t):r+t-r*t,l=2*r-s;n=i(l,s,e+1/3),o=i(l,s,e),a=i(l,s,e-1/3)}return[255*n,255*o,255*a]},t.rgbToXyz=n,t.xyzToCIELab=o,t.rgbToCIELab=a,t.deltaE94=i,t.rgbDiff=s,t.hexDiff=function(e,t){return s(r(e),r(t))},t.getColorDiffStatus=function(e){return e<t.DELTAE94_DIFF_STATUS.NA?"N/A":e<=t.DELTAE94_DIFF_STATUS.PERFECT?"Perfect":e<=t.DELTAE94_DIFF_STATUS.CLOSE?"Close":e<=t.DELTAE94_DIFF_STATUS.GOOD?"Good":e<t.DELTAE94_DIFF_STATUS.SIMILAR?"Similar":"Wrong"},t.getColorIndex=function(e,r,n){return(e<<2*t.SIGBITS)+(r<<t.SIGBITS)+n}},8110:function(e,t,r){"use strict";var n=this&&this.__createBinding||(Object.create?function(e,t,r,n){void 0===n&&(n=r),Object.defineProperty(e,n,{enumerable:!0,get:function(){return t[r]}})}:function(e,t,r,n){void 0===n&&(n=r),e[n]=t[r]}),o=this&&this.__setModuleDefault||(Object.create?function(e,t){Object.defineProperty(e,"default",{enumerable:!0,value:t})}:function(e,t){e.default=t}),a=this&&this.__importStar||function(e){if(e&&e.__esModule)return e;var t={};if(null!=e)for(var r in e)"default"!==r&&Object.hasOwnProperty.call(e,r)&&n(t,e,r);return o(t,e),t},i=this&&this.__importDefault||function(e){return e&&e.__esModule?e:{default:e}};Object.defineProperty(t,"__esModule",{value:!0});var s=r(97248),l=i(r(31564)),c=a(r(67294)),u=a(r(14853)),d=a(r(77234)),p=a(r(63096)),h=r(91747),m=function(){function e(t,r){this._src=t,this.opts=h({},r,e.DefaultOpts),this.opts.combinedFilter=p.combineFilters(this.opts.filters)}return e.from=function(e){return new l.default(e)},e.prototype._process=function(e,t){var r=t.quantizer,n=t.generator;return e.scaleDown(t),e.applyFilter(t.combinedFilter).then((function(e){return r(e.data,t)})).then((function(e){return s.Swatch.applyFilter(e,t.combinedFilter)})).then((function(e){return Promise.resolve(n(e))}))},e.prototype.palette=function(){return this.swatches()},e.prototype.swatches=function(){return this._palette},e.prototype.getPalette=function(e){var t=this,r=new this.opts.ImageClass,n=r.load(this._src).then((function(e){return t._process(e,t.opts)})).then((function(e){return t._palette=e,r.remove(),e}),(function(e){throw r.remove(),e}));return e&&n.then((function(t){return e(null,t)}),(function(t){return e(t)})),n},e.Builder=l.default,e.Quantizer=u,e.Generator=d,e.Filter=p,e.Util=c,e.Swatch=s.Swatch,e.DefaultOpts={colorCount:64,quality:5,generator:d.Default,ImageClass:null,quantizer:u.MMCQ,filters:[p.Default]},e}();t.default=m},70631:function(e,t,r){var n="function"==typeof Map&&Map.prototype,o=Object.getOwnPropertyDescriptor&&n?Object.getOwnPropertyDescriptor(Map.prototype,"size"):null,a=n&&o&&"function"==typeof o.get?o.get:null,i=n&&Map.prototype.forEach,s="function"==typeof Set&&Set.prototype,l=Object.getOwnPropertyDescriptor&&s?Object.getOwnPropertyDescriptor(Set.prototype,"size"):null,c=s&&l&&"function"==typeof l.get?l.get:null,u=s&&Set.prototype.forEach,d="function"==typeof WeakMap&&WeakMap.prototype?WeakMap.prototype.has:null,p="function"==typeof WeakSet&&WeakSet.prototype?WeakSet.prototype.has:null,h="function"==typeof WeakRef&&WeakRef.prototype?WeakRef.prototype.deref:null,m=Boolean.prototype.valueOf,g=Object.prototype.toString,f=Function.prototype.toString,v=String.prototype.match,b=String.prototype.slice,A=String.prototype.replace,y=String.prototype.toUpperCase,C=String.prototype.toLowerCase,k=RegExp.prototype.test,w=Array.prototype.concat,S=Array.prototype.join,x=Array.prototype.slice,j=Math.floor,_="function"==typeof BigInt?BigInt.prototype.valueOf:null,P=Object.getOwnPropertySymbols,N="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?Symbol.prototype.toString:null,z="function"==typeof Symbol&&"object"==typeof Symbol.iterator,E="function"==typeof Symbol&&Symbol.toStringTag&&(Symbol.toStringTag,1)?Symbol.toStringTag:null,O=Object.prototype.propertyIsEnumerable,T=("function"==typeof Reflect?Reflect.getPrototypeOf:Object.getPrototypeOf)||([].__proto__===Array.prototype?function(e){return e.__proto__}:null);function D(e,t){if(e===1/0||e===-1/0||e!=e||e&&e>-1e3&&e<1e3||k.call(/e/,t))return t;var r=/[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;if("number"==typeof e){var n=e<0?-j(-e):j(e);if(n!==e){var o=String(n),a=b.call(t,o.length+1);return A.call(o,r,"$&_")+"."+A.call(A.call(a,/([0-9]{3})/g,"$&_"),/_$/,"")}}return A.call(t,r,"$&_")}var F=r(24654),B=F.custom,M=R(B)?B:null;function L(e,t,r){var n="double"===(r.quoteStyle||t)?'"':"'";return n+e+n}function I(e){return A.call(String(e),/"/g,"&quot;")}function G(e){return!("[object Array]"!==H(e)||E&&"object"==typeof e&&E in e)}function U(e){return!("[object RegExp]"!==H(e)||E&&"object"==typeof e&&E in e)}function R(e){if(z)return e&&"object"==typeof e&&e instanceof Symbol;if("symbol"==typeof e)return!0;if(!e||"object"!=typeof e||!N)return!1;try{return N.call(e),!0}catch(e){}return!1}e.exports=function e(t,r,n,o){var s=r||{};if(V(s,"quoteStyle")&&"single"!==s.quoteStyle&&"double"!==s.quoteStyle)throw new TypeError('option "quoteStyle" must be "single" or "double"');if(V(s,"maxStringLength")&&("number"==typeof s.maxStringLength?s.maxStringLength<0&&s.maxStringLength!==1/0:null!==s.maxStringLength))throw new TypeError('option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`');var l=!V(s,"customInspect")||s.customInspect;if("boolean"!=typeof l&&"symbol"!==l)throw new TypeError("option \"customInspect\", if provided, must be `true`, `false`, or `'symbol'`");if(V(s,"indent")&&null!==s.indent&&"\t"!==s.indent&&!(parseInt(s.indent,10)===s.indent&&s.indent>0))throw new TypeError('option "indent" must be "\\t", an integer > 0, or `null`');if(V(s,"numericSeparator")&&"boolean"!=typeof s.numericSeparator)throw new TypeError('option "numericSeparator", if provided, must be `true` or `false`');var g=s.numericSeparator;if(void 0===t)return"undefined";if(null===t)return"null";if("boolean"==typeof t)return t?"true":"false";if("string"==typeof t)return W(t,s);if("number"==typeof t){if(0===t)return 1/0/t>0?"0":"-0";var y=String(t);return g?D(t,y):y}if("bigint"==typeof t){var k=String(t)+"n";return g?D(t,k):k}var j=void 0===s.depth?5:s.depth;if(void 0===n&&(n=0),n>=j&&j>0&&"object"==typeof t)return G(t)?"[Array]":"[Object]";var P,B=function(e,t){var r;if("\t"===e.indent)r="\t";else{if(!("number"==typeof e.indent&&e.indent>0))return null;r=S.call(Array(e.indent+1)," ")}return{base:r,prev:S.call(Array(t+1),r)}}(s,n);if(void 0===o)o=[];else if($(o,t)>=0)return"[Circular]";function q(t,r,a){if(r&&(o=x.call(o)).push(r),a){var i={depth:s.depth};return V(s,"quoteStyle")&&(i.quoteStyle=s.quoteStyle),e(t,i,n+1,o)}return e(t,s,n+1,o)}if("function"==typeof t&&!U(t)){var Z=function(e){if(e.name)return e.name;var t=v.call(f.call(e),/^function\s*([\w$]+)/);return t?t[1]:null}(t),ee=X(t,q);return"[Function"+(Z?": "+Z:" (anonymous)")+"]"+(ee.length>0?" { "+S.call(ee,", ")+" }":"")}if(R(t)){var te=z?A.call(String(t),/^(Symbol\(.*\))_[^)]*$/,"$1"):N.call(t);return"object"!=typeof t||z?te:K(te)}if((P=t)&&"object"==typeof P&&("undefined"!=typeof HTMLElement&&P instanceof HTMLElement||"string"==typeof P.nodeName&&"function"==typeof P.getAttribute)){for(var re="<"+C.call(String(t.nodeName)),ne=t.attributes||[],oe=0;oe<ne.length;oe++)re+=" "+ne[oe].name+"="+L(I(ne[oe].value),"double",s);return re+=">",t.childNodes&&t.childNodes.length&&(re+="..."),re+"</"+C.call(String(t.nodeName))+">"}if(G(t)){if(0===t.length)return"[]";var ae=X(t,q);return B&&!function(e){for(var t=0;t<e.length;t++)if($(e[t],"\n")>=0)return!1;return!0}(ae)?"["+J(ae,B)+"]":"[ "+S.call(ae,", ")+" ]"}if(function(e){return!("[object Error]"!==H(e)||E&&"object"==typeof e&&E in e)}(t)){var ie=X(t,q);return"cause"in Error.prototype||!("cause"in t)||O.call(t,"cause")?0===ie.length?"["+String(t)+"]":"{ ["+String(t)+"] "+S.call(ie,", ")+" }":"{ ["+String(t)+"] "+S.call(w.call("[cause]: "+q(t.cause),ie),", ")+" }"}if("object"==typeof t&&l){if(M&&"function"==typeof t[M]&&F)return F(t,{depth:j-n});if("symbol"!==l&&"function"==typeof t.inspect)return t.inspect()}if(function(e){if(!a||!e||"object"!=typeof e)return!1;try{a.call(e);try{c.call(e)}catch(e){return!0}return e instanceof Map}catch(e){}return!1}(t)){var se=[];return i&&i.call(t,(function(e,r){se.push(q(r,t,!0)+" => "+q(e,t))})),Q("Map",a.call(t),se,B)}if(function(e){if(!c||!e||"object"!=typeof e)return!1;try{c.call(e);try{a.call(e)}catch(e){return!0}return e instanceof Set}catch(e){}return!1}(t)){var le=[];return u&&u.call(t,(function(e){le.push(q(e,t))})),Q("Set",c.call(t),le,B)}if(function(e){if(!d||!e||"object"!=typeof e)return!1;try{d.call(e,d);try{p.call(e,p)}catch(e){return!0}return e instanceof WeakMap}catch(e){}return!1}(t))return Y("WeakMap");if(function(e){if(!p||!e||"object"!=typeof e)return!1;try{p.call(e,p);try{d.call(e,d)}catch(e){return!0}return e instanceof WeakSet}catch(e){}return!1}(t))return Y("WeakSet");if(function(e){if(!h||!e||"object"!=typeof e)return!1;try{return h.call(e),!0}catch(e){}return!1}(t))return Y("WeakRef");if(function(e){return!("[object Number]"!==H(e)||E&&"object"==typeof e&&E in e)}(t))return K(q(Number(t)));if(function(e){if(!e||"object"!=typeof e||!_)return!1;try{return _.call(e),!0}catch(e){}return!1}(t))return K(q(_.call(t)));if(function(e){return!("[object Boolean]"!==H(e)||E&&"object"==typeof e&&E in e)}(t))return K(m.call(t));if(function(e){return!("[object String]"!==H(e)||E&&"object"==typeof e&&E in e)}(t))return K(q(String(t)));if(!function(e){return!("[object Date]"!==H(e)||E&&"object"==typeof e&&E in e)}(t)&&!U(t)){var ce=X(t,q),ue=T?T(t)===Object.prototype:t instanceof Object||t.constructor===Object,de=t instanceof Object?"":"null prototype",pe=!ue&&E&&Object(t)===t&&E in t?b.call(H(t),8,-1):de?"Object":"",he=(ue||"function"!=typeof t.constructor?"":t.constructor.name?t.constructor.name+" ":"")+(pe||de?"["+S.call(w.call([],pe||[],de||[]),": ")+"] ":"");return 0===ce.length?he+"{}":B?he+"{"+J(ce,B)+"}":he+"{ "+S.call(ce,", ")+" }"}return String(t)};var q=Object.prototype.hasOwnProperty||function(e){return e in this};function V(e,t){return q.call(e,t)}function H(e){return g.call(e)}function $(e,t){if(e.indexOf)return e.indexOf(t);for(var r=0,n=e.length;r<n;r++)if(e[r]===t)return r;return-1}function W(e,t){if(e.length>t.maxStringLength){var r=e.length-t.maxStringLength,n="... "+r+" more character"+(r>1?"s":"");return W(b.call(e,0,t.maxStringLength),t)+n}return L(A.call(A.call(e,/(['\\])/g,"\\$1"),/[\x00-\x1f]/g,Z),"single",t)}function Z(e){var t=e.charCodeAt(0),r={8:"b",9:"t",10:"n",12:"f",13:"r"}[t];return r?"\\"+r:"\\x"+(t<16?"0":"")+y.call(t.toString(16))}function K(e){return"Object("+e+")"}function Y(e){return e+" { ? }"}function Q(e,t,r,n){return e+" ("+t+") {"+(n?J(r,n):S.call(r,", "))+"}"}function J(e,t){if(0===e.length)return"";var r="\n"+t.prev+t.base;return r+S.call(e,","+r)+"\n"+t.prev}function X(e,t){var r=G(e),n=[];if(r){n.length=e.length;for(var o=0;o<e.length;o++)n[o]=V(e,o)?t(e[o],e):""}var a,i="function"==typeof P?P(e):[];if(z){a={};for(var s=0;s<i.length;s++)a["$"+i[s]]=i[s]}for(var l in e)V(e,l)&&(r&&String(Number(l))===l&&l<e.length||z&&a["$"+l]instanceof Symbol||(k.call(/[^\w$]/,l)?n.push(t(l,e)+": "+t(e[l],e)):n.push(l+": "+t(e[l],e))));if("function"==typeof P)for(var c=0;c<i.length;c++)O.call(e,i[c])&&n.push("["+t(i[c])+"]: "+t(e[i[c]],e));return n}},37478:function(e,t,r){"use strict";var n=r(40210),o=r(21924),a=r(70631),i=n("%TypeError%"),s=n("%WeakMap%",!0),l=n("%Map%",!0),c=o("WeakMap.prototype.get",!0),u=o("WeakMap.prototype.set",!0),d=o("WeakMap.prototype.has",!0),p=o("Map.prototype.get",!0),h=o("Map.prototype.set",!0),m=o("Map.prototype.has",!0),g=function(e,t){for(var r,n=e;null!==(r=n.next);n=r)if(r.key===t)return n.next=r.next,r.next=e.next,e.next=r,r};e.exports=function(){var e,t,r,n={assert:function(e){if(!n.has(e))throw new i("Side channel does not contain "+a(e))},get:function(n){if(s&&n&&("object"==typeof n||"function"==typeof n)){if(e)return c(e,n)}else if(l){if(t)return p(t,n)}else if(r)return function(e,t){var r=g(e,t);return r&&r.value}(r,n)},has:function(n){if(s&&n&&("object"==typeof n||"function"==typeof n)){if(e)return d(e,n)}else if(l){if(t)return m(t,n)}else if(r)return function(e,t){return!!g(e,t)}(r,n);return!1},set:function(n,o){s&&n&&("object"==typeof n||"function"==typeof n)?(e||(e=new s),u(e,n,o)):l?(t||(t=new l),h(t,n,o)):(r||(r={key:{},next:null}),function(e,t,r){var n=g(e,t);n?n.value=r:e.next={key:t,next:e.next,value:r}}(r,n,o))}};return n}},52511:function(e,t,r){var n;e=r.nmd(e),function(o){t&&t.nodeType,e&&e.nodeType;var a="object"==typeof r.g&&r.g;a.global!==a&&a.window!==a&&a.self;var i,s=2147483647,l=36,c=26,u=38,d=700,p=/^xn--/,h=/[^\x20-\x7E]/,m=/[\x2E\u3002\uFF0E\uFF61]/g,g={overflow:"Overflow: input needs wider integers to process","not-basic":"Illegal input >= 0x80 (not a basic code point)","invalid-input":"Invalid input"},f=l-1,v=Math.floor,b=String.fromCharCode;function A(e){throw new RangeError(g[e])}function y(e,t){for(var r=e.length,n=[];r--;)n[r]=t(e[r]);return n}function C(e,t){var r=e.split("@"),n="";return r.length>1&&(n=r[0]+"@",e=r[1]),n+y((e=e.replace(m,".")).split("."),t).join(".")}function k(e){for(var t,r,n=[],o=0,a=e.length;o<a;)(t=e.charCodeAt(o++))>=55296&&t<=56319&&o<a?56320==(64512&(r=e.charCodeAt(o++)))?n.push(((1023&t)<<10)+(1023&r)+65536):(n.push(t),o--):n.push(t);return n}function w(e){return y(e,(function(e){var t="";return e>65535&&(t+=b((e-=65536)>>>10&1023|55296),e=56320|1023&e),t+b(e)})).join("")}function S(e,t){return e+22+75*(e<26)-((0!=t)<<5)}function x(e,t,r){var n=0;for(e=r?v(e/d):e>>1,e+=v(e/t);e>f*c>>1;n+=l)e=v(e/f);return v(n+(f+1)*e/(e+u))}function j(e){var t,r,n,o,a,i,u,d,p,h,m,g=[],f=e.length,b=0,y=128,C=72;for((r=e.lastIndexOf("-"))<0&&(r=0),n=0;n<r;++n)e.charCodeAt(n)>=128&&A("not-basic"),g.push(e.charCodeAt(n));for(o=r>0?r+1:0;o<f;){for(a=b,i=1,u=l;o>=f&&A("invalid-input"),((d=(m=e.charCodeAt(o++))-48<10?m-22:m-65<26?m-65:m-97<26?m-97:l)>=l||d>v((s-b)/i))&&A("overflow"),b+=d*i,!(d<(p=u<=C?1:u>=C+c?c:u-C));u+=l)i>v(s/(h=l-p))&&A("overflow"),i*=h;C=x(b-a,t=g.length+1,0==a),v(b/t)>s-y&&A("overflow"),y+=v(b/t),b%=t,g.splice(b++,0,y)}return w(g)}function _(e){var t,r,n,o,a,i,u,d,p,h,m,g,f,y,C,w=[];for(g=(e=k(e)).length,t=128,r=0,a=72,i=0;i<g;++i)(m=e[i])<128&&w.push(b(m));for(n=o=w.length,o&&w.push("-");n<g;){for(u=s,i=0;i<g;++i)(m=e[i])>=t&&m<u&&(u=m);for(u-t>v((s-r)/(f=n+1))&&A("overflow"),r+=(u-t)*f,t=u,i=0;i<g;++i)if((m=e[i])<t&&++r>s&&A("overflow"),m==t){for(d=r,p=l;!(d<(h=p<=a?1:p>=a+c?c:p-a));p+=l)C=d-h,y=l-h,w.push(b(S(h+C%y,0))),d=v(C/y);w.push(b(S(d,0))),a=x(r,f,n==o),r=0,++n}++r,++t}return w.join("")}i={version:"1.4.1",ucs2:{decode:k,encode:w},decode:j,encode:_,toASCII:function(e){return C(e,(function(e){return h.test(e)?"xn--"+_(e):e}))},toUnicode:function(e){return C(e,(function(e){return p.test(e)?j(e.slice(4).toLowerCase()):e}))}},void 0===(n=function(){return i}.call(t,r,t,e))||(e.exports=n)}()},44719:function(e){"use strict";var t=String.prototype.replace,r=/%20/g,n="RFC3986";e.exports={default:n,formatters:{RFC1738:function(e){return t.call(e,r,"+")},RFC3986:function(e){return String(e)}},RFC1738:"RFC1738",RFC3986:n}},35984:function(e,t,r){"use strict";var n=r(24730),o=r(7325),a=r(44719);e.exports={formats:a,parse:o,stringify:n}},7325:function(e,t,r){"use strict";var n=r(19368),o=Object.prototype.hasOwnProperty,a=Array.isArray,i={allowDots:!1,allowPrototypes:!1,allowSparse:!1,arrayLimit:20,charset:"utf-8",charsetSentinel:!1,comma:!1,decoder:n.decode,delimiter:"&",depth:5,ignoreQueryPrefix:!1,interpretNumericEntities:!1,parameterLimit:1e3,parseArrays:!0,plainObjects:!1,strictNullHandling:!1},s=function(e){return e.replace(/&#(\d+);/g,(function(e,t){return String.fromCharCode(parseInt(t,10))}))},l=function(e,t){return e&&"string"==typeof e&&t.comma&&e.indexOf(",")>-1?e.split(","):e},c=function(e,t,r,n){if(e){var a=r.allowDots?e.replace(/\.([^.[]+)/g,"[$1]"):e,i=/(\[[^[\]]*])/g,s=r.depth>0&&/(\[[^[\]]*])/.exec(a),c=s?a.slice(0,s.index):a,u=[];if(c){if(!r.plainObjects&&o.call(Object.prototype,c)&&!r.allowPrototypes)return;u.push(c)}for(var d=0;r.depth>0&&null!==(s=i.exec(a))&&d<r.depth;){if(d+=1,!r.plainObjects&&o.call(Object.prototype,s[1].slice(1,-1))&&!r.allowPrototypes)return;u.push(s[1])}return s&&u.push("["+a.slice(s.index)+"]"),function(e,t,r,n){for(var o=n?t:l(t,r),a=e.length-1;a>=0;--a){var i,s=e[a];if("[]"===s&&r.parseArrays)i=[].concat(o);else{i=r.plainObjects?Object.create(null):{};var c="["===s.charAt(0)&&"]"===s.charAt(s.length-1)?s.slice(1,-1):s,u=parseInt(c,10);r.parseArrays||""!==c?!isNaN(u)&&s!==c&&String(u)===c&&u>=0&&r.parseArrays&&u<=r.arrayLimit?(i=[])[u]=o:"__proto__"!==c&&(i[c]=o):i={0:o}}o=i}return o}(u,t,r,n)}};e.exports=function(e,t){var r=function(e){if(!e)return i;if(null!==e.decoder&&void 0!==e.decoder&&"function"!=typeof e.decoder)throw new TypeError("Decoder has to be a function.");if(void 0!==e.charset&&"utf-8"!==e.charset&&"iso-8859-1"!==e.charset)throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");var t=void 0===e.charset?i.charset:e.charset;return{allowDots:void 0===e.allowDots?i.allowDots:!!e.allowDots,allowPrototypes:"boolean"==typeof e.allowPrototypes?e.allowPrototypes:i.allowPrototypes,allowSparse:"boolean"==typeof e.allowSparse?e.allowSparse:i.allowSparse,arrayLimit:"number"==typeof e.arrayLimit?e.arrayLimit:i.arrayLimit,charset:t,charsetSentinel:"boolean"==typeof e.charsetSentinel?e.charsetSentinel:i.charsetSentinel,comma:"boolean"==typeof e.comma?e.comma:i.comma,decoder:"function"==typeof e.decoder?e.decoder:i.decoder,delimiter:"string"==typeof e.delimiter||n.isRegExp(e.delimiter)?e.delimiter:i.delimiter,depth:"number"==typeof e.depth||!1===e.depth?+e.depth:i.depth,ignoreQueryPrefix:!0===e.ignoreQueryPrefix,interpretNumericEntities:"boolean"==typeof e.interpretNumericEntities?e.interpretNumericEntities:i.interpretNumericEntities,parameterLimit:"number"==typeof e.parameterLimit?e.parameterLimit:i.parameterLimit,parseArrays:!1!==e.parseArrays,plainObjects:"boolean"==typeof e.plainObjects?e.plainObjects:i.plainObjects,strictNullHandling:"boolean"==typeof e.strictNullHandling?e.strictNullHandling:i.strictNullHandling}}(t);if(""===e||null==e)return r.plainObjects?Object.create(null):{};for(var u="string"==typeof e?function(e,t){var r,c={__proto__:null},u=t.ignoreQueryPrefix?e.replace(/^\?/,""):e,d=t.parameterLimit===1/0?void 0:t.parameterLimit,p=u.split(t.delimiter,d),h=-1,m=t.charset;if(t.charsetSentinel)for(r=0;r<p.length;++r)0===p[r].indexOf("utf8=")&&("utf8=%E2%9C%93"===p[r]?m="utf-8":"utf8=%26%2310003%3B"===p[r]&&(m="iso-8859-1"),h=r,r=p.length);for(r=0;r<p.length;++r)if(r!==h){var g,f,v=p[r],b=v.indexOf("]="),A=-1===b?v.indexOf("="):b+1;-1===A?(g=t.decoder(v,i.decoder,m,"key"),f=t.strictNullHandling?null:""):(g=t.decoder(v.slice(0,A),i.decoder,m,"key"),f=n.maybeMap(l(v.slice(A+1),t),(function(e){return t.decoder(e,i.decoder,m,"value")}))),f&&t.interpretNumericEntities&&"iso-8859-1"===m&&(f=s(f)),v.indexOf("[]=")>-1&&(f=a(f)?[f]:f),o.call(c,g)?c[g]=n.combine(c[g],f):c[g]=f}return c}(e,r):e,d=r.plainObjects?Object.create(null):{},p=Object.keys(u),h=0;h<p.length;++h){var m=p[h],g=c(m,u[m],r,"string"==typeof e);d=n.merge(d,g,r)}return!0===r.allowSparse?d:n.compact(d)}},24730:function(e,t,r){"use strict";var n=r(37478),o=r(19368),a=r(44719),i=Object.prototype.hasOwnProperty,s={brackets:function(e){return e+"[]"},comma:"comma",indices:function(e,t){return e+"["+t+"]"},repeat:function(e){return e}},l=Array.isArray,c=Array.prototype.push,u=function(e,t){c.apply(e,l(t)?t:[t])},d=Date.prototype.toISOString,p=a.default,h={addQueryPrefix:!1,allowDots:!1,charset:"utf-8",charsetSentinel:!1,delimiter:"&",encode:!0,encoder:o.encode,encodeValuesOnly:!1,format:p,formatter:a.formatters[p],indices:!1,serializeDate:function(e){return d.call(e)},skipNulls:!1,strictNullHandling:!1},m={},g=function e(t,r,a,i,s,c,d,p,g,f,v,b,A,y,C,k){for(var w,S=t,x=k,j=0,_=!1;void 0!==(x=x.get(m))&&!_;){var P=x.get(t);if(j+=1,void 0!==P){if(P===j)throw new RangeError("Cyclic object value");_=!0}void 0===x.get(m)&&(j=0)}if("function"==typeof p?S=p(r,S):S instanceof Date?S=v(S):"comma"===a&&l(S)&&(S=o.maybeMap(S,(function(e){return e instanceof Date?v(e):e}))),null===S){if(s)return d&&!y?d(r,h.encoder,C,"key",b):r;S=""}if("string"==typeof(w=S)||"number"==typeof w||"boolean"==typeof w||"symbol"==typeof w||"bigint"==typeof w||o.isBuffer(S))return d?[A(y?r:d(r,h.encoder,C,"key",b))+"="+A(d(S,h.encoder,C,"value",b))]:[A(r)+"="+A(String(S))];var N,z=[];if(void 0===S)return z;if("comma"===a&&l(S))y&&d&&(S=o.maybeMap(S,d)),N=[{value:S.length>0?S.join(",")||null:void 0}];else if(l(p))N=p;else{var E=Object.keys(S);N=g?E.sort(g):E}for(var O=i&&l(S)&&1===S.length?r+"[]":r,T=0;T<N.length;++T){var D=N[T],F="object"==typeof D&&void 0!==D.value?D.value:S[D];if(!c||null!==F){var B=l(S)?"function"==typeof a?a(O,D):O:O+(f?"."+D:"["+D+"]");k.set(t,j);var M=n();M.set(m,k),u(z,e(F,B,a,i,s,c,"comma"===a&&y&&l(S)?null:d,p,g,f,v,b,A,y,C,M))}}return z};e.exports=function(e,t){var r,o=e,c=function(e){if(!e)return h;if(null!==e.encoder&&void 0!==e.encoder&&"function"!=typeof e.encoder)throw new TypeError("Encoder has to be a function.");var t=e.charset||h.charset;if(void 0!==e.charset&&"utf-8"!==e.charset&&"iso-8859-1"!==e.charset)throw new TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");var r=a.default;if(void 0!==e.format){if(!i.call(a.formatters,e.format))throw new TypeError("Unknown format option provided.");r=e.format}var n=a.formatters[r],o=h.filter;return("function"==typeof e.filter||l(e.filter))&&(o=e.filter),{addQueryPrefix:"boolean"==typeof e.addQueryPrefix?e.addQueryPrefix:h.addQueryPrefix,allowDots:void 0===e.allowDots?h.allowDots:!!e.allowDots,charset:t,charsetSentinel:"boolean"==typeof e.charsetSentinel?e.charsetSentinel:h.charsetSentinel,delimiter:void 0===e.delimiter?h.delimiter:e.delimiter,encode:"boolean"==typeof e.encode?e.encode:h.encode,encoder:"function"==typeof e.encoder?e.encoder:h.encoder,encodeValuesOnly:"boolean"==typeof e.encodeValuesOnly?e.encodeValuesOnly:h.encodeValuesOnly,filter:o,format:r,formatter:n,serializeDate:"function"==typeof e.serializeDate?e.serializeDate:h.serializeDate,skipNulls:"boolean"==typeof e.skipNulls?e.skipNulls:h.skipNulls,sort:"function"==typeof e.sort?e.sort:null,strictNullHandling:"boolean"==typeof e.strictNullHandling?e.strictNullHandling:h.strictNullHandling}}(t);"function"==typeof c.filter?o=(0,c.filter)("",o):l(c.filter)&&(r=c.filter);var d,p=[];if("object"!=typeof o||null===o)return"";d=t&&t.arrayFormat in s?t.arrayFormat:t&&"indices"in t?t.indices?"indices":"repeat":"indices";var m=s[d];if(t&&"commaRoundTrip"in t&&"boolean"!=typeof t.commaRoundTrip)throw new TypeError("`commaRoundTrip` must be a boolean, or absent");var f="comma"===m&&t&&t.commaRoundTrip;r||(r=Object.keys(o)),c.sort&&r.sort(c.sort);for(var v=n(),b=0;b<r.length;++b){var A=r[b];c.skipNulls&&null===o[A]||u(p,g(o[A],A,m,f,c.strictNullHandling,c.skipNulls,c.encode?c.encoder:null,c.filter,c.sort,c.allowDots,c.serializeDate,c.format,c.formatter,c.encodeValuesOnly,c.charset,v))}var y=p.join(c.delimiter),C=!0===c.addQueryPrefix?"?":"";return c.charsetSentinel&&("iso-8859-1"===c.charset?C+="utf8=%26%2310003%3B&":C+="utf8=%E2%9C%93&"),y.length>0?C+y:""}},19368:function(e,t,r){"use strict";var n=r(44719),o=Object.prototype.hasOwnProperty,a=Array.isArray,i=function(){for(var e=[],t=0;t<256;++t)e.push("%"+((t<16?"0":"")+t.toString(16)).toUpperCase());return e}(),s=function(e,t){for(var r=t&&t.plainObjects?Object.create(null):{},n=0;n<e.length;++n)void 0!==e[n]&&(r[n]=e[n]);return r};e.exports={arrayToObject:s,assign:function(e,t){return Object.keys(t).reduce((function(e,r){return e[r]=t[r],e}),e)},combine:function(e,t){return[].concat(e,t)},compact:function(e){for(var t=[{obj:{o:e},prop:"o"}],r=[],n=0;n<t.length;++n)for(var o=t[n],i=o.obj[o.prop],s=Object.keys(i),l=0;l<s.length;++l){var c=s[l],u=i[c];"object"==typeof u&&null!==u&&-1===r.indexOf(u)&&(t.push({obj:i,prop:c}),r.push(u))}return function(e){for(;e.length>1;){var t=e.pop(),r=t.obj[t.prop];if(a(r)){for(var n=[],o=0;o<r.length;++o)void 0!==r[o]&&n.push(r[o]);t.obj[t.prop]=n}}}(t),e},decode:function(e,t,r){var n=e.replace(/\+/g," ");if("iso-8859-1"===r)return n.replace(/%[0-9a-f]{2}/gi,unescape);try{return decodeURIComponent(n)}catch(e){return n}},encode:function(e,t,r,o,a){if(0===e.length)return e;var s=e;if("symbol"==typeof e?s=Symbol.prototype.toString.call(e):"string"!=typeof e&&(s=String(e)),"iso-8859-1"===r)return escape(s).replace(/%u[0-9a-f]{4}/gi,(function(e){return"%26%23"+parseInt(e.slice(2),16)+"%3B"}));for(var l="",c=0;c<s.length;++c){var u=s.charCodeAt(c);45===u||46===u||95===u||126===u||u>=48&&u<=57||u>=65&&u<=90||u>=97&&u<=122||a===n.RFC1738&&(40===u||41===u)?l+=s.charAt(c):u<128?l+=i[u]:u<2048?l+=i[192|u>>6]+i[128|63&u]:u<55296||u>=57344?l+=i[224|u>>12]+i[128|u>>6&63]+i[128|63&u]:(c+=1,u=65536+((1023&u)<<10|1023&s.charCodeAt(c)),l+=i[240|u>>18]+i[128|u>>12&63]+i[128|u>>6&63]+i[128|63&u])}return l},isBuffer:function(e){return!(!e||"object"!=typeof e||!(e.constructor&&e.constructor.isBuffer&&e.constructor.isBuffer(e)))},isRegExp:function(e){return"[object RegExp]"===Object.prototype.toString.call(e)},maybeMap:function(e,t){if(a(e)){for(var r=[],n=0;n<e.length;n+=1)r.push(t(e[n]));return r}return t(e)},merge:function e(t,r,n){if(!r)return t;if("object"!=typeof r){if(a(t))t.push(r);else{if(!t||"object"!=typeof t)return[t,r];(n&&(n.plainObjects||n.allowPrototypes)||!o.call(Object.prototype,r))&&(t[r]=!0)}return t}if(!t||"object"!=typeof t)return[t].concat(r);var i=t;return a(t)&&!a(r)&&(i=s(t,n)),a(t)&&a(r)?(r.forEach((function(r,a){if(o.call(t,a)){var i=t[a];i&&"object"==typeof i&&r&&"object"==typeof r?t[a]=e(i,r,n):t.push(r)}else t[a]=r})),t):Object.keys(r).reduce((function(t,a){var i=r[a];return o.call(t,a)?t[a]=e(t[a],i,n):t[a]=i,t}),i)}}},8575:function(e,t,r){"use strict";var n=r(52511);function o(){this.protocol=null,this.slashes=null,this.auth=null,this.host=null,this.port=null,this.hostname=null,this.hash=null,this.search=null,this.query=null,this.pathname=null,this.path=null,this.href=null}var a=/^([a-z0-9.+-]+:)/i,i=/:[0-9]*$/,s=/^(\/\/?(?!\/)[^?\s]*)(\?[^\s]*)?$/,l=["{","}","|","\\","^","`"].concat(["<",">",'"',"`"," ","\r","\n","\t"]),c=["'"].concat(l),u=["%","/","?",";","#"].concat(c),d=["/","?","#"],p=/^[+a-z0-9A-Z_-]{0,63}$/,h=/^([+a-z0-9A-Z_-]{0,63})(.*)$/,m={javascript:!0,"javascript:":!0},g={javascript:!0,"javascript:":!0},f={http:!0,https:!0,ftp:!0,gopher:!0,file:!0,"http:":!0,"https:":!0,"ftp:":!0,"gopher:":!0,"file:":!0},v=r(35984);function b(e,t,r){if(e&&"object"==typeof e&&e instanceof o)return e;var n=new o;return n.parse(e,t,r),n}o.prototype.parse=function(e,t,r){if("string"!=typeof e)throw new TypeError("Parameter 'url' must be a string, not "+typeof e);var o=e.indexOf("?"),i=-1!==o&&o<e.indexOf("#")?"?":"#",l=e.split(i);l[0]=l[0].replace(/\\/g,"/");var b=e=l.join(i);if(b=b.trim(),!r&&1===e.split("#").length){var A=s.exec(b);if(A)return this.path=b,this.href=b,this.pathname=A[1],A[2]?(this.search=A[2],this.query=t?v.parse(this.search.substr(1)):this.search.substr(1)):t&&(this.search="",this.query={}),this}var y=a.exec(b);if(y){var C=(y=y[0]).toLowerCase();this.protocol=C,b=b.substr(y.length)}if(r||y||b.match(/^\/\/[^@/]+@[^@/]+/)){var k="//"===b.substr(0,2);!k||y&&g[y]||(b=b.substr(2),this.slashes=!0)}if(!g[y]&&(k||y&&!f[y])){for(var w,S,x=-1,j=0;j<d.length;j++)-1!==(_=b.indexOf(d[j]))&&(-1===x||_<x)&&(x=_);for(-1!==(S=-1===x?b.lastIndexOf("@"):b.lastIndexOf("@",x))&&(w=b.slice(0,S),b=b.slice(S+1),this.auth=decodeURIComponent(w)),x=-1,j=0;j<u.length;j++){var _;-1!==(_=b.indexOf(u[j]))&&(-1===x||_<x)&&(x=_)}-1===x&&(x=b.length),this.host=b.slice(0,x),b=b.slice(x),this.parseHost(),this.hostname=this.hostname||"";var P="["===this.hostname[0]&&"]"===this.hostname[this.hostname.length-1];if(!P)for(var N=this.hostname.split(/\./),z=(j=0,N.length);j<z;j++){var E=N[j];if(E&&!E.match(p)){for(var O="",T=0,D=E.length;T<D;T++)E.charCodeAt(T)>127?O+="x":O+=E[T];if(!O.match(p)){var F=N.slice(0,j),B=N.slice(j+1),M=E.match(h);M&&(F.push(M[1]),B.unshift(M[2])),B.length&&(b="/"+B.join(".")+b),this.hostname=F.join(".");break}}}this.hostname.length>255?this.hostname="":this.hostname=this.hostname.toLowerCase(),P||(this.hostname=n.toASCII(this.hostname));var L=this.port?":"+this.port:"",I=this.hostname||"";this.host=I+L,this.href+=this.host,P&&(this.hostname=this.hostname.substr(1,this.hostname.length-2),"/"!==b[0]&&(b="/"+b))}if(!m[C])for(j=0,z=c.length;j<z;j++){var G=c[j];if(-1!==b.indexOf(G)){var U=encodeURIComponent(G);U===G&&(U=escape(G)),b=b.split(G).join(U)}}var R=b.indexOf("#");-1!==R&&(this.hash=b.substr(R),b=b.slice(0,R));var q=b.indexOf("?");if(-1!==q?(this.search=b.substr(q),this.query=b.substr(q+1),t&&(this.query=v.parse(this.query)),b=b.slice(0,q)):t&&(this.search="",this.query={}),b&&(this.pathname=b),f[C]&&this.hostname&&!this.pathname&&(this.pathname="/"),this.pathname||this.search){L=this.pathname||"";var V=this.search||"";this.path=L+V}return this.href=this.format(),this},o.prototype.format=function(){var e=this.auth||"";e&&(e=(e=encodeURIComponent(e)).replace(/%3A/i,":"),e+="@");var t=this.protocol||"",r=this.pathname||"",n=this.hash||"",o=!1,a="";this.host?o=e+this.host:this.hostname&&(o=e+(-1===this.hostname.indexOf(":")?this.hostname:"["+this.hostname+"]"),this.port&&(o+=":"+this.port)),this.query&&"object"==typeof this.query&&Object.keys(this.query).length&&(a=v.stringify(this.query));var i=this.search||a&&"?"+a||"";return t&&":"!==t.substr(-1)&&(t+=":"),this.slashes||(!t||f[t])&&!1!==o?(o="//"+(o||""),r&&"/"!==r.charAt(0)&&(r="/"+r)):o||(o=""),n&&"#"!==n.charAt(0)&&(n="#"+n),i&&"?"!==i.charAt(0)&&(i="?"+i),t+o+(r=r.replace(/[?#]/g,(function(e){return encodeURIComponent(e)})))+(i=i.replace("#","%23"))+n},o.prototype.resolve=function(e){return this.resolveObject(b(e,!1,!0)).format()},o.prototype.resolveObject=function(e){if("string"==typeof e){var t=new o;t.parse(e,!1,!0),e=t}for(var r=new o,n=Object.keys(this),a=0;a<n.length;a++){var i=n[a];r[i]=this[i]}if(r.hash=e.hash,""===e.href)return r.href=r.format(),r;if(e.slashes&&!e.protocol){for(var s=Object.keys(e),l=0;l<s.length;l++){var c=s[l];"protocol"!==c&&(r[c]=e[c])}return f[r.protocol]&&r.hostname&&!r.pathname&&(r.pathname="/",r.path=r.pathname),r.href=r.format(),r}if(e.protocol&&e.protocol!==r.protocol){if(!f[e.protocol]){for(var u=Object.keys(e),d=0;d<u.length;d++){var p=u[d];r[p]=e[p]}return r.href=r.format(),r}if(r.protocol=e.protocol,e.host||g[e.protocol])r.pathname=e.pathname;else{for(var h=(e.pathname||"").split("/");h.length&&!(e.host=h.shift()););e.host||(e.host=""),e.hostname||(e.hostname=""),""!==h[0]&&h.unshift(""),h.length<2&&h.unshift(""),r.pathname=h.join("/")}if(r.search=e.search,r.query=e.query,r.host=e.host||"",r.auth=e.auth,r.hostname=e.hostname||e.host,r.port=e.port,r.pathname||r.search){var m=r.pathname||"",v=r.search||"";r.path=m+v}return r.slashes=r.slashes||e.slashes,r.href=r.format(),r}var b=r.pathname&&"/"===r.pathname.charAt(0),A=e.host||e.pathname&&"/"===e.pathname.charAt(0),y=A||b||r.host&&e.pathname,C=y,k=r.pathname&&r.pathname.split("/")||[],w=(h=e.pathname&&e.pathname.split("/")||[],r.protocol&&!f[r.protocol]);if(w&&(r.hostname="",r.port=null,r.host&&(""===k[0]?k[0]=r.host:k.unshift(r.host)),r.host="",e.protocol&&(e.hostname=null,e.port=null,e.host&&(""===h[0]?h[0]=e.host:h.unshift(e.host)),e.host=null),y=y&&(""===h[0]||""===k[0])),A)r.host=e.host||""===e.host?e.host:r.host,r.hostname=e.hostname||""===e.hostname?e.hostname:r.hostname,r.search=e.search,r.query=e.query,k=h;else if(h.length)k||(k=[]),k.pop(),k=k.concat(h),r.search=e.search,r.query=e.query;else if(null!=e.search)return w&&(r.host=k.shift(),r.hostname=r.host,(P=!!(r.host&&r.host.indexOf("@")>0)&&r.host.split("@"))&&(r.auth=P.shift(),r.hostname=P.shift(),r.host=r.hostname)),r.search=e.search,r.query=e.query,null===r.pathname&&null===r.search||(r.path=(r.pathname?r.pathname:"")+(r.search?r.search:"")),r.href=r.format(),r;if(!k.length)return r.pathname=null,r.search?r.path="/"+r.search:r.path=null,r.href=r.format(),r;for(var S=k.slice(-1)[0],x=(r.host||e.host||k.length>1)&&("."===S||".."===S)||""===S,j=0,_=k.length;_>=0;_--)"."===(S=k[_])?k.splice(_,1):".."===S?(k.splice(_,1),j++):j&&(k.splice(_,1),j--);if(!y&&!C)for(;j--;j)k.unshift("..");!y||""===k[0]||k[0]&&"/"===k[0].charAt(0)||k.unshift(""),x&&"/"!==k.join("/").substr(-1)&&k.push("");var P,N=""===k[0]||k[0]&&"/"===k[0].charAt(0);return w&&(r.hostname=N?"":k.length?k.shift():"",r.host=r.hostname,(P=!!(r.host&&r.host.indexOf("@")>0)&&r.host.split("@"))&&(r.auth=P.shift(),r.hostname=P.shift(),r.host=r.hostname)),(y=y||r.host&&k.length)&&!N&&k.unshift(""),k.length>0?r.pathname=k.join("/"):(r.pathname=null,r.path=null),null===r.pathname&&null===r.search||(r.path=(r.pathname?r.pathname:"")+(r.search?r.search:"")),r.auth=e.auth||r.auth,r.slashes=r.slashes||e.slashes,r.href=r.format(),r},o.prototype.parseHost=function(){var e=this.host,t=i.exec(e);t&&(":"!==(t=t[0])&&(this.port=t.substr(1)),e=e.substr(0,e.length-t.length)),e&&(this.hostname=e)},t.parse=b,t.resolve=function(e,t){return b(e,!1,!0).resolve(t)},t.resolveObject=function(e,t){return e?b(e,!1,!0).resolveObject(t):t},t.format=function(e){return"string"==typeof e&&(e=b(e)),e instanceof o?e.format():o.prototype.format.call(e)},t.Url=o},24654:function(){}},n={};function o(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={id:e,loaded:!1,exports:{}};return r[e].call(a.exports,a,a.exports,o),a.loaded=!0,a.exports}o.m=r,e=[],o.O=function(t,r,n,a){if(!r){var i=1/0;for(u=0;u<e.length;u++){r=e[u][0],n=e[u][1],a=e[u][2];for(var s=!0,l=0;l<r.length;l++)(!1&a||i>=a)&&Object.keys(o.O).every((function(e){return o.O[e](r[l])}))?r.splice(l--,1):(s=!1,a<i&&(i=a));if(s){e.splice(u--,1);var c=n();void 0!==c&&(t=c)}}return t}a=a||0;for(var u=e.length;u>0&&e[u-1][2]>a;u--)e[u]=e[u-1];e[u]=[r,n,a]},o.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return o.d(t,{a:t}),t},o.d=function(e,t){for(var r in t)o.o(t,r)&&!o.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},o.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(e){if("object"==typeof window)return window}}(),o.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},o.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},o.nmd=function(e){return e.paths=[],e.children||(e.children=[]),e},o.j=1474,function(){o.b=document.baseURI||self.location.href;var e={1474:0};o.O.j=function(t){return 0===e[t]};var t=function(t,r){var n,a,i=r[0],s=r[1],l=r[2],c=0;if(i.some((function(t){return 0!==e[t]}))){for(n in s)o.o(s,n)&&(o.m[n]=s[n]);if(l)var u=l(o)}for(t&&t(r);c<i.length;c++)a=i[c],o.o(e,a)&&e[a]&&e[a][0](),e[a]=0;return o.O(u)},r=self.webpackChunknextcloud=self.webpackChunknextcloud||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))}(),o.nc=void 0;var a=o.O(void 0,[7874],(function(){return o(68453)}));a=o.O(a)}();
-//# sourceMappingURL=theming-personal-theming.js.map?v=0711f238be9d259afd77
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/@nextcloud/vue/dist/Components/NcColorPicker.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@nextcloud/vue/dist/Components/NcColorPicker.js ***!
+  \**********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+/* provided dependency */ var console = __webpack_require__(/*! ./node_modules/console-browserify/index.js */ "./node_modules/console-browserify/index.js");
+/*! For license information please see NcColorPicker.js.LICENSE.txt */
+!function(e,a){ true?module.exports=a():0}(self,(()=>(()=>{var e={3089:(e,a,t)=>{"use strict";function o(e){return o="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},o(e)}function i(e,a){var t=Object.keys(e);if(Object.getOwnPropertySymbols){var o=Object.getOwnPropertySymbols(e);a&&(o=o.filter((function(a){return Object.getOwnPropertyDescriptor(e,a).enumerable}))),t.push.apply(t,o)}return t}function n(e){for(var a=1;a<arguments.length;a++){var t=null!=arguments[a]?arguments[a]:{};a%2?i(Object(t),!0).forEach((function(a){s(e,a,t[a])})):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(t)):i(Object(t)).forEach((function(a){Object.defineProperty(e,a,Object.getOwnPropertyDescriptor(t,a))}))}return e}function s(e,a,t){return(a=function(e){var a=function(e,a){if("object"!==o(e)||null===e)return e;var t=e[Symbol.toPrimitive];if(void 0!==t){var i=t.call(e,a||"default");if("object"!==o(i))return i;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===a?String:Number)(e)}(e,"string");return"symbol"===o(a)?a:String(a)}(a))in e?Object.defineProperty(e,a,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[a]=t,e}t.d(a,{default:()=>N});const r={name:"NcButton",props:{alignment:{type:String,default:"center",validator:function(e){return["start","start-reverse","center","center-reverse","end","end-reverse"].includes(e)}},disabled:{type:Boolean,default:!1},type:{type:String,validator:function(e){return-1!==["primary","secondary","tertiary","tertiary-no-background","tertiary-on-primary","error","warning","success"].indexOf(e)},default:"secondary"},nativeType:{type:String,validator:function(e){return-1!==["submit","reset","button"].indexOf(e)},default:"button"},wide:{type:Boolean,default:!1},ariaLabel:{type:String,default:null},href:{type:String,default:null},download:{type:String,default:null},to:{type:[String,Object],default:null},exact:{type:Boolean,default:!1},ariaHidden:{type:Boolean,default:null},pressed:{type:Boolean,default:null}},emits:["update:pressed","click"],computed:{realType:function(){return this.pressed?"primary":!1===this.pressed&&"primary"===this.type?"secondary":this.type},flexAlignment:function(){return this.alignment.split("-")[0]},isReverseAligned:function(){return this.alignment.includes("-")}},render:function(e){var a,t,o,i=this,r=null===(a=this.$slots.default)||void 0===a||null===(a=a[0])||void 0===a||null===(a=a.text)||void 0===a||null===(t=a.trim)||void 0===t?void 0:t.call(a),l=!!r,c=null===(o=this.$slots)||void 0===o?void 0:o.icon;r||this.ariaLabel||console.warn("You need to fill either the text or the ariaLabel props in the button component.",{text:r,ariaLabel:this.ariaLabel},this);var m=function(){var a,t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},o=t.navigate,m=t.isActive,d=t.isExactActive;return e(i.to||!i.href?"button":"a",{class:["button-vue",(a={"button-vue--icon-only":c&&!l,"button-vue--text-only":l&&!c,"button-vue--icon-and-text":c&&l},s(a,"button-vue--vue-".concat(i.realType),i.realType),s(a,"button-vue--wide",i.wide),s(a,"button-vue--".concat(i.flexAlignment),"center"!==i.flexAlignment),s(a,"button-vue--reverse",i.isReverseAligned),s(a,"active",m),s(a,"router-link-exact-active",d),a)],attrs:n({"aria-label":i.ariaLabel,"aria-pressed":i.pressed,disabled:i.disabled,type:i.href?null:i.nativeType,role:i.href?"button":null,href:!i.to&&i.href?i.href:null,target:!i.to&&i.href?"_self":null,rel:!i.to&&i.href?"nofollow noreferrer noopener":null,download:!i.to&&i.href&&i.download?i.download:null},i.$attrs),on:n(n({},i.$listeners),{},{click:function(e){"boolean"==typeof i.pressed&&i.$emit("update:pressed",!i.pressed),i.$emit("click",e),null==o||o(e)}})},[e("span",{class:"button-vue__wrapper"},[c?e("span",{class:"button-vue__icon",attrs:{"aria-hidden":i.ariaHidden}},[i.$slots.icon]):null,l?e("span",{class:"button-vue__text"},[r]):null])])};return this.to?e("router-link",{props:{custom:!0,to:this.to,exact:this.exact},scopedSlots:{default:m}}):m()}};var l=t(3379),c=t.n(l),m=t(7795),d=t.n(m),u=t(569),p=t.n(u),h=t(3565),g=t.n(h),v=t(9216),k=t.n(v),y=t(4589),A=t.n(y),f=t(7294),C={};C.styleTagTransform=A(),C.setAttributes=g(),C.insert=p().bind(null,"head"),C.domAPI=d(),C.insertStyleElement=k();c()(f.Z,C);f.Z&&f.Z.locals&&f.Z.locals;var P=t(1900),S=t(2102),w=t.n(S),b=(0,P.Z)(r,undefined,undefined,!1,null,"7aad13a0",null);"function"==typeof w()&&w()(b);const N=b.exports},2297:(e,a,t)=>{"use strict";t.d(a,{default:()=>E});var o=t(9454),i=t(4505),n=t(1206);function s(e){return s="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},s(e)}function r(){r=function(){return e};var e={},a=Object.prototype,t=a.hasOwnProperty,o=Object.defineProperty||function(e,a,t){e[a]=t.value},i="function"==typeof Symbol?Symbol:{},n=i.iterator||"@@iterator",l=i.asyncIterator||"@@asyncIterator",c=i.toStringTag||"@@toStringTag";function m(e,a,t){return Object.defineProperty(e,a,{value:t,enumerable:!0,configurable:!0,writable:!0}),e[a]}try{m({},"")}catch(e){m=function(e,a,t){return e[a]=t}}function d(e,a,t,i){var n=a&&a.prototype instanceof h?a:h,s=Object.create(n.prototype),r=new j(i||[]);return o(s,"_invoke",{value:S(e,t,r)}),s}function u(e,a,t){try{return{type:"normal",arg:e.call(a,t)}}catch(e){return{type:"throw",arg:e}}}e.wrap=d;var p={};function h(){}function g(){}function v(){}var k={};m(k,n,(function(){return this}));var y=Object.getPrototypeOf,A=y&&y(y(O([])));A&&A!==a&&t.call(A,n)&&(k=A);var f=v.prototype=h.prototype=Object.create(k);function C(e){["next","throw","return"].forEach((function(a){m(e,a,(function(e){return this._invoke(a,e)}))}))}function P(e,a){function i(o,n,r,l){var c=u(e[o],e,n);if("throw"!==c.type){var m=c.arg,d=m.value;return d&&"object"==s(d)&&t.call(d,"__await")?a.resolve(d.__await).then((function(e){i("next",e,r,l)}),(function(e){i("throw",e,r,l)})):a.resolve(d).then((function(e){m.value=e,r(m)}),(function(e){return i("throw",e,r,l)}))}l(c.arg)}var n;o(this,"_invoke",{value:function(e,t){function o(){return new a((function(a,o){i(e,t,a,o)}))}return n=n?n.then(o,o):o()}})}function S(e,a,t){var o="suspendedStart";return function(i,n){if("executing"===o)throw new Error("Generator is already running");if("completed"===o){if("throw"===i)throw n;return E()}for(t.method=i,t.arg=n;;){var s=t.delegate;if(s){var r=w(s,t);if(r){if(r===p)continue;return r}}if("next"===t.method)t.sent=t._sent=t.arg;else if("throw"===t.method){if("suspendedStart"===o)throw o="completed",t.arg;t.dispatchException(t.arg)}else"return"===t.method&&t.abrupt("return",t.arg);o="executing";var l=u(e,a,t);if("normal"===l.type){if(o=t.done?"completed":"suspendedYield",l.arg===p)continue;return{value:l.arg,done:t.done}}"throw"===l.type&&(o="completed",t.method="throw",t.arg=l.arg)}}}function w(e,a){var t=a.method,o=e.iterator[t];if(void 0===o)return a.delegate=null,"throw"===t&&e.iterator.return&&(a.method="return",a.arg=void 0,w(e,a),"throw"===a.method)||"return"!==t&&(a.method="throw",a.arg=new TypeError("The iterator does not provide a '"+t+"' method")),p;var i=u(o,e.iterator,a.arg);if("throw"===i.type)return a.method="throw",a.arg=i.arg,a.delegate=null,p;var n=i.arg;return n?n.done?(a[e.resultName]=n.value,a.next=e.nextLoc,"return"!==a.method&&(a.method="next",a.arg=void 0),a.delegate=null,p):n:(a.method="throw",a.arg=new TypeError("iterator result is not an object"),a.delegate=null,p)}function b(e){var a={tryLoc:e[0]};1 in e&&(a.catchLoc=e[1]),2 in e&&(a.finallyLoc=e[2],a.afterLoc=e[3]),this.tryEntries.push(a)}function N(e){var a=e.completion||{};a.type="normal",delete a.arg,e.completion=a}function j(e){this.tryEntries=[{tryLoc:"root"}],e.forEach(b,this),this.reset(!0)}function O(e){if(e){var a=e[n];if(a)return a.call(e);if("function"==typeof e.next)return e;if(!isNaN(e.length)){var o=-1,i=function a(){for(;++o<e.length;)if(t.call(e,o))return a.value=e[o],a.done=!1,a;return a.value=void 0,a.done=!0,a};return i.next=i}}return{next:E}}function E(){return{value:void 0,done:!0}}return g.prototype=v,o(f,"constructor",{value:v,configurable:!0}),o(v,"constructor",{value:g,configurable:!0}),g.displayName=m(v,c,"GeneratorFunction"),e.isGeneratorFunction=function(e){var a="function"==typeof e&&e.constructor;return!!a&&(a===g||"GeneratorFunction"===(a.displayName||a.name))},e.mark=function(e){return Object.setPrototypeOf?Object.setPrototypeOf(e,v):(e.__proto__=v,m(e,c,"GeneratorFunction")),e.prototype=Object.create(f),e},e.awrap=function(e){return{__await:e}},C(P.prototype),m(P.prototype,l,(function(){return this})),e.AsyncIterator=P,e.async=function(a,t,o,i,n){void 0===n&&(n=Promise);var s=new P(d(a,t,o,i),n);return e.isGeneratorFunction(t)?s:s.next().then((function(e){return e.done?e.value:s.next()}))},C(f),m(f,c,"Generator"),m(f,n,(function(){return this})),m(f,"toString",(function(){return"[object Generator]"})),e.keys=function(e){var a=Object(e),t=[];for(var o in a)t.push(o);return t.reverse(),function e(){for(;t.length;){var o=t.pop();if(o in a)return e.value=o,e.done=!1,e}return e.done=!0,e}},e.values=O,j.prototype={constructor:j,reset:function(e){if(this.prev=0,this.next=0,this.sent=this._sent=void 0,this.done=!1,this.delegate=null,this.method="next",this.arg=void 0,this.tryEntries.forEach(N),!e)for(var a in this)"t"===a.charAt(0)&&t.call(this,a)&&!isNaN(+a.slice(1))&&(this[a]=void 0)},stop:function(){this.done=!0;var e=this.tryEntries[0].completion;if("throw"===e.type)throw e.arg;return this.rval},dispatchException:function(e){if(this.done)throw e;var a=this;function o(t,o){return s.type="throw",s.arg=e,a.next=t,o&&(a.method="next",a.arg=void 0),!!o}for(var i=this.tryEntries.length-1;i>=0;--i){var n=this.tryEntries[i],s=n.completion;if("root"===n.tryLoc)return o("end");if(n.tryLoc<=this.prev){var r=t.call(n,"catchLoc"),l=t.call(n,"finallyLoc");if(r&&l){if(this.prev<n.catchLoc)return o(n.catchLoc,!0);if(this.prev<n.finallyLoc)return o(n.finallyLoc)}else if(r){if(this.prev<n.catchLoc)return o(n.catchLoc,!0)}else{if(!l)throw new Error("try statement without catch or finally");if(this.prev<n.finallyLoc)return o(n.finallyLoc)}}}},abrupt:function(e,a){for(var o=this.tryEntries.length-1;o>=0;--o){var i=this.tryEntries[o];if(i.tryLoc<=this.prev&&t.call(i,"finallyLoc")&&this.prev<i.finallyLoc){var n=i;break}}n&&("break"===e||"continue"===e)&&n.tryLoc<=a&&a<=n.finallyLoc&&(n=null);var s=n?n.completion:{};return s.type=e,s.arg=a,n?(this.method="next",this.next=n.finallyLoc,p):this.complete(s)},complete:function(e,a){if("throw"===e.type)throw e.arg;return"break"===e.type||"continue"===e.type?this.next=e.arg:"return"===e.type?(this.rval=this.arg=e.arg,this.method="return",this.next="end"):"normal"===e.type&&a&&(this.next=a),p},finish:function(e){for(var a=this.tryEntries.length-1;a>=0;--a){var t=this.tryEntries[a];if(t.finallyLoc===e)return this.complete(t.completion,t.afterLoc),N(t),p}},catch:function(e){for(var a=this.tryEntries.length-1;a>=0;--a){var t=this.tryEntries[a];if(t.tryLoc===e){var o=t.completion;if("throw"===o.type){var i=o.arg;N(t)}return i}}throw new Error("illegal catch attempt")},delegateYield:function(e,a,t){return this.delegate={iterator:O(e),resultName:a,nextLoc:t},"next"===this.method&&(this.arg=void 0),p}},e}function l(e,a,t,o,i,n,s){try{var r=e[n](s),l=r.value}catch(e){return void t(e)}r.done?a(l):Promise.resolve(l).then(o,i)}const c={name:"NcPopover",components:{Dropdown:o.Dropdown},inheritAttrs:!1,props:{popoverBaseClass:{type:String,default:""},focusTrap:{type:Boolean,default:!0},setReturnFocus:{default:void 0,type:[HTMLElement,SVGElement,String,Boolean]}},emits:["after-show","after-hide"],beforeDestroy:function(){this.clearFocusTrap()},methods:{useFocusTrap:function(){var e,a=this;return(e=r().mark((function e(){var t,o;return r().wrap((function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,a.$nextTick();case 2:if(a.focusTrap){e.next=4;break}return e.abrupt("return");case 4:if(o=null===(t=a.$refs.popover)||void 0===t||null===(t=t.$refs.popperContent)||void 0===t?void 0:t.$el){e.next=7;break}return e.abrupt("return");case 7:a.$focusTrap=(0,i.createFocusTrap)(o,{escapeDeactivates:!1,allowOutsideClick:!0,setReturnFocus:a.setReturnFocus,trapStack:(0,n.L)()}),a.$focusTrap.activate();case 9:case"end":return e.stop()}}),e)})),function(){var a=this,t=arguments;return new Promise((function(o,i){var n=e.apply(a,t);function s(e){l(n,o,i,s,r,"next",e)}function r(e){l(n,o,i,s,r,"throw",e)}s(void 0)}))})()},clearFocusTrap:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};try{var a;null===(a=this.$focusTrap)||void 0===a||a.deactivate(e),this.$focusTrap=null}catch(e){console.warn(e)}},afterShow:function(){var e=this;this.$nextTick((function(){e.$emit("after-show"),e.useFocusTrap()}))},afterHide:function(){this.$emit("after-hide"),this.clearFocusTrap()}}},m=c;var d=t(3379),u=t.n(d),p=t(7795),h=t.n(p),g=t(569),v=t.n(g),k=t(3565),y=t.n(k),A=t(9216),f=t.n(A),C=t(4589),P=t.n(C),S=t(1625),w={};w.styleTagTransform=P(),w.setAttributes=y(),w.insert=v().bind(null,"head"),w.domAPI=h(),w.insertStyleElement=f();u()(S.Z,w);S.Z&&S.Z.locals&&S.Z.locals;var b=t(1900),N=t(2405),j=t.n(N),O=(0,b.Z)(m,(function(){var e=this;return(0,e._self._c)("Dropdown",e._g(e._b({ref:"popover",attrs:{distance:10,"arrow-padding":10,"no-auto-focus":!0,"popper-class":e.popoverBaseClass},on:{"apply-show":e.afterShow,"apply-hide":e.afterHide},scopedSlots:e._u([{key:"popper",fn:function(){return[e._t("default")]},proxy:!0}],null,!0)},"Dropdown",e.$attrs,!1),e.$listeners),[e._t("trigger")],2)}),[],!1,null,null,null);"function"==typeof j()&&j()(O);const E=O.exports},1206:(e,a,t)=>{"use strict";t.d(a,{L:()=>o});var o=function(){return Object.assign(window,{_nc_focus_trap:window._nc_focus_trap||[]}),window._nc_focus_trap}},7294:(e,a,t)=>{"use strict";t.d(a,{Z:()=>r});var o=t(7537),i=t.n(o),n=t(3645),s=t.n(n)()(i());s.push([e.id,".material-design-icon[data-v-7aad13a0]{display:flex;align-self:center;justify-self:center;align-items:center;justify-content:center}.button-vue[data-v-7aad13a0]{position:relative;width:fit-content;overflow:hidden;border:0;padding:0;font-size:var(--default-font-size);font-weight:bold;min-height:44px;min-width:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:22px;transition-property:color,border-color,background-color;transition-duration:.1s;transition-timing-function:linear;color:var(--color-primary-element-light-text);background-color:var(--color-primary-element-light)}.button-vue *[data-v-7aad13a0],.button-vue span[data-v-7aad13a0]{cursor:pointer}.button-vue[data-v-7aad13a0]:focus{outline:none}.button-vue[data-v-7aad13a0]:disabled{cursor:default;opacity:.5;filter:saturate(0.7)}.button-vue:disabled *[data-v-7aad13a0]{cursor:default}.button-vue[data-v-7aad13a0]:hover:not(:disabled){background-color:var(--color-primary-element-light-hover)}.button-vue[data-v-7aad13a0]:active{background-color:var(--color-primary-element-light)}.button-vue__wrapper[data-v-7aad13a0]{display:inline-flex;align-items:center;justify-content:center;width:100%}.button-vue--end .button-vue__wrapper[data-v-7aad13a0]{justify-content:end}.button-vue--start .button-vue__wrapper[data-v-7aad13a0]{justify-content:start}.button-vue--reverse .button-vue__wrapper[data-v-7aad13a0]{flex-direction:row-reverse}.button-vue--reverse.button-vue--icon-and-text[data-v-7aad13a0]{padding-inline:calc(var(--default-grid-baseline)*4) var(--default-grid-baseline)}.button-vue__icon[data-v-7aad13a0]{height:44px;width:44px;min-height:44px;min-width:44px;display:flex;justify-content:center;align-items:center}.button-vue__text[data-v-7aad13a0]{font-weight:bold;margin-bottom:1px;padding:2px 0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.button-vue--icon-only[data-v-7aad13a0]{width:44px !important}.button-vue--text-only[data-v-7aad13a0]{padding:0 12px}.button-vue--text-only .button-vue__text[data-v-7aad13a0]{margin-left:4px;margin-right:4px}.button-vue--icon-and-text[data-v-7aad13a0]{padding-block:0;padding-inline:var(--default-grid-baseline) calc(var(--default-grid-baseline)*4)}.button-vue--wide[data-v-7aad13a0]{width:100%}.button-vue[data-v-7aad13a0]:focus-visible{outline:2px solid var(--color-main-text) !important;box-shadow:0 0 0 4px var(--color-main-background) !important}.button-vue:focus-visible.button-vue--vue-tertiary-on-primary[data-v-7aad13a0]{outline:2px solid var(--color-primary-element-text);border-radius:var(--border-radius);background-color:rgba(0,0,0,0)}.button-vue--vue-primary[data-v-7aad13a0]{background-color:var(--color-primary-element);color:var(--color-primary-element-text)}.button-vue--vue-primary[data-v-7aad13a0]:hover:not(:disabled){background-color:var(--color-primary-element-hover)}.button-vue--vue-primary[data-v-7aad13a0]:active{background-color:var(--color-primary-element)}.button-vue--vue-secondary[data-v-7aad13a0]{color:var(--color-primary-element-light-text);background-color:var(--color-primary-element-light)}.button-vue--vue-secondary[data-v-7aad13a0]:hover:not(:disabled){color:var(--color-primary-element-light-text);background-color:var(--color-primary-element-light-hover)}.button-vue--vue-tertiary[data-v-7aad13a0]{color:var(--color-main-text);background-color:rgba(0,0,0,0)}.button-vue--vue-tertiary[data-v-7aad13a0]:hover:not(:disabled){background-color:var(--color-background-hover)}.button-vue--vue-tertiary-no-background[data-v-7aad13a0]{color:var(--color-main-text);background-color:rgba(0,0,0,0)}.button-vue--vue-tertiary-no-background[data-v-7aad13a0]:hover:not(:disabled){background-color:rgba(0,0,0,0)}.button-vue--vue-tertiary-on-primary[data-v-7aad13a0]{color:var(--color-primary-element-text);background-color:rgba(0,0,0,0)}.button-vue--vue-tertiary-on-primary[data-v-7aad13a0]:hover:not(:disabled){background-color:rgba(0,0,0,0)}.button-vue--vue-success[data-v-7aad13a0]{background-color:var(--color-success);color:#fff}.button-vue--vue-success[data-v-7aad13a0]:hover:not(:disabled){background-color:var(--color-success-hover)}.button-vue--vue-success[data-v-7aad13a0]:active{background-color:var(--color-success)}.button-vue--vue-warning[data-v-7aad13a0]{background-color:var(--color-warning);color:#fff}.button-vue--vue-warning[data-v-7aad13a0]:hover:not(:disabled){background-color:var(--color-warning-hover)}.button-vue--vue-warning[data-v-7aad13a0]:active{background-color:var(--color-warning)}.button-vue--vue-error[data-v-7aad13a0]{background-color:var(--color-error);color:#fff}.button-vue--vue-error[data-v-7aad13a0]:hover:not(:disabled){background-color:var(--color-error-hover)}.button-vue--vue-error[data-v-7aad13a0]:active{background-color:var(--color-error)}","",{version:3,sources:["webpack://./src/assets/material-icons.css","webpack://./src/components/NcButton/NcButton.vue","webpack://./src/assets/variables.scss"],names:[],mappings:"AAGA,uCACC,YAAA,CACA,iBAAA,CACA,mBAAA,CACA,kBAAA,CACA,sBAAA,CCLD,6BACC,iBAAA,CACA,iBAAA,CACA,eAAA,CACA,QAAA,CACA,SAAA,CACA,kCAAA,CACA,gBAAA,CACA,eCcgB,CDbhB,cCagB,CDZhB,YAAA,CACA,kBAAA,CACA,sBAAA,CAGA,cAAA,CAKA,kBAAA,CACA,uDAAA,CACA,uBAAA,CACA,iCAAA,CAkBA,6CAAA,CACA,mDAAA,CA1BA,iEAEC,cAAA,CAQD,mCACC,YAAA,CAGD,sCACC,cAAA,CAIA,UCIiB,CDFjB,oBAAA,CALA,wCACC,cAAA,CAUF,kDACC,yDAAA,CAKD,oCACC,mDAAA,CAGD,sCACC,mBAAA,CACA,kBAAA,CACA,sBAAA,CACA,UAAA,CAGD,uDACC,mBAAA,CAED,yDACC,qBAAA,CAED,2DACC,0BAAA,CAGD,gEACC,gFAAA,CAGD,mCACC,WCrDe,CDsDf,UCtDe,CDuDf,eCvDe,CDwDf,cCxDe,CDyDf,YAAA,CACA,sBAAA,CACA,kBAAA,CAGD,mCACC,gBAAA,CACA,iBAAA,CACA,aAAA,CACA,kBAAA,CACA,sBAAA,CACA,eAAA,CAID,wCACC,qBAAA,CAID,wCACC,cAAA,CACA,0DACC,eAAA,CACA,gBAAA,CAKF,4CACC,eAAA,CACA,gFAAA,CAID,mCACC,UAAA,CAGD,2CACC,mDAAA,CACA,4DAAA,CACA,+EACC,mDAAA,CACA,kCAAA,CACA,8BAAA,CAOF,0CACC,6CAAA,CACA,uCAAA,CACA,+DACC,mDAAA,CAID,iDACC,6CAAA,CAKF,4CACC,6CAAA,CACA,mDAAA,CACA,iEACC,6CAAA,CACA,yDAAA,CAKF,2CACC,4BAAA,CACA,8BAAA,CACA,gEACC,8CAAA,CAKF,yDACC,4BAAA,CACA,8BAAA,CACA,8EACC,8BAAA,CAKF,sDACC,uCAAA,CACA,8BAAA,CAEA,2EACC,8BAAA,CAKF,0CACC,qCAAA,CACA,UAAA,CACA,+DACC,2CAAA,CAID,iDACC,qCAAA,CAKF,0CACC,qCAAA,CACA,UAAA,CACA,+DACC,2CAAA,CAID,iDACC,qCAAA,CAKF,wCACC,mCAAA,CACA,UAAA,CACA,6DACC,yCAAA,CAID,+CACC,mCAAA",sourcesContent:["/*\n* Ensure proper alignment of the vue material icons\n*/\n.material-design-icon {\n\tdisplay: flex;\n\talign-self: center;\n\tjustify-self: center;\n\talign-items: center;\n\tjustify-content: center;\n}\n","@use 'sass:math'; $scope_version:\"0bb2eca\"; @import 'variables'; @import 'material-icons';\n\n\n.button-vue {\n\tposition: relative;\n\twidth: fit-content;\n\toverflow: hidden;\n\tborder: 0;\n\tpadding: 0;\n\tfont-size: var(--default-font-size);\n\tfont-weight: bold;\n\tmin-height: $clickable-area;\n\tmin-width: $clickable-area;\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: center;\n\n\t// Cursor pointer on element and all children\n\tcursor: pointer;\n\t& *,\n\tspan {\n\t\tcursor: pointer;\n\t}\n\tborder-radius: math.div($clickable-area, 2);\n\ttransition-property: color, border-color, background-color;\n\ttransition-duration: 0.1s;\n\ttransition-timing-function: linear;\n\n\t// No outline feedback for focus. Handled with a toggled class in js (see data)\n\t&:focus {\n\t\toutline: none;\n\t}\n\n\t&:disabled {\n\t\tcursor: default;\n\t\t& * {\n\t\t\tcursor: default;\n\t\t}\n\t\topacity: $opacity_disabled;\n\t\t// Gives a wash out effect\n\t\tfilter: saturate($opacity_normal);\n\t}\n\n\t// Default button type\n\tcolor: var(--color-primary-element-light-text);\n\tbackground-color: var(--color-primary-element-light);\n\t&:hover:not(:disabled) {\n\t\tbackground-color: var(--color-primary-element-light-hover);\n\t}\n\n\t// Back to the default color for this button when active\n\t// TODO: add ripple effect\n\t&:active {\n\t\tbackground-color: var(--color-primary-element-light);\n\t}\n\n\t&__wrapper {\n\t\tdisplay: inline-flex;\n\t\talign-items: center;\n\t\tjustify-content: center;\n\t\twidth: 100%;\n\t}\n\n\t&--end &__wrapper {\n\t\tjustify-content: end;\n\t}\n\t&--start &__wrapper {\n\t\tjustify-content: start;\n\t}\n\t&--reverse &__wrapper {\n\t\tflex-direction: row-reverse;\n\t}\n\n\t&--reverse#{&}--icon-and-text {\n\t\tpadding-inline: calc(var(--default-grid-baseline) * 4) var(--default-grid-baseline);\n\t}\n\n\t&__icon {\n\t\theight: $clickable-area;\n\t\twidth: $clickable-area;\n\t\tmin-height: $clickable-area;\n\t\tmin-width: $clickable-area;\n\t\tdisplay: flex;\n\t\tjustify-content: center;\n\t\talign-items: center;\n\t}\n\n\t&__text {\n\t\tfont-weight: bold;\n\t\tmargin-bottom: 1px;\n\t\tpadding: 2px 0;\n\t\twhite-space: nowrap;\n\t\ttext-overflow: ellipsis;\n\t\toverflow: hidden;\n\t}\n\n\t// Icon-only button\n\t&--icon-only {\n\t\twidth: $clickable-area !important;\n\t}\n\n\t// Text-only button\n\t&--text-only {\n\t\tpadding: 0 12px;\n\t\t& .button-vue__text {\n\t\t\tmargin-left: 4px;\n\t\t\tmargin-right: 4px;\n\t\t}\n\t}\n\n\t// Icon and text button\n\t&--icon-and-text {\n\t\tpadding-block: 0;\n\t\tpadding-inline: var(--default-grid-baseline) calc(var(--default-grid-baseline) * 4);\n\t}\n\n\t// Wide button spans the whole width of the container\n\t&--wide {\n\t\twidth: 100%;\n\t}\n\n\t&:focus-visible {\n\t\toutline: 2px solid var(--color-main-text) !important;\n\t\tbox-shadow: 0 0 0 4px var(--color-main-background) !important;\n\t\t&.button-vue--vue-tertiary-on-primary {\n\t\t\toutline: 2px solid var(--color-primary-element-text);\n\t\t\tborder-radius: var(--border-radius);\n\t\t\tbackground-color: transparent;\n\t\t}\n\t}\n\n\t// Button types\n\n\t// Primary\n\t&--vue-primary {\n\t\tbackground-color: var(--color-primary-element);\n\t\tcolor: var(--color-primary-element-text);\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color-primary-element-hover);\n\t\t}\n\t\t// Back to the default color for this button when active\n\t\t// TODO: add ripple effect\n\t\t&:active {\n\t\t\tbackground-color: var(--color-primary-element);\n\t\t}\n\t}\n\n\t// Secondary\n\t&--vue-secondary {\n\t\tcolor: var(--color-primary-element-light-text);\n\t\tbackground-color: var(--color-primary-element-light);\n\t\t&:hover:not(:disabled) {\n\t\t\tcolor: var(--color-primary-element-light-text);\n\t\t\tbackground-color: var(--color-primary-element-light-hover);\n\t\t}\n\t}\n\n\t// Tertiary\n\t&--vue-tertiary {\n\t\tcolor: var(--color-main-text);\n\t\tbackground-color: transparent;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color-background-hover);\n\t\t}\n\t}\n\n\t// Tertiary, no background\n\t&--vue-tertiary-no-background {\n\t\tcolor: var(--color-main-text);\n\t\tbackground-color: transparent;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: transparent;\n\t\t}\n\t}\n\n\t// Tertiary on primary color (like the header)\n\t&--vue-tertiary-on-primary {\n\t\tcolor: var(--color-primary-element-text);\n\t\tbackground-color: transparent;\n\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: transparent;\n\t\t}\n\t}\n\n\t// Success\n\t&--vue-success {\n\t\tbackground-color: var(--color-success);\n\t\tcolor: white;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color-success-hover);\n\t\t}\n\t\t// Back to the default color for this button when active\n\t\t// : add ripple effect\n\t\t&:active {\n\t\t\tbackground-color: var(--color-success);\n\t\t}\n\t}\n\n\t// Warning\n\t&--vue-warning {\n\t\tbackground-color: var(--color-warning);\n\t\tcolor: white;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color-warning-hover);\n\t\t}\n\t\t// Back to the default color for this button when active\n\t\t// TODO: add ripple effect\n\t\t&:active {\n\t\t\tbackground-color: var(--color-warning);\n\t\t}\n\t}\n\n\t// Error\n\t&--vue-error {\n\t\tbackground-color: var(--color-error);\n\t\tcolor: white;\n\t\t&:hover:not(:disabled) {\n\t\t\tbackground-color: var(--color-error-hover);\n\t\t}\n\t\t// Back to the default color for this button when active\n\t\t// TODO: add ripple effect\n\t\t&:active {\n\t\t\tbackground-color: var(--color-error);\n\t\t}\n\t}\n}\n\n","/**\n * @copyright Copyright (c) 2019 John Molakvoæ <skjnldsv@protonmail.com>\n *\n * @author John Molakvoæ <skjnldsv@protonmail.com>\n *\n * @license GNU AGPL version 3 or any later version\n *\n * This program is free software: you can redistribute it and/or modify\n * it under the terms of the GNU Affero General Public License as\n * published by the Free Software Foundation, either version 3 of the\n * License, or (at your option) any later version.\n *\n * This program is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n * GNU Affero General Public License for more details.\n *\n * You should have received a copy of the GNU Affero General Public License\n * along with this program. If not, see <http://www.gnu.org/licenses/>.\n *\n */\n\n// https://uxplanet.org/7-rules-for-mobile-ui-button-design-e9cf2ea54556\n// recommended is 48px\n// 44px is what we choose and have very good visual-to-usability ratio\n$clickable-area: 44px;\n\n// background icon size\n// also used for the scss icon font\n$icon-size: 16px;\n\n// icon padding for a $clickable-area width and a $icon-size icon\n// ( 44px - 16px ) / 2\n$icon-margin: math.div($clickable-area - $icon-size, 2);\n\n// transparency background for icons\n$icon-focus-bg: rgba(127, 127, 127, .25);\n\n// popovermenu arrow width from the triangle center\n$arrow-width: 9px;\n\n// opacities\n$opacity_disabled: .5;\n$opacity_normal: .7;\n$opacity_full: 1;\n\n// menu round background hover feedback\n// good looking on dark AND white bg\n$action-background-hover: rgba(127, 127, 127, .25);\n\n// various structure data used in the \n// `AppNavigation` component\n$header-height: 50px;\n$navigation-width: 300px;\n\n// mobile breakpoint\n$breakpoint-mobile: 1024px;\n\n// top-bar spacing\n$topbar-margin: 4px;\n\n// navigation spacing\n$app-navigation-settings-margin: 3px;\n"],sourceRoot:""}]);const r=s},3246:(e,a,t)=>{"use strict";t.d(a,{Z:()=>r});var o=t(7537),i=t.n(o),n=t(3645),s=t.n(n)()(i());s.push([e.id,".material-design-icon[data-v-6cccc0ac]{display:flex;align-self:center;justify-self:center;align-items:center;justify-content:center}.color-picker[data-v-6cccc0ac]{display:flex;overflow:hidden;align-content:flex-end;flex-direction:column;justify-content:space-between;box-sizing:content-box !important;width:176px;padding:8px;border-radius:3px}.color-picker--advanced-fields[data-v-6cccc0ac]{width:264px}.color-picker__simple[data-v-6cccc0ac]{display:grid;grid-template-columns:repeat(auto-fit, 44px);grid-auto-rows:44px}.color-picker__simple-color-circle[data-v-6cccc0ac]{display:flex;align-items:center;justify-content:center;width:34px;height:34px;min-height:34px;margin:auto;padding:0;color:#fff;border:1px solid rgba(0,0,0,.25);border-radius:50%;font-size:16px}.color-picker__simple-color-circle[data-v-6cccc0ac]:hover{opacity:.6}.color-picker__simple-color-circle--active[data-v-6cccc0ac]{width:38px;height:38px;min-height:38px;transition:all 100ms ease-in-out;opacity:1 !important}.color-picker__advanced[data-v-6cccc0ac]{box-shadow:none !important}.color-picker__navigation[data-v-6cccc0ac]{display:flex;flex-direction:row;justify-content:space-between;margin-top:10px}[data-v-6cccc0ac]  .vc-chrome{width:unset;background-color:var(--color-main-background)}[data-v-6cccc0ac]  .vc-chrome-color-wrap{width:30px;height:30px}[data-v-6cccc0ac]  .vc-chrome-active-color{width:34px;height:34px;border-radius:17px}[data-v-6cccc0ac]  .vc-chrome-body{padding:14px 0 0 0;background-color:var(--color-main-background)}[data-v-6cccc0ac]  .vc-chrome-body .vc-input__input{box-shadow:none}[data-v-6cccc0ac]  .vc-chrome-toggle-btn{filter:var(--background-invert-if-dark)}[data-v-6cccc0ac]  .vc-chrome-saturation-wrap{border-radius:3px}[data-v-6cccc0ac]  .vc-chrome-saturation-circle{width:20px;height:20px}.slide-enter[data-v-6cccc0ac]{transform:translateX(-50%);opacity:0}.slide-enter-to[data-v-6cccc0ac]{transform:translateX(0);opacity:1}.slide-leave[data-v-6cccc0ac]{transform:translateX(0);opacity:1}.slide-leave-to[data-v-6cccc0ac]{transform:translateX(-50%);opacity:0}.slide-enter-active[data-v-6cccc0ac],.slide-leave-active[data-v-6cccc0ac]{transition:all 50ms ease-in-out}","",{version:3,sources:["webpack://./src/assets/material-icons.css","webpack://./src/components/NcColorPicker/NcColorPicker.vue","webpack://./src/assets/variables.scss"],names:[],mappings:"AAGA,uCACC,YAAA,CACA,iBAAA,CACA,mBAAA,CACA,kBAAA,CACA,sBAAA,CCND,+BACC,YAAA,CACA,eAAA,CACA,sBAAA,CACA,qBAAA,CACA,6BAAA,CACA,iCAAA,CACA,WAAA,CACA,WAAA,CACA,iBAAA,CAEA,gDACC,WAAA,CAGD,uCACC,YAAA,CACA,4CAAA,CACA,mBCKe,CDHf,oDACC,YAAA,CACA,kBAAA,CACA,sBAAA,CACA,UAAA,CACA,WAAA,CACA,eAAA,CACA,WAAA,CACA,SAAA,CACA,UAAA,CACA,gCAAA,CACA,iBAAA,CACA,cAAA,CACA,0DACC,UAAA,CAED,4DACC,UAAA,CACA,WAAA,CACA,eAAA,CACA,gCAAA,CACA,oBAAA,CAKH,yCACC,0BAAA,CAGD,2CACC,YAAA,CACA,kBAAA,CACA,6BAAA,CACA,eAAA,CAKD,8BACC,WAAA,CACA,6CAAA,CAEA,yCACC,UAAA,CACA,WAAA,CAGD,2CACC,UAAA,CACA,WAAA,CACA,kBAAA,CAGD,mCACC,kBAAA,CACA,6CAAA,CACA,oDACC,eAAA,CAIF,yCACC,uCAAA,CAIA,8CACC,iBAAA,CAGD,gDACC,UAAA,CACA,WAAA,CAOH,8BACC,0BAAA,CACA,SAAA,CAED,iCACC,uBAAA,CACA,SAAA,CAED,8BACC,uBAAA,CACA,SAAA,CAED,iCACC,0BAAA,CACA,SAAA,CAED,0EAEC,+BAAA",sourcesContent:["/*\n* Ensure proper alignment of the vue material icons\n*/\n.material-design-icon {\n\tdisplay: flex;\n\talign-self: center;\n\tjustify-self: center;\n\talign-items: center;\n\tjustify-content: center;\n}\n","@use 'sass:math'; $scope_version:\"0bb2eca\"; @import 'variables'; @import 'material-icons';\n\n.color-picker {\n\tdisplay: flex;\n\toverflow: hidden;\n\talign-content: flex-end;\n\tflex-direction: column;\n\tjustify-content: space-between;\n\tbox-sizing: content-box !important;\n\twidth: 176px;\n\tpadding: 8px;\n\tborder-radius: 3px;\n\n\t&--advanced-fields {\n\t\twidth: 264px;\n\t}\n\n\t&__simple {\n\t\tdisplay: grid;\n\t\tgrid-template-columns: repeat(auto-fit, $clickable-area);\n\t\tgrid-auto-rows: $clickable-area;\n\n\t\t&-color-circle {\n\t\t\tdisplay: flex;\n\t\t\talign-items: center;\n\t\t\tjustify-content: center;\n\t\t\twidth: 34px;\n\t\t\theight: 34px;\n\t\t\tmin-height: 34px;\n\t\t\tmargin: auto;\n\t\t\tpadding: 0;\n\t\t\tcolor: white;\n\t\t\tborder: 1px solid rgba(0, 0, 0, 0.25);\n\t\t\tborder-radius: 50%;\n\t\t\tfont-size: 16px;\n\t\t\t&:hover {\n\t\t\t\topacity: .6;\n\t\t\t}\n\t\t\t&--active {\n\t\t\t\twidth: 38px;\n\t\t\t\theight: 38px;\n\t\t\t\tmin-height: 38px;\n\t\t\t\ttransition: all 100ms ease-in-out;\n\t\t\t\topacity: 1 !important;\n\t\t\t}\n\t\t}\n\t}\n\n\t&__advanced {\n\t\tbox-shadow: none !important;\n\t}\n\n\t&__navigation {\n\t\tdisplay: flex;\n\t\tflex-direction: row;\n\t\tjustify-content: space-between;\n\t\tmargin-top: 10px;\n\t}\n}\n\n:deep() .vc {\n\t&-chrome {\n\t\twidth: unset;\n\t\tbackground-color: var(--color-main-background);\n\n\t\t&-color-wrap {\n\t\t\twidth: 30px;\n\t\t\theight: 30px;\n\t\t}\n\n\t\t&-active-color {\n\t\t\twidth: 34px;\n\t\t\theight: 34px;\n\t\t\tborder-radius: 17px;\n\t\t}\n\n\t\t&-body {\n\t\t\tpadding: 14px 0 0 0;\n\t\t\tbackground-color: var(--color-main-background);\n\t\t\t.vc-input__input {\n\t\t\t\tbox-shadow: none;\n\t\t\t}\n\t\t}\n\n\t\t&-toggle-btn {\n\t\t\tfilter: var(--background-invert-if-dark);\n\t\t}\n\n\t\t&-saturation {\n\t\t\t&-wrap {\n\t\t\t\tborder-radius: 3px;\n\t\t\t}\n\n\t\t\t&-circle {\n\t\t\t\twidth: 20px;\n\t\t\t\theight: 20px;\n\t\t\t}\n\t\t}\n\t}\n}\n\n.slide {\n\t&-enter {\n\t\ttransform: translateX(-50%);\n\t\topacity: 0;\n\t}\n\t&-enter-to {\n\t\ttransform: translateX(0);\n\t\topacity: 1;\n\t}\n\t&-leave {\n\t\ttransform: translateX(0);\n\t\topacity: 1;\n\t}\n\t&-leave-to {\n\t\ttransform: translateX(-50%);\n\t\topacity: 0;\n\t}\n\t&-enter-active,\n\t&-leave-active {\n\t\ttransition: all 50ms ease-in-out;\n\t}\n}\n\n","/**\n * @copyright Copyright (c) 2019 John Molakvoæ <skjnldsv@protonmail.com>\n *\n * @author John Molakvoæ <skjnldsv@protonmail.com>\n *\n * @license GNU AGPL version 3 or any later version\n *\n * This program is free software: you can redistribute it and/or modify\n * it under the terms of the GNU Affero General Public License as\n * published by the Free Software Foundation, either version 3 of the\n * License, or (at your option) any later version.\n *\n * This program is distributed in the hope that it will be useful,\n * but WITHOUT ANY WARRANTY; without even the implied warranty of\n * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n * GNU Affero General Public License for more details.\n *\n * You should have received a copy of the GNU Affero General Public License\n * along with this program. If not, see <http://www.gnu.org/licenses/>.\n *\n */\n\n// https://uxplanet.org/7-rules-for-mobile-ui-button-design-e9cf2ea54556\n// recommended is 48px\n// 44px is what we choose and have very good visual-to-usability ratio\n$clickable-area: 44px;\n\n// background icon size\n// also used for the scss icon font\n$icon-size: 16px;\n\n// icon padding for a $clickable-area width and a $icon-size icon\n// ( 44px - 16px ) / 2\n$icon-margin: math.div($clickable-area - $icon-size, 2);\n\n// transparency background for icons\n$icon-focus-bg: rgba(127, 127, 127, .25);\n\n// popovermenu arrow width from the triangle center\n$arrow-width: 9px;\n\n// opacities\n$opacity_disabled: .5;\n$opacity_normal: .7;\n$opacity_full: 1;\n\n// menu round background hover feedback\n// good looking on dark AND white bg\n$action-background-hover: rgba(127, 127, 127, .25);\n\n// various structure data used in the \n// `AppNavigation` component\n$header-height: 50px;\n$navigation-width: 300px;\n\n// mobile breakpoint\n$breakpoint-mobile: 1024px;\n\n// top-bar spacing\n$topbar-margin: 4px;\n\n// navigation spacing\n$app-navigation-settings-margin: 3px;\n"],sourceRoot:""}]);const r=s},1625:(e,a,t)=>{"use strict";t.d(a,{Z:()=>r});var o=t(7537),i=t.n(o),n=t(3645),s=t.n(n)()(i());s.push([e.id,".material-design-icon{display:flex;align-self:center;justify-self:center;align-items:center;justify-content:center}.resize-observer{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;border:none;background-color:rgba(0,0,0,0);pointer-events:none;display:block;overflow:hidden;opacity:0}.resize-observer object{display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:-1}.v-popper--theme-dropdown.v-popper__popper{z-index:100000;top:0;left:0;display:block !important;filter:drop-shadow(0 1px 10px var(--color-box-shadow))}.v-popper--theme-dropdown.v-popper__popper .v-popper__inner{padding:0;color:var(--color-main-text);border-radius:var(--border-radius-large);overflow:hidden;background:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper .v-popper__arrow-container{position:absolute;z-index:1;width:0;height:0;border-style:solid;border-color:rgba(0,0,0,0);border-width:10px}.v-popper--theme-dropdown.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-container{bottom:-10px;border-bottom-width:0;border-top-color:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-container{top:-10px;border-top-width:0;border-bottom-color:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-container{left:-10px;border-left-width:0;border-right-color:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-container{right:-10px;border-right-width:0;border-left-color:var(--color-main-background)}.v-popper--theme-dropdown.v-popper__popper[aria-hidden=true]{visibility:hidden;transition:opacity var(--animation-quick),visibility var(--animation-quick);opacity:0}.v-popper--theme-dropdown.v-popper__popper[aria-hidden=false]{visibility:visible;transition:opacity var(--animation-quick);opacity:1}","",{version:3,sources:["webpack://./src/assets/material-icons.css","webpack://./src/components/NcPopover/NcPopover.vue"],names:[],mappings:"AAGA,sBACC,YAAA,CACA,iBAAA,CACA,mBAAA,CACA,kBAAA,CACA,sBAAA,CCLD,iBACC,iBAAA,CACA,KAAA,CACA,MAAA,CACA,UAAA,CACA,UAAA,CACA,WAAA,CACA,WAAA,CACA,8BAAA,CACA,mBAAA,CACA,aAAA,CACA,eAAA,CACA,SAAA,CAGD,wBACC,aAAA,CACA,iBAAA,CACA,KAAA,CACA,MAAA,CACA,WAAA,CACA,UAAA,CACA,eAAA,CACA,mBAAA,CACA,UAAA,CAMA,2CACC,cAAA,CACA,KAAA,CACA,MAAA,CACA,wBAAA,CAEA,sDAAA,CAEA,4DACC,SAAA,CACA,4BAAA,CACA,wCAAA,CACA,eAAA,CACA,uCAAA,CAGD,sEACC,iBAAA,CACA,SAAA,CACA,OAAA,CACA,QAAA,CACA,kBAAA,CACA,0BAAA,CACA,iBA1BW,CA6BZ,kGACC,YAAA,CACA,qBAAA,CACA,6CAAA,CAGD,qGACC,SAAA,CACA,kBAAA,CACA,gDAAA,CAGD,oGACC,UAAA,CACA,mBAAA,CACA,+CAAA,CAGD,mGACC,WAAA,CACA,oBAAA,CACA,8CAAA,CAGD,6DACC,iBAAA,CACA,2EAAA,CACA,SAAA,CAGD,8DACC,kBAAA,CACA,yCAAA,CACA,SAAA",sourcesContent:["/*\n* Ensure proper alignment of the vue material icons\n*/\n.material-design-icon {\n\tdisplay: flex;\n\talign-self: center;\n\tjustify-self: center;\n\talign-items: center;\n\tjustify-content: center;\n}\n","@use 'sass:math'; $scope_version:\"0bb2eca\"; @import 'variables'; @import 'material-icons';\n\n\n.resize-observer {\n\tposition:absolute;\n\ttop:0;\n\tleft:0;\n\tz-index:-1;\n\twidth:100%;\n\theight:100%;\n\tborder:none;\n\tbackground-color:transparent;\n\tpointer-events:none;\n\tdisplay:block;\n\toverflow:hidden;\n\topacity:0\n}\n\n.resize-observer object {\n\tdisplay:block;\n\tposition:absolute;\n\ttop:0;\n\tleft:0;\n\theight:100%;\n\twidth:100%;\n\toverflow:hidden;\n\tpointer-events:none;\n\tz-index:-1\n}\n\n$arrow-width: 10px;\n\n.v-popper--theme-dropdown {\n\t&.v-popper__popper {\n\t\tz-index: 100000;\n\t\ttop: 0;\n\t\tleft: 0;\n\t\tdisplay: block !important;\n\n\t\tfilter: drop-shadow(0 1px 10px var(--color-box-shadow));\n\n\t\t.v-popper__inner {\n\t\t\tpadding: 0;\n\t\t\tcolor: var(--color-main-text);\n\t\t\tborder-radius: var(--border-radius-large);\n\t\t\toverflow: hidden;\n\t\t\tbackground: var(--color-main-background);\n\t\t}\n\n\t\t.v-popper__arrow-container {\n\t\t\tposition: absolute;\n\t\t\tz-index: 1;\n\t\t\twidth: 0;\n\t\t\theight: 0;\n\t\t\tborder-style: solid;\n\t\t\tborder-color: transparent;\n\t\t\tborder-width: $arrow-width;\n\t\t}\n\n\t\t&[data-popper-placement^='top'] .v-popper__arrow-container {\n\t\t\tbottom: -$arrow-width;\n\t\t\tborder-bottom-width: 0;\n\t\t\tborder-top-color: var(--color-main-background);\n\t\t}\n\n\t\t&[data-popper-placement^='bottom'] .v-popper__arrow-container {\n\t\t\ttop: -$arrow-width;\n\t\t\tborder-top-width: 0;\n\t\t\tborder-bottom-color: var(--color-main-background);\n\t\t}\n\n\t\t&[data-popper-placement^='right'] .v-popper__arrow-container {\n\t\t\tleft: -$arrow-width;\n\t\t\tborder-left-width: 0;\n\t\t\tborder-right-color: var(--color-main-background);\n\t\t}\n\n\t\t&[data-popper-placement^='left'] .v-popper__arrow-container {\n\t\t\tright: -$arrow-width;\n\t\t\tborder-right-width: 0;\n\t\t\tborder-left-color: var(--color-main-background);\n\t\t}\n\n\t\t&[aria-hidden='true'] {\n\t\t\tvisibility: hidden;\n\t\t\ttransition: opacity var(--animation-quick), visibility var(--animation-quick);\n\t\t\topacity: 0;\n\t\t}\n\n\t\t&[aria-hidden='false'] {\n\t\t\tvisibility: visible;\n\t\t\ttransition: opacity var(--animation-quick);\n\t\t\topacity: 1;\n\t\t}\n\t}\n}\n\n"],sourceRoot:""}]);const r=s},3645:e=>{"use strict";e.exports=function(e){var a=[];return a.toString=function(){return this.map((function(a){var t="",o=void 0!==a[5];return a[4]&&(t+="@supports (".concat(a[4],") {")),a[2]&&(t+="@media ".concat(a[2]," {")),o&&(t+="@layer".concat(a[5].length>0?" ".concat(a[5]):""," {")),t+=e(a),o&&(t+="}"),a[2]&&(t+="}"),a[4]&&(t+="}"),t})).join("")},a.i=function(e,t,o,i,n){"string"==typeof e&&(e=[[null,e,void 0]]);var s={};if(o)for(var r=0;r<this.length;r++){var l=this[r][0];null!=l&&(s[l]=!0)}for(var c=0;c<e.length;c++){var m=[].concat(e[c]);o&&s[m[0]]||(void 0!==n&&(void 0===m[5]||(m[1]="@layer".concat(m[5].length>0?" ".concat(m[5]):""," {").concat(m[1],"}")),m[5]=n),t&&(m[2]?(m[1]="@media ".concat(m[2]," {").concat(m[1],"}"),m[2]=t):m[2]=t),i&&(m[4]?(m[1]="@supports (".concat(m[4],") {").concat(m[1],"}"),m[4]=i):m[4]="".concat(i)),a.push(m))}},a}},7537:e=>{"use strict";e.exports=function(e){var a=e[1],t=e[3];if(!t)return a;if("function"==typeof btoa){var o=btoa(unescape(encodeURIComponent(JSON.stringify(t)))),i="sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(o),n="/*# ".concat(i," */");return[a].concat([n]).join("\n")}return[a].join("\n")}},3379:e=>{"use strict";var a=[];function t(e){for(var t=-1,o=0;o<a.length;o++)if(a[o].identifier===e){t=o;break}return t}function o(e,o){for(var n={},s=[],r=0;r<e.length;r++){var l=e[r],c=o.base?l[0]+o.base:l[0],m=n[c]||0,d="".concat(c," ").concat(m);n[c]=m+1;var u=t(d),p={css:l[1],media:l[2],sourceMap:l[3],supports:l[4],layer:l[5]};if(-1!==u)a[u].references++,a[u].updater(p);else{var h=i(p,o);o.byIndex=r,a.splice(r,0,{identifier:d,updater:h,references:1})}s.push(d)}return s}function i(e,a){var t=a.domAPI(a);t.update(e);return function(a){if(a){if(a.css===e.css&&a.media===e.media&&a.sourceMap===e.sourceMap&&a.supports===e.supports&&a.layer===e.layer)return;t.update(e=a)}else t.remove()}}e.exports=function(e,i){var n=o(e=e||[],i=i||{});return function(e){e=e||[];for(var s=0;s<n.length;s++){var r=t(n[s]);a[r].references--}for(var l=o(e,i),c=0;c<n.length;c++){var m=t(n[c]);0===a[m].references&&(a[m].updater(),a.splice(m,1))}n=l}}},569:e=>{"use strict";var a={};e.exports=function(e,t){var o=function(e){if(void 0===a[e]){var t=document.querySelector(e);if(window.HTMLIFrameElement&&t instanceof window.HTMLIFrameElement)try{t=t.contentDocument.head}catch(e){t=null}a[e]=t}return a[e]}(e);if(!o)throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");o.appendChild(t)}},9216:e=>{"use strict";e.exports=function(e){var a=document.createElement("style");return e.setAttributes(a,e.attributes),e.insert(a,e.options),a}},3565:(e,a,t)=>{"use strict";e.exports=function(e){var a=t.nc;a&&e.setAttribute("nonce",a)}},7795:e=>{"use strict";e.exports=function(e){if("undefined"==typeof document)return{update:function(){},remove:function(){}};var a=e.insertStyleElement(e);return{update:function(t){!function(e,a,t){var o="";t.supports&&(o+="@supports (".concat(t.supports,") {")),t.media&&(o+="@media ".concat(t.media," {"));var i=void 0!==t.layer;i&&(o+="@layer".concat(t.layer.length>0?" ".concat(t.layer):""," {")),o+=t.css,i&&(o+="}"),t.media&&(o+="}"),t.supports&&(o+="}");var n=t.sourceMap;n&&"undefined"!=typeof btoa&&(o+="\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(n))))," */")),a.styleTagTransform(o,e,a.options)}(a,e,t)},remove:function(){!function(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e)}(a)}}}},4589:e=>{"use strict";e.exports=function(e,a){if(a.styleSheet)a.styleSheet.cssText=e;else{for(;a.firstChild;)a.removeChild(a.firstChild);a.appendChild(document.createTextNode(e))}}},2102:()=>{},1554:()=>{},2405:()=>{},1900:(e,a,t)=>{"use strict";function o(e,a,t,o,i,n,s,r){var l,c="function"==typeof e?e.options:e;if(a&&(c.render=a,c.staticRenderFns=t,c._compiled=!0),o&&(c.functional=!0),n&&(c._scopeId="data-v-"+n),s?(l=function(e){(e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),i&&i.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(s)},c._ssrRegister=l):i&&(l=r?function(){i.call(this,(c.functional?this.parent:this).$root.$options.shadowRoot)}:i),l)if(c.functional){c._injectStyles=l;var m=c.render;c.render=function(e,a){return l.call(a),m(e,a)}}else{var d=c.beforeCreate;c.beforeCreate=d?[].concat(d,l):[l]}return{exports:e,options:c}}t.d(a,{Z:()=>o})},9454:e=>{"use strict";e.exports=__webpack_require__(/*! floating-vue */ "./node_modules/floating-vue/dist/floating-vue.es.js")},4505:e=>{"use strict";e.exports=__webpack_require__(/*! focus-trap */ "./node_modules/focus-trap/dist/focus-trap.esm.js")}},a={};function t(o){var i=a[o];if(void 0!==i)return i.exports;var n=a[o]={id:o,exports:{}};return e[o](n,n.exports,t),n.exports}t.n=e=>{var a=e&&e.__esModule?()=>e.default:()=>e;return t.d(a,{a}),a},t.d=(e,a)=>{for(var o in a)t.o(a,o)&&!t.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:a[o]})},t.o=(e,a)=>Object.prototype.hasOwnProperty.call(e,a),t.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},t.nc=void 0;var o={};return(()=>{"use strict";t.r(o),t.d(o,{default:()=>R});var e=t(3089),a=t(2297);var i=(0,(__webpack_require__(/*! @nextcloud/l10n/gettext */ "./node_modules/@nextcloud/l10n/dist/gettext.js").getGettextBuilder))().detectLocale();[{locale:"af",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"ar",translations:{"{tag} (invisible)":"{tag} (غير مرئي)","{tag} (restricted)":"{tag} (مقيد)","a few seconds ago":"منذ عدة ثوانٍ مضت",Actions:"الإجراءات",'Actions for item with name "{name}"':'إجراءات على العنصر المُسمَّى "{name}"',Activities:"الحركات","Animals & Nature":"الحيوانات والطبيعة","Any link":"أيَّ رابطٍ","Anything shared with the same group of people will show up here":"أي مادة تمت مشاركتها مع نفس المجموعة من الأشخاص سيتم عرضها هنا","Avatar of {displayName}":"الرمز التجسيدي avatar ـ {displayName}  ","Avatar of {displayName}, {status}":"الرمز التجسيدي لـ {displayName}، {status}",Back:"عودة","Back to provider selection":"عودة إلى اختيار المُزوِّد","Cancel changes":"إلغاء التغييرات","Change name":"تغيير الاسم",Choose:"إختَر","Clear search":"محو البحث","Clear text":"محو النص",Close:"أغلِق","Close modal":"أغلِق النافذة الصُّورِية","Close navigation":"أغلِق المُتصفِّح","Close sidebar":"قفل الشريط الجانبي","Close Smart Picker":"أغلِق اللاقط الذكي Smart Picker","Collapse menu":"طَيّ القائمة","Confirm changes":"تأكيد التغييرات",Custom:"مُخصَّص","Edit item":"تعديل عنصر","Enter link":"أدخِل الرابط","Error getting related resources. Please contact your system administrator if you have any questions.":"خطأ في الحصول على الموارد ذات الصلة. يرجى الاتصال بمشرف النظام عندك إذا كان لديك أيّ أسئلة.","External documentation for {name}":"التوثيق الخارجي لـ {name}",Favorite:"المُفضَّلة",Flags:"الأعلام","Food & Drink":"الطعام والشراب","Frequently used":"شائعة الاستعمال",Global:"شامل","Go back to the list":"عودة إلى القائمة","Hide password":"إخفاء كلمة المرور",'Load more "{options}""':'حمّل "{options}"" أكثر',"Message limit of {count} characters reached":"تمّ الوصول إلى الحد الأقصى لعدد الأحرف في الرسالة: {count} حرف","More items …":"عناصر أخرى ...","More options":"خيارات أخرى ...",Next:"التالي","No emoji found":"لم يتم العثور على أي إيموجي emoji","No link provider found":"لا يوجد أيّ مزود روابط link provider","No results":"ليس هناك أية نتيجة",Objects:"أشياء","Open contact menu":"إفتَح قائمة جهات الاتصال",'Open link to "{resourceName}"':'إفتَح الرابط إلى "{resourceName}"',"Open menu":"إفتَح القائمة","Open navigation":"إفتَح المتصفح","Open settings menu":"إفتَح قائمة الإعدادات","Password is secure":"كلمة المرور مُؤمّنة","Pause slideshow":"تجميد عرض الشرائح","People & Body":"ناس و أجسام","Pick a date":"إختَر التاريخ","Pick a date and a time":"إختَر التاريخ و الوقت","Pick a month":"إختَر الشهر","Pick a time":"إختَر الوقت","Pick a week":"إختَر الأسبوع","Pick a year":"إختَر السنة","Pick an emoji":"إختَر رمز إيموجي emoji","Please select a time zone:":"الرجاء تحديد المنطقة الزمنية:",Previous:"السابق","Provider icon":"أيقونة المُزوِّد","Raw link {options}":" الرابط الخام raw link ـ {options}","Related resources":"مصادر ذات صلة",Search:"بحث","Search emoji":"بحث عن إيموجي emoji","Search results":"نتائج البحث","sec. ago":"ثانية مضت","seconds ago":"ثوان مضت","Select a tag":"إختَر سِمَةً tag","Select provider":"إختَر مٌزوِّداً",Settings:"الإعدادات","Settings navigation":"إعدادات التّصفُّح","Show password":"أظهِر كلمة المرور","Smart Picker":"اللاقط الذكي smart picker","Smileys & Emotion":"وجوهٌ ضاحكة و مشاعر","Start slideshow":"إبدإ العرض","Start typing to search":"إبدإ كتابة مفردات البحث",Submit:"إرسال",Symbols:"رموز","Travel & Places":"سفر و أماكن","Type to search time zone":"أكتُب للبحث عن منطقة زمنية","Unable to search the group":"تعذّر البحث في المجموعة","Undo changes":"تراجع عن التغييرات",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'أكتُب رسالةً؛ إستعمِل "@" للإشارة إلى شخص ما، و استخدم ":" للإكمال التلقائي لرموز الإيموجي ...'}},{locale:"ast",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"az",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"be",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"bg",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"bn_BD",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"br",translations:{"{tag} (invisible)":"{tag} (diwelus)","{tag} (restricted)":"{tag} (bevennet)","a few seconds ago":"",Actions:"Oberioù",'Actions for item with name "{name}"':"",Activities:"Oberiantizoù","Animals & Nature":"Loened & Natur","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"Dibab","Clear search":"","Clear text":"",Close:"Serriñ","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"Personelañ","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"Bannieloù","Food & Drink":"Boued & Evajoù","Frequently used":"Implijet alies",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"Da heul","No emoji found":"Emoji ebet kavet","No link provider found":"","No results":"Disoc'h ebet",Objects:"Traoù","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"Arsav an diaporama","People & Body":"Tud & Korf","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Choaz un emoji","Please select a time zone:":"",Previous:"A-raok","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Klask","Search emoji":"","Search results":"Disoc'hoù an enklask","sec. ago":"","seconds ago":"","Select a tag":"Choaz ur c'hlav","Select provider":"",Settings:"Arventennoù","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"Smileyioù & Fromoù","Start slideshow":"Kregiñ an diaporama","Start typing to search":"",Submit:"",Symbols:"Arouezioù","Travel & Places":"Beaj & Lec'hioù","Type to search time zone":"","Unable to search the group":"Dibosupl eo klask ar strollad","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"bs",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"ca",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (restringit)","a few seconds ago":"",Actions:"Accions",'Actions for item with name "{name}"':"",Activities:"Activitats","Animals & Nature":"Animals i natura","Any link":"","Anything shared with the same group of people will show up here":"Qualsevol cosa compartida amb el mateix grup de persones es mostrarà aquí","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Cancel·la els canvis","Change name":"",Choose:"Tria","Clear search":"","Clear text":"Netejar text",Close:"Tanca","Close modal":"Tancar el mode","Close navigation":"Tanca la navegació","Close sidebar":"Tancar la barra lateral","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Confirmeu els canvis",Custom:"Personalitzat","Edit item":"Edita l'element","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Preferit",Flags:"Marques","Food & Drink":"Menjar i begudes","Frequently used":"Utilitzats recentment",Global:"Global","Go back to the list":"Torna a la llista","Hide password":"Amagar contrasenya",'Load more "{options}""':"","Message limit of {count} characters reached":"S'ha arribat al límit de {count} caràcters per missatge","More items …":"Més artícles...","More options":"",Next:"Següent","No emoji found":"No s'ha trobat cap emoji","No link provider found":"","No results":"Sense resultats",Objects:"Objectes","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Obre la navegació","Open settings menu":"","Password is secure":"Contrasenya segura<br>","Pause slideshow":"Atura la presentació","People & Body":"Persones i cos","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Trieu un emoji","Please select a time zone:":"Seleccioneu una zona horària:",Previous:"Anterior","Provider icon":"","Raw link {options}":"","Related resources":"Recursos relacionats",Search:"Cerca","Search emoji":"","Search results":"Resultats de cerca","sec. ago":"","seconds ago":"","Select a tag":"Seleccioneu una etiqueta","Select provider":"",Settings:"Paràmetres","Settings navigation":"Navegació d'opcions","Show password":"Mostrar contrasenya","Smart Picker":"","Smileys & Emotion":"Cares i emocions","Start slideshow":"Inicia la presentació","Start typing to search":"",Submit:"Envia",Symbols:"Símbols","Travel & Places":"Viatges i llocs","Type to search time zone":"Escriviu per cercar la zona horària","Unable to search the group":"No es pot cercar el grup","Undo changes":"Desfés els canvis",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Escriu missatge, fes servir "@" per esmentar algú, fes servir ":" per autocompletar emojis...'}},{locale:"cs",translations:{"{tag} (invisible)":"{tag} (neviditelné)","{tag} (restricted)":"{tag} (omezené)","a few seconds ago":"před několika sekundami",Actions:"Akce",'Actions for item with name "{name}"':"Akce pro položku s názvem „{name}“",Activities:"Aktivity","Animals & Nature":"Zvířata a příroda","Any link":"Jakýkoli odkaz","Anything shared with the same group of people will show up here":"Cokoli nasdíleného stejné skupině lidí se zobrazí zde","Avatar of {displayName}":"Zástupný obrázek uživatele {displayName}","Avatar of {displayName}, {status}":"Zástupný obrázek uživatele {displayName}, {status}",Back:"Zpět","Back to provider selection":"Zpět na výběr poskytovatele","Cancel changes":"Zrušit změny","Change name":"Změnit název",Choose:"Zvolit","Clear search":"Vyčistit vyhledávání","Clear text":"Čitelný text",Close:"Zavřít","Close modal":"Zavřít dialogové okno","Close navigation":"Zavřít navigaci","Close sidebar":"Zavřít postranní panel","Close Smart Picker":"Zavřít inteligentní výběr","Collapse menu":"Sbalit nabídku","Confirm changes":"Potvrdit změny",Custom:"Uživatelsky určené","Edit item":"Upravit položku","Enter link":"Zadat odkaz","Error getting related resources. Please contact your system administrator if you have any questions.":"Chyba při získávání souvisejících prostředků. Pokud máte jakékoli dotazy, obraťte se na správce vámi využívaného systému.","External documentation for {name}":"Externí dokumentace pro {name}",Favorite:"Oblíbené",Flags:"Příznaky","Food & Drink":"Jídlo a pití","Frequently used":"Často používané",Global:"Globální","Go back to the list":"Jít zpět na seznam","Hide password":"Skrýt heslo",'Load more "{options}""':"Načíst více „{options}“","Message limit of {count} characters reached":"Dosaženo limitu počtu ({count}) znaků zprávy","More items …":"Další položky…","More options":"Další volby",Next:"Následující","No emoji found":"Nenalezeno žádné emoji","No link provider found":"Nenalezen žádný poskytovatel odkazů","No results":"Nic nenalezeno",Objects:"Objekty","Open contact menu":"Otevřít nabídku kontaktů",'Open link to "{resourceName}"':"Otevřít odkaz na „{resourceName}“","Open menu":"Otevřít nabídku","Open navigation":"Otevřít navigaci","Open settings menu":"Otevřít nabídku nastavení","Password is secure":"Heslo je bezpečné","Pause slideshow":"Pozastavit prezentaci","People & Body":"Lidé a tělo","Pick a date":"Vybrat datum","Pick a date and a time":"Vybrat datum a čas","Pick a month":"Vybrat měsíc","Pick a time":"Vybrat čas","Pick a week":"Vybrat týden","Pick a year":"Vybrat rok","Pick an emoji":"Vybrat emoji","Please select a time zone:":"Vyberte časovou zónu:",Previous:"Předchozí","Provider icon":"Ikona poskytovatele","Raw link {options}":"Holý odkaz {options}","Related resources":"Související prostředky",Search:"Hledat","Search emoji":"Hledat emoji","Search results":"Výsledky hledání","sec. ago":"sek. před","seconds ago":"sekund předtím","Select a tag":"Vybrat štítek","Select provider":"Vybrat poskytovatele",Settings:"Nastavení","Settings navigation":"Pohyb po nastavení","Show password":"Zobrazit heslo","Smart Picker":"Inteligentní výběr","Smileys & Emotion":"Úsměvy a emoce","Start slideshow":"Spustit prezentaci","Start typing to search":"Vyhledávejte psaním",Submit:"Odeslat",Symbols:"Symboly","Travel & Places":"Cestování a místa","Type to search time zone":"Psaním vyhledejte časovou zónu","Unable to search the group":"Nedaří se hledat skupinu","Undo changes":"Vzít změny zpět",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':"Napište zprávu – pokud chcete někoho zmínit, napište před jeho uživatelským jménem „@“ (zavináč); automatické doplňování emotikonů zahájíte napsáním „:“ (dvojtečky)…"}},{locale:"cy_GB",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"da",translations:{"{tag} (invisible)":"{tag} (usynlig)","{tag} (restricted)":"{tag} (begrænset)","a few seconds ago":"et par sekunder siden",Actions:"Handlinger",'Actions for item with name "{name}"':'Handlinger for element med navnet "{name}"',Activities:"Aktiviteter","Animals & Nature":"Dyr & Natur","Any link":"Ethvert link","Anything shared with the same group of people will show up here":"Alt der deles med samme gruppe af personer vil vises her","Avatar of {displayName}":"Avatar af {displayName}","Avatar of {displayName}, {status}":"Avatar af {displayName}, {status}",Back:"Tilbage","Back to provider selection":"Tilbage til udbydervalg","Cancel changes":"Annuller ændringer","Change name":"Ændre navn",Choose:"Vælg","Clear search":"Ryd søgning","Clear text":"Ryd tekst",Close:"Luk","Close modal":"Luk vindue","Close navigation":"Luk navigation","Close sidebar":"Luk sidepanel","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Bekræft ændringer",Custom:"Brugerdefineret","Edit item":"Rediger emne","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Favorit",Flags:"Flag","Food & Drink":"Mad & Drikke","Frequently used":"Ofte brugt",Global:"Global","Go back to the list":"Tilbage til listen","Hide password":"Skjul kodeord",'Load more "{options}""':"","Message limit of {count} characters reached":"Begrænsning på {count} tegn er nået","More items …":"Mere ...","More options":"",Next:"Videre","No emoji found":"Ingen emoji fundet","No link provider found":"","No results":"Ingen resultater",Objects:"Objekter","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Åbn navigation","Open settings menu":"","Password is secure":"Kodeordet er sikkert","Pause slideshow":"Suspender fremvisning","People & Body":"Mennesker & Menneskekroppen","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Vælg en emoji","Please select a time zone:":"Vælg venligst en tidszone:",Previous:"Forrige","Provider icon":"","Raw link {options}":"","Related resources":"Relaterede emner",Search:"Søg","Search emoji":"","Search results":"Søgeresultater","sec. ago":"","seconds ago":"","Select a tag":"Vælg et mærke","Select provider":"",Settings:"Indstillinger","Settings navigation":"Naviger i indstillinger","Show password":"Vis kodeord","Smart Picker":"","Smileys & Emotion":"Smileys & Emotion","Start slideshow":"Start fremvisning","Start typing to search":"",Submit:"Send",Symbols:"Symboler","Travel & Places":"Rejser & Rejsemål","Type to search time zone":"Indtast for at søge efter tidszone","Unable to search the group":"Kan ikke søge på denne gruppe","Undo changes":"Fortryd ændringer",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Skriv besked, brug "@" for at nævne nogen, brug ":" til emoji-autofuldførelse ...'}},{locale:"de",translations:{"{tag} (invisible)":"{tag} (unsichtbar)","{tag} (restricted)":"{tag} (eingeschränkt)","a few seconds ago":"",Actions:"Aktionen",'Actions for item with name "{name}"':"",Activities:"Aktivitäten","Animals & Nature":"Tiere & Natur","Any link":"","Anything shared with the same group of people will show up here":"Alles, das mit derselben Gruppe von Personen geteilt wird, wird hier angezeigt","Avatar of {displayName}":"Avatar von {displayName}","Avatar of {displayName}, {status}":"Avatar von {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Änderungen verwerfen","Change name":"",Choose:"Auswählen","Clear search":"","Clear text":"Klartext",Close:"Schließen","Close modal":"Modal schließen","Close navigation":"Navigation schließen","Close sidebar":"Seitenleiste schließen","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Änderungen bestätigen",Custom:"Benutzerdefiniert","Edit item":"Objekt bearbeiten","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Favorit",Flags:"Flaggen","Food & Drink":"Essen & Trinken","Frequently used":"Häufig verwendet",Global:"Global","Go back to the list":"Zurück zur Liste","Hide password":"Passwort verbergen",'Load more "{options}""':"","Message limit of {count} characters reached":"Nachrichtenlimit von {count} Zeichen erreicht","More items …":"Weitere Elemente …","More options":"",Next:"Weiter","No emoji found":"Kein Emoji gefunden","No link provider found":"","No results":"Keine Ergebnisse",Objects:"Gegenstände","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Navigation öffnen","Open settings menu":"","Password is secure":"Passwort ist sicher","Pause slideshow":"Diashow pausieren","People & Body":"Menschen & Körper","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Ein Emoji auswählen","Please select a time zone:":"Bitte wählen Sie eine Zeitzone:",Previous:"Vorherige","Provider icon":"","Raw link {options}":"","Related resources":"Verwandte Ressourcen",Search:"Suche","Search emoji":"","Search results":"Suchergebnisse","sec. ago":"","seconds ago":"","Select a tag":"Schlagwort auswählen","Select provider":"",Settings:"Einstellungen","Settings navigation":"Einstellungen für die Navigation","Show password":"Passwort anzeigen","Smart Picker":"","Smileys & Emotion":"Smileys & Emotionen","Start slideshow":"Diashow starten","Start typing to search":"",Submit:"Einreichen",Symbols:"Symbole","Travel & Places":"Reisen & Orte","Type to search time zone":"Tippen, um Zeitzone zu suchen","Unable to search the group":"Die Gruppe konnte nicht durchsucht werden","Undo changes":"Änderungen rückgängig machen",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Nachricht schreiben, "@" um jemanden zu erwähnen, ":" für die automatische Vervollständigung von Emojis …'}},{locale:"de_DE",translations:{"{tag} (invisible)":"{tag} (unsichtbar)","{tag} (restricted)":"{tag} (eingeschränkt)","a few seconds ago":"vor ein paar Sekunden",Actions:"Aktionen",'Actions for item with name "{name}"':'Aktionen für Element mit dem Namen "{name}“',Activities:"Aktivitäten","Animals & Nature":"Tiere & Natur","Any link":"Irgendein Link","Anything shared with the same group of people will show up here":"Alles, das mit derselben Gruppe von Personen geteilt wird, wird hier angezeigt","Avatar of {displayName}":"Avatar von {displayName}","Avatar of {displayName}, {status}":"Avatar von {displayName}, {status}",Back:"Zurück","Back to provider selection":"Zurück zur Anbieterauswahl","Cancel changes":"Änderungen verwerfen","Change name":"Namen ändern",Choose:"Auswählen","Clear search":"Suche leeren","Clear text":"Klartext",Close:"Schließen","Close modal":"Modal schließen","Close navigation":"Navigation schließen","Close sidebar":"Seitenleiste schließen","Close Smart Picker":"Intelligente Auswahl schließen","Collapse menu":"Menü einklappen","Confirm changes":"Änderungen bestätigen",Custom:"Benutzerdefiniert","Edit item":"Objekt bearbeiten","Enter link":"Link eingeben","Error getting related resources. Please contact your system administrator if you have any questions.":"Fehler beim Abrufen verwandter Ressourcen. Bei Fragen wenden Sie sich bitte an Ihren Systemadministrator.","External documentation for {name}":"Externe Dokumentation für {name}",Favorite:"Favorit",Flags:"Flaggen","Food & Drink":"Essen & Trinken","Frequently used":"Häufig verwendet",Global:"Global","Go back to the list":"Zurück zur Liste","Hide password":"Passwort verbergen",'Load more "{options}""':'Weitere "{options}“ laden',"Message limit of {count} characters reached":"Nachrichtenlimit von {count} Zeichen erreicht","More items …":"Weitere Elemente …","More options":"Mehr Optionen",Next:"Weiter","No emoji found":"Kein Emoji gefunden","No link provider found":"Kein Linkanbieter gefunden","No results":"Keine Ergebnisse",Objects:"Objekte","Open contact menu":"Kontaktmenü öffnen",'Open link to "{resourceName}"':'Link zu "{resourceName}“ öffnen',"Open menu":"Menü öffnen","Open navigation":"Navigation öffnen","Open settings menu":"Einstellungsmenü öffnen","Password is secure":"Passwort ist sicher","Pause slideshow":"Diashow pausieren","People & Body":"Menschen & Körper","Pick a date":"Ein Datum auswählen","Pick a date and a time":"Datum und Uhrzeit auswählen","Pick a month":"Einen Monat auswählen","Pick a time":"Eine Uhrzeit auswählen","Pick a week":"Eine Woche auswählen","Pick a year":"Ein Jahr auswählen","Pick an emoji":"Ein Emoji auswählen","Please select a time zone:":"Bitte eine Zeitzone auswählen:",Previous:"Vorherige","Provider icon":"Anbietersymbol","Raw link {options}":"Unverarbeiteter Link {Optionen}","Related resources":"Verwandte Ressourcen",Search:"Suche","Search emoji":"Emoji suchen","Search results":"Suchergebnisse","sec. ago":"Sek. zuvor","seconds ago":"Sekunden zuvor","Select a tag":"Schlagwort auswählen","Select provider":"Anbieter auswählen",Settings:"Einstellungen","Settings navigation":"Einstellungen für die Navigation","Show password":"Passwort anzeigen","Smart Picker":"Intelligente Auswahl","Smileys & Emotion":"Smileys & Emotionen","Start slideshow":"Diashow starten","Start typing to search":"Mit der Eingabe beginnen, um zu suchen",Submit:"Einreichen",Symbols:"Symbole","Travel & Places":"Reisen & Orte","Type to search time zone":"Tippen, um eine Zeitzone zu suchen","Unable to search the group":"Die Gruppe kann nicht durchsucht werden","Undo changes":"Änderungen rückgängig machen",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Nachricht schreiben, "@" um jemanden zu erwähnen, ":" für die automatische Vervollständigung von Emojis …'}},{locale:"el",translations:{"{tag} (invisible)":"{tag} (αόρατο)","{tag} (restricted)":"{tag} (περιορισμένο)","a few seconds ago":"",Actions:"Ενέργειες",'Actions for item with name "{name}"':"",Activities:"Δραστηριότητες","Animals & Nature":"Ζώα & Φύση","Any link":"","Anything shared with the same group of people will show up here":"Οτιδήποτε μοιράζεται με την ίδια ομάδα ατόμων θα εμφανίζεται εδώ","Avatar of {displayName}":"Άβαταρ του {displayName}","Avatar of {displayName}, {status}":"Άβαταρ του {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Ακύρωση αλλαγών","Change name":"",Choose:"Επιλογή","Clear search":"","Clear text":"Εκκαθάριση κειμένου",Close:"Κλείσιμο","Close modal":"Βοηθητικό κλείσιμο","Close navigation":"Κλείσιμο πλοήγησης","Close sidebar":"Κλείσιμο πλευρικής μπάρας","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Επιβεβαίωση αλλαγών",Custom:"Προσαρμογή","Edit item":"Επεξεργασία","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Αγαπημένα",Flags:"Σημαίες","Food & Drink":"Φαγητό & Ποτό","Frequently used":"Συχνά χρησιμοποιούμενο",Global:"Καθολικό","Go back to the list":"Επιστροφή στην αρχική λίστα ","Hide password":"Απόκρυψη κωδικού πρόσβασης",'Load more "{options}""':"","Message limit of {count} characters reached":"Συμπληρώθηκε το όριο των {count} χαρακτήρων του μηνύματος","More items …":"Περισσότερα στοιχεία …","More options":"",Next:"Επόμενο","No emoji found":"Δεν βρέθηκε emoji","No link provider found":"","No results":"Κανένα αποτέλεσμα",Objects:"Αντικείμενα","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Άνοιγμα πλοήγησης","Open settings menu":"","Password is secure":"Ο κωδικός πρόσβασης είναι ασφαλής","Pause slideshow":"Παύση προβολής διαφανειών","People & Body":"Άνθρωποι & Σώμα","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Επιλέξτε ένα emoji","Please select a time zone:":"Παρακαλούμε επιλέξτε μια ζώνη ώρας:",Previous:"Προηγούμενο","Provider icon":"","Raw link {options}":"","Related resources":"Σχετικοί πόροι",Search:"Αναζήτηση","Search emoji":"","Search results":"Αποτελέσματα αναζήτησης","sec. ago":"","seconds ago":"","Select a tag":"Επιλογή ετικέτας","Select provider":"",Settings:"Ρυθμίσεις","Settings navigation":"Πλοήγηση ρυθμίσεων","Show password":"Εμφάνιση κωδικού πρόσβασης","Smart Picker":"","Smileys & Emotion":"Φατσούλες & Συναίσθημα","Start slideshow":"Έναρξη προβολής διαφανειών","Start typing to search":"",Submit:"Υποβολή",Symbols:"Σύμβολα","Travel & Places":"Ταξίδια & Τοποθεσίες","Type to search time zone":"Πληκτρολογήστε για αναζήτηση ζώνης ώρας","Unable to search the group":"Δεν είναι δυνατή η αναζήτηση της ομάδας","Undo changes":"Αναίρεση Αλλαγών",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Γράψτε μήνυμα, χρησιμοποιείστε "@" για να αναφέρετε κάποιον, χρησιμοποιείστε ":" για αυτόματη συμπλήρωση emoji …'}},{locale:"en_GB",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (restricted)","a few seconds ago":"a few seconds ago",Actions:"Actions",'Actions for item with name "{name}"':'Actions for item with name "{name}"',Activities:"Activities","Animals & Nature":"Animals & Nature","Any link":"Any link","Anything shared with the same group of people will show up here":"Anything shared with the same group of people will show up here","Avatar of {displayName}":"Avatar of {displayName}","Avatar of {displayName}, {status}":"Avatar of {displayName}, {status}",Back:"Back","Back to provider selection":"Back to provider selection","Cancel changes":"Cancel changes","Change name":"Change name",Choose:"Choose","Clear search":"Clear search","Clear text":"Clear text",Close:"Close","Close modal":"Close modal","Close navigation":"Close navigation","Close sidebar":"Close sidebar","Close Smart Picker":"Close Smart Picker","Collapse menu":"Collapse menu","Confirm changes":"Confirm changes",Custom:"Custom","Edit item":"Edit item","Enter link":"Enter link","Error getting related resources. Please contact your system administrator if you have any questions.":"Error getting related resources. Please contact your system administrator if you have any questions.","External documentation for {name}":"External documentation for {name}",Favorite:"Favourite",Flags:"Flags","Food & Drink":"Food & Drink","Frequently used":"Frequently used",Global:"Global","Go back to the list":"Go back to the list","Hide password":"Hide password",'Load more "{options}""':'Load more "{options}""',"Message limit of {count} characters reached":"Message limit of {count} characters reached","More items …":"More items …","More options":"More options",Next:"Next","No emoji found":"No emoji found","No link provider found":"No link provider found","No results":"No results",Objects:"Objects","Open contact menu":"Open contact menu",'Open link to "{resourceName}"':'Open link to "{resourceName}"',"Open menu":"Open menu","Open navigation":"Open navigation","Open settings menu":"Open settings menu","Password is secure":"Password is secure","Pause slideshow":"Pause slideshow","People & Body":"People & Body","Pick a date":"Pick a date","Pick a date and a time":"Pick a date and a time","Pick a month":"Pick a month","Pick a time":"Pick a time","Pick a week":"Pick a week","Pick a year":"Pick a year","Pick an emoji":"Pick an emoji","Please select a time zone:":"Please select a time zone:",Previous:"Previous","Provider icon":"Provider icon","Raw link {options}":"Raw link {options}","Related resources":"Related resources",Search:"Search","Search emoji":"Search emoji","Search results":"Search results","sec. ago":"sec. ago","seconds ago":"seconds ago","Select a tag":"Select a tag","Select provider":"Select provider",Settings:"Settings","Settings navigation":"Settings navigation","Show password":"Show password","Smart Picker":"Smart Picker","Smileys & Emotion":"Smileys & Emotion","Start slideshow":"Start slideshow","Start typing to search":"Start typing to search",Submit:"Submit",Symbols:"Symbols","Travel & Places":"Travel & Places","Type to search time zone":"Type to search time zone","Unable to search the group":"Unable to search the group","Undo changes":"Undo changes",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Write message, use "@" to mention someone, use ":" for emoji autocompletion …'}},{locale:"eo",translations:{"{tag} (invisible)":"{tag} (kaŝita)","{tag} (restricted)":"{tag} (limigita)","a few seconds ago":"",Actions:"Agoj",'Actions for item with name "{name}"':"",Activities:"Aktiveco","Animals & Nature":"Bestoj & Naturo","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"Elektu","Clear search":"","Clear text":"",Close:"Fermu","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"Propra","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"Flagoj","Food & Drink":"Manĝaĵo & Trinkaĵo","Frequently used":"Ofte uzataj",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"La limo je {count} da literoj atingita","More items …":"","More options":"",Next:"Sekva","No emoji found":"La emoĝio forestas","No link provider found":"","No results":"La rezulto forestas",Objects:"Objektoj","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"Payzi bildprezenton","People & Body":"Homoj & Korpo","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Elekti emoĝion ","Please select a time zone:":"",Previous:"Antaŭa","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Serĉi","Search emoji":"","Search results":"Serĉrezultoj","sec. ago":"","seconds ago":"","Select a tag":"Elektu etikedon","Select provider":"",Settings:"Agordo","Settings navigation":"Agorda navigado","Show password":"","Smart Picker":"","Smileys & Emotion":"Ridoj kaj Emocioj","Start slideshow":"Komenci bildprezenton","Start typing to search":"",Submit:"",Symbols:"Signoj","Travel & Places":"Vojaĵoj & Lokoj","Type to search time zone":"","Unable to search the group":"Ne eblas serĉi en la grupo","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (restringido)","a few seconds ago":"hace unos pocos segundos",Actions:"Acciones",'Actions for item with name "{name}"':'Acciones para el elemento con nombre "{name}"',Activities:"Actividades","Animals & Nature":"Animales y naturaleza","Any link":"Cualquier enlace","Anything shared with the same group of people will show up here":"Cualquier cosa que sea compartida con el mismo grupo de personas se mostrará aquí","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}",Back:"Atrás","Back to provider selection":"Volver a la selección de proveedor","Cancel changes":"Cancelar cambios","Change name":"Cambiar nombre",Choose:"Elegir","Clear search":"Limpiar búsqueda","Clear text":"Limpiar texto",Close:"Cerrar","Close modal":"Cerrar modal","Close navigation":"Cerrar navegación","Close sidebar":"Cerrar barra lateral","Close Smart Picker":"Cerrar selector inteligente","Collapse menu":"Ocultar menú","Confirm changes":"Confirmar cambios",Custom:"Personalizado","Edit item":"Editar elemento","Enter link":"Ingrese enlace","Error getting related resources. Please contact your system administrator if you have any questions.":"Error al obtener recursos relacionados. Por favor, contacta a tu administrador del sistema si tienes alguna pregunta.","External documentation for {name}":"Documentación externa para {name}",Favorite:"Favorito",Flags:"Banderas","Food & Drink":"Comida y bebida","Frequently used":"Usado con frecuenca",Global:"Global","Go back to the list":"Volver a la lista","Hide password":"Ocultar contraseña",'Load more "{options}""':'Cargar más "{options}"',"Message limit of {count} characters reached":"El mensaje ha alcanzado el límite de {count} caracteres","More items …":"Más ítems...","More options":"Más opciones",Next:"Siguiente","No emoji found":"No hay ningún emoji","No link provider found":"No se encontró ningún proveedor de enlaces","No results":" Ningún resultado",Objects:"Objetos","Open contact menu":"Abrir menú de contactos",'Open link to "{resourceName}"':'Abrir enlace a "{resourceName}"',"Open menu":"Abrir menú","Open navigation":"Abrir navegación","Open settings menu":"Abrir menú de ajustes","Password is secure":"La contraseña es segura","Pause slideshow":"Pausar la presentación ","People & Body":"Personas y cuerpos","Pick a date":"Seleccione una fecha","Pick a date and a time":"Seleccione una fecha y hora","Pick a month":"Seleccione un mes","Pick a time":"Seleccione una hora","Pick a week":"Seleccione una semana","Pick a year":"Seleccione un año","Pick an emoji":"Elegir un emoji","Please select a time zone:":"Por favor elige un huso de horario:",Previous:"Anterior","Provider icon":"Ícono del proveedor","Raw link {options}":"Enlace directo {options}","Related resources":"Recursos relacionados",Search:"Buscar","Search emoji":"Buscar emoji","Search results":"Resultados de la búsqueda","sec. ago":"hace segundos","seconds ago":"segundos atrás","Select a tag":"Seleccione una etiqueta","Select provider":"Seleccione proveedor",Settings:"Ajustes","Settings navigation":"Navegación por ajustes","Show password":"Mostrar contraseña","Smart Picker":"Selector inteligente","Smileys & Emotion":"Smileys y emoticonos","Start slideshow":"Iniciar la presentación","Start typing to search":"Comience a escribir para buscar",Submit:"Enviar",Symbols:"Símbolos","Travel & Places":"Viajes y lugares","Type to search time zone":"Escribe para buscar un huso de horario","Unable to search the group":"No es posible buscar en el grupo","Undo changes":"Deshacer cambios",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Escribir mensaje, utilice "@" para mencionar a alguien, utilice ":" para autocompletado de emojis ...'}},{locale:"es_419",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_AR",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_CL",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_CO",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_CR",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_DO",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_EC",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (restricted)","a few seconds ago":"hace unos segundos",Actions:"Acciones",'Actions for item with name "{name}"':'Acciones para el elemento con nombre "{name}"',Activities:"Actividades","Animals & Nature":"Animales y Naturaleza","Any link":"Cualquier enlace","Anything shared with the same group of people will show up here":"Cualquier cosa compartida con el mismo grupo de personas aparecerá aquí.","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}",Back:"Atrás","Back to provider selection":"Volver a la selección de proveedor","Cancel changes":"Cancelar cambios","Change name":"Cambiar nombre",Choose:"Elegir","Clear search":"Limpiar búsqueda","Clear text":"Limpiar texto",Close:"Cerrar","Close modal":"Cerrar modal","Close navigation":"Cerrar navegación","Close sidebar":"Cerrar barra lateral","Close Smart Picker":"Cerrar selector inteligente","Collapse menu":"Ocultar menú","Confirm changes":"Confirmar cambios",Custom:"Personalizado","Edit item":"Editar elemento","Enter link":"Ingresar enlace","Error getting related resources. Please contact your system administrator if you have any questions.":"Error al obtener recursos relacionados. Por favor, contacta a tu administrador del sistema si tienes alguna pregunta.","External documentation for {name}":"Documentación externa para {name}",Favorite:"Favorito",Flags:"Marcas","Food & Drink":"Comida y Bebida","Frequently used":"Frecuentemente utilizado",Global:"Global","Go back to the list":"Volver a la lista","Hide password":"Ocultar contraseña",'Load more "{options}""':'Cargar más "{options}"',"Message limit of {count} characters reached":"Se ha alcanzado el límite de caracteres del mensaje {count}","More items …":"Más elementos...","More options":"Más opciones",Next:"Siguiente","No emoji found":"No se encontró ningún emoji","No link provider found":"No se encontró ningún proveedor de enlaces","No results":"Sin resultados",Objects:"Objetos","Open contact menu":"Abrir menú de contactos",'Open link to "{resourceName}"':'Abrir enlace a "{resourceName}"',"Open menu":"Abrir menú","Open navigation":"Abrir navegación","Open settings menu":"Abrir menú de configuración","Password is secure":"La contraseña es segura","Pause slideshow":"Pausar presentación de diapositivas","People & Body":"Personas y Cuerpo","Pick a date":"Seleccionar una fecha","Pick a date and a time":"Seleccionar una fecha y una hora","Pick a month":"Seleccionar un mes","Pick a time":"Seleccionar una semana","Pick a week":"Seleccionar una semana","Pick a year":"Seleccionar un año","Pick an emoji":"Seleccionar un emoji","Please select a time zone:":"Por favor, selecciona una zona horaria:",Previous:"Anterior","Provider icon":"Ícono del proveedor","Raw link {options}":"Enlace directo {options}","Related resources":"Recursos relacionados",Search:"Buscar","Search emoji":"Buscar emoji","Search results":"Resultados de búsqueda","sec. ago":"hace segundos","seconds ago":"Segundos atrás","Select a tag":"Seleccionar una etiqueta","Select provider":"Seleccionar proveedor",Settings:"Configuraciones","Settings navigation":"Navegación de configuraciones","Show password":"Mostrar contraseña","Smart Picker":"Selector inteligente","Smileys & Emotion":"Caritas y Emociones","Start slideshow":"Iniciar presentación de diapositivas","Start typing to search":"Comienza a escribir para buscar",Submit:"Enviar",Symbols:"Símbolos","Travel & Places":"Viajes y Lugares","Type to search time zone":"Escribe para buscar la zona horaria","Unable to search the group":"No se puede buscar en el grupo","Undo changes":"Deshacer cambios",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Escribir mensaje, usar "@" para mencionar a alguien, usar ":" para autocompletar emojis...'}},{locale:"es_GT",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_HN",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_MX",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_NI",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_PA",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_PE",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_PR",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_PY",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_SV",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"es_UY",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"et_EE",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"eu",translations:{"{tag} (invisible)":"{tag} (ikusezina)","{tag} (restricted)":"{tag} (mugatua)","a few seconds ago":"",Actions:"Ekintzak",'Actions for item with name "{name}"':"",Activities:"Jarduerak","Animals & Nature":"Animaliak eta Natura","Any link":"","Anything shared with the same group of people will show up here":"Pertsona-talde berarekin partekatutako edozer agertuko da hemen","Avatar of {displayName}":"{displayName}-(e)n irudia","Avatar of {displayName}, {status}":"{displayName} -(e)n irudia, {status}",Back:"","Back to provider selection":"","Cancel changes":"Ezeztatu aldaketak","Change name":"",Choose:"Aukeratu","Clear search":"","Clear text":"Garbitu testua",Close:"Itxi","Close modal":"Itxi modala","Close navigation":"Itxi nabigazioa","Close sidebar":"Itxi albo-barra","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Baieztatu aldaketak",Custom:"Pertsonalizatua","Edit item":"Editatu elementua","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Gogokoa",Flags:"Banderak","Food & Drink":"Janaria eta edariak","Frequently used":"Askotan erabilia",Global:"Globala","Go back to the list":"Bueltatu zerrendara","Hide password":"Ezkutatu pasahitza",'Load more "{options}""':"","Message limit of {count} characters reached":"Mezuaren {count} karaketere-limitera heldu zara","More items …":"Elementu gehiago …","More options":"",Next:"Hurrengoa","No emoji found":"Ez da emojirik aurkitu","No link provider found":"","No results":"Emaitzarik ez",Objects:"Objektuak","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Ireki nabigazioa","Open settings menu":"","Password is secure":"Pasahitza segurua da","Pause slideshow":"Pausatu diaporama","People & Body":"Jendea eta gorputza","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Hautatu emoji bat","Please select a time zone:":"Mesedez hautatu ordu-zona bat:",Previous:"Aurrekoa","Provider icon":"","Raw link {options}":"","Related resources":"Erlazionatutako baliabideak",Search:"Bilatu","Search emoji":"","Search results":"Bilaketa emaitzak","sec. ago":"","seconds ago":"","Select a tag":"Hautatu etiketa bat","Select provider":"",Settings:"Ezarpenak","Settings navigation":"Nabigazio ezarpenak","Show password":"Erakutsi pasahitza","Smart Picker":"","Smileys & Emotion":"Smileyak eta emozioa","Start slideshow":"Hasi diaporama","Start typing to search":"",Submit:"Bidali",Symbols:"Sinboloak","Travel & Places":"Bidaiak eta lekuak","Type to search time zone":"Idatzi ordu-zona bat bilatzeko","Unable to search the group":"Ezin izan da taldea bilatu","Undo changes":"Aldaketak desegin",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Idatzi mezua, erabili "@" norbait aipatzeko, erabili ":" emojiak automatikoki osatzeko...'}},{locale:"fa",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"fi",translations:{"{tag} (invisible)":"{tag} (näkymätön)","{tag} (restricted)":"{tag} (rajoitettu)","a few seconds ago":"",Actions:"Toiminnot",'Actions for item with name "{name}"':"",Activities:"Aktiviteetit","Animals & Nature":"Eläimet & luonto","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"Käyttäjän {displayName} avatar","Avatar of {displayName}, {status}":"Käyttäjän {displayName} avatar, {status}",Back:"","Back to provider selection":"","Cancel changes":"Peruuta muutokset","Change name":"",Choose:"Valitse","Clear search":"","Clear text":"",Close:"Sulje","Close modal":"","Close navigation":"Sulje navigaatio","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Vahvista muutokset",Custom:"Mukautettu","Edit item":"Muokkaa kohdetta","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"Liput","Food & Drink":"Ruoka & juoma","Frequently used":"Usein käytetyt",Global:"Yleinen","Go back to the list":"Siirry takaisin listaan","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"Viestin merkken enimmäisimäärä {count} täynnä ","More items …":"","More options":"",Next:"Seuraava","No emoji found":"Emojia ei löytynyt","No link provider found":"","No results":"Ei tuloksia",Objects:"Esineet & asiat","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Avaa navigaatio","Open settings menu":"","Password is secure":"","Pause slideshow":"Keskeytä diaesitys","People & Body":"Ihmiset & keho","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Valitse emoji","Please select a time zone:":"Valitse aikavyöhyke:",Previous:"Edellinen","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Etsi","Search emoji":"","Search results":"Hakutulokset","sec. ago":"","seconds ago":"","Select a tag":"Valitse tagi","Select provider":"",Settings:"Asetukset","Settings navigation":"Asetusnavigaatio","Show password":"","Smart Picker":"","Smileys & Emotion":"Hymiöt & tunteet","Start slideshow":"Aloita diaesitys","Start typing to search":"",Submit:"Lähetä",Symbols:"Symbolit","Travel & Places":"Matkustus & kohteet","Type to search time zone":"Kirjoita etsiäksesi aikavyöhyke","Unable to search the group":"Ryhmää ei voi hakea","Undo changes":"Kumoa muutokset",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"fo",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"fr",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (restreint)","a few seconds ago":"il y a quelques instants",Actions:"Actions",'Actions for item with name "{name}"':"",Activities:"Activités","Animals & Nature":"Animaux & Nature","Any link":"","Anything shared with the same group of people will show up here":"Tout ce qui est partagé avec le même groupe de personnes apparaîtra ici","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}",Back:"Retour","Back to provider selection":"","Cancel changes":"Annuler les modifications","Change name":"Modifier le nom",Choose:"Choisir","Clear search":"Effacer la recherche","Clear text":"Effacer le texte",Close:"Fermer","Close modal":"Fermer la fenêtre","Close navigation":"Fermer la navigation","Close sidebar":"Fermer la barre latérale","Close Smart Picker":"","Collapse menu":"Réduire le menu","Confirm changes":"Confirmer les modifications",Custom:"Personnalisé","Edit item":"Éditer l'élément","Enter link":"Saisissez le lien","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"Documentation externe pour {name}",Favorite:"Favori",Flags:"Drapeaux","Food & Drink":"Nourriture & Boissons","Frequently used":"Utilisés fréquemment",Global:"Global","Go back to the list":"Retourner à la liste","Hide password":"Cacher le mot de passe",'Load more "{options}""':"","Message limit of {count} characters reached":"Limite de messages de {count} caractères atteinte","More items …":"Plus d'éléments...","More options":"Plus d'options",Next:"Suivant","No emoji found":"Pas d’émoji trouvé","No link provider found":"","No results":"Aucun résultat",Objects:"Objets","Open contact menu":"Ouvrir le menu Contact",'Open link to "{resourceName}"':"","Open menu":"Ouvrir le menu","Open navigation":"Ouvrir la navigation","Open settings menu":"Ouvrir le menu Paramètres","Password is secure":"Le mot de passe est sécurisé","Pause slideshow":"Mettre le diaporama en pause","People & Body":"Personnes & Corps","Pick a date":"Sélectionner une date","Pick a date and a time":"Sélectionner une date et une heure","Pick a month":"Sélectionner un mois","Pick a time":"Sélectionner une heure","Pick a week":"Sélectionner une semaine","Pick a year":"Sélectionner une année","Pick an emoji":"Choisissez un émoji","Please select a time zone:":"Sélectionnez un fuseau horaire : ",Previous:"Précédent","Provider icon":"","Raw link {options}":"","Related resources":"Ressources liées",Search:"Chercher","Search emoji":"Rechercher un emoji","Search results":"Résultats de recherche","sec. ago":"","seconds ago":"","Select a tag":"Sélectionnez une balise","Select provider":"",Settings:"Paramètres","Settings navigation":"Navigation dans les paramètres","Show password":"Afficher le mot de passe","Smart Picker":"","Smileys & Emotion":"Smileys & Émotions","Start slideshow":"Démarrer le diaporama","Start typing to search":"",Submit:"Valider",Symbols:"Symboles","Travel & Places":"Voyage & Lieux","Type to search time zone":"Saisissez les premiers lettres pour rechercher un fuseau horaire","Unable to search the group":"Impossible de chercher le groupe","Undo changes":"Annuler les changements",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Écrire un message, utiliser "@" pour mentionner une personne, ":" pour l\'autocomplétion des émojis...'}},{locale:"gd",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"gl",translations:{"{tag} (invisible)":"{tag} (invisíbel)","{tag} (restricted)":"{tag} (restrinxido)","a few seconds ago":"",Actions:"Accións",'Actions for item with name "{name}"':"",Activities:"Actividades","Animals & Nature":"Animais e natureza","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"Cancelar os cambios","Change name":"",Choose:"Escoller","Clear search":"","Clear text":"",Close:"Pechar","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Confirma os cambios",Custom:"Personalizado","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"Bandeiras","Food & Drink":"Comida e bebida","Frequently used":"Usado con frecuencia",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"Acadouse o límite de {count} caracteres por mensaxe","More items …":"","More options":"",Next:"Seguinte","No emoji found":"Non se atopou ningún «emoji»","No link provider found":"","No results":"Sen resultados",Objects:"Obxectos","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"Pausar o diaporama","People & Body":"Persoas e corpo","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Escolla un «emoji»","Please select a time zone:":"",Previous:"Anterir","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Buscar","Search emoji":"","Search results":"Resultados da busca","sec. ago":"","seconds ago":"","Select a tag":"Seleccione unha etiqueta","Select provider":"",Settings:"Axustes","Settings navigation":"Navegación polos axustes","Show password":"","Smart Picker":"","Smileys & Emotion":"Sorrisos e emocións","Start slideshow":"Iniciar o diaporama","Start typing to search":"",Submit:"Enviar",Symbols:"Símbolos","Travel & Places":"Viaxes e lugares","Type to search time zone":"","Unable to search the group":"Non foi posíbel buscar o grupo","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"he",translations:{"{tag} (invisible)":"{tag} (נסתר)","{tag} (restricted)":"{tag} (מוגבל)","a few seconds ago":"לפני מספר שניות",Actions:"פעולות",'Actions for item with name "{name}"':"פעולות לפריט בשם „{name}”",Activities:"פעילויות","Animals & Nature":"חיות וטבע","Any link":"קישור כלשהו","Anything shared with the same group of people will show up here":"כל מה שמשותף עם אותה קבוצת האנשים יופיע כאן","Avatar of {displayName}":"תמונה ייצוגית של {displayName}","Avatar of {displayName}, {status}":"תמונה ייצוגית של {displayName}, {status}",Back:"חזרה","Back to provider selection":"חזרה לבחירת ספק","Cancel changes":"ביטול שינויים","Change name":"החלפת שם",Choose:"בחירה","Clear search":"פינוי חיפוש","Clear text":"פינוי טקסט",Close:"סגירה","Close modal":"סגירת החלונית","Close navigation":"סגירת הניווט","Close sidebar":"סגירת סרגל הצד","Close Smart Picker":"סגירת הבורר החכם","Collapse menu":"צמצום התפריט","Confirm changes":"אישור השינויים",Custom:"בהתאמה אישית","Edit item":"עריכת פריט","Enter link":"מילוי קישור","Error getting related resources. Please contact your system administrator if you have any questions.":"שגיאה בקבלת המשאבים הקשורים. נא ליצור קשר עם הנהלת המערכת אם יש לך שאלות.","External documentation for {name}":"תיעוד חיצוני עבור {name}",Favorite:"למועדפים",Flags:"דגלים","Food & Drink":"מזון ומשקאות","Frequently used":"בשימוש תדיר",Global:"כללי","Go back to the list":"חזרה לרשימה","Hide password":"הסתרת סיסמה",'Load more "{options}""':"טעינת „{options}” נוספות","Message limit of {count} characters reached":"הגעת למגבלה של {count} תווים","More items …":"פריטים נוספים…","More options":"אפשרויות נוספות",Next:"הבא","No emoji found":"לא נמצא אמוג׳י","No link provider found":"לא נמצא ספק קישורים","No results":"אין תוצאות",Objects:"חפצים","Open contact menu":"פתיחת תפריט קשר",'Open link to "{resourceName}"':"פתיחת קישור אל „{resourceName}”","Open menu":"פתיחת תפריט","Open navigation":"פתיחת ניווט","Open settings menu":"פתיחת תפריט הגדרות","Password is secure":"הסיסמה מאובטחת","Pause slideshow":"השהיית מצגת","People & Body":"אנשים וגוף","Pick a date":"נא לבחור תאריך","Pick a date and a time":"נא לבחור תאריך ושעה","Pick a month":"נא לבחור חודש","Pick a time":"נא לבחור שעה","Pick a week":"נא לבחור שבוע","Pick a year":"נא לבחור שנה","Pick an emoji":"נא לבחור אמוג׳י","Please select a time zone:":"נא לבחור אזור זמן:",Previous:"הקודם","Provider icon":"סמל ספק","Raw link {options}":"קישור גולמי {options}","Related resources":"משאבים קשורים",Search:"חיפוש","Search emoji":"חיפוש אמוג׳י","Search results":"תוצאות חיפוש","sec. ago":"לפני מספר שניות","seconds ago":"לפני מס׳ שניות","Select a tag":"בחירת תגית","Select provider":"בחירת ספק",Settings:"הגדרות","Settings navigation":"ניווט בהגדרות","Show password":"הצגת סיסמה","Smart Picker":"בורר חכם","Smileys & Emotion":"חייכנים ורגשונים","Start slideshow":"התחלת המצגת","Start typing to search":"התחלת הקלדה מחפשת",Submit:"הגשה",Symbols:"סמלים","Travel & Places":"טיולים ומקומות","Type to search time zone":"יש להקליד כדי לחפש אזור זמן","Unable to search the group":"לא ניתן לחפש בקבוצה","Undo changes":"ביטול שינויים",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':"כאן ניתן לכתוב הודעה, אפשר להשתמש ב־„@” כדי לאזכר מישהו, ב־„:” להשלמה אוטומטית של אמוג׳י…"}},{locale:"hi_IN",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"hr",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"hsb",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"hu",translations:{"{tag} (invisible)":"{tag} (láthatatlan)","{tag} (restricted)":"{tag} (korlátozott)","a few seconds ago":"",Actions:"Műveletek",'Actions for item with name "{name}"':"",Activities:"Tevékenységek","Animals & Nature":"Állatok és természet","Any link":"","Anything shared with the same group of people will show up here":"Minden, amit ugyanazzal a csoporttal oszt meg, itt fog megjelenni","Avatar of {displayName}":"{displayName} profilképe","Avatar of {displayName}, {status}":"{displayName} profilképe, {status}",Back:"","Back to provider selection":"","Cancel changes":"Változtatások elvetése","Change name":"",Choose:"Válassszon","Clear search":"","Clear text":"Szöveg törlése",Close:"Bezárás","Close modal":"Ablak bezárása","Close navigation":"Navigáció bezárása","Close sidebar":"Oldalsáv bezárása","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Változtatások megerősítése",Custom:"Egyéni","Edit item":"Elem szerkesztése","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Kedvenc",Flags:"Zászlók","Food & Drink":"Étel és ital","Frequently used":"Gyakran használt",Global:"Globális","Go back to the list":"Ugrás vissza a listához","Hide password":"Jelszó elrejtése",'Load more "{options}""':"","Message limit of {count} characters reached":"{count} karakteres üzenetkorlát elérve","More items …":"További elemek...","More options":"",Next:"Következő","No emoji found":"Nem található emodzsi","No link provider found":"","No results":"Nincs találat",Objects:"Tárgyak","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Navigáció megnyitása","Open settings menu":"","Password is secure":"A jelszó biztonságos","Pause slideshow":"Diavetítés szüneteltetése","People & Body":"Emberek és test","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Válasszon egy emodzsit","Please select a time zone:":"Válasszon időzónát:",Previous:"Előző","Provider icon":"","Raw link {options}":"","Related resources":"Kapcsolódó erőforrások",Search:"Keresés","Search emoji":"","Search results":"Találatok","sec. ago":"","seconds ago":"","Select a tag":"Válasszon címkét","Select provider":"",Settings:"Beállítások","Settings navigation":"Navigáció a beállításokban","Show password":"Jelszó megjelenítése","Smart Picker":"","Smileys & Emotion":"Mosolyok és érzelmek","Start slideshow":"Diavetítés indítása","Start typing to search":"",Submit:"Beküldés",Symbols:"Szimbólumok","Travel & Places":"Utazás és helyek","Type to search time zone":"Gépeljen az időzóna kereséséhez","Unable to search the group":"A csoport nem kereshető","Undo changes":"Változtatások visszavonása",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':"Írjon egy üzenetet, használja a „@”-ot valaki megemlítéséhet, illetve a „:”-ot az emodzsik automatikus kiegészítéséhez…"}},{locale:"hy",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"ia",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"id",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"ig",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"is",translations:{"{tag} (invisible)":"{tag} (ósýnilegt)","{tag} (restricted)":"{tag} (takmarkað)","a few seconds ago":"",Actions:"Aðgerðir",'Actions for item with name "{name}"':"",Activities:"Aðgerðir","Animals & Nature":"Dýr og náttúra","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"Velja","Clear search":"","Clear text":"",Close:"Loka","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"Sérsniðið","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"Flögg","Food & Drink":"Matur og drykkur","Frequently used":"Oftast notað",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"Næsta","No emoji found":"Ekkert tjáningartákn fannst","No link provider found":"","No results":"Engar niðurstöður",Objects:"Hlutir","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"Gera hlé á skyggnusýningu","People & Body":"Fólk og líkami","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Veldu tjáningartákn","Please select a time zone:":"",Previous:"Fyrri","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Leita","Search emoji":"","Search results":"Leitarniðurstöður","sec. ago":"","seconds ago":"","Select a tag":"Veldu merki","Select provider":"",Settings:"Stillingar","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"Broskallar og tilfinningar","Start slideshow":"Byrja skyggnusýningu","Start typing to search":"",Submit:"",Symbols:"Tákn","Travel & Places":"Staðir og ferðalög","Type to search time zone":"","Unable to search the group":"Get ekki leitað í hópnum","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"it",translations:{"{tag} (invisible)":"{tag} (invisibile)","{tag} (restricted)":"{tag} (limitato)","a few seconds ago":"",Actions:"Azioni",'Actions for item with name "{name}"':"",Activities:"Attività","Animals & Nature":"Animali e natura","Any link":"","Anything shared with the same group of people will show up here":"Tutto ciò che è stato condiviso con lo stesso gruppo di persone viene visualizzato qui","Avatar of {displayName}":"Avatar di {displayName}","Avatar of {displayName}, {status}":"Avatar di {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Annulla modifiche","Change name":"",Choose:"Scegli","Clear search":"","Clear text":"Cancella il testo",Close:"Chiudi","Close modal":"Chiudi il messaggio modale","Close navigation":"Chiudi la navigazione","Close sidebar":"Chiudi la barra laterale","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Conferma modifiche",Custom:"Personalizzato","Edit item":"Modifica l'elemento","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Preferito",Flags:"Bandiere","Food & Drink":"Cibo e bevande","Frequently used":"Usati di frequente",Global:"Globale","Go back to the list":"Torna all'elenco","Hide password":"Nascondi la password",'Load more "{options}""':"","Message limit of {count} characters reached":"Limite dei messaggi di {count} caratteri raggiunto","More items …":"Più elementi ...","More options":"",Next:"Successivo","No emoji found":"Nessun emoji trovato","No link provider found":"","No results":"Nessun risultato",Objects:"Oggetti","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Apri la navigazione","Open settings menu":"","Password is secure":"La password è sicura","Pause slideshow":"Presentazione in pausa","People & Body":"Persone e corpo","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Scegli un emoji","Please select a time zone:":"Si prega di selezionare un fuso orario:",Previous:"Precedente","Provider icon":"","Raw link {options}":"","Related resources":"Risorse correlate",Search:"Cerca","Search emoji":"","Search results":"Risultati di ricerca","sec. ago":"","seconds ago":"","Select a tag":"Seleziona un'etichetta","Select provider":"",Settings:"Impostazioni","Settings navigation":"Navigazione delle impostazioni","Show password":"Mostra la password","Smart Picker":"","Smileys & Emotion":"Faccine ed emozioni","Start slideshow":"Avvia presentazione","Start typing to search":"",Submit:"Invia",Symbols:"Simboli","Travel & Places":"Viaggi e luoghi","Type to search time zone":"Digita per cercare un fuso orario","Unable to search the group":"Impossibile cercare il gruppo","Undo changes":"Cancella i cambiamenti",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Scrivi un messaggio, "@" per menzionare qualcuno, ":" per il completamento automatico delle emoji ...'}},{locale:"ja",translations:{"{tag} (invisible)":"{タグ} (不可視)","{tag} (restricted)":"{タグ} (制限付)","a few seconds ago":"",Actions:"操作",'Actions for item with name "{name}"':"",Activities:"アクティビティ","Animals & Nature":"動物と自然","Any link":"","Anything shared with the same group of people will show up here":"同じグループで共有しているものは、全てここに表示されます","Avatar of {displayName}":"{displayName} のアバター","Avatar of {displayName}, {status}":"{displayName}, {status} のアバター",Back:"","Back to provider selection":"","Cancel changes":"変更をキャンセル","Change name":"",Choose:"選択","Clear search":"","Clear text":"テキストをクリア",Close:"閉じる","Close modal":"モーダルを閉じる","Close navigation":"ナビゲーションを閉じる","Close sidebar":"サイドバーを閉じる","Close Smart Picker":"","Collapse menu":"","Confirm changes":"変更を承認",Custom:"カスタム","Edit item":"編集","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"お気に入り",Flags:"国旗","Food & Drink":"食べ物と飲み物","Frequently used":"よく使うもの",Global:"全体","Go back to the list":"リストに戻る","Hide password":"パスワードを非表示",'Load more "{options}""':"","Message limit of {count} characters reached":"{count} 文字のメッセージ上限に達しています","More items …":"他のアイテム","More options":"",Next:"次","No emoji found":"絵文字が見つかりません","No link provider found":"","No results":"なし",Objects:"物","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"ナビゲーションを開く","Open settings menu":"","Password is secure":"パスワードは保護されています","Pause slideshow":"スライドショーを一時停止","People & Body":"様々な人と体の部位","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"絵文字を選択","Please select a time zone:":"タイムゾーンを選んで下さい：",Previous:"前","Provider icon":"","Raw link {options}":"","Related resources":"関連リソース",Search:"検索","Search emoji":"","Search results":"検索結果","sec. ago":"","seconds ago":"","Select a tag":"タグを選択","Select provider":"",Settings:"設定","Settings navigation":"ナビゲーション設定","Show password":"パスワードを表示","Smart Picker":"","Smileys & Emotion":"感情表現","Start slideshow":"スライドショーを開始","Start typing to search":"",Submit:"提出",Symbols:"記号","Travel & Places":"旅行と場所","Type to search time zone":"タイムゾーン検索のため入力してください","Unable to search the group":"グループを検索できません","Undo changes":"変更を取り消し",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'メッセージを記入、"@"でメンション、"："で絵文字の自動補完 ...'}},{locale:"ka",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"ka_GE",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"kab",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"kk",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"km",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"kn",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"ko",translations:{"{tag} (invisible)":"{tag}(숨김)","{tag} (restricted)":"{tag}(제한)","a few seconds ago":"방금 전",Actions:"",'Actions for item with name "{name}"':"",Activities:"활동","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"la",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"lb",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"lo",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"lt_LT",translations:{"{tag} (invisible)":"{tag} (nematoma)","{tag} (restricted)":"{tag} (apribota)","a few seconds ago":"",Actions:"Veiksmai",'Actions for item with name "{name}"':"",Activities:"Veiklos","Animals & Nature":"Gyvūnai ir gamta","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"Pasirinkti","Clear search":"","Clear text":"",Close:"Užverti","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"Tinkinti","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"Vėliavos","Food & Drink":"Maistas ir gėrimai","Frequently used":"Dažniausiai naudoti",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"Pasiekta {count} simbolių žinutės riba","More items …":"","More options":"",Next:"Kitas","No emoji found":"Nerasta jaustukų","No link provider found":"","No results":"Nėra rezultatų",Objects:"Objektai","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"Pristabdyti skaidrių rodymą","People & Body":"Žmonės ir kūnas","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Pasirinkti jaustuką","Please select a time zone:":"",Previous:"Ankstesnis","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Ieškoti","Search emoji":"","Search results":"Paieškos rezultatai","sec. ago":"","seconds ago":"","Select a tag":"Pasirinkti žymę","Select provider":"",Settings:"Nustatymai","Settings navigation":"Naršymas nustatymuose","Show password":"","Smart Picker":"","Smileys & Emotion":"Šypsenos ir emocijos","Start slideshow":"Pradėti skaidrių rodymą","Start typing to search":"",Submit:"Pateikti",Symbols:"Simboliai","Travel & Places":"Kelionės ir vietos","Type to search time zone":"","Unable to search the group":"Nepavyko atlikti paiešką grupėje","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"lv",translations:{"{tag} (invisible)":"{tag} (neredzams)","{tag} (restricted)":"{tag} (ierobežots)","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"Izvēlēties","Clear search":"","Clear text":"",Close:"Aizvērt","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"Nākamais","No emoji found":"","No link provider found":"","No results":"Nav rezultātu",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"Pauzēt slaidrādi","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"Iepriekšējais","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"Izvēlēties birku","Select provider":"",Settings:"Iestatījumi","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"Sākt slaidrādi","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"mk",translations:{"{tag} (invisible)":"{tag} (невидливо)","{tag} (restricted)":"{tag} (ограничено)","a few seconds ago":"",Actions:"Акции",'Actions for item with name "{name}"':"",Activities:"Активности","Animals & Nature":"Животни & Природа","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"Аватар на {displayName}","Avatar of {displayName}, {status}":"Аватар на {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Откажи ги промените","Change name":"",Choose:"Избери","Clear search":"","Clear text":"",Close:"Затвори","Close modal":"Затвори модал","Close navigation":"Затвори навигација","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Потврди ги промените",Custom:"Прилагодени","Edit item":"Уреди","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Фаворити",Flags:"Знамиња","Food & Drink":"Храна & Пијалоци","Frequently used":"Најчесто користени",Global:"Глобално","Go back to the list":"Врати се на листата","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"Ограничувањето на должината на пораката од {count} карактери е надминато","More items …":"","More options":"",Next:"Следно","No emoji found":"Не се пронајдени емотикони","No link provider found":"","No results":"Нема резултати",Objects:"Објекти","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Отвори навигација","Open settings menu":"","Password is secure":"","Pause slideshow":"Пузирај слајдшоу","People & Body":"Луѓе & Тело","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Избери емотикон","Please select a time zone:":"Изберете временска зона:",Previous:"Предходно","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Барај","Search emoji":"","Search results":"Резултати од барувањето","sec. ago":"","seconds ago":"","Select a tag":"Избери ознака","Select provider":"",Settings:"Параметри","Settings navigation":"Параметри за навигација","Show password":"","Smart Picker":"","Smileys & Emotion":"Смешковци & Емотикони","Start slideshow":"Стартувај слајдшоу","Start typing to search":"",Submit:"Испрати",Symbols:"Симболи","Travel & Places":"Патувања & Места","Type to search time zone":"Напишете за да пребарате временска зона","Unable to search the group":"Неможе да се принајде групата","Undo changes":"Врати ги промените",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"mn",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"mr",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"ms_MY",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"my",translations:{"{tag} (invisible)":"{tag} (ကွယ်ဝှက်ထား)","{tag} (restricted)":"{tag} (ကန့်သတ်)","a few seconds ago":"",Actions:"လုပ်ဆောင်ချက်များ",'Actions for item with name "{name}"':"",Activities:"ပြုလုပ်ဆောင်တာများ","Animals & Nature":"တိရစ္ဆာန်များနှင့် သဘာဝ","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"{displayName} ၏ ကိုယ်ပွား","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"ပြောင်းလဲမှုများ ပယ်ဖျက်ရန်","Change name":"",Choose:"ရွေးချယ်ရန်","Clear search":"","Clear text":"",Close:"ပိတ်ရန်","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"ပြောင်းလဲမှုများ အတည်ပြုရန်",Custom:"အလိုကျချိန်ညှိမှု","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"အလံများ","Food & Drink":"အစားအသောက်","Frequently used":"မကြာခဏအသုံးပြုသော",Global:"ကမ္ဘာလုံးဆိုင်ရာ","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"ကန့်သတ် စာလုံးရေ {count} လုံး ပြည့်ပါပြီ","More items …":"","More options":"",Next:"နောက်သို့ဆက်ရန်","No emoji found":"အီမိုဂျီ ရှာဖွေမတွေ့နိုင်ပါ","No link provider found":"","No results":"ရလဒ်မရှိပါ",Objects:"အရာဝတ္ထုများ","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"စလိုက်ရှိုး ခေတ္တရပ်ရန်","People & Body":"လူပုဂ္ဂိုလ်များနှင့် ခန္ဓာကိုယ်","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"အီမိုဂျီရွေးရန်","Please select a time zone:":"ဒေသစံတော်ချိန် ရွေးချယ်ပေးပါ",Previous:"ယခင်","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"ရှာဖွေရန်","Search emoji":"","Search results":"ရှာဖွေမှု ရလဒ်များ","sec. ago":"","seconds ago":"","Select a tag":"tag ရွေးချယ်ရန်","Select provider":"",Settings:"ချိန်ညှိချက်များ","Settings navigation":"ချိန်ညှိချက်အညွှန်း","Show password":"","Smart Picker":"","Smileys & Emotion":"စမိုင်လီများနှင့် အီမိုရှင်း","Start slideshow":"စလိုက်ရှိုးအား စတင်ရန်","Start typing to search":"",Submit:"တင်သွင်းရန်",Symbols:"သင်္ကေတများ","Travel & Places":"ခရီးသွားလာခြင်းနှင့် နေရာများ","Type to search time zone":"ဒေသစံတော်ချိန်များ ရှာဖွေရန် စာရိုက်ပါ","Unable to search the group":"အဖွဲ့အား ရှာဖွေ၍ မရနိုင်ပါ","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"nb",translations:{"{tag} (invisible)":"{tag} (usynlig)","{tag} (restricted)":"{tag} (beskyttet)","a few seconds ago":"",Actions:"Handlinger",'Actions for item with name "{name}"':"",Activities:"Aktiviteter","Animals & Nature":"Dyr og natur","Any link":"","Anything shared with the same group of people will show up here":"Alt som er delt med den samme gruppen vil vises her","Avatar of {displayName}":"Avataren til {displayName}","Avatar of {displayName}, {status}":"{displayName}'s avatar, {status}",Back:"","Back to provider selection":"","Cancel changes":"Avbryt endringer","Change name":"",Choose:"Velg","Clear search":"","Clear text":"Fjern tekst",Close:"Lukk","Close modal":"Lukk modal","Close navigation":"Lukk navigasjon","Close sidebar":"Lukk sidepanel","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Bekreft endringer",Custom:"Tilpasset","Edit item":"Rediger","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Favoritt",Flags:"Flagg","Food & Drink":"Mat og drikke","Frequently used":"Ofte brukt",Global:"Global","Go back to the list":"Gå tilbake til listen","Hide password":"Skjul passord",'Load more "{options}""':"","Message limit of {count} characters reached":"Karakter begrensing {count} nådd i melding","More items …":"Flere gjenstander...","More options":"",Next:"Neste","No emoji found":"Fant ingen emoji","No link provider found":"","No results":"Ingen resultater",Objects:"Objekter","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Åpne navigasjon","Open settings menu":"","Password is secure":"Passordet er sikkert","Pause slideshow":"Pause lysbildefremvisning","People & Body":"Mennesker og kropp","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Velg en emoji","Please select a time zone:":"Vennligst velg tidssone",Previous:"Forrige","Provider icon":"","Raw link {options}":"","Related resources":"Relaterte ressurser",Search:"Søk","Search emoji":"","Search results":"Søkeresultater","sec. ago":"","seconds ago":"","Select a tag":"Velg en merkelapp","Select provider":"",Settings:"Innstillinger","Settings navigation":"Navigasjonsinstillinger","Show password":"Vis passord","Smart Picker":"","Smileys & Emotion":"Smilefjes og følelser","Start slideshow":"Start lysbildefremvisning","Start typing to search":"",Submit:"Send",Symbols:"Symboler","Travel & Places":"Reise og steder","Type to search time zone":"Tast for å søke etter tidssone","Unable to search the group":"Kunne ikke søke i gruppen","Undo changes":"Tilbakestill endringer",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Skriv melding, bruk "@" for å nevne noen, bruk ":" for autofullføring av emoji...'}},{locale:"ne",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"nl",translations:{"{tag} (invisible)":"{tag} (onzichtbaar)","{tag} (restricted)":"{tag} (beperkt)","a few seconds ago":"",Actions:"Acties",'Actions for item with name "{name}"':"",Activities:"Activiteiten","Animals & Nature":"Dieren & Natuur","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"Avatar van {displayName}","Avatar of {displayName}, {status}":"Avatar van {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Wijzigingen annuleren","Change name":"",Choose:"Kies","Clear search":"","Clear text":"",Close:"Sluiten","Close modal":"","Close navigation":"Navigatie sluiten","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Wijzigingen bevestigen",Custom:"Aangepast","Edit item":"Item bewerken","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"Vlaggen","Food & Drink":"Eten & Drinken","Frequently used":"Vaak gebruikt",Global:"Globaal","Go back to the list":"Ga terug naar de lijst","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"Berichtlimiet van {count} karakters bereikt","More items …":"","More options":"",Next:"Volgende","No emoji found":"Geen emoji gevonden","No link provider found":"","No results":"Geen resultaten",Objects:"Objecten","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Navigatie openen","Open settings menu":"","Password is secure":"","Pause slideshow":"Pauzeer diavoorstelling","People & Body":"Mensen & Lichaam","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Kies een emoji","Please select a time zone:":"Selecteer een tijdzone:",Previous:"Vorige","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Zoeken","Search emoji":"","Search results":"Zoekresultaten","sec. ago":"","seconds ago":"","Select a tag":"Selecteer een label","Select provider":"",Settings:"Instellingen","Settings navigation":"Instellingen navigatie","Show password":"","Smart Picker":"","Smileys & Emotion":"Smileys & Emotie","Start slideshow":"Start diavoorstelling","Start typing to search":"",Submit:"Verwerken",Symbols:"Symbolen","Travel & Places":"Reizen & Plaatsen","Type to search time zone":"Type om de tijdzone te zoeken","Unable to search the group":"Kan niet in de groep zoeken","Undo changes":"Wijzigingen ongedaan maken",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"nn_NO",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"oc",translations:{"{tag} (invisible)":"{tag} (invisible)","{tag} (restricted)":"{tag} (limit)","a few seconds ago":"",Actions:"Accions",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"Causir","Clear search":"","Clear text":"",Close:"Tampar","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"Seguent","No emoji found":"","No link provider found":"","No results":"Cap de resultat",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"Metre en pausa lo diaporama","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"Precedent","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"Seleccionar una etiqueta","Select provider":"",Settings:"Paramètres","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"Lançar lo diaporama","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"pl",translations:{"{tag} (invisible)":"{tag} (niewidoczna)","{tag} (restricted)":"{tag} (ograniczona)","a few seconds ago":"",Actions:"Działania",'Actions for item with name "{name}"':"",Activities:"Aktywność","Animals & Nature":"Zwierzęta i natura","Any link":"","Anything shared with the same group of people will show up here":"Tutaj pojawi się wszystko, co zostało udostępnione tej samej grupie osób","Avatar of {displayName}":"Awatar {displayName}","Avatar of {displayName}, {status}":"Awatar {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Anuluj zmiany","Change name":"",Choose:"Wybierz","Clear search":"","Clear text":"Wyczyść tekst",Close:"Zamknij","Close modal":"Zamknij modal","Close navigation":"Zamknij nawigację","Close sidebar":"Zamknij pasek boczny","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Potwierdź zmiany",Custom:"Zwyczajne","Edit item":"Edytuj element","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Ulubiony",Flags:"Flagi","Food & Drink":"Jedzenie i picie","Frequently used":"Często używane",Global:"Globalnie","Go back to the list":"Powrót do listy","Hide password":"Ukryj hasło",'Load more "{options}""':"","Message limit of {count} characters reached":"Przekroczono limit wiadomości wynoszący {count} znaków","More items …":"Więcej pozycji…","More options":"",Next:"Następny","No emoji found":"Nie znaleziono emoji","No link provider found":"","No results":"Brak wyników",Objects:"Obiekty","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Otwórz nawigację","Open settings menu":"","Password is secure":"Hasło jest bezpieczne","Pause slideshow":"Wstrzymaj pokaz slajdów","People & Body":"Ludzie i ciało","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Wybierz emoji","Please select a time zone:":"Wybierz strefę czasową:",Previous:"Poprzedni","Provider icon":"","Raw link {options}":"","Related resources":"Powiązane zasoby",Search:"Szukaj","Search emoji":"","Search results":"Wyniki wyszukiwania","sec. ago":"","seconds ago":"","Select a tag":"Wybierz etykietę","Select provider":"",Settings:"Ustawienia","Settings navigation":"Ustawienia nawigacji","Show password":"Pokaż hasło","Smart Picker":"","Smileys & Emotion":"Buźki i emotikony","Start slideshow":"Rozpocznij pokaz slajdów","Start typing to search":"",Submit:"Wyślij",Symbols:"Symbole","Travel & Places":"Podróże i miejsca","Type to search time zone":"Wpisz, aby wyszukać strefę czasową","Unable to search the group":"Nie można przeszukać grupy","Undo changes":"Cofnij zmiany",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Napisz wiadomość, "@" aby o kimś wspomnieć, ":" dla autouzupełniania emoji…'}},{locale:"ps",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"pt_BR",translations:{"{tag} (invisible)":"{tag} (invisível)","{tag} (restricted)":"{tag} (restrito) ","a few seconds ago":"",Actions:"Ações",'Actions for item with name "{name}"':"",Activities:"Atividades","Animals & Nature":"Animais & Natureza","Any link":"","Anything shared with the same group of people will show up here":"Qualquer coisa compartilhada com o mesmo grupo de pessoas aparecerá aqui","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Cancelar alterações","Change name":"",Choose:"Escolher","Clear search":"","Clear text":"Limpar texto",Close:"Fechar","Close modal":"Fechar modal","Close navigation":"Fechar navegação","Close sidebar":"Fechar barra lateral","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Confirmar alterações",Custom:"Personalizado","Edit item":"Editar item","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Favorito",Flags:"Bandeiras","Food & Drink":"Comida & Bebida","Frequently used":"Mais usados",Global:"Global","Go back to the list":"Volte para a lista","Hide password":"Ocultar a senha",'Load more "{options}""':"","Message limit of {count} characters reached":"Limite de mensagem de {count} caracteres atingido","More items …":"Mais itens …","More options":"",Next:"Próximo","No emoji found":"Nenhum emoji encontrado","No link provider found":"","No results":"Sem resultados",Objects:"Objetos","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Abrir navegação","Open settings menu":"","Password is secure":"A senha é segura","Pause slideshow":"Pausar apresentação de slides","People & Body":"Pessoas & Corpo","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Escolha um emoji","Please select a time zone:":"Selecione um fuso horário: ",Previous:"Anterior","Provider icon":"","Raw link {options}":"","Related resources":"Recursos relacionados",Search:"Pesquisar","Search emoji":"","Search results":"Resultados da pesquisa","sec. ago":"","seconds ago":"","Select a tag":"Selecionar uma tag","Select provider":"",Settings:"Configurações","Settings navigation":"Navegação de configurações","Show password":"Mostrar senha","Smart Picker":"","Smileys & Emotion":"Smiles & Emoções","Start slideshow":"Iniciar apresentação de slides","Start typing to search":"",Submit:"Enviar",Symbols:"Símbolo","Travel & Places":"Viagem & Lugares","Type to search time zone":"Digite para pesquisar o fuso horário ","Unable to search the group":"Não foi possível pesquisar o grupo","Undo changes":"Desfazer modificações",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Escreva mensagens, use "@" para mencionar algum, use ":" for autocompletar emoji …'}},{locale:"pt_PT",translations:{"{tag} (invisible)":"{tag} (invisivel)","{tag} (restricted)":"{tag} (restrito)","a few seconds ago":"alguns segundos atrás",Actions:"Ações",'Actions for item with name "{name}"':'Ações para objeto com o nome "[name]"',Activities:"Atividades","Animals & Nature":"Animais e Natureza","Any link":"Qualquer link","Anything shared with the same group of people will show up here":"Qualquer coisa compartilhada com o mesmo grupo de pessoas aparecerá aqui","Avatar of {displayName}":"Avatar de {displayName}","Avatar of {displayName}, {status}":"Avatar de {displayName}, {status}",Back:"Voltar atrás","Back to provider selection":"Voltar à seleção de fornecedor","Cancel changes":"Cancelar alterações","Change name":"Alterar nome",Choose:"Escolher","Clear search":"Limpar a pesquisa","Clear text":"Limpar texto",Close:"Fechar","Close modal":"Fechar modal","Close navigation":"Fechar navegação","Close sidebar":"Fechar barra lateral","Close Smart Picker":'Fechar "Smart Picker"',"Collapse menu":"Comprimir menu","Confirm changes":"Confirmar alterações",Custom:"Personalizado","Edit item":"Editar item","Enter link":"Introduzir link","Error getting related resources. Please contact your system administrator if you have any questions.":"Erro em obter info relacionadas. Por favor contacte o administrador do sistema para esclarecimentos adicionais.","External documentation for {name}":"Documentação externa para {name}",Favorite:"Favorito",Flags:"Bandeiras","Food & Drink":"Comida e Bebida","Frequently used":"Mais utilizados",Global:"Global","Go back to the list":"Voltar para a lista","Hide password":"Ocultar a senha",'Load more "{options}""':'Obter mais "{options}""',"Message limit of {count} characters reached":"Atingido o limite de {count} carateres da mensagem.","More items …":"Mais itens …","More options":"Mais opções",Next:"Seguinte","No emoji found":"Nenhum emoji encontrado","No link provider found":"Nenhum fornecedor de link encontrado","No results":"Sem resultados",Objects:"Objetos","Open contact menu":"Abrir o menu de contato",'Open link to "{resourceName}"':'Abrir link para "{resourceName}"',"Open menu":"Abrir menu","Open navigation":"Abrir navegação","Open settings menu":"Abrir menu de configurações","Password is secure":"A senha é segura","Pause slideshow":"Pausar diaporama","People & Body":"Pessoas e Corpo","Pick a date":"Escolha uma data","Pick a date and a time":"Escolha uma data e um horário","Pick a month":"Escolha um mês","Pick a time":"Escolha um horário","Pick a week":"Escolha uma semana","Pick a year":"Escolha um ano","Pick an emoji":"Escolha um emoji","Please select a time zone:":"Por favor, selecione um fuso horário: ",Previous:"Anterior","Provider icon":"Icon do fornecedor","Raw link {options}":"Link inicial {options}","Related resources":"Recursos relacionados",Search:"Pesquisar","Search emoji":"Pesquisar emoji","Search results":"Resultados da pesquisa","sec. ago":"seg. atrás","seconds ago":"segundos atrás","Select a tag":"Selecionar uma etiqueta","Select provider":"Escolha de fornecedor",Settings:"Definições","Settings navigation":"Navegação de configurações","Show password":"Mostrar senha","Smart Picker":"Smart Picker","Smileys & Emotion":"Sorrisos e Emoções","Start slideshow":"Iniciar diaporama","Start typing to search":"Comece a digitar para pesquisar",Submit:"Submeter",Symbols:"Símbolos","Travel & Places":"Viagem e Lugares","Type to search time zone":"Digite para pesquisar o fuso horário ","Unable to search the group":"Não é possível pesquisar o grupo","Undo changes":"Anular alterações",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Escreva a mensagem, use "@" para mencionar alguém, use ":" para obter um emoji …'}},{locale:"ro",translations:{"{tag} (invisible)":"{tag} (invizibil)","{tag} (restricted)":"{tag} (restricționat)","a few seconds ago":"",Actions:"Acțiuni",'Actions for item with name "{name}"':"",Activities:"Activități","Animals & Nature":"Animale și natură","Any link":"","Anything shared with the same group of people will show up here":"Tot ceea ce este partajat cu același grup de persoane va fi afișat aici","Avatar of {displayName}":"Avatarul lui {displayName}","Avatar of {displayName}, {status}":"Avatarul lui {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Anulează modificările","Change name":"",Choose:"Alegeți","Clear search":"","Clear text":"Șterge textul",Close:"Închideți","Close modal":"Închideți modulul","Close navigation":"Închideți navigarea","Close sidebar":"Închide bara laterală","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Confirmați modificările",Custom:"Personalizat","Edit item":"Editați elementul","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Favorit",Flags:"Marcaje","Food & Drink":"Alimente și băuturi","Frequently used":"Utilizate frecvent",Global:"Global","Go back to the list":"Întoarceți-vă la listă","Hide password":"Ascunde parola",'Load more "{options}""':"","Message limit of {count} characters reached":"Limita mesajului de {count} caractere a fost atinsă","More items …":"Mai multe articole ...","More options":"",Next:"Următorul","No emoji found":"Nu s-a găsit niciun emoji","No link provider found":"","No results":"Nu există rezultate",Objects:"Obiecte","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Deschideți navigația","Open settings menu":"","Password is secure":"Parola este sigură","Pause slideshow":"Pauză prezentare de diapozitive","People & Body":"Oameni și corp","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Alege un emoji","Please select a time zone:":"Vă rugăm să selectați un fus orar:",Previous:"Anterior","Provider icon":"","Raw link {options}":"","Related resources":"Resurse legate",Search:"Căutare","Search emoji":"","Search results":"Rezultatele căutării","sec. ago":"","seconds ago":"","Select a tag":"Selectați o etichetă","Select provider":"",Settings:"Setări","Settings navigation":"Navigare setări","Show password":"Arată parola","Smart Picker":"","Smileys & Emotion":"Zâmbete și emoții","Start slideshow":"Începeți prezentarea de diapozitive","Start typing to search":"",Submit:"Trimiteți",Symbols:"Simboluri","Travel & Places":"Călătorii și locuri","Type to search time zone":"Tastați pentru a căuta fusul orar","Unable to search the group":"Imposibilitatea de a căuta în grup","Undo changes":"Anularea modificărilor",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Scrie un mesaj, folosește "@" pentru a menționa pe cineva, folosește ":" pentru autocompletarea cu emoji ...'}},{locale:"ru",translations:{"{tag} (invisible)":"{tag} (невидимое)","{tag} (restricted)":"{tag} (ограниченное)","a few seconds ago":"",Actions:"Действия ",'Actions for item with name "{name}"':"",Activities:"События","Animals & Nature":"Животные и природа ","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"Аватар {displayName}","Avatar of {displayName}, {status}":"Фотография {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Отменить изменения","Change name":"",Choose:"Выберите","Clear search":"","Clear text":"",Close:"Закрыть","Close modal":"Закрыть модальное окно","Close navigation":"Закрыть навигацию","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Подтвердить изменения",Custom:"Пользовательское","Edit item":"Изменить элемент","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"Флаги","Food & Drink":"Еда, напиток","Frequently used":"Часто используемый",Global:"Глобальный","Go back to the list":"Вернуться к списку","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"Достигнуто ограничение на количество символов в {count}","More items …":"","More options":"",Next:"Следующее","No emoji found":"Эмодзи не найдено","No link provider found":"","No results":"Результаты отсуствуют",Objects:"Объекты","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Открыть навигацию","Open settings menu":"","Password is secure":"","Pause slideshow":"Приостановить показ слйдов","People & Body":"Люди и тело","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Выберите эмодзи","Please select a time zone:":"Пожалуйста, выберите часовой пояс:",Previous:"Предыдущее","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Поиск","Search emoji":"","Search results":"Результаты поиска","sec. ago":"","seconds ago":"","Select a tag":"Выберите метку","Select provider":"",Settings:"Параметры","Settings navigation":"Навигация по настройкам","Show password":"","Smart Picker":"","Smileys & Emotion":"Смайлики и эмоции","Start slideshow":"Начать показ слайдов","Start typing to search":"",Submit:"Утвердить",Symbols:"Символы","Travel & Places":"Путешествия и места","Type to search time zone":"Введите для поиска часового пояса","Unable to search the group":"Невозможно найти группу","Undo changes":"Отменить изменения",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"sc",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"si",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"sk",translations:{"{tag} (invisible)":"{tag} (neviditeľný)","{tag} (restricted)":"{tag} (obmedzený)","a few seconds ago":"",Actions:"Akcie",'Actions for item with name "{name}"':"",Activities:"Aktivity","Animals & Nature":"Zvieratá a príroda","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"Avatar {displayName}","Avatar of {displayName}, {status}":"Avatar {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Zrušiť zmeny","Change name":"",Choose:"Vybrať","Clear search":"","Clear text":"",Close:"Zatvoriť","Close modal":"","Close navigation":"Zavrieť navigáciu","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Potvrdiť zmeny",Custom:"Zvyk","Edit item":"Upraviť položku","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"Vlajky","Food & Drink":"Jedlo a nápoje","Frequently used":"Často používané",Global:"Globálne","Go back to the list":"Naspäť na zoznam","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"Limit správy na {count} znakov dosiahnutý","More items …":"","More options":"",Next:"Ďalší","No emoji found":"Nenašli sa žiadne emodži","No link provider found":"","No results":"Žiadne výsledky",Objects:"Objekty","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Otvoriť navigáciu","Open settings menu":"","Password is secure":"","Pause slideshow":"Pozastaviť prezentáciu","People & Body":"Ľudia a telo","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Vyberte si emodži","Please select a time zone:":"Prosím vyberte časovú zónu:",Previous:"Predchádzajúci","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Hľadať","Search emoji":"","Search results":"Výsledky vyhľadávania","sec. ago":"","seconds ago":"","Select a tag":"Vybrať štítok","Select provider":"",Settings:"Nastavenia","Settings navigation":"Navigácia v nastaveniach","Show password":"","Smart Picker":"","Smileys & Emotion":"Smajlíky a emócie","Start slideshow":"Začať prezentáciu","Start typing to search":"",Submit:"Odoslať",Symbols:"Symboly","Travel & Places":"Cestovanie a miesta","Type to search time zone":"Začníte písať pre vyhľadávanie časovej zóny","Unable to search the group":"Skupinu sa nepodarilo nájsť","Undo changes":"Vrátiť zmeny",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"sl",translations:{"{tag} (invisible)":"{tag} (nevidno)","{tag} (restricted)":"{tag} (omejeno)","a few seconds ago":"",Actions:"Dejanja",'Actions for item with name "{name}"':"",Activities:"Dejavnosti","Animals & Nature":"Živali in Narava","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"Podoba {displayName}","Avatar of {displayName}, {status}":"Prikazna slika {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Prekliči spremembe","Change name":"",Choose:"Izbor","Clear search":"","Clear text":"Počisti besedilo",Close:"Zapri","Close modal":"Zapri pojavno okno","Close navigation":"Zapri krmarjenje","Close sidebar":"Zapri stransko vrstico","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Potrdi spremembe",Custom:"Po meri","Edit item":"Uredi predmet","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Priljubljeno",Flags:"Zastavice","Food & Drink":"Hrana in Pijača","Frequently used":"Pogostost uporabe",Global:"Splošno","Go back to the list":"Vrni se na seznam","Hide password":"Skrij geslo",'Load more "{options}""':"","Message limit of {count} characters reached":"Dosežena omejitev {count} znakov na sporočilo.","More items …":"Več predmetov ...","More options":"",Next:"Naslednji","No emoji found":"Ni najdenih izraznih ikon","No link provider found":"","No results":"Ni zadetkov",Objects:"Predmeti","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Odpri krmarjenje","Open settings menu":"","Password is secure":"Geslo je varno","Pause slideshow":"Ustavi predstavitev","People & Body":"Ljudje in Telo","Pick a date":"Izbor datuma","Pick a date and a time":"Izbor datuma in časa","Pick a month":"Izbor meseca","Pick a time":"Izbor časa","Pick a week":"Izbor tedna","Pick a year":"Izbor leta","Pick an emoji":"Izbor izrazne ikone","Please select a time zone:":"Izbor časovnega pasu:",Previous:"Predhodni","Provider icon":"","Raw link {options}":"","Related resources":"Povezani viri",Search:"Iskanje","Search emoji":"","Search results":"Zadetki iskanja","sec. ago":"","seconds ago":"","Select a tag":"Izbor oznake","Select provider":"",Settings:"Nastavitve","Settings navigation":"Krmarjenje nastavitev","Show password":"Pokaži geslo","Smart Picker":"","Smileys & Emotion":"Izrazne ikone","Start slideshow":"Začni predstavitev","Start typing to search":"",Submit:"Pošlji",Symbols:"Simboli","Travel & Places":"Potovanja in Kraji","Type to search time zone":"Vpišite niz za iskanje časovnega pasu","Unable to search the group":"Ni mogoče iskati po skupini","Undo changes":"Razveljavi spremembe",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"sq",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"sr",translations:{"{tag} (invisible)":"{tag} (nevidljivo)","{tag} (restricted)":"{tag} (ograničeno)","a few seconds ago":"",Actions:"Radnje",'Actions for item with name "{name}"':"",Activities:"Aktivnosti","Animals & Nature":"Životinje i Priroda","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"Avatar za {displayName}","Avatar of {displayName}, {status}":"Avatar za {displayName}, {status}",Back:"","Back to provider selection":"","Cancel changes":"Otkaži izmene","Change name":"",Choose:"Изаберите","Clear search":"","Clear text":"",Close:"Затвори","Close modal":"Zatvori modal","Close navigation":"Zatvori navigaciju","Close sidebar":"Zatvori bočnu traku","Close Smart Picker":"","Collapse menu":"","Confirm changes":"Potvrdite promene",Custom:"Po meri","Edit item":"Uredi stavku","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"Omiljeni",Flags:"Zastave","Food & Drink":"Hrana i Piće","Frequently used":"Često korišćeno",Global:"Globalno","Go back to the list":"Natrag na listu","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"Dostignuto je ograničenje za poruke od {count} znakova","More items …":"","More options":"",Next:"Следеће","No emoji found":"Nije pronađen nijedan emodži","No link provider found":"","No results":"Нема резултата",Objects:"Objekti","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"Otvori navigaciju","Open settings menu":"","Password is secure":"","Pause slideshow":"Паузирај слајд шоу","People & Body":"Ljudi i Telo","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"Izaberi emodži","Please select a time zone:":"Molimo izaberite vremensku zonu:",Previous:"Претходно","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"Pretraži","Search emoji":"","Search results":"Rezultati pretrage","sec. ago":"","seconds ago":"","Select a tag":"Изаберите ознаку","Select provider":"",Settings:"Поставке","Settings navigation":"Navigacija u podešavanjima","Show password":"","Smart Picker":"","Smileys & Emotion":"Smajli i Emocije","Start slideshow":"Покрени слајд шоу","Start typing to search":"",Submit:"Prihvati",Symbols:"Simboli","Travel & Places":"Putovanja i Mesta","Type to search time zone":"Ukucaj da pretražiš vremenske zone","Unable to search the group":"Nije moguće pretražiti grupu","Undo changes":"Poništi promene",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"sr@latin",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"sv",translations:{"{tag} (invisible)":"{tag} (osynlig)","{tag} (restricted)":"{tag} (begränsad)","a few seconds ago":"några sekunder sedan",Actions:"Åtgärder",'Actions for item with name "{name}"':'Åtgärder för objekt med namn "{name}"',Activities:"Aktiviteter","Animals & Nature":"Djur & Natur","Any link":"Vilken länk som helst","Anything shared with the same group of people will show up here":"Något som delats med samma grupp av personer kommer att visas här","Avatar of {displayName}":"{displayName}s avatar","Avatar of {displayName}, {status}":"{displayName}s avatar, {status}",Back:"Tillbaka","Back to provider selection":"Tillbaka till leverantörsval","Cancel changes":"Avbryt ändringar","Change name":"Ändra namn",Choose:"Välj","Clear search":"Rensa sökning","Clear text":"Ta bort text",Close:"Stäng","Close modal":"Stäng modal","Close navigation":"Stäng navigering","Close sidebar":"Stäng sidopanel","Close Smart Picker":"Stäng Smart Picker","Collapse menu":"Komprimera menyn","Confirm changes":"Bekräfta ändringar",Custom:"Anpassad","Edit item":"Ändra","Enter link":"Ange länk","Error getting related resources. Please contact your system administrator if you have any questions.":"Det gick inte att hämta relaterade resurser. Kontakta din systemadministratör om du har några frågor.","External documentation for {name}":"Extern dokumentation för {name}",Favorite:"Favorit",Flags:"Flaggor","Food & Drink":"Mat & Dryck","Frequently used":"Används ofta",Global:"Global","Go back to the list":"Gå tillbaka till listan","Hide password":"Göm lössenordet",'Load more "{options}""':'Ladda fler "{options}""',"Message limit of {count} characters reached":"Meddelandegräns {count} tecken används","More items …":"Fler objekt","More options":"Fler alternativ",Next:"Nästa","No emoji found":"Hittade inga emojis","No link provider found":"Ingen länkleverantör hittades","No results":"Inga resultat",Objects:"Objekt","Open contact menu":"Öppna kontaktmenyn",'Open link to "{resourceName}"':'Öppna länken till "{resourceName}"',"Open menu":"Öppna menyn","Open navigation":"Öppna navigering","Open settings menu":"Öppna inställningsmenyn","Password is secure":"Lössenordet är säkert","Pause slideshow":"Pausa bildspelet","People & Body":"Kropp & Själ","Pick a date":"Välj datum","Pick a date and a time":"Välj datum och tid","Pick a month":"Välj månad","Pick a time":"Välj tid","Pick a week":"Välj vecka","Pick a year":"Välj år","Pick an emoji":"Välj en emoji","Please select a time zone:":"Välj tidszon:",Previous:"Föregående","Provider icon":"Leverantörsikon","Raw link {options}":"Oformaterad länk {options}","Related resources":"Relaterade resurser",Search:"Sök","Search emoji":"Sök emoji","Search results":"Sökresultat","sec. ago":"sek. sedan","seconds ago":"sekunder sedan","Select a tag":"Välj en tag","Select provider":"Välj leverantör",Settings:"Inställningar","Settings navigation":"Inställningsmeny","Show password":"Visa lössenordet","Smart Picker":"Smart Picker","Smileys & Emotion":"Selfies & Känslor","Start slideshow":"Starta bildspelet","Start typing to search":"Börja skriva för att söka",Submit:"Skicka",Symbols:"Symboler","Travel & Places":"Resor & Sevärdigheter","Type to search time zone":"Skriv för att välja tidszon","Unable to search the group":"Kunde inte söka i gruppen","Undo changes":"Ångra ändringar",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Skriv meddelande, använd "@" för att nämna någon, använd ":" för automatiska emojiförslag ...'}},{locale:"sw",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"ta",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"th",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"tk",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"tr",translations:{"{tag} (invisible)":"{tag} (görünmez)","{tag} (restricted)":"{tag} (kısıtlı)","a few seconds ago":"birkaç saniye önce",Actions:"İşlemler",'Actions for item with name "{name}"':"{name} adındaki öge için işlemler",Activities:"Etkinlikler","Animals & Nature":"Hayvanlar ve Doğa","Any link":"Herhangi bir bağlantı","Anything shared with the same group of people will show up here":"Aynı kişi grubu ile paylaşılan herşey burada görüntülenir","Avatar of {displayName}":"{displayName} avatarı","Avatar of {displayName}, {status}":"{displayName}, {status} avatarı",Back:"Geri","Back to provider selection":"Sağlayıcı seçimine dön","Cancel changes":"Değişiklikleri iptal et","Change name":"Adı değiştir",Choose:"Seçin","Clear search":"Aramayı temizle","Clear text":"Metni temizle",Close:"Kapat","Close modal":"Üste açılan pencereyi kapat","Close navigation":"Gezinmeyi kapat","Close sidebar":"Yan çubuğu kapat","Close Smart Picker":"Akıllı seçimi kapat","Collapse menu":"Menüyü daralt","Confirm changes":"Değişiklikleri onayla",Custom:"Özel","Edit item":"Ögeyi düzenle","Enter link":"Bağlantıyı yazın","Error getting related resources. Please contact your system administrator if you have any questions.":"İlgili kaynaklara ulaşılırken sorun çıktı. Herhangi bir sorunuz varsa lütfen sistem yöneticiniz ile görüşün ","External documentation for {name}":"{name} için dış belgeler",Favorite:"Sık kullanılanlara ekle",Flags:"Bayraklar","Food & Drink":"Yeme ve içme","Frequently used":"Sık kullanılanlar",Global:"Evrensel","Go back to the list":"Listeye dön","Hide password":"Parolayı gizle",'Load more "{options}""':'Diğer "{options}"',"Message limit of {count} characters reached":"{count} karakter ileti sınırına ulaşıldı","More items …":"Diğer ögeler…","More options":"Diğer seçenekler",Next:"Sonraki","No emoji found":"Herhangi bir emoji bulunamadı","No link provider found":"Bağlantı sağlayıcısı bulunamadı","No results":"Herhangi bir sonuç bulunamadı",Objects:"Nesneler","Open contact menu":"İletişim menüsünü aç",'Open link to "{resourceName}"':"{resourceName} bağlantısını aç","Open menu":"Menüyü aç","Open navigation":"Gezinmeyi aç","Open settings menu":"Ayarlar menüsünü aç","Password is secure":"Parola güvenli","Pause slideshow":"Slayt sunumunu duraklat","People & Body":"İnsanlar ve beden","Pick a date":"Bir tarih seçin","Pick a date and a time":"Bir tarih ve saat seçin","Pick a month":"Bir ay seçin","Pick a time":"Bir saat seçin","Pick a week":"Bir hafta seçin","Pick a year":"Bir yıl seçin","Pick an emoji":"Bir emoji seçin","Please select a time zone:":"Lütfen bir saat dilimi seçin:",Previous:"Önceki","Provider icon":"Sağlayıcı simgesi","Raw link {options}":"Ham bağlantı {options}","Related resources":"İlgili kaynaklar",Search:"Arama","Search emoji":"Emoji ara","Search results":"Arama sonuçları","sec. ago":"sn. önce","seconds ago":"saniye önce","Select a tag":"Bir etiket seçin","Select provider":"Sağlayıcı seçin",Settings:"Ayarlar","Settings navigation":"Gezinme ayarları","Show password":"Parolayı görüntüle","Smart Picker":"Akıllı seçim","Smileys & Emotion":"İfadeler ve duygular","Start slideshow":"Slayt sunumunu başlat","Start typing to search":"Aramak için yazmaya başlayın",Submit:"Gönder",Symbols:"Simgeler","Travel & Places":"Gezi ve yerler","Type to search time zone":"Saat dilimi aramak için yazmaya başlayın","Unable to search the group":"Grupta arama yapılamadı","Undo changes":"Değişiklikleri geri al",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'İleti yazın, birini anmak için @, otomatik emoji tamamlamak için ":" kullanın…'}},{locale:"ug",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"uk",translations:{"{tag} (invisible)":"{tag} (невидимий)","{tag} (restricted)":"{tag} (обмежений)","a few seconds ago":"декілька секунд тому",Actions:"Дії",'Actions for item with name "{name}"':'Дії для об\'єкту "{name}"',Activities:"Діяльність","Animals & Nature":"Тварини та природа","Any link":"Будь-яке посилання","Anything shared with the same group of people will show up here":"Будь-що доступне для цієї же групи людей буде показано тут","Avatar of {displayName}":"Аватар {displayName}","Avatar of {displayName}, {status}":"Аватар {displayName}, {status}",Back:"Назад","Back to provider selection":"Назад до вибору постачальника","Cancel changes":"Скасувати зміни","Change name":"Змінити назву",Choose:"Виберіть","Clear search":"Очистити пошук","Clear text":"Очистити текст",Close:"Закрити","Close modal":"Закрити модаль","Close navigation":"Закрити навігацію","Close sidebar":"Закрити бічну панель","Close Smart Picker":"Закрити асистент вибору","Collapse menu":"Згорнути меню","Confirm changes":"Підтвердити зміни",Custom:"Власне","Edit item":"Редагувати елемент","Enter link":"Зазначте посилання","Error getting related resources. Please contact your system administrator if you have any questions.":"Помилка під час отримання пов'язаних ресурсів. Будь ласка, сконтактуйте з системним адміністратором, якщо у вас виникли запитання.","External documentation for {name}":"Зовнішня документація для {name}",Favorite:"Із зірочкою",Flags:"Прапори","Food & Drink":"Їжа та напої","Frequently used":"Найчастіші",Global:"Глобальний","Go back to the list":"Повернутися до списку","Hide password":"Приховати пароль",'Load more "{options}""':'Завантажити більше "{options}"',"Message limit of {count} characters reached":"Вичерпано ліміт у {count} символів для повідомлення","More items …":"Більше об'єктів...","More options":"Більше об'єктів",Next:"Вперед","No emoji found":"Емоційки відсутні","No link provider found":"Не наведено посилання","No results":"Відсутні результати",Objects:"Об'єкти","Open contact menu":"Відкрити меню контактів",'Open link to "{resourceName}"':'Відкрити посилання на "{resourceName}"',"Open menu":"Відкрити меню","Open navigation":"Відкрити навігацію","Open settings menu":"Відкрити меню налаштувань","Password is secure":"Пароль безпечний","Pause slideshow":"Пауза у показі слайдів","People & Body":"Люди та жести","Pick a date":"Вибрати дату","Pick a date and a time":"Виберіть дату та час","Pick a month":"Виберіть місяць","Pick a time":"Виберіть час","Pick a week":"Виберіть тиждень","Pick a year":"Виберіть рік","Pick an emoji":"Виберіть емоційку","Please select a time zone:":"Виберіть часовий пояс:",Previous:"Назад","Provider icon":"Піктограма постачальника","Raw link {options}":"Пряме посилання {options}","Related resources":"Пов'язані ресурси",Search:"Пошук","Search emoji":"Шукати емоційки","Search results":"Результати пошуку","sec. ago":"с тому","seconds ago":"с тому","Select a tag":"Виберіть позначку","Select provider":"Виберіть постачальника",Settings:"Налаштування","Settings navigation":"Навігація у налаштуваннях","Show password":"Показати пароль","Smart Picker":"Асистент вибору","Smileys & Emotion":"Смайли та емоції","Start slideshow":"Почати показ слайдів","Start typing to search":"Почніть вводити для пошуку",Submit:"Надіслати",Symbols:"Символи","Travel & Places":"Поїздки та місця","Type to search time zone":"Введіть для пошуку часовий пояс","Unable to search the group":"Неможливо шукати в групі","Undo changes":"Скасувати зміни",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'Додайте "@", щоби згадати коористувача або ":" для вибору емоційки...'}},{locale:"ur_PK",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"uz",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"vi",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"zh_CN",translations:{"{tag} (invisible)":"{tag} （不可见）","{tag} (restricted)":"{tag} （受限）","a few seconds ago":"",Actions:"行为",'Actions for item with name "{name}"':"",Activities:"活动","Animals & Nature":"动物 & 自然","Any link":"","Anything shared with the same group of people will show up here":"与同组用户分享的所有内容都会显示于此","Avatar of {displayName}":"{displayName}的头像","Avatar of {displayName}, {status}":"{displayName}的头像，{status}",Back:"","Back to provider selection":"","Cancel changes":"取消更改","Change name":"",Choose:"选择","Clear search":"","Clear text":"清除文本",Close:"关闭","Close modal":"关闭窗口","Close navigation":"关闭导航","Close sidebar":"关闭侧边栏","Close Smart Picker":"","Collapse menu":"","Confirm changes":"确认更改",Custom:"自定义","Edit item":"编辑项目","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"喜爱",Flags:"旗帜","Food & Drink":"食物 & 饮品","Frequently used":"经常使用",Global:"全局","Go back to the list":"返回至列表","Hide password":"隐藏密码",'Load more "{options}""':"","Message limit of {count} characters reached":"已达到 {count} 个字符的消息限制","More items …":"更多项目…","More options":"",Next:"下一个","No emoji found":"表情未找到","No link provider found":"","No results":"无结果",Objects:"物体","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"开启导航","Open settings menu":"","Password is secure":"密码安全","Pause slideshow":"暂停幻灯片","People & Body":"人 & 身体","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"选择一个表情","Please select a time zone:":"请选择一个时区：",Previous:"上一个","Provider icon":"","Raw link {options}":"","Related resources":"相关资源",Search:"搜索","Search emoji":"","Search results":"搜索结果","sec. ago":"","seconds ago":"","Select a tag":"选择一个标签","Select provider":"",Settings:"设置","Settings navigation":"设置向导","Show password":"显示密码","Smart Picker":"","Smileys & Emotion":"笑脸 & 情感","Start slideshow":"开始幻灯片","Start typing to search":"",Submit:"提交",Symbols:"符号","Travel & Places":"旅游 & 地点","Type to search time zone":"打字以搜索时区","Unable to search the group":"无法搜索分组","Undo changes":"撤销更改",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'写信息，使用"@"来提及某人，使用":"进行表情符号自动完成 ...'}},{locale:"zh_HK",translations:{"{tag} (invisible)":"{tag} (隱藏)","{tag} (restricted)":"{tag} (受限)","a few seconds ago":"",Actions:"動作",'Actions for item with name "{name}"':"",Activities:"活動","Animals & Nature":"動物與自然","Any link":"","Anything shared with the same group of people will show up here":"與同一組人共享的任何內容都會顯示在此處","Avatar of {displayName}":"{displayName} 的頭像","Avatar of {displayName}, {status}":"{displayName} 的頭像，{status}",Back:"","Back to provider selection":"","Cancel changes":"取消更改","Change name":"",Choose:"選擇","Clear search":"","Clear text":"清除文本",Close:"關閉","Close modal":"關閉模態","Close navigation":"關閉導航","Close sidebar":"關閉側邊欄","Close Smart Picker":"","Collapse menu":"","Confirm changes":"確認更改",Custom:"自定義","Edit item":"編輯項目","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"喜愛",Flags:"旗幟","Food & Drink":"食物與飲料","Frequently used":"經常使用",Global:"全球的","Go back to the list":"返回清單","Hide password":"隱藏密碼",'Load more "{options}""':"","Message limit of {count} characters reached":"已達到訊息最多 {count} 字元限制","More items …":"更多項目 …","More options":"",Next:"下一個","No emoji found":"未找到表情符號","No link provider found":"","No results":"無結果",Objects:"物件","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"開啟導航","Open settings menu":"","Password is secure":"密碼是安全的","Pause slideshow":"暫停幻燈片","People & Body":"人物","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"選擇表情符號","Please select a time zone:":"請選擇時區：",Previous:"上一個","Provider icon":"","Raw link {options}":"","Related resources":"相關資源",Search:"搜尋","Search emoji":"","Search results":"搜尋結果","sec. ago":"","seconds ago":"","Select a tag":"選擇標籤","Select provider":"",Settings:"設定","Settings navigation":"設定值導覽","Show password":"顯示密碼","Smart Picker":"","Smileys & Emotion":"表情","Start slideshow":"開始幻燈片","Start typing to search":"",Submit:"提交",Symbols:"標誌","Travel & Places":"旅遊與景點","Type to search time zone":"鍵入以搜索時區","Unable to search the group":"無法搜尋群組","Undo changes":"取消更改",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':'寫訊息，使用 "@" 來指代某人，使用 ":" 用於表情符號自動填充 ...'}},{locale:"zh_TW",translations:{"{tag} (invisible)":"{tag}（隱藏）","{tag} (restricted)":"{tag}（受限）","a few seconds ago":"幾秒前",Actions:"動作",'Actions for item with name "{name}"':"",Activities:"活動","Animals & Nature":"動物與自然","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"選擇","Clear search":"","Clear text":"",Close:"關閉","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"自定義","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"旗幟","Food & Drink":"食物與飲料","Frequently used":"最近使用",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"已達到訊息最多 {count} 字元限制","More items …":"","More options":"",Next:"下一個","No emoji found":"未找到表情符號","No link provider found":"","No results":"無結果",Objects:"物件","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"暫停幻燈片","People & Body":"人物","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"選擇表情符號","Please select a time zone:":"",Previous:"上一個","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"搜尋","Search emoji":"","Search results":"搜尋結果","sec. ago":"","seconds ago":"","Select a tag":"選擇標籤","Select provider":"",Settings:"設定","Settings navigation":"設定值導覽","Show password":"","Smart Picker":"","Smileys & Emotion":"表情","Start slideshow":"開始幻燈片","Start typing to search":"",Submit:"",Symbols:"標誌","Travel & Places":"旅遊與景點","Type to search time zone":"","Unable to search the group":"無法搜尋群組","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}},{locale:"zu_ZA",translations:{"{tag} (invisible)":"","{tag} (restricted)":"","a few seconds ago":"",Actions:"",'Actions for item with name "{name}"':"",Activities:"","Animals & Nature":"","Any link":"","Anything shared with the same group of people will show up here":"","Avatar of {displayName}":"","Avatar of {displayName}, {status}":"",Back:"","Back to provider selection":"","Cancel changes":"","Change name":"",Choose:"","Clear search":"","Clear text":"",Close:"","Close modal":"","Close navigation":"","Close sidebar":"","Close Smart Picker":"","Collapse menu":"","Confirm changes":"",Custom:"","Edit item":"","Enter link":"","Error getting related resources. Please contact your system administrator if you have any questions.":"","External documentation for {name}":"",Favorite:"",Flags:"","Food & Drink":"","Frequently used":"",Global:"","Go back to the list":"","Hide password":"",'Load more "{options}""':"","Message limit of {count} characters reached":"","More items …":"","More options":"",Next:"","No emoji found":"","No link provider found":"","No results":"",Objects:"","Open contact menu":"",'Open link to "{resourceName}"':"","Open menu":"","Open navigation":"","Open settings menu":"","Password is secure":"","Pause slideshow":"","People & Body":"","Pick a date":"","Pick a date and a time":"","Pick a month":"","Pick a time":"","Pick a week":"","Pick a year":"","Pick an emoji":"","Please select a time zone:":"",Previous:"","Provider icon":"","Raw link {options}":"","Related resources":"",Search:"","Search emoji":"","Search results":"","sec. ago":"","seconds ago":"","Select a tag":"","Select provider":"",Settings:"","Settings navigation":"","Show password":"","Smart Picker":"","Smileys & Emotion":"","Start slideshow":"","Start typing to search":"",Submit:"",Symbols:"","Travel & Places":"","Type to search time zone":"","Unable to search the group":"","Undo changes":"",'Write message, use "@" to mention someone, use ":" for emoji autocompletion …':""}}].forEach((function(e){var a={};for(var t in e.translations)e.translations[t].pluralId?a[t]={msgid:t,msgid_plural:e.translations[t].pluralId,msgstr:e.translations[t].msgstr}:a[t]={msgid:t,msgstr:[e.translations[t]]};i.addTranslation(e.locale,{translations:{"":a}})}));var n=i.build(),s=(n.ngettext.bind(n),n.gettext.bind(n));function r(e,a,t){this.r=e,this.g=a,this.b=t}function l(e,a,t){var o=[];o.push(a);for(var i=function(e,a){var t=new Array(3);return t[0]=(a[1].r-a[0].r)/e,t[1]=(a[1].g-a[0].g)/e,t[2]=(a[1].b-a[0].b)/e,t}(e,[a,t]),n=1;n<e;n++){var s=parseInt(a.r+i[0]*n,10),l=parseInt(a.g+i[1]*n,10),c=parseInt(a.b+i[2]*n,10);o.push(new r(s,l,c))}return o}const c=function(e){e||(e=6);var a=new r(182,70,157),t=new r(221,203,85),o=new r(0,130,201),i=l(e,a,t),n=l(e,t,o),s=l(e,o,a);return i.concat(n).concat(s)},m=__webpack_require__(/*! vue-material-design-icons/ArrowLeft.vue */ "./node_modules/vue-material-design-icons/ArrowLeft.vue");var d=t.n(m);const u=__webpack_require__(/*! vue-material-design-icons/Check.vue */ "./node_modules/vue-material-design-icons/Check.vue");var p=t.n(u);const h=__webpack_require__(/*! vue-material-design-icons/DotsHorizontal.vue */ "./node_modules/vue-material-design-icons/DotsHorizontal.vue");var g=t.n(h);const v=__webpack_require__(/*! vue-color */ "./node_modules/vue-color/dist/vue-color.min.js");var k=function(e){var a=e.toString(16);return 1===a.length?"0"+a:a};const y={name:"NcColorPicker",components:{ArrowLeft:d(),Check:p(),Chrome:v.Chrome,DotsHorizontal:g(),NcButton:e.default,NcPopover:a.default},props:{value:{type:String,required:!0},advancedFields:{type:Boolean,default:!1},palette:{type:Array,default:function(){return c(4).map((function(e){return"#"+k(e.r)+k(e.g)+k(e.b)}))},validator:function(e){return e.every((function(e){return/^#([a-f0-9]{3}|[a-f0-9]{6})$/i.test(e)}))}}},emits:["submit","close","update:open","update:value","input"],data:function(){return{currentColor:this.value,advanced:!1,ariaBack:s("Back"),ariaMore:s("More options")}},watch:{value:function(e){this.currentColor=e}},methods:{t:s,handleConfirm:function(){this.$emit("submit",this.currentColor),this.handleClose(),this.advanced=!1},handleClose:function(){this.$emit("close"),this.$emit("update:open",!1)},handleBack:function(){this.advanced=!1},handleMoreSettings:function(){this.advanced=!0},pickColor:function(e){"string"!=typeof e&&(e=this.currentColor.hex),this.currentColor=e,this.$emit("update:value",e),this.$emit("input",e)}}};var A=t(3379),f=t.n(A),C=t(7795),P=t.n(C),S=t(569),w=t.n(S),b=t(3565),N=t.n(b),j=t(9216),O=t.n(j),E=t(4589),x=t.n(E),z=t(3246),F={};F.styleTagTransform=x(),F.setAttributes=N(),F.insert=w().bind(null,"head"),F.domAPI=P(),F.insertStyleElement=O();f()(z.Z,F);z.Z&&z.Z.locals&&z.Z.locals;var B=t(1900),M=t(1554),T=t.n(M),G=(0,B.Z)(y,(function(){var e=this,a=e._self._c;return a("NcPopover",e._g(e._b({on:{"apply-hide":e.handleClose},scopedSlots:e._u([{key:"trigger",fn:function(){return[e._t("default")]},proxy:!0}],null,!0)},"NcPopover",e.$attrs,!1),e.$listeners),[e._v(" "),a("div",{staticClass:"color-picker",class:{"color-picker--advanced-fields":e.advanced&&e.advancedFields}},[a("transition",{attrs:{name:"slide",mode:"out-in"}},[e.advanced?e._e():a("div",{staticClass:"color-picker__simple"},e._l(e.palette,(function(t,o){return a("button",{key:o,staticClass:"color-picker__simple-color-circle",class:{"color-picker__simple-color-circle--active":t===e.currentColor},style:{"background-color":t},attrs:{type:"button"},on:{click:function(a){return e.pickColor(t)}}},[t===e.currentColor?a("Check",{attrs:{size:20}}):e._e()],1)})),0),e._v(" "),e.advanced?a("Chrome",{staticClass:"color-picker__advanced",attrs:{"disable-alpha":!0,"disable-fields":!e.advancedFields},on:{input:e.pickColor},model:{value:e.currentColor,callback:function(a){e.currentColor=a},expression:"currentColor"}}):e._e()],1),e._v(" "),a("div",{staticClass:"color-picker__navigation"},[e.advanced?a("NcButton",{attrs:{type:"tertiary","aria-label":e.ariaBack},on:{click:e.handleBack},scopedSlots:e._u([{key:"icon",fn:function(){return[a("ArrowLeft",{attrs:{size:20}})]},proxy:!0}],null,!1,1821202730)}):e._e(),e._v(" "),e.advanced?e._e():a("NcButton",{attrs:{type:"tertiary","aria-label":e.ariaMore},on:{click:e.handleMoreSettings},scopedSlots:e._u([{key:"icon",fn:function(){return[a("DotsHorizontal",{attrs:{size:20}})]},proxy:!0}],null,!1,1056868794)}),e._v(" "),e.advanced?a("NcButton",{attrs:{type:"primary"},on:{click:e.handleConfirm}},[e._v("\n\t\t\t\t"+e._s(e.t("Choose"))+"\n\t\t\t")]):e._e()],1)],1)])}),[],!1,null,"6cccc0ac",null);"function"==typeof T()&&T()(G);const R=G.exports})(),o})()));
+//# sourceMappingURL=NcColorPicker.js.map
+
+/***/ }),
+
+/***/ "./apps/theming/src/helpers/refreshStyles.js":
+/*!***************************************************!*\
+  !*** ./apps/theming/src/helpers/refreshStyles.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   refreshStyles: () => (/* binding */ refreshStyles)
+/* harmony export */ });
+/**
+ * @copyright 2022 Christopher Ng <chrng8@gmail.com>
+ *
+ * @author Christopher Ng <chrng8@gmail.com>
+ *
+ * @license AGPL-3.0-or-later
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+const refreshStyles = () => {
+  // Refresh server-side generated theming CSS
+  [...document.head.querySelectorAll('link.theme')].forEach(theme => {
+    const url = new URL(theme.href);
+    url.searchParams.set('v', Date.now());
+    const newTheme = theme.cloneNode();
+    newTheme.href = url.toString();
+    newTheme.onload = () => theme.remove();
+    document.head.append(newTheme);
+  });
+};
+
+/***/ }),
+
+/***/ "./apps/theming/src/personal-settings.js":
+/*!***********************************************!*\
+  !*** ./apps/theming/src/personal-settings.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm.js");
+/* harmony import */ var _UserThemes_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserThemes.vue */ "./apps/theming/src/UserThemes.vue");
+/* harmony import */ var _helpers_refreshStyles_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/refreshStyles.js */ "./apps/theming/src/helpers/refreshStyles.js");
+/**
+ * @copyright Copyright (c) 2018 John Molakvoæ <skjnldsv@protonmail.com>
+ *
+ * @author John Molakvoæ <skjnldsv@protonmail.com>
+ *
+ * @license AGPL-3.0-or-later
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ *
+ */
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].prototype.OC = OC;
+vue__WEBPACK_IMPORTED_MODULE_2__["default"].prototype.t = t;
+const View = vue__WEBPACK_IMPORTED_MODULE_2__["default"].extend(_UserThemes_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
+const theming = new View();
+theming.$mount('#theming');
+theming.$on('update:background', _helpers_refreshStyles_js__WEBPACK_IMPORTED_MODULE_1__.refreshStyles);
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _nextcloud_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @nextcloud/router */ "./node_modules/@nextcloud/router/dist/index.js");
+/* harmony import */ var _nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nextcloud/initial-state */ "./node_modules/@nextcloud/initial-state/dist/index.es.mjs");
+/* harmony import */ var _nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nextcloud/axios */ "./node_modules/@nextcloud/axios/dist/index.es.mjs");
+/* harmony import */ var _nextcloud_vue_dist_Components_NcCheckboxRadioSwitch_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js */ "./node_modules/@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js");
+/* harmony import */ var _nextcloud_vue_dist_Components_NcCheckboxRadioSwitch_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_nextcloud_vue_dist_Components_NcCheckboxRadioSwitch_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _nextcloud_vue_dist_Components_NcSettingsSection_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @nextcloud/vue/dist/Components/NcSettingsSection.js */ "./node_modules/@nextcloud/vue/dist/Components/NcSettingsSection.js");
+/* harmony import */ var _nextcloud_vue_dist_Components_NcSettingsSection_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_nextcloud_vue_dist_Components_NcSettingsSection_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_BackgroundSettings_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/BackgroundSettings.vue */ "./apps/theming/src/components/BackgroundSettings.vue");
+/* harmony import */ var _components_ItemPreview_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/ItemPreview.vue */ "./apps/theming/src/components/ItemPreview.vue");
+/* provided dependency */ var console = __webpack_require__(/*! ./node_modules/console-browserify/index.js */ "./node_modules/console-browserify/index.js");
+
+
+
+
+
+
+
+const availableThemes = (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__.loadState)('theming', 'themes', []);
+const enforceTheme = (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__.loadState)('theming', 'enforceTheme', '');
+const shortcutsDisabled = (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__.loadState)('theming', 'shortcutsDisabled', false);
+const isUserThemingDisabled = (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__.loadState)('theming', 'isUserThemingDisabled');
+console.debug('Available themes', availableThemes);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'UserThemes',
+  components: {
+    ItemPreview: _components_ItemPreview_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    NcCheckboxRadioSwitch: (_nextcloud_vue_dist_Components_NcCheckboxRadioSwitch_js__WEBPACK_IMPORTED_MODULE_3___default()),
+    NcSettingsSection: (_nextcloud_vue_dist_Components_NcSettingsSection_js__WEBPACK_IMPORTED_MODULE_4___default()),
+    BackgroundSettings: _components_BackgroundSettings_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+  },
+  data() {
+    return {
+      availableThemes,
+      // Admin defined configs
+      enforceTheme,
+      shortcutsDisabled,
+      isUserThemingDisabled
+    };
+  },
+  computed: {
+    themes() {
+      return this.availableThemes.filter(theme => theme.type === 1);
+    },
+    fonts() {
+      return this.availableThemes.filter(theme => theme.type === 2);
+    },
+    // Selected theme, fallback on first (default) if none
+    selectedTheme() {
+      return this.themes.find(theme => theme.enabled === true) || this.themes[0];
+    },
+    description() {
+      // using the `t` replace method escape html, we have to do it manually :/
+      return t('theming', 'Universal access is very important to us. We follow web standards and check to make everything usable also without mouse, and assistive software such as screenreaders. We aim to be compliant with the {guidelines}Web Content Accessibility Guidelines{linkend} 2.1 on AA level, with the high contrast theme even on AAA level.').replace('{guidelines}', this.guidelinesLink).replace('{linkend}', '</a>');
+    },
+    guidelinesLink() {
+      return '<a target="_blank" href="https://www.w3.org/WAI/standards-guidelines/wcag/" rel="noreferrer nofollow">';
+    },
+    descriptionDetail() {
+      return t('theming', 'If you find any issues, do not hesitate to report them on {issuetracker}our issue tracker{linkend}. And if you want to get involved, come join {designteam}our design team{linkend}!').replace('{issuetracker}', this.issuetrackerLink).replace('{designteam}', this.designteamLink).replace(/\{linkend\}/g, '</a>');
+    },
+    issuetrackerLink() {
+      return '<a target="_blank" href="https://github.com/nextcloud/server/issues/" rel="noreferrer nofollow">';
+    },
+    designteamLink() {
+      return '<a target="_blank" href="https://nextcloud.com/design" rel="noreferrer nofollow">';
+    }
+  },
+  watch: {
+    shortcutsDisabled(newState) {
+      this.changeShortcutsDisabled(newState);
+    }
+  },
+  methods: {
+    // Refresh server-side generated theming CSS
+    refreshGlobalStyles() {
+      [...document.head.querySelectorAll('link.theme')].forEach(theme => {
+        const url = new URL(theme.href);
+        url.searchParams.set('v', Date.now());
+        const newTheme = theme.cloneNode();
+        newTheme.href = url.toString();
+        newTheme.onload = () => theme.remove();
+        document.head.append(newTheme);
+      });
+    },
+    updateBackground(data) {
+      this.background = data.type === 'custom' || data.type === 'default' ? data.type : data.value;
+      this.refreshGlobalStyles();
+    },
+    changeTheme(_ref) {
+      let {
+        enabled,
+        id
+      } = _ref;
+      // Reset selected and select new one
+      this.themes.forEach(theme => {
+        if (theme.id === id && enabled) {
+          theme.enabled = true;
+          return;
+        }
+        theme.enabled = false;
+      });
+      this.updateBodyAttributes();
+      this.selectItem(enabled, id);
+    },
+    changeFont(_ref2) {
+      let {
+        enabled,
+        id
+      } = _ref2;
+      // Reset selected and select new one
+      this.fonts.forEach(font => {
+        if (font.id === id && enabled) {
+          font.enabled = true;
+          return;
+        }
+        font.enabled = false;
+      });
+      this.updateBodyAttributes();
+      this.selectItem(enabled, id);
+    },
+    async changeShortcutsDisabled(newState) {
+      if (newState) {
+        await (0,_nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"])({
+          url: (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateOcsUrl)('apps/provisioning_api/api/v1/config/users/{appId}/{configKey}', {
+            appId: 'theming',
+            configKey: 'shortcuts_disabled'
+          }),
+          data: {
+            configValue: 'yes'
+          },
+          method: 'POST'
+        });
+      } else {
+        await (0,_nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"])({
+          url: (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateOcsUrl)('apps/provisioning_api/api/v1/config/users/{appId}/{configKey}', {
+            appId: 'theming',
+            configKey: 'shortcuts_disabled'
+          }),
+          method: 'DELETE'
+        });
+      }
+    },
+    updateBodyAttributes() {
+      const enabledThemesIDs = this.themes.filter(theme => theme.enabled === true).map(theme => theme.id);
+      const enabledFontsIDs = this.fonts.filter(font => font.enabled === true).map(font => font.id);
+      this.themes.forEach(theme => {
+        document.body.toggleAttribute("data-theme-".concat(theme.id), theme.enabled);
+      });
+      this.fonts.forEach(font => {
+        document.body.toggleAttribute("data-theme-".concat(font.id), font.enabled);
+      });
+      document.body.setAttribute('data-themes', [...enabledThemesIDs, ...enabledFontsIDs].join(','));
+    },
+    /**
+     * Commit a change and force reload css
+     * Fetching the file again will trigger the server update
+     *
+     * @param {boolean} enabled the theme state
+     * @param {string} themeId the theme ID to change
+     */
+    async selectItem(enabled, themeId) {
+      try {
+        if (enabled) {
+          await (0,_nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"])({
+            url: (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateOcsUrl)('apps/theming/api/v1/theme/{themeId}/enable', {
+              themeId
+            }),
+            method: 'PUT'
+          });
+        } else {
+          await (0,_nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"])({
+            url: (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateOcsUrl)('apps/theming/api/v1/theme/{themeId}', {
+              themeId
+            }),
+            method: 'DELETE'
+          });
+        }
+      } catch (err) {
+        console.error(err, err.response);
+        OC.Notification.showTemporary(t('theming', err.response.data.ocs.meta.message + '. Unable to apply the setting.'));
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _nextcloud_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @nextcloud/router */ "./node_modules/@nextcloud/router/dist/index.js");
+/* harmony import */ var _nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nextcloud/initial-state */ "./node_modules/@nextcloud/initial-state/dist/index.es.mjs");
+/* harmony import */ var _nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @nextcloud/axios */ "./node_modules/@nextcloud/axios/dist/index.es.mjs");
+/* harmony import */ var vue_material_design_icons_Check_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-material-design-icons/Check.vue */ "./node_modules/vue-material-design-icons/Check.vue");
+/* harmony import */ var vue_material_design_icons_Close_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-material-design-icons/Close.vue */ "./node_modules/vue-material-design-icons/Close.vue");
+/* harmony import */ var vue_material_design_icons_ImageEdit_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-material-design-icons/ImageEdit.vue */ "./node_modules/vue-material-design-icons/ImageEdit.vue");
+/* harmony import */ var debounce__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! debounce */ "./node_modules/debounce/index.js");
+/* harmony import */ var debounce__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(debounce__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _nextcloud_vue_dist_Components_NcColorPicker_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @nextcloud/vue/dist/Components/NcColorPicker.js */ "./node_modules/@nextcloud/vue/dist/Components/NcColorPicker.js");
+/* harmony import */ var _nextcloud_vue_dist_Components_NcColorPicker_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_nextcloud_vue_dist_Components_NcColorPicker_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var node_vibrant__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! node-vibrant */ "./node_modules/node-vibrant/lib/browser.js");
+/* harmony import */ var node_vibrant__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(node_vibrant__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var node_vibrant_lib_color_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! node-vibrant/lib/color.js */ "./node_modules/node-vibrant/lib/color.js");
+/* harmony import */ var _nextcloud_dialogs__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @nextcloud/dialogs */ "./node_modules/@nextcloud/dialogs/dist/index.mjs");
+/* harmony import */ var _nextcloud_auth__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @nextcloud/auth */ "./node_modules/@nextcloud/auth/dist/index.es.mjs");
+/* provided dependency */ var console = __webpack_require__(/*! ./node_modules/console-browserify/index.js */ "./node_modules/console-browserify/index.js");
+
+
+
+
+
+
+
+
+
+
+
+
+const backgroundImage = (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__.loadState)('theming', 'backgroundImage');
+const shippedBackgroundList = (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__.loadState)('theming', 'shippedBackgrounds');
+const themingDefaultBackground = (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__.loadState)('theming', 'themingDefaultBackground');
+const defaultShippedBackground = (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__.loadState)('theming', 'defaultShippedBackground');
+const prefixWithBaseUrl = url => (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateFilePath)('theming', '', 'img/background/') + url;
+const picker = (0,_nextcloud_dialogs__WEBPACK_IMPORTED_MODULE_10__.getFilePickerBuilder)(t('theming', 'Select a background from your files')).setMultiSelect(false).setModal(true).setType(1).setMimeTypeFilter(['image/png', 'image/gif', 'image/jpeg', 'image/svg+xml', 'image/svg']).build();
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'BackgroundSettings',
+  components: {
+    Check: vue_material_design_icons_Check_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    Close: vue_material_design_icons_Close_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    ImageEdit: vue_material_design_icons_ImageEdit_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    NcColorPicker: (_nextcloud_vue_dist_Components_NcColorPicker_js__WEBPACK_IMPORTED_MODULE_7___default())
+  },
+  data() {
+    return {
+      loading: false,
+      Theming: (0,_nextcloud_initial_state__WEBPACK_IMPORTED_MODULE_1__.loadState)('theming', 'data', {}),
+      // User background image and color settings
+      backgroundImage
+    };
+  },
+  computed: {
+    shippedBackgrounds() {
+      return Object.keys(shippedBackgroundList).map(fileName => {
+        return {
+          name: fileName,
+          url: prefixWithBaseUrl(fileName),
+          preview: prefixWithBaseUrl('preview/' + fileName),
+          details: shippedBackgroundList[fileName]
+        };
+      }).filter(background => {
+        // If the admin did not changed the global background
+        // let's hide the default background to not show it twice
+        if (!this.isGlobalBackgroundDeleted && !this.isGlobalBackgroundDefault) {
+          return background.name !== defaultShippedBackground;
+        }
+        return true;
+      });
+    },
+    isGlobalBackgroundDefault() {
+      return !!themingDefaultBackground;
+    },
+    isGlobalBackgroundDeleted() {
+      return themingDefaultBackground === 'backgroundColor';
+    },
+    isBackgroundDisabled() {
+      return this.backgroundImage === 'disabled' || !this.backgroundImage;
+    }
+  },
+  methods: {
+    /**
+     * Do we need to invert the text if color is too bright?
+     *
+     * @param {string} color the hex color
+     */
+    invertTextColor(color) {
+      return this.calculateLuma(color) > 0.6;
+    },
+    /**
+     * Calculate luminance of provided hex color
+     *
+     * @param {string} color the hex color
+     */
+    calculateLuma(color) {
+      const [red, green, blue] = this.hexToRGB(color);
+      return (0.2126 * red + 0.7152 * green + 0.0722 * blue) / 255;
+    },
+    /**
+     * Convert hex color to RGB
+     *
+     * @param {string} hex the hex color
+     */
+    hexToRGB(hex) {
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      return result ? [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)] : null;
+    },
+    /**
+     * Update local state
+     *
+     * @param {object} data destructuring object
+     * @param {string} data.backgroundColor background color value
+     * @param {string} data.backgroundImage background image value
+     * @param {string} data.version cache buster number
+     * @see https://github.com/nextcloud/server/blob/c78bd45c64d9695724fc44fe8453a88824b85f2f/apps/theming/lib/Controller/UserThemeController.php#L187-L191
+     */
+    async update(data) {
+      // Update state
+      this.backgroundImage = data.backgroundImage;
+      this.Theming.color = data.backgroundColor;
+
+      // Notify parent and reload style
+      this.$emit('update:background');
+      this.loading = false;
+    },
+    async setDefault() {
+      this.loading = 'default';
+      const result = await _nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"].post((0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateUrl)('/apps/theming/background/default'));
+      this.update(result.data);
+    },
+    async setShipped(shipped) {
+      this.loading = shipped;
+      const result = await _nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"].post((0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateUrl)('/apps/theming/background/shipped'), {
+        value: shipped
+      });
+      this.update(result.data);
+    },
+    async setFile(path) {
+      let color = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      this.loading = 'custom';
+      const result = await _nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"].post((0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateUrl)('/apps/theming/background/custom'), {
+        value: path,
+        color
+      });
+      this.update(result.data);
+    },
+    async removeBackground() {
+      this.loading = 'remove';
+      const result = await _nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"].delete((0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateUrl)('/apps/theming/background/custom'));
+      this.update(result.data);
+    },
+    async pickColor(event) {
+      var _event$target, _this$Theming;
+      this.loading = 'color';
+      const color = (event === null || event === void 0 || (_event$target = event.target) === null || _event$target === void 0 || (_event$target = _event$target.dataset) === null || _event$target === void 0 ? void 0 : _event$target.color) || ((_this$Theming = this.Theming) === null || _this$Theming === void 0 ? void 0 : _this$Theming.color) || '#0082c9';
+      const result = await _nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"].post((0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateUrl)('/apps/theming/background/color'), {
+        color
+      });
+      this.update(result.data);
+    },
+    debouncePickColor: debounce__WEBPACK_IMPORTED_MODULE_6___default()(function () {
+      this.pickColor(...arguments);
+    }, 200),
+    async pickFile() {
+      const path = await picker.pick();
+      this.loading = 'custom';
+
+      // Extract primary color from image
+      let response = null;
+      let color = null;
+      try {
+        var _palette$DarkVibrant;
+        const fileUrl = (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateRemoteUrl)('dav/files/' + (0,_nextcloud_auth__WEBPACK_IMPORTED_MODULE_11__.getCurrentUser)().uid + path);
+        response = await _nextcloud_axios__WEBPACK_IMPORTED_MODULE_2__["default"].get(fileUrl, {
+          responseType: 'blob'
+        });
+        const blobUrl = URL.createObjectURL(response.data);
+        const palette = await this.getColorPaletteFromBlob(blobUrl);
+
+        // DarkVibrant is accessible AND visually pleasing
+        // Vibrant is not accessible enough and others are boring
+        color = palette === null || palette === void 0 || (_palette$DarkVibrant = palette.DarkVibrant) === null || _palette$DarkVibrant === void 0 ? void 0 : _palette$DarkVibrant.hex;
+        this.setFile(path, color);
+
+        // Log data
+        console.debug('Extracted colour', color, 'from custom image', path, palette);
+      } catch (error) {
+        this.setFile(path);
+        console.error('Unable to extract colour from custom image', {
+          error,
+          path,
+          response,
+          color
+        });
+      }
+    },
+    /**
+     * Extract a Vibrant color palette from a blob URL
+     *
+     * @param {string} blobUrl the blob URL
+     * @return {Promise<Palette>}
+     */
+    getColorPaletteFromBlob(blobUrl) {
+      return new Promise((resolve, reject) => {
+        const vibrant = new (node_vibrant__WEBPACK_IMPORTED_MODULE_8___default())(blobUrl);
+        vibrant.getPalette((error, palette) => {
+          if (error) {
+            reject(error);
+          }
+          resolve(palette);
+        });
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _nextcloud_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @nextcloud/router */ "./node_modules/@nextcloud/router/dist/index.js");
+/* harmony import */ var _nextcloud_vue_dist_Components_NcCheckboxRadioSwitch_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js */ "./node_modules/@nextcloud/vue/dist/Components/NcCheckboxRadioSwitch.js");
+/* harmony import */ var _nextcloud_vue_dist_Components_NcCheckboxRadioSwitch_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_nextcloud_vue_dist_Components_NcCheckboxRadioSwitch_js__WEBPACK_IMPORTED_MODULE_1__);
+/* provided dependency */ var console = __webpack_require__(/*! ./node_modules/console-browserify/index.js */ "./node_modules/console-browserify/index.js");
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'ItemPreview',
+  components: {
+    NcCheckboxRadioSwitch: (_nextcloud_vue_dist_Components_NcCheckboxRadioSwitch_js__WEBPACK_IMPORTED_MODULE_1___default())
+  },
+  props: {
+    enforced: {
+      type: Boolean,
+      default: false
+    },
+    selected: {
+      type: Boolean,
+      default: false
+    },
+    theme: {
+      type: Object,
+      required: true
+    },
+    type: {
+      type: String,
+      default: ''
+    },
+    unique: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    switchType() {
+      return this.unique ? 'switch' : 'radio';
+    },
+    name() {
+      return !this.unique ? this.type : null;
+    },
+    img() {
+      return (0,_nextcloud_router__WEBPACK_IMPORTED_MODULE_0__.generateFilePath)('theming', 'img', this.theme.id + '.jpg');
+    },
+    checked: {
+      get() {
+        return this.selected;
+      },
+      set(checked) {
+        console.debug('Changed theme', this.theme.id, checked);
+
+        // If this is a radio, we can only enable
+        if (!this.unique) {
+          this.$emit('change', {
+            enabled: true,
+            id: this.theme.id
+          });
+          return;
+        }
+
+        // If this is a switch, we can disable the theme
+        this.$emit('change', {
+          enabled: checked === true,
+          id: this.theme.id
+        });
+      }
+    }
+  },
+  methods: {
+    onToggle() {
+      if (this.switchType === 'radio') {
+        this.checked = true;
+        return;
+      }
+
+      // Invert state
+      this.checked = !this.checked;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=template&id=7ec2e6a8&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=template&id=7ec2e6a8&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render),
+/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("section", [_c("NcSettingsSection", {
+    staticClass: "theming",
+    attrs: {
+      name: _vm.t("theming", "Appearance and accessibility"),
+      "limit-width": false
+    }
+  }, [_c("p", {
+    domProps: {
+      innerHTML: _vm._s(_vm.description)
+    }
+  }), _vm._v(" "), _c("p", {
+    domProps: {
+      innerHTML: _vm._s(_vm.descriptionDetail)
+    }
+  }), _vm._v(" "), _c("div", {
+    staticClass: "theming__preview-list"
+  }, _vm._l(_vm.themes, function (theme) {
+    return _c("ItemPreview", {
+      key: theme.id,
+      attrs: {
+        enforced: theme.id === _vm.enforceTheme,
+        selected: _vm.selectedTheme.id === theme.id,
+        theme: theme,
+        unique: _vm.themes.length === 1,
+        type: "theme"
+      },
+      on: {
+        change: _vm.changeTheme
+      }
+    });
+  }), 1), _vm._v(" "), _c("div", {
+    staticClass: "theming__preview-list"
+  }, _vm._l(_vm.fonts, function (theme) {
+    return _c("ItemPreview", {
+      key: theme.id,
+      attrs: {
+        selected: theme.enabled,
+        theme: theme,
+        unique: _vm.fonts.length === 1,
+        type: "font"
+      },
+      on: {
+        change: _vm.changeFont
+      }
+    });
+  }), 1)]), _vm._v(" "), _c("NcSettingsSection", {
+    attrs: {
+      name: _vm.t("theming", "Keyboard shortcuts")
+    }
+  }, [_c("p", [_vm._v(_vm._s(_vm.t("theming", "In some cases keyboard shortcuts can interfere with accessibility tools. In order to allow focusing on your tool correctly you can disable all keyboard shortcuts here. This will also disable all available shortcuts in apps.")))]), _vm._v(" "), _c("NcCheckboxRadioSwitch", {
+    staticClass: "theming__preview-toggle",
+    attrs: {
+      checked: _vm.shortcutsDisabled,
+      name: "shortcuts_disabled",
+      type: "switch"
+    },
+    on: {
+      "update:checked": function ($event) {
+        _vm.shortcutsDisabled = $event;
+      },
+      change: _vm.changeShortcutsDisabled
+    }
+  }, [_vm._v("\n\t\t\t" + _vm._s(_vm.t("theming", "Disable all keyboard shortcuts")) + "\n\t\t")])], 1), _vm._v(" "), _c("NcSettingsSection", {
+    staticClass: "background",
+    attrs: {
+      name: _vm.t("theming", "Background"),
+      "data-user-theming-background-disabled": ""
+    }
+  }, [_vm.isUserThemingDisabled ? [_c("p", [_vm._v(_vm._s(_vm.t("theming", "Customization has been disabled by your administrator")))])] : [_c("p", [_vm._v(_vm._s(_vm.t("theming", "Set a custom background")))]), _vm._v(" "), _c("BackgroundSettings", {
+    staticClass: "background__grid",
+    on: {
+      "update:background": _vm.refreshGlobalStyles
+    }
+  })]], 2)], 1);
+};
+var staticRenderFns = [];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=template&id=2cb9c9e7&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=template&id=2cb9c9e7&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render),
+/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "background-selector",
+    attrs: {
+      "data-user-theming-background-settings": ""
+    }
+  }, [_c("button", {
+    staticClass: "background background__filepicker",
+    class: {
+      "icon-loading": _vm.loading === "custom",
+      "background--active": _vm.backgroundImage === "custom"
+    },
+    attrs: {
+      "data-color-bright": _vm.invertTextColor(_vm.Theming.color),
+      "data-user-theming-background-custom": "",
+      tabindex: "0"
+    },
+    on: {
+      click: _vm.pickFile
+    }
+  }, [_vm._v("\n\t\t" + _vm._s(_vm.t("theming", "Custom background")) + "\n\t\t"), _vm.backgroundImage !== "custom" ? _c("ImageEdit", {
+    attrs: {
+      size: 26
+    }
+  }) : _vm._e(), _vm._v(" "), _c("Check", {
+    attrs: {
+      size: 44
+    }
+  })], 1), _vm._v(" "), _c("button", {
+    staticClass: "background background__default",
+    class: {
+      "icon-loading": _vm.loading === "default",
+      "background--active": _vm.backgroundImage === "default"
+    },
+    style: {
+      "--border-color": _vm.Theming.defaultColor
+    },
+    attrs: {
+      "data-color-bright": _vm.invertTextColor(_vm.Theming.defaultColor),
+      "data-user-theming-background-default": "",
+      tabindex: "0"
+    },
+    on: {
+      click: _vm.setDefault
+    }
+  }, [_vm._v("\n\t\t" + _vm._s(_vm.t("theming", "Default background")) + "\n\t\t"), _c("Check", {
+    attrs: {
+      size: 44
+    }
+  })], 1), _vm._v(" "), _c("NcColorPicker", {
+    on: {
+      input: _vm.debouncePickColor
+    },
+    model: {
+      value: _vm.Theming.color,
+      callback: function ($$v) {
+        _vm.$set(_vm.Theming, "color", $$v);
+      },
+      expression: "Theming.color"
+    }
+  }, [_c("button", {
+    staticClass: "background background__color",
+    style: {
+      backgroundColor: _vm.Theming.color,
+      "--border-color": _vm.Theming.color
+    },
+    attrs: {
+      "data-color": _vm.Theming.color,
+      "data-color-bright": _vm.invertTextColor(_vm.Theming.color),
+      "data-user-theming-background-color": "",
+      tabindex: "0"
+    }
+  }, [_vm._v("\n\t\t\t" + _vm._s(_vm.t("theming", "Change color")) + "\n\t\t")])]), _vm._v(" "), _c("button", {
+    staticClass: "background background__delete",
+    class: {
+      "background--active": _vm.isBackgroundDisabled
+    },
+    attrs: {
+      "data-user-theming-background-clear": "",
+      tabindex: "0"
+    },
+    on: {
+      click: _vm.removeBackground
+    }
+  }, [_vm._v("\n\t\t" + _vm._s(_vm.t("theming", "No background")) + "\n\t\t"), !_vm.isBackgroundDisabled ? _c("Close", {
+    attrs: {
+      size: 32
+    }
+  }) : _vm._e(), _vm._v(" "), _c("Check", {
+    attrs: {
+      size: 44
+    }
+  })], 1), _vm._v(" "), _vm._l(_vm.shippedBackgrounds, function (shippedBackground) {
+    return _c("button", {
+      key: shippedBackground.name,
+      staticClass: "background background__shipped",
+      class: {
+        "icon-loading": _vm.loading === shippedBackground.name,
+        "background--active": _vm.backgroundImage === shippedBackground.name
+      },
+      style: {
+        backgroundImage: "url(" + shippedBackground.preview + ")",
+        "--border-color": shippedBackground.details.primary_color
+      },
+      attrs: {
+        title: shippedBackground.details.attribution,
+        "aria-label": shippedBackground.details.attribution,
+        "data-color-bright": shippedBackground.details.theming === "dark",
+        "data-user-theming-background-shipped": shippedBackground.name,
+        tabindex: "0"
+      },
+      on: {
+        click: function ($event) {
+          return _vm.setShipped(shippedBackground.name);
+        }
+      }
+    }, [_c("Check", {
+      attrs: {
+        size: 44
+      }
+    })], 1);
+  })], 2);
+};
+var staticRenderFns = [];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=template&id=5d6fc2af&scoped=true&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=template&id=5d6fc2af&scoped=true& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render),
+/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", {
+    staticClass: "theming__preview",
+    class: "theming__preview--" + _vm.theme.id
+  }, [_c("div", {
+    staticClass: "theming__preview-image",
+    style: {
+      backgroundImage: "url(" + _vm.img + ")"
+    },
+    on: {
+      click: _vm.onToggle
+    }
+  }), _vm._v(" "), _c("div", {
+    staticClass: "theming__preview-description"
+  }, [_c("h3", [_vm._v(_vm._s(_vm.theme.title))]), _vm._v(" "), _c("p", {
+    staticClass: "theming__preview-explanation"
+  }, [_vm._v(_vm._s(_vm.theme.description))]), _vm._v(" "), _vm.enforced ? _c("span", {
+    staticClass: "theming__preview-warning",
+    attrs: {
+      role: "note"
+    }
+  }, [_vm._v("\n\t\t\t" + _vm._s(_vm.t("theming", "Theme selection is enforced")) + "\n\t\t")]) : _vm._e(), _vm._v(" "), _c("NcCheckboxRadioSwitch", {
+    staticClass: "theming__preview-toggle",
+    attrs: {
+      checked: _vm.checked,
+      disabled: _vm.enforced,
+      name: _vm.name,
+      type: _vm.switchType
+    },
+    on: {
+      "update:checked": function ($event) {
+        _vm.checked = $event;
+      }
+    }
+  }, [_vm._v("\n\t\t\t" + _vm._s(_vm.theme.enableLabel) + "\n\t\t")])], 1)]);
+};
+var staticRenderFns = [];
+render._withStripped = true;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ "./node_modules/css-loader/dist/runtime/noSourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.theming p[data-v-7ec2e6a8] {
+  max-width: 800px;
+}
+.theming[data-v-7ec2e6a8] a {
+  font-weight: bold;
+}
+.theming[data-v-7ec2e6a8] a:hover, .theming[data-v-7ec2e6a8] a:focus {
+  text-decoration: underline;
+}
+.theming__preview-list[data-v-7ec2e6a8] {
+  --gap: 30px;
+  display: grid;
+  margin-top: var(--gap);
+  column-gap: var(--gap);
+  row-gap: var(--gap);
+  grid-template-columns: 1fr 1fr;
+}
+.background__grid[data-v-7ec2e6a8] {
+  margin-top: 30px;
+}
+@media (max-width: 1440px) {
+.theming__preview-list[data-v-7ec2e6a8] {
+    display: flex;
+    flex-direction: column;
+}
+}`, ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ "./node_modules/css-loader/dist/runtime/noSourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.background-selector[data-v-2cb9c9e7] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.background-selector .background[data-v-2cb9c9e7] {
+  overflow: hidden;
+  width: 176px;
+  height: 96px;
+  margin: 8px;
+  text-align: center;
+  border: 2px solid var(--color-main-background);
+  border-radius: var(--border-radius-large);
+  background-position: center center;
+  background-size: cover;
+}
+.background-selector .background__filepicker.background--active[data-v-2cb9c9e7] {
+  color: white;
+  background-image: var(--image-background);
+}
+.background-selector .background__default[data-v-2cb9c9e7] {
+  background-color: var(--color-primary-default);
+  background-image: var(--image-background-plain, var(--image-background-default));
+}
+.background-selector .background__filepicker[data-v-2cb9c9e7], .background-selector .background__default[data-v-2cb9c9e7], .background-selector .background__color[data-v-2cb9c9e7] {
+  border-color: var(--color-border);
+}
+.background-selector .background__color[data-v-2cb9c9e7] {
+  color: var(--color-primary-text);
+  background-color: var(--color-primary-default);
+}
+.background-selector .background__default[data-v-2cb9c9e7], .background-selector .background__shipped[data-v-2cb9c9e7] {
+  color: white;
+}
+.background-selector .background[data-color-bright][data-v-2cb9c9e7] {
+  color: black;
+}
+.background-selector .background--active[data-v-2cb9c9e7], .background-selector .background[data-v-2cb9c9e7]:hover, .background-selector .background[data-v-2cb9c9e7]:focus {
+  border: 2px solid var(--border-color, var(--color-primary-element)) !important;
+}
+.background-selector .background span[data-v-2cb9c9e7] {
+  margin: 4px;
+}
+.background-selector .background .check-icon[data-v-2cb9c9e7] {
+  display: none;
+}
+.background-selector .background--active:not(.icon-loading) .check-icon[data-v-2cb9c9e7] {
+  display: block !important;
+}`, ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ "./node_modules/css-loader/dist/runtime/noSourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `.theming__preview[data-v-5d6fc2af] {
+  --ratio: 16;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  max-width: 800px;
+}
+.theming__preview[data-v-5d6fc2af],
+.theming__preview *[data-v-5d6fc2af] {
+  user-select: none;
+}
+.theming__preview-image[data-v-5d6fc2af] {
+  flex-basis: calc(16px * var(--ratio));
+  flex-shrink: 0;
+  height: calc(10px * var(--ratio));
+  margin-right: var(--gap);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+.theming__preview-explanation[data-v-5d6fc2af] {
+  margin-bottom: 10px;
+}
+.theming__preview-description[data-v-5d6fc2af] {
+  display: flex;
+  flex-direction: column;
+}
+.theming__preview-description h3[data-v-5d6fc2af] {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.theming__preview-description label[data-v-5d6fc2af] {
+  padding: 12px 0;
+}
+.theming__preview--default[data-v-5d6fc2af] {
+  grid-column: span 2;
+}
+.theming__preview-warning[data-v-5d6fc2af] {
+  color: var(--color-warning);
+}
+@media (max-width: 682.6666666667px) {
+.theming__preview[data-v-5d6fc2af] {
+    flex-direction: column;
+}
+.theming__preview-image[data-v-5d6fc2af] {
+    margin: 0;
+}
+}`, ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseEach.js":
+/*!******************************************!*\
+  !*** ./node_modules/lodash/_baseEach.js ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseForOwn = __webpack_require__(/*! ./_baseForOwn */ "./node_modules/lodash/_baseForOwn.js"),
+    createBaseEach = __webpack_require__(/*! ./_createBaseEach */ "./node_modules/lodash/_createBaseEach.js");
+
+/**
+ * The base implementation of `_.forEach` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array|Object} Returns `collection`.
+ */
+var baseEach = createBaseEach(baseForOwn);
+
+module.exports = baseEach;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseFilter.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseFilter.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseEach = __webpack_require__(/*! ./_baseEach */ "./node_modules/lodash/_baseEach.js");
+
+/**
+ * The base implementation of `_.filter` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {Array} Returns the new filtered array.
+ */
+function baseFilter(collection, predicate) {
+  var result = [];
+  baseEach(collection, function(value, index, collection) {
+    if (predicate(value, index, collection)) {
+      result.push(value);
+    }
+  });
+  return result;
+}
+
+module.exports = baseFilter;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_baseForOwn.js":
+/*!********************************************!*\
+  !*** ./node_modules/lodash/_baseForOwn.js ***!
+  \********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseFor = __webpack_require__(/*! ./_baseFor */ "./node_modules/lodash/_baseFor.js"),
+    keys = __webpack_require__(/*! ./keys */ "./node_modules/lodash/keys.js");
+
+/**
+ * The base implementation of `_.forOwn` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The object to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Object} Returns `object`.
+ */
+function baseForOwn(object, iteratee) {
+  return object && baseFor(object, iteratee, keys);
+}
+
+module.exports = baseForOwn;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/_createBaseEach.js":
+/*!************************************************!*\
+  !*** ./node_modules/lodash/_createBaseEach.js ***!
+  \************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var isArrayLike = __webpack_require__(/*! ./isArrayLike */ "./node_modules/lodash/isArrayLike.js");
+
+/**
+ * Creates a `baseEach` or `baseEachRight` function.
+ *
+ * @private
+ * @param {Function} eachFunc The function to iterate over a collection.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {Function} Returns the new base function.
+ */
+function createBaseEach(eachFunc, fromRight) {
+  return function(collection, iteratee) {
+    if (collection == null) {
+      return collection;
+    }
+    if (!isArrayLike(collection)) {
+      return eachFunc(collection, iteratee);
+    }
+    var length = collection.length,
+        index = fromRight ? length : -1,
+        iterable = Object(collection);
+
+    while ((fromRight ? index-- : ++index < length)) {
+      if (iteratee(iterable[index], index, iterable) === false) {
+        break;
+      }
+    }
+    return collection;
+  };
+}
+
+module.exports = createBaseEach;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/defaults.js":
+/*!*****************************************!*\
+  !*** ./node_modules/lodash/defaults.js ***!
+  \*****************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var baseRest = __webpack_require__(/*! ./_baseRest */ "./node_modules/lodash/_baseRest.js"),
+    eq = __webpack_require__(/*! ./eq */ "./node_modules/lodash/eq.js"),
+    isIterateeCall = __webpack_require__(/*! ./_isIterateeCall */ "./node_modules/lodash/_isIterateeCall.js"),
+    keysIn = __webpack_require__(/*! ./keysIn */ "./node_modules/lodash/keysIn.js");
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Assigns own and inherited enumerable string keyed properties of source
+ * objects to the destination object for all destination properties that
+ * resolve to `undefined`. Source objects are applied from left to right.
+ * Once a property is set, additional values of the same property are ignored.
+ *
+ * **Note:** This method mutates `object`.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The destination object.
+ * @param {...Object} [sources] The source objects.
+ * @returns {Object} Returns `object`.
+ * @see _.defaultsDeep
+ * @example
+ *
+ * _.defaults({ 'a': 1 }, { 'b': 2 }, { 'a': 3 });
+ * // => { 'a': 1, 'b': 2 }
+ */
+var defaults = baseRest(function(object, sources) {
+  object = Object(object);
+
+  var index = -1;
+  var length = sources.length;
+  var guard = length > 2 ? sources[2] : undefined;
+
+  if (guard && isIterateeCall(sources[0], sources[1], guard)) {
+    length = 1;
+  }
+
+  while (++index < length) {
+    var source = sources[index];
+    var props = keysIn(source);
+    var propsIndex = -1;
+    var propsLength = props.length;
+
+    while (++propsIndex < propsLength) {
+      var key = props[propsIndex];
+      var value = object[key];
+
+      if (value === undefined ||
+          (eq(value, objectProto[key]) && !hasOwnProperty.call(object, key))) {
+        object[key] = source[key];
+      }
+    }
+  }
+
+  return object;
+});
+
+module.exports = defaults;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/filter.js":
+/*!***************************************!*\
+  !*** ./node_modules/lodash/filter.js ***!
+  \***************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ "./node_modules/lodash/_arrayFilter.js"),
+    baseFilter = __webpack_require__(/*! ./_baseFilter */ "./node_modules/lodash/_baseFilter.js"),
+    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ "./node_modules/lodash/_baseIteratee.js"),
+    isArray = __webpack_require__(/*! ./isArray */ "./node_modules/lodash/isArray.js");
+
+/**
+ * Iterates over elements of `collection`, returning an array of all elements
+ * `predicate` returns truthy for. The predicate is invoked with three
+ * arguments: (value, index|key, collection).
+ *
+ * **Note:** Unlike `_.remove`, this method returns a new array.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Collection
+ * @param {Array|Object} collection The collection to iterate over.
+ * @param {Function} [predicate=_.identity] The function invoked per iteration.
+ * @returns {Array} Returns the new filtered array.
+ * @see _.reject
+ * @example
+ *
+ * var users = [
+ *   { 'user': 'barney', 'age': 36, 'active': true },
+ *   { 'user': 'fred',   'age': 40, 'active': false }
+ * ];
+ *
+ * _.filter(users, function(o) { return !o.active; });
+ * // => objects for ['fred']
+ *
+ * // The `_.matches` iteratee shorthand.
+ * _.filter(users, { 'age': 36, 'active': true });
+ * // => objects for ['barney']
+ *
+ * // The `_.matchesProperty` iteratee shorthand.
+ * _.filter(users, ['active', false]);
+ * // => objects for ['fred']
+ *
+ * // The `_.property` iteratee shorthand.
+ * _.filter(users, 'active');
+ * // => objects for ['barney']
+ *
+ * // Combining several predicates using `_.overEvery` or `_.overSome`.
+ * _.filter(users, _.overSome([{ 'age': 36 }, ['age', 40]]));
+ * // => objects for ['fred', 'barney']
+ */
+function filter(collection, predicate) {
+  var func = isArray(collection) ? arrayFilter : baseFilter;
+  return func(collection, baseIteratee(predicate, 3));
+}
+
+module.exports = filter;
+
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/browser.js":
+/*!**************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/browser.js ***!
+  \**************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+var vibrant_1 = __importDefault(__webpack_require__(/*! ./vibrant */ "./node_modules/node-vibrant/lib/vibrant.js"));
+var browser_1 = __importDefault(__webpack_require__(/*! ./image/browser */ "./node_modules/node-vibrant/lib/image/browser.js"));
+vibrant_1.default.DefaultOpts.ImageClass = browser_1.default;
+module.exports = vibrant_1.default;
+//# sourceMappingURL=browser.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/builder.js":
+/*!**************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/builder.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var vibrant_1 = __importDefault(__webpack_require__(/*! ./vibrant */ "./node_modules/node-vibrant/lib/vibrant.js"));
+var clone = __webpack_require__(/*! lodash/clone */ "./node_modules/lodash/clone.js");
+var Builder = /** @class */ (function () {
+    function Builder(src, opts) {
+        if (opts === void 0) { opts = {}; }
+        this._src = src;
+        this._opts = opts;
+        this._opts.filters = clone(vibrant_1.default.DefaultOpts.filters);
+    }
+    Builder.prototype.maxColorCount = function (n) {
+        this._opts.colorCount = n;
+        return this;
+    };
+    Builder.prototype.maxDimension = function (d) {
+        this._opts.maxDimension = d;
+        return this;
+    };
+    Builder.prototype.addFilter = function (f) {
+        this._opts.filters.push(f);
+        return this;
+    };
+    Builder.prototype.removeFilter = function (f) {
+        var i = this._opts.filters.indexOf(f);
+        if (i > 0)
+            this._opts.filters.splice(i);
+        return this;
+    };
+    Builder.prototype.clearFilters = function () {
+        this._opts.filters = [];
+        return this;
+    };
+    Builder.prototype.quality = function (q) {
+        this._opts.quality = q;
+        return this;
+    };
+    Builder.prototype.useImageClass = function (imageClass) {
+        this._opts.ImageClass = imageClass;
+        return this;
+    };
+    Builder.prototype.useGenerator = function (generator) {
+        this._opts.generator = generator;
+        return this;
+    };
+    Builder.prototype.useQuantizer = function (quantizer) {
+        this._opts.quantizer = quantizer;
+        return this;
+    };
+    Builder.prototype.build = function () {
+        return new vibrant_1.default(this._src, this._opts);
+    };
+    Builder.prototype.getPalette = function (cb) {
+        return this.build().getPalette(cb);
+    };
+    Builder.prototype.getSwatches = function (cb) {
+        return this.build().getPalette(cb);
+    };
+    return Builder;
+}());
+exports["default"] = Builder;
+//# sourceMappingURL=builder.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/color.js":
+/*!************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/color.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.Swatch = void 0;
+var util_1 = __webpack_require__(/*! ./util */ "./node_modules/node-vibrant/lib/util.js");
+var filter = __webpack_require__(/*! lodash/filter */ "./node_modules/lodash/filter.js");
+var Swatch = /** @class */ (function () {
+    function Swatch(rgb, population) {
+        this._rgb = rgb;
+        this._population = population;
+    }
+    Swatch.applyFilter = function (colors, f) {
+        return typeof f === 'function'
+            ? filter(colors, function (_a) {
+                var r = _a.r, g = _a.g, b = _a.b;
+                return f(r, g, b, 255);
+            })
+            : colors;
+    };
+    Object.defineProperty(Swatch.prototype, "r", {
+        get: function () { return this._rgb[0]; },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Swatch.prototype, "g", {
+        get: function () { return this._rgb[1]; },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Swatch.prototype, "b", {
+        get: function () { return this._rgb[2]; },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Swatch.prototype, "rgb", {
+        get: function () { return this._rgb; },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Swatch.prototype, "hsl", {
+        get: function () {
+            if (!this._hsl) {
+                var _a = this._rgb, r = _a[0], g = _a[1], b = _a[2];
+                this._hsl = util_1.rgbToHsl(r, g, b);
+            }
+            return this._hsl;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Swatch.prototype, "hex", {
+        get: function () {
+            if (!this._hex) {
+                var _a = this._rgb, r = _a[0], g = _a[1], b = _a[2];
+                this._hex = util_1.rgbToHex(r, g, b);
+            }
+            return this._hex;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Swatch.prototype, "population", {
+        get: function () { return this._population; },
+        enumerable: false,
+        configurable: true
+    });
+    Swatch.prototype.toJSON = function () {
+        return {
+            rgb: this.rgb,
+            population: this.population
+        };
+    };
+    // TODO: deprecate internally, use property instead
+    Swatch.prototype.getRgb = function () { return this._rgb; };
+    // TODO: deprecate internally, use property instead
+    Swatch.prototype.getHsl = function () { return this.hsl; };
+    // TODO: deprecate internally, use property instead
+    Swatch.prototype.getPopulation = function () { return this._population; };
+    // TODO: deprecate internally, use property instead
+    Swatch.prototype.getHex = function () { return this.hex; };
+    Swatch.prototype.getYiq = function () {
+        if (!this._yiq) {
+            var rgb = this._rgb;
+            this._yiq = (rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000;
+        }
+        return this._yiq;
+    };
+    Object.defineProperty(Swatch.prototype, "titleTextColor", {
+        get: function () {
+            if (!this._titleTextColor) {
+                this._titleTextColor = this.getYiq() < 200 ? '#fff' : '#000';
+            }
+            return this._titleTextColor;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Swatch.prototype, "bodyTextColor", {
+        get: function () {
+            if (!this._bodyTextColor) {
+                this._bodyTextColor = this.getYiq() < 150 ? '#fff' : '#000';
+            }
+            return this._bodyTextColor;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Swatch.prototype.getTitleTextColor = function () {
+        return this.titleTextColor;
+    };
+    Swatch.prototype.getBodyTextColor = function () {
+        return this.bodyTextColor;
+    };
+    return Swatch;
+}());
+exports.Swatch = Swatch;
+//# sourceMappingURL=color.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/filter/default.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/filter/default.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+function defaultFilter(r, g, b, a) {
+    return a >= 125 &&
+        !(r > 250 && g > 250 && b > 250);
+}
+exports["default"] = defaultFilter;
+//# sourceMappingURL=default.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/filter/index.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/filter/index.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.combineFilters = void 0;
+var default_1 = __webpack_require__(/*! ./default */ "./node_modules/node-vibrant/lib/filter/default.js");
+Object.defineProperty(exports, "Default", ({ enumerable: true, get: function () { return default_1.default; } }));
+function combineFilters(filters) {
+    // TODO: caching
+    if (!Array.isArray(filters) || filters.length === 0)
+        return null;
+    return function (r, g, b, a) {
+        if (a === 0)
+            return false;
+        for (var i = 0; i < filters.length; i++) {
+            if (!filters[i](r, g, b, a))
+                return false;
+        }
+        return true;
+    };
+}
+exports.combineFilters = combineFilters;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/generator/default.js":
+/*!************************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/generator/default.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var color_1 = __webpack_require__(/*! ../color */ "./node_modules/node-vibrant/lib/color.js");
+var util_1 = __webpack_require__(/*! ../util */ "./node_modules/node-vibrant/lib/util.js");
+var defaults = __webpack_require__(/*! lodash/defaults */ "./node_modules/lodash/defaults.js");
+var DefaultOpts = {
+    targetDarkLuma: 0.26,
+    maxDarkLuma: 0.45,
+    minLightLuma: 0.55,
+    targetLightLuma: 0.74,
+    minNormalLuma: 0.3,
+    targetNormalLuma: 0.5,
+    maxNormalLuma: 0.7,
+    targetMutesSaturation: 0.3,
+    maxMutesSaturation: 0.4,
+    targetVibrantSaturation: 1.0,
+    minVibrantSaturation: 0.35,
+    weightSaturation: 3,
+    weightLuma: 6.5,
+    weightPopulation: 0.5
+};
+function _findMaxPopulation(swatches) {
+    var p = 0;
+    swatches.forEach(function (s) {
+        p = Math.max(p, s.getPopulation());
+    });
+    return p;
+}
+function _isAlreadySelected(palette, s) {
+    return palette.Vibrant === s ||
+        palette.DarkVibrant === s ||
+        palette.LightVibrant === s ||
+        palette.Muted === s ||
+        palette.DarkMuted === s ||
+        palette.LightMuted === s;
+}
+function _createComparisonValue(saturation, targetSaturation, luma, targetLuma, population, maxPopulation, opts) {
+    function weightedMean() {
+        var values = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            values[_i] = arguments[_i];
+        }
+        var sum = 0;
+        var weightSum = 0;
+        for (var i = 0; i < values.length; i += 2) {
+            var value = values[i];
+            var weight = values[i + 1];
+            sum += value * weight;
+            weightSum += weight;
+        }
+        return sum / weightSum;
+    }
+    function invertDiff(value, targetValue) {
+        return 1 - Math.abs(value - targetValue);
+    }
+    return weightedMean(invertDiff(saturation, targetSaturation), opts.weightSaturation, invertDiff(luma, targetLuma), opts.weightLuma, population / maxPopulation, opts.weightPopulation);
+}
+function _findColorVariation(palette, swatches, maxPopulation, targetLuma, minLuma, maxLuma, targetSaturation, minSaturation, maxSaturation, opts) {
+    var max = null;
+    var maxValue = 0;
+    swatches.forEach(function (swatch) {
+        var _a = swatch.getHsl(), s = _a[1], l = _a[2];
+        if (s >= minSaturation && s <= maxSaturation &&
+            l >= minLuma && l <= maxLuma &&
+            !_isAlreadySelected(palette, swatch)) {
+            var value = _createComparisonValue(s, targetSaturation, l, targetLuma, swatch.getPopulation(), maxPopulation, opts);
+            if (max === null || value > maxValue) {
+                max = swatch;
+                maxValue = value;
+            }
+        }
+    });
+    return max;
+}
+function _generateVariationColors(swatches, maxPopulation, opts) {
+    var palette = {};
+    // mVibrantSwatch = findColor(TARGET_NORMAL_LUMA, MIN_NORMAL_LUMA, MAX_NORMAL_LUMA,
+    //     TARGET_VIBRANT_SATURATION, MIN_VIBRANT_SATURATION, 1f);
+    palette.Vibrant = _findColorVariation(palette, swatches, maxPopulation, opts.targetNormalLuma, opts.minNormalLuma, opts.maxNormalLuma, opts.targetVibrantSaturation, opts.minVibrantSaturation, 1, opts);
+    // mLightVibrantSwatch = findColor(TARGET_LIGHT_LUMA, MIN_LIGHT_LUMA, 1f,
+    //     TARGET_VIBRANT_SATURATION, MIN_VIBRANT_SATURATION, 1f);
+    palette.LightVibrant = _findColorVariation(palette, swatches, maxPopulation, opts.targetLightLuma, opts.minLightLuma, 1, opts.targetVibrantSaturation, opts.minVibrantSaturation, 1, opts);
+    // mDarkVibrantSwatch = findColor(TARGET_DARK_LUMA, 0f, MAX_DARK_LUMA,
+    //     TARGET_VIBRANT_SATURATION, MIN_VIBRANT_SATURATION, 1f);
+    palette.DarkVibrant = _findColorVariation(palette, swatches, maxPopulation, opts.targetDarkLuma, 0, opts.maxDarkLuma, opts.targetVibrantSaturation, opts.minVibrantSaturation, 1, opts);
+    // mMutedSwatch = findColor(TARGET_NORMAL_LUMA, MIN_NORMAL_LUMA, MAX_NORMAL_LUMA,
+    //     TARGET_MUTED_SATURATION, 0f, MAX_MUTED_SATURATION);
+    palette.Muted = _findColorVariation(palette, swatches, maxPopulation, opts.targetNormalLuma, opts.minNormalLuma, opts.maxNormalLuma, opts.targetMutesSaturation, 0, opts.maxMutesSaturation, opts);
+    // mLightMutedColor = findColor(TARGET_LIGHT_LUMA, MIN_LIGHT_LUMA, 1f,
+    //     TARGET_MUTED_SATURATION, 0f, MAX_MUTED_SATURATION);
+    palette.LightMuted = _findColorVariation(palette, swatches, maxPopulation, opts.targetLightLuma, opts.minLightLuma, 1, opts.targetMutesSaturation, 0, opts.maxMutesSaturation, opts);
+    // mDarkMutedSwatch = findColor(TARGET_DARK_LUMA, 0f, MAX_DARK_LUMA,
+    //     TARGET_MUTED_SATURATION, 0f, MAX_MUTED_SATURATION);
+    palette.DarkMuted = _findColorVariation(palette, swatches, maxPopulation, opts.targetDarkLuma, 0, opts.maxDarkLuma, opts.targetMutesSaturation, 0, opts.maxMutesSaturation, opts);
+    return palette;
+}
+function _generateEmptySwatches(palette, maxPopulation, opts) {
+    if (palette.Vibrant === null && palette.DarkVibrant === null && palette.LightVibrant === null) {
+        if (palette.DarkVibrant === null && palette.DarkMuted !== null) {
+            var _a = palette.DarkMuted.getHsl(), h = _a[0], s = _a[1], l = _a[2];
+            l = opts.targetDarkLuma;
+            palette.DarkVibrant = new color_1.Swatch(util_1.hslToRgb(h, s, l), 0);
+        }
+        if (palette.LightVibrant === null && palette.LightMuted !== null) {
+            var _b = palette.LightMuted.getHsl(), h = _b[0], s = _b[1], l = _b[2];
+            l = opts.targetDarkLuma;
+            palette.DarkVibrant = new color_1.Swatch(util_1.hslToRgb(h, s, l), 0);
+        }
+    }
+    if (palette.Vibrant === null && palette.DarkVibrant !== null) {
+        var _c = palette.DarkVibrant.getHsl(), h = _c[0], s = _c[1], l = _c[2];
+        l = opts.targetNormalLuma;
+        palette.Vibrant = new color_1.Swatch(util_1.hslToRgb(h, s, l), 0);
+    }
+    else if (palette.Vibrant === null && palette.LightVibrant !== null) {
+        var _d = palette.LightVibrant.getHsl(), h = _d[0], s = _d[1], l = _d[2];
+        l = opts.targetNormalLuma;
+        palette.Vibrant = new color_1.Swatch(util_1.hslToRgb(h, s, l), 0);
+    }
+    if (palette.DarkVibrant === null && palette.Vibrant !== null) {
+        var _e = palette.Vibrant.getHsl(), h = _e[0], s = _e[1], l = _e[2];
+        l = opts.targetDarkLuma;
+        palette.DarkVibrant = new color_1.Swatch(util_1.hslToRgb(h, s, l), 0);
+    }
+    if (palette.LightVibrant === null && palette.Vibrant !== null) {
+        var _f = palette.Vibrant.getHsl(), h = _f[0], s = _f[1], l = _f[2];
+        l = opts.targetLightLuma;
+        palette.LightVibrant = new color_1.Swatch(util_1.hslToRgb(h, s, l), 0);
+    }
+    if (palette.Muted === null && palette.Vibrant !== null) {
+        var _g = palette.Vibrant.getHsl(), h = _g[0], s = _g[1], l = _g[2];
+        l = opts.targetMutesSaturation;
+        palette.Muted = new color_1.Swatch(util_1.hslToRgb(h, s, l), 0);
+    }
+    if (palette.DarkMuted === null && palette.DarkVibrant !== null) {
+        var _h = palette.DarkVibrant.getHsl(), h = _h[0], s = _h[1], l = _h[2];
+        l = opts.targetMutesSaturation;
+        palette.DarkMuted = new color_1.Swatch(util_1.hslToRgb(h, s, l), 0);
+    }
+    if (palette.LightMuted === null && palette.LightVibrant !== null) {
+        var _j = palette.LightVibrant.getHsl(), h = _j[0], s = _j[1], l = _j[2];
+        l = opts.targetMutesSaturation;
+        palette.LightMuted = new color_1.Swatch(util_1.hslToRgb(h, s, l), 0);
+    }
+}
+var DefaultGenerator = function (swatches, opts) {
+    opts = defaults({}, opts, DefaultOpts);
+    var maxPopulation = _findMaxPopulation(swatches);
+    var palette = _generateVariationColors(swatches, maxPopulation, opts);
+    _generateEmptySwatches(palette, maxPopulation, opts);
+    return palette;
+};
+exports["default"] = DefaultGenerator;
+//# sourceMappingURL=default.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/generator/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/generator/index.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var default_1 = __webpack_require__(/*! ./default */ "./node_modules/node-vibrant/lib/generator/default.js");
+Object.defineProperty(exports, "Default", ({ enumerable: true, get: function () { return default_1.default; } }));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/image/base.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/image/base.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ImageBase = void 0;
+var ImageBase = /** @class */ (function () {
+    function ImageBase() {
+    }
+    ImageBase.prototype.scaleDown = function (opts) {
+        var width = this.getWidth();
+        var height = this.getHeight();
+        var ratio = 1;
+        if (opts.maxDimension > 0) {
+            var maxSide = Math.max(width, height);
+            if (maxSide > opts.maxDimension)
+                ratio = opts.maxDimension / maxSide;
+        }
+        else {
+            ratio = 1 / opts.quality;
+        }
+        if (ratio < 1)
+            this.resize(width * ratio, height * ratio, ratio);
+    };
+    ImageBase.prototype.applyFilter = function (filter) {
+        var imageData = this.getImageData();
+        if (typeof filter === 'function') {
+            var pixels = imageData.data;
+            var n = pixels.length / 4;
+            var offset = void 0, r = void 0, g = void 0, b = void 0, a = void 0;
+            for (var i = 0; i < n; i++) {
+                offset = i * 4;
+                r = pixels[offset + 0];
+                g = pixels[offset + 1];
+                b = pixels[offset + 2];
+                a = pixels[offset + 3];
+                // Mark ignored color
+                if (!filter(r, g, b, a))
+                    pixels[offset + 3] = 0;
+            }
+        }
+        return Promise.resolve(imageData);
+    };
+    return ImageBase;
+}());
+exports.ImageBase = ImageBase;
+//# sourceMappingURL=base.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/image/browser.js":
+/*!********************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/image/browser.js ***!
+  \********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var base_1 = __webpack_require__(/*! ./base */ "./node_modules/node-vibrant/lib/image/base.js");
+var Url = __importStar(__webpack_require__(/*! url */ "./node_modules/url/url.js"));
+function isRelativeUrl(url) {
+    var u = Url.parse(url);
+    return u.protocol === null &&
+        u.host === null &&
+        u.port === null;
+}
+function isSameOrigin(a, b) {
+    var ua = Url.parse(a);
+    var ub = Url.parse(b);
+    // https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+    return ua.protocol === ub.protocol &&
+        ua.hostname === ub.hostname &&
+        ua.port === ub.port;
+}
+var BrowserImage = /** @class */ (function (_super) {
+    __extends(BrowserImage, _super);
+    function BrowserImage() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    BrowserImage.prototype._initCanvas = function () {
+        var img = this.image;
+        var canvas = this._canvas = document.createElement('canvas');
+        var context = this._context = canvas.getContext('2d');
+        canvas.className = 'vibrant-canvas';
+        canvas.style.display = 'none';
+        this._width = canvas.width = img.width;
+        this._height = canvas.height = img.height;
+        context.drawImage(img, 0, 0);
+        document.body.appendChild(canvas);
+    };
+    BrowserImage.prototype.load = function (image) {
+        var _this = this;
+        var img = null;
+        var src = null;
+        if (typeof image === 'string') {
+            img = document.createElement('img');
+            if (!isRelativeUrl(image) && !isSameOrigin(window.location.href, image)) {
+                img.crossOrigin = 'anonymous';
+            }
+            src = img.src = image;
+        }
+        else if (image instanceof HTMLImageElement) {
+            img = image;
+            src = image.src;
+        }
+        else {
+            return Promise.reject(new Error("Cannot load buffer as an image in browser"));
+        }
+        this.image = img;
+        return new Promise(function (resolve, reject) {
+            var onImageLoad = function () {
+                _this._initCanvas();
+                resolve(_this);
+            };
+            if (img.complete) {
+                // Already loaded
+                onImageLoad();
+            }
+            else {
+                img.onload = onImageLoad;
+                img.onerror = function (e) { return reject(new Error("Fail to load image: " + src)); };
+            }
+        });
+    };
+    BrowserImage.prototype.clear = function () {
+        this._context.clearRect(0, 0, this._width, this._height);
+    };
+    BrowserImage.prototype.update = function (imageData) {
+        this._context.putImageData(imageData, 0, 0);
+    };
+    BrowserImage.prototype.getWidth = function () {
+        return this._width;
+    };
+    BrowserImage.prototype.getHeight = function () {
+        return this._height;
+    };
+    BrowserImage.prototype.resize = function (targetWidth, targetHeight, ratio) {
+        var _a = this, canvas = _a._canvas, context = _a._context, img = _a.image;
+        this._width = canvas.width = targetWidth;
+        this._height = canvas.height = targetHeight;
+        context.scale(ratio, ratio);
+        context.drawImage(img, 0, 0);
+    };
+    BrowserImage.prototype.getPixelCount = function () {
+        return this._width * this._height;
+    };
+    BrowserImage.prototype.getImageData = function () {
+        return this._context.getImageData(0, 0, this._width, this._height);
+    };
+    BrowserImage.prototype.remove = function () {
+        if (this._canvas && this._canvas.parentNode) {
+            this._canvas.parentNode.removeChild(this._canvas);
+        }
+    };
+    return BrowserImage;
+}(base_1.ImageBase));
+exports["default"] = BrowserImage;
+//# sourceMappingURL=browser.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/quantizer/index.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/quantizer/index.js ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.WebWorker = void 0;
+var mmcq_1 = __webpack_require__(/*! ./mmcq */ "./node_modules/node-vibrant/lib/quantizer/mmcq.js");
+Object.defineProperty(exports, "MMCQ", ({ enumerable: true, get: function () { return mmcq_1.default; } }));
+exports.WebWorker = null;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/quantizer/mmcq.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/quantizer/mmcq.js ***!
+  \*********************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var color_1 = __webpack_require__(/*! ../color */ "./node_modules/node-vibrant/lib/color.js");
+var vbox_1 = __importDefault(__webpack_require__(/*! ./vbox */ "./node_modules/node-vibrant/lib/quantizer/vbox.js"));
+var pqueue_1 = __importDefault(__webpack_require__(/*! ./pqueue */ "./node_modules/node-vibrant/lib/quantizer/pqueue.js"));
+var fractByPopulations = 0.75;
+function _splitBoxes(pq, target) {
+    var lastSize = pq.size();
+    while (pq.size() < target) {
+        var vbox = pq.pop();
+        if (vbox && vbox.count() > 0) {
+            var _a = vbox.split(), vbox1 = _a[0], vbox2 = _a[1];
+            pq.push(vbox1);
+            if (vbox2 && vbox2.count() > 0)
+                pq.push(vbox2);
+            // No more new boxes, converged
+            if (pq.size() === lastSize) {
+                break;
+            }
+            else {
+                lastSize = pq.size();
+            }
+        }
+        else {
+            break;
+        }
+    }
+}
+var MMCQ = function (pixels, opts) {
+    if (pixels.length === 0 || opts.colorCount < 2 || opts.colorCount > 256) {
+        throw new Error('Wrong MMCQ parameters');
+    }
+    var vbox = vbox_1.default.build(pixels);
+    var hist = vbox.hist;
+    var colorCount = Object.keys(hist).length;
+    var pq = new pqueue_1.default(function (a, b) { return a.count() - b.count(); });
+    pq.push(vbox);
+    // first set of colors, sorted by population
+    _splitBoxes(pq, fractByPopulations * opts.colorCount);
+    // Re-order
+    var pq2 = new pqueue_1.default(function (a, b) { return a.count() * a.volume() - b.count() * b.volume(); });
+    pq2.contents = pq.contents;
+    // next set - generate the median cuts using the (npix * vol) sorting.
+    _splitBoxes(pq2, opts.colorCount - pq2.size());
+    // calculate the actual colors
+    return generateSwatches(pq2);
+};
+function generateSwatches(pq) {
+    var swatches = [];
+    while (pq.size()) {
+        var v = pq.pop();
+        var color = v.avg();
+        var r = color[0], g = color[1], b = color[2];
+        swatches.push(new color_1.Swatch(color, v.count()));
+    }
+    return swatches;
+}
+exports["default"] = MMCQ;
+//# sourceMappingURL=mmcq.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/quantizer/pqueue.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/quantizer/pqueue.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var PQueue = /** @class */ (function () {
+    function PQueue(comparator) {
+        this._comparator = comparator;
+        this.contents = [];
+        this._sorted = false;
+    }
+    PQueue.prototype._sort = function () {
+        if (!this._sorted) {
+            this.contents.sort(this._comparator);
+            this._sorted = true;
+        }
+    };
+    PQueue.prototype.push = function (item) {
+        this.contents.push(item);
+        this._sorted = false;
+    };
+    PQueue.prototype.peek = function (index) {
+        this._sort();
+        index = typeof index === 'number' ? index : this.contents.length - 1;
+        return this.contents[index];
+    };
+    PQueue.prototype.pop = function () {
+        this._sort();
+        return this.contents.pop();
+    };
+    PQueue.prototype.size = function () {
+        return this.contents.length;
+    };
+    PQueue.prototype.map = function (mapper) {
+        this._sort();
+        return this.contents.map(mapper);
+    };
+    return PQueue;
+}());
+exports["default"] = PQueue;
+//# sourceMappingURL=pqueue.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/quantizer/vbox.js":
+/*!*********************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/quantizer/vbox.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var util_1 = __webpack_require__(/*! ../util */ "./node_modules/node-vibrant/lib/util.js");
+var VBox = /** @class */ (function () {
+    function VBox(r1, r2, g1, g2, b1, b2, hist) {
+        this._volume = -1;
+        this._count = -1;
+        this.dimension = { r1: r1, r2: r2, g1: g1, g2: g2, b1: b1, b2: b2 };
+        this.hist = hist;
+    }
+    VBox.build = function (pixels, shouldIgnore) {
+        var hn = 1 << (3 * util_1.SIGBITS);
+        var hist = new Uint32Array(hn);
+        var rmax;
+        var rmin;
+        var gmax;
+        var gmin;
+        var bmax;
+        var bmin;
+        var r;
+        var g;
+        var b;
+        var a;
+        rmax = gmax = bmax = 0;
+        rmin = gmin = bmin = Number.MAX_VALUE;
+        var n = pixels.length / 4;
+        var i = 0;
+        while (i < n) {
+            var offset = i * 4;
+            i++;
+            r = pixels[offset + 0];
+            g = pixels[offset + 1];
+            b = pixels[offset + 2];
+            a = pixels[offset + 3];
+            // Ignored pixels' alpha is marked as 0 in filtering stage
+            if (a === 0)
+                continue;
+            r = r >> util_1.RSHIFT;
+            g = g >> util_1.RSHIFT;
+            b = b >> util_1.RSHIFT;
+            var index = util_1.getColorIndex(r, g, b);
+            hist[index] += 1;
+            if (r > rmax)
+                rmax = r;
+            if (r < rmin)
+                rmin = r;
+            if (g > gmax)
+                gmax = g;
+            if (g < gmin)
+                gmin = g;
+            if (b > bmax)
+                bmax = b;
+            if (b < bmin)
+                bmin = b;
+        }
+        return new VBox(rmin, rmax, gmin, gmax, bmin, bmax, hist);
+    };
+    VBox.prototype.invalidate = function () {
+        this._volume = this._count = -1;
+        this._avg = null;
+    };
+    VBox.prototype.volume = function () {
+        if (this._volume < 0) {
+            var _a = this.dimension, r1 = _a.r1, r2 = _a.r2, g1 = _a.g1, g2 = _a.g2, b1 = _a.b1, b2 = _a.b2;
+            this._volume = (r2 - r1 + 1) * (g2 - g1 + 1) * (b2 - b1 + 1);
+        }
+        return this._volume;
+    };
+    VBox.prototype.count = function () {
+        if (this._count < 0) {
+            var hist = this.hist;
+            var _a = this.dimension, r1 = _a.r1, r2 = _a.r2, g1 = _a.g1, g2 = _a.g2, b1 = _a.b1, b2 = _a.b2;
+            var c = 0;
+            for (var r = r1; r <= r2; r++) {
+                for (var g = g1; g <= g2; g++) {
+                    for (var b = b1; b <= b2; b++) {
+                        var index = util_1.getColorIndex(r, g, b);
+                        c += hist[index];
+                    }
+                }
+            }
+            this._count = c;
+        }
+        return this._count;
+    };
+    VBox.prototype.clone = function () {
+        var hist = this.hist;
+        var _a = this.dimension, r1 = _a.r1, r2 = _a.r2, g1 = _a.g1, g2 = _a.g2, b1 = _a.b1, b2 = _a.b2;
+        return new VBox(r1, r2, g1, g2, b1, b2, hist);
+    };
+    VBox.prototype.avg = function () {
+        if (!this._avg) {
+            var hist = this.hist;
+            var _a = this.dimension, r1 = _a.r1, r2 = _a.r2, g1 = _a.g1, g2 = _a.g2, b1 = _a.b1, b2 = _a.b2;
+            var ntot = 0;
+            var mult = 1 << (8 - util_1.SIGBITS);
+            var rsum = void 0;
+            var gsum = void 0;
+            var bsum = void 0;
+            rsum = gsum = bsum = 0;
+            for (var r = r1; r <= r2; r++) {
+                for (var g = g1; g <= g2; g++) {
+                    for (var b = b1; b <= b2; b++) {
+                        var index = util_1.getColorIndex(r, g, b);
+                        var h = hist[index];
+                        ntot += h;
+                        rsum += (h * (r + 0.5) * mult);
+                        gsum += (h * (g + 0.5) * mult);
+                        bsum += (h * (b + 0.5) * mult);
+                    }
+                }
+            }
+            if (ntot) {
+                this._avg = [
+                    ~~(rsum / ntot),
+                    ~~(gsum / ntot),
+                    ~~(bsum / ntot)
+                ];
+            }
+            else {
+                this._avg = [
+                    ~~(mult * (r1 + r2 + 1) / 2),
+                    ~~(mult * (g1 + g2 + 1) / 2),
+                    ~~(mult * (b1 + b2 + 1) / 2)
+                ];
+            }
+        }
+        return this._avg;
+    };
+    VBox.prototype.contains = function (rgb) {
+        var r = rgb[0], g = rgb[1], b = rgb[2];
+        var _a = this.dimension, r1 = _a.r1, r2 = _a.r2, g1 = _a.g1, g2 = _a.g2, b1 = _a.b1, b2 = _a.b2;
+        r >>= util_1.RSHIFT;
+        g >>= util_1.RSHIFT;
+        b >>= util_1.RSHIFT;
+        return r >= r1 && r <= r2 &&
+            g >= g1 && g <= g2 &&
+            b >= b1 && b <= b2;
+    };
+    VBox.prototype.split = function () {
+        var hist = this.hist;
+        var _a = this.dimension, r1 = _a.r1, r2 = _a.r2, g1 = _a.g1, g2 = _a.g2, b1 = _a.b1, b2 = _a.b2;
+        var count = this.count();
+        if (!count)
+            return [];
+        if (count === 1)
+            return [this.clone()];
+        var rw = r2 - r1 + 1;
+        var gw = g2 - g1 + 1;
+        var bw = b2 - b1 + 1;
+        var maxw = Math.max(rw, gw, bw);
+        var accSum = null;
+        var sum;
+        var total;
+        sum = total = 0;
+        var maxd = null;
+        if (maxw === rw) {
+            maxd = 'r';
+            accSum = new Uint32Array(r2 + 1);
+            for (var r = r1; r <= r2; r++) {
+                sum = 0;
+                for (var g = g1; g <= g2; g++) {
+                    for (var b = b1; b <= b2; b++) {
+                        var index = util_1.getColorIndex(r, g, b);
+                        sum += hist[index];
+                    }
+                }
+                total += sum;
+                accSum[r] = total;
+            }
+        }
+        else if (maxw === gw) {
+            maxd = 'g';
+            accSum = new Uint32Array(g2 + 1);
+            for (var g = g1; g <= g2; g++) {
+                sum = 0;
+                for (var r = r1; r <= r2; r++) {
+                    for (var b = b1; b <= b2; b++) {
+                        var index = util_1.getColorIndex(r, g, b);
+                        sum += hist[index];
+                    }
+                }
+                total += sum;
+                accSum[g] = total;
+            }
+        }
+        else {
+            maxd = 'b';
+            accSum = new Uint32Array(b2 + 1);
+            for (var b = b1; b <= b2; b++) {
+                sum = 0;
+                for (var r = r1; r <= r2; r++) {
+                    for (var g = g1; g <= g2; g++) {
+                        var index = util_1.getColorIndex(r, g, b);
+                        sum += hist[index];
+                    }
+                }
+                total += sum;
+                accSum[b] = total;
+            }
+        }
+        var splitPoint = -1;
+        var reverseSum = new Uint32Array(accSum.length);
+        for (var i = 0; i < accSum.length; i++) {
+            var d = accSum[i];
+            if (splitPoint < 0 && d > total / 2)
+                splitPoint = i;
+            reverseSum[i] = total - d;
+        }
+        var vbox = this;
+        function doCut(d) {
+            var dim1 = d + '1';
+            var dim2 = d + '2';
+            var d1 = vbox.dimension[dim1];
+            var d2 = vbox.dimension[dim2];
+            var vbox1 = vbox.clone();
+            var vbox2 = vbox.clone();
+            var left = splitPoint - d1;
+            var right = d2 - splitPoint;
+            if (left <= right) {
+                d2 = Math.min(d2 - 1, ~~(splitPoint + right / 2));
+                d2 = Math.max(0, d2);
+            }
+            else {
+                d2 = Math.max(d1, ~~(splitPoint - 1 - left / 2));
+                d2 = Math.min(vbox.dimension[dim2], d2);
+            }
+            while (!accSum[d2])
+                d2++;
+            var c2 = reverseSum[d2];
+            while (!c2 && accSum[d2 - 1])
+                c2 = reverseSum[--d2];
+            vbox1.dimension[dim2] = d2;
+            vbox2.dimension[dim1] = d2 + 1;
+            return [vbox1, vbox2];
+        }
+        return doCut(maxd);
+    };
+    return VBox;
+}());
+exports["default"] = VBox;
+//# sourceMappingURL=vbox.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/util.js":
+/*!***********************************************!*\
+  !*** ./node_modules/node-vibrant/lib/util.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getColorIndex = exports.getColorDiffStatus = exports.hexDiff = exports.rgbDiff = exports.deltaE94 = exports.rgbToCIELab = exports.xyzToCIELab = exports.rgbToXyz = exports.hslToRgb = exports.rgbToHsl = exports.rgbToHex = exports.hexToRgb = exports.defer = exports.RSHIFT = exports.SIGBITS = exports.DELTAE94_DIFF_STATUS = void 0;
+exports.DELTAE94_DIFF_STATUS = {
+    NA: 0,
+    PERFECT: 1,
+    CLOSE: 2,
+    GOOD: 10,
+    SIMILAR: 50
+};
+exports.SIGBITS = 5;
+exports.RSHIFT = 8 - exports.SIGBITS;
+function defer() {
+    var resolve;
+    var reject;
+    // eslint-disable-next-line promise/param-names
+    var promise = new Promise(function (_resolve, _reject) {
+        resolve = _resolve;
+        reject = _reject;
+    });
+    // @ts-ignore
+    return { resolve: resolve, reject: reject, promise: promise };
+}
+exports.defer = defer;
+function hexToRgb(hex) {
+    var m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return m === null ? null : [m[1], m[2], m[3]].map(function (s) { return parseInt(s, 16); });
+}
+exports.hexToRgb = hexToRgb;
+function rgbToHex(r, g, b) {
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1, 7);
+}
+exports.rgbToHex = rgbToHex;
+function rgbToHsl(r, g, b) {
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    var max = Math.max(r, g, b);
+    var min = Math.min(r, g, b);
+    var h;
+    var s;
+    var l = (max + min) / 2;
+    if (max === min) {
+        h = s = 0;
+    }
+    else {
+        var d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+        switch (max) {
+            case r:
+                h = (g - b) / d + (g < b ? 6 : 0);
+                break;
+            case g:
+                h = (b - r) / d + 2;
+                break;
+            case b:
+                h = (r - g) / d + 4;
+                break;
+        }
+        // @ts-ignore
+        h /= 6;
+    }
+    // @ts-ignore
+    return [h, s, l];
+}
+exports.rgbToHsl = rgbToHsl;
+function hslToRgb(h, s, l) {
+    var r;
+    var g;
+    var b;
+    function hue2rgb(p, q, t) {
+        if (t < 0)
+            t += 1;
+        if (t > 1)
+            t -= 1;
+        if (t < 1 / 6)
+            return p + (q - p) * 6 * t;
+        if (t < 1 / 2)
+            return q;
+        if (t < 2 / 3)
+            return p + (q - p) * (2 / 3 - t) * 6;
+        return p;
+    }
+    if (s === 0) {
+        r = g = b = l;
+    }
+    else {
+        var q = l < 0.5 ? l * (1 + s) : l + s - (l * s);
+        var p = 2 * l - q;
+        r = hue2rgb(p, q, h + 1 / 3);
+        g = hue2rgb(p, q, h);
+        b = hue2rgb(p, q, h - (1 / 3));
+    }
+    return [
+        r * 255,
+        g * 255,
+        b * 255
+    ];
+}
+exports.hslToRgb = hslToRgb;
+function rgbToXyz(r, g, b) {
+    r /= 255;
+    g /= 255;
+    b /= 255;
+    r = r > 0.04045 ? Math.pow((r + 0.005) / 1.055, 2.4) : r / 12.92;
+    g = g > 0.04045 ? Math.pow((g + 0.005) / 1.055, 2.4) : g / 12.92;
+    b = b > 0.04045 ? Math.pow((b + 0.005) / 1.055, 2.4) : b / 12.92;
+    r *= 100;
+    g *= 100;
+    b *= 100;
+    var x = r * 0.4124 + g * 0.3576 + b * 0.1805;
+    var y = r * 0.2126 + g * 0.7152 + b * 0.0722;
+    var z = r * 0.0193 + g * 0.1192 + b * 0.9505;
+    return [x, y, z];
+}
+exports.rgbToXyz = rgbToXyz;
+function xyzToCIELab(x, y, z) {
+    var REF_X = 95.047;
+    var REF_Y = 100;
+    var REF_Z = 108.883;
+    x /= REF_X;
+    y /= REF_Y;
+    z /= REF_Z;
+    x = x > 0.008856 ? Math.pow(x, 1 / 3) : 7.787 * x + 16 / 116;
+    y = y > 0.008856 ? Math.pow(y, 1 / 3) : 7.787 * y + 16 / 116;
+    z = z > 0.008856 ? Math.pow(z, 1 / 3) : 7.787 * z + 16 / 116;
+    var L = 116 * y - 16;
+    var a = 500 * (x - y);
+    var b = 200 * (y - z);
+    return [L, a, b];
+}
+exports.xyzToCIELab = xyzToCIELab;
+function rgbToCIELab(r, g, b) {
+    var _a = rgbToXyz(r, g, b), x = _a[0], y = _a[1], z = _a[2];
+    return xyzToCIELab(x, y, z);
+}
+exports.rgbToCIELab = rgbToCIELab;
+function deltaE94(lab1, lab2) {
+    var WEIGHT_L = 1;
+    var WEIGHT_C = 1;
+    var WEIGHT_H = 1;
+    var L1 = lab1[0], a1 = lab1[1], b1 = lab1[2];
+    var L2 = lab2[0], a2 = lab2[1], b2 = lab2[2];
+    var dL = L1 - L2;
+    var da = a1 - a2;
+    var db = b1 - b2;
+    var xC1 = Math.sqrt(a1 * a1 + b1 * b1);
+    var xC2 = Math.sqrt(a2 * a2 + b2 * b2);
+    var xDL = L2 - L1;
+    var xDC = xC2 - xC1;
+    var xDE = Math.sqrt(dL * dL + da * da + db * db);
+    var xDH = (Math.sqrt(xDE) > Math.sqrt(Math.abs(xDL)) + Math.sqrt(Math.abs(xDC)))
+        ? Math.sqrt(xDE * xDE - xDL * xDL - xDC * xDC)
+        : 0;
+    var xSC = 1 + 0.045 * xC1;
+    var xSH = 1 + 0.015 * xC1;
+    xDL /= WEIGHT_L;
+    xDC /= WEIGHT_C * xSC;
+    xDH /= WEIGHT_H * xSH;
+    return Math.sqrt(xDL * xDL + xDC * xDC + xDH * xDH);
+}
+exports.deltaE94 = deltaE94;
+function rgbDiff(rgb1, rgb2) {
+    var lab1 = rgbToCIELab.apply(undefined, rgb1);
+    var lab2 = rgbToCIELab.apply(undefined, rgb2);
+    return deltaE94(lab1, lab2);
+}
+exports.rgbDiff = rgbDiff;
+function hexDiff(hex1, hex2) {
+    var rgb1 = hexToRgb(hex1);
+    var rgb2 = hexToRgb(hex2);
+    return rgbDiff(rgb1, rgb2);
+}
+exports.hexDiff = hexDiff;
+function getColorDiffStatus(d) {
+    if (d < exports.DELTAE94_DIFF_STATUS.NA) {
+        return 'N/A';
+    }
+    // Not perceptible by human eyes
+    if (d <= exports.DELTAE94_DIFF_STATUS.PERFECT) {
+        return 'Perfect';
+    }
+    // Perceptible through close observation
+    if (d <= exports.DELTAE94_DIFF_STATUS.CLOSE) {
+        return 'Close';
+    }
+    // Perceptible at a glance
+    if (d <= exports.DELTAE94_DIFF_STATUS.GOOD) {
+        return 'Good';
+    }
+    // Colors are more similar than opposite
+    if (d < exports.DELTAE94_DIFF_STATUS.SIMILAR) {
+        return 'Similar';
+    }
+    return 'Wrong';
+}
+exports.getColorDiffStatus = getColorDiffStatus;
+function getColorIndex(r, g, b) {
+    return (r << (2 * exports.SIGBITS)) + (g << exports.SIGBITS) + b;
+}
+exports.getColorIndex = getColorIndex;
+//# sourceMappingURL=util.js.map
+
+/***/ }),
+
+/***/ "./node_modules/node-vibrant/lib/vibrant.js":
+/*!**************************************************!*\
+  !*** ./node_modules/node-vibrant/lib/vibrant.js ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+var color_1 = __webpack_require__(/*! ./color */ "./node_modules/node-vibrant/lib/color.js");
+var builder_1 = __importDefault(__webpack_require__(/*! ./builder */ "./node_modules/node-vibrant/lib/builder.js"));
+var Util = __importStar(__webpack_require__(/*! ./util */ "./node_modules/node-vibrant/lib/util.js"));
+var Quantizer = __importStar(__webpack_require__(/*! ./quantizer */ "./node_modules/node-vibrant/lib/quantizer/index.js"));
+var Generator = __importStar(__webpack_require__(/*! ./generator */ "./node_modules/node-vibrant/lib/generator/index.js"));
+var Filters = __importStar(__webpack_require__(/*! ./filter */ "./node_modules/node-vibrant/lib/filter/index.js"));
+var defaults = __webpack_require__(/*! lodash/defaults */ "./node_modules/lodash/defaults.js");
+var Vibrant = /** @class */ (function () {
+    function Vibrant(_src, opts) {
+        this._src = _src;
+        this.opts = defaults({}, opts, Vibrant.DefaultOpts);
+        this.opts.combinedFilter = Filters.combineFilters(this.opts.filters);
+    }
+    Vibrant.from = function (src) {
+        return new builder_1.default(src);
+    };
+    Vibrant.prototype._process = function (image, opts) {
+        var quantizer = opts.quantizer, generator = opts.generator;
+        image.scaleDown(opts);
+        return image.applyFilter(opts.combinedFilter)
+            .then(function (imageData) { return quantizer(imageData.data, opts); })
+            .then(function (colors) { return color_1.Swatch.applyFilter(colors, opts.combinedFilter); })
+            .then(function (colors) { return Promise.resolve(generator(colors)); });
+    };
+    Vibrant.prototype.palette = function () {
+        return this.swatches();
+    };
+    Vibrant.prototype.swatches = function () {
+        return this._palette;
+    };
+    Vibrant.prototype.getPalette = function (cb) {
+        var _this = this;
+        var image = new this.opts.ImageClass();
+        var result = image.load(this._src)
+            .then(function (image) { return _this._process(image, _this.opts); })
+            .then(function (palette) {
+            _this._palette = palette;
+            image.remove();
+            return palette;
+        }, function (err) {
+            image.remove();
+            throw err;
+        });
+        if (cb)
+            result.then(function (palette) { return cb(null, palette); }, function (err) { return cb(err); });
+        return result;
+    };
+    Vibrant.Builder = builder_1.default;
+    Vibrant.Quantizer = Quantizer;
+    Vibrant.Generator = Generator;
+    Vibrant.Filter = Filters;
+    Vibrant.Util = Util;
+    Vibrant.Swatch = color_1.Swatch;
+    Vibrant.DefaultOpts = {
+        colorCount: 64,
+        quality: 5,
+        generator: Generator.Default,
+        ImageClass: null,
+        quantizer: Quantizer.MMCQ,
+        filters: [Filters.Default]
+    };
+    return Vibrant;
+}());
+exports["default"] = Vibrant;
+//# sourceMappingURL=vibrant.js.map
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_style_index_0_id_7ec2e6a8_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true&");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_style_index_0_id_7ec2e6a8_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_style_index_0_id_7ec2e6a8_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_style_index_0_id_7ec2e6a8_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_style_index_0_id_7ec2e6a8_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_style_index_0_id_2cb9c9e7_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/sass-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss&");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_style_index_0_id_2cb9c9e7_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_style_index_0_id_2cb9c9e7_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_style_index_0_id_2cb9c9e7_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_style_index_0_id_2cb9c9e7_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_style_index_0_id_5d6fc2af_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/sass-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true&");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_style_index_0_id_5d6fc2af_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_style_index_0_id_5d6fc2af_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_style_index_0_id_5d6fc2af_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_style_index_0_id_5d6fc2af_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+
+/***/ }),
+
+/***/ "./apps/theming/src/UserThemes.vue":
+/*!*****************************************!*\
+  !*** ./apps/theming/src/UserThemes.vue ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _UserThemes_vue_vue_type_template_id_7ec2e6a8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./UserThemes.vue?vue&type=template&id=7ec2e6a8&scoped=true& */ "./apps/theming/src/UserThemes.vue?vue&type=template&id=7ec2e6a8&scoped=true&");
+/* harmony import */ var _UserThemes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserThemes.vue?vue&type=script&lang=js& */ "./apps/theming/src/UserThemes.vue?vue&type=script&lang=js&");
+/* harmony import */ var _UserThemes_vue_vue_type_style_index_0_id_7ec2e6a8_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true& */ "./apps/theming/src/UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _UserThemes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _UserThemes_vue_vue_type_template_id_7ec2e6a8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _UserThemes_vue_vue_type_template_id_7ec2e6a8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "7ec2e6a8",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "apps/theming/src/UserThemes.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./apps/theming/src/components/BackgroundSettings.vue":
+/*!************************************************************!*\
+  !*** ./apps/theming/src/components/BackgroundSettings.vue ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _BackgroundSettings_vue_vue_type_template_id_2cb9c9e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BackgroundSettings.vue?vue&type=template&id=2cb9c9e7&scoped=true& */ "./apps/theming/src/components/BackgroundSettings.vue?vue&type=template&id=2cb9c9e7&scoped=true&");
+/* harmony import */ var _BackgroundSettings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BackgroundSettings.vue?vue&type=script&lang=js& */ "./apps/theming/src/components/BackgroundSettings.vue?vue&type=script&lang=js&");
+/* harmony import */ var _BackgroundSettings_vue_vue_type_style_index_0_id_2cb9c9e7_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss& */ "./apps/theming/src/components/BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _BackgroundSettings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _BackgroundSettings_vue_vue_type_template_id_2cb9c9e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _BackgroundSettings_vue_vue_type_template_id_2cb9c9e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "2cb9c9e7",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "apps/theming/src/components/BackgroundSettings.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./apps/theming/src/components/ItemPreview.vue":
+/*!*****************************************************!*\
+  !*** ./apps/theming/src/components/ItemPreview.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ItemPreview_vue_vue_type_template_id_5d6fc2af_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ItemPreview.vue?vue&type=template&id=5d6fc2af&scoped=true& */ "./apps/theming/src/components/ItemPreview.vue?vue&type=template&id=5d6fc2af&scoped=true&");
+/* harmony import */ var _ItemPreview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ItemPreview.vue?vue&type=script&lang=js& */ "./apps/theming/src/components/ItemPreview.vue?vue&type=script&lang=js&");
+/* harmony import */ var _ItemPreview_vue_vue_type_style_index_0_id_5d6fc2af_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true& */ "./apps/theming/src/components/ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ItemPreview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ItemPreview_vue_vue_type_template_id_5d6fc2af_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ItemPreview_vue_vue_type_template_id_5d6fc2af_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "5d6fc2af",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "apps/theming/src/components/ItemPreview.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./node_modules/vue-material-design-icons/ImageEdit.vue":
+/*!**************************************************************!*\
+  !*** ./node_modules/vue-material-design-icons/ImageEdit.vue ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _ImageEdit_vue_vue_type_template_id_112051ee___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ImageEdit.vue?vue&type=template&id=112051ee& */ "./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=template&id=112051ee&");
+/* harmony import */ var _ImageEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ImageEdit.vue?vue&type=script&lang=js& */ "./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=script&lang=js&");
+/* harmony import */ var _vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ImageEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ImageEdit_vue_vue_type_template_id_112051ee___WEBPACK_IMPORTED_MODULE_0__.render,
+  _ImageEdit_vue_vue_type_template_id_112051ee___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "node_modules/vue-material-design-icons/ImageEdit.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "ImageEditIcon",
+  emits: ['click'],
+  props: {
+    title: {
+      type: String,
+    },
+    fillColor: {
+      type: String,
+      default: "currentColor"
+    },
+    size: {
+      type: Number,
+      default: 24
+    }
+  }
+});
+
+
+/***/ }),
+
+/***/ "./apps/theming/src/UserThemes.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./apps/theming/src/UserThemes.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./UserThemes.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./apps/theming/src/components/BackgroundSettings.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./apps/theming/src/components/BackgroundSettings.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackgroundSettings.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./apps/theming/src/components/ItemPreview.vue?vue&type=script&lang=js&":
+/*!******************************************************************************!*\
+  !*** ./apps/theming/src/components/ItemPreview.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ItemPreview.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./apps/theming/src/UserThemes.vue?vue&type=template&id=7ec2e6a8&scoped=true&":
+/*!************************************************************************************!*\
+  !*** ./apps/theming/src/UserThemes.vue?vue&type=template&id=7ec2e6a8&scoped=true& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_template_id_7ec2e6a8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   staticRenderFns: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_template_id_7ec2e6a8_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_template_id_7ec2e6a8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./UserThemes.vue?vue&type=template&id=7ec2e6a8&scoped=true& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=template&id=7ec2e6a8&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./apps/theming/src/components/BackgroundSettings.vue?vue&type=template&id=2cb9c9e7&scoped=true&":
+/*!*******************************************************************************************************!*\
+  !*** ./apps/theming/src/components/BackgroundSettings.vue?vue&type=template&id=2cb9c9e7&scoped=true& ***!
+  \*******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_template_id_2cb9c9e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   staticRenderFns: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_template_id_2cb9c9e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_template_id_2cb9c9e7_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackgroundSettings.vue?vue&type=template&id=2cb9c9e7&scoped=true& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=template&id=2cb9c9e7&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./apps/theming/src/components/ItemPreview.vue?vue&type=template&id=5d6fc2af&scoped=true&":
+/*!************************************************************************************************!*\
+  !*** ./apps/theming/src/components/ItemPreview.vue?vue&type=template&id=5d6fc2af&scoped=true& ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_template_id_5d6fc2af_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   staticRenderFns: () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_template_id_5d6fc2af_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_template_id_5d6fc2af_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ItemPreview.vue?vue&type=template&id=5d6fc2af&scoped=true& */ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=template&id=5d6fc2af&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./apps/theming/src/UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true&":
+/*!***************************************************************************************************!*\
+  !*** ./apps/theming/src/UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true& ***!
+  \***************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_UserThemes_vue_vue_type_style_index_0_id_7ec2e6a8_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/sass-loader/dist/cjs.js!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/UserThemes.vue?vue&type=style&index=0&id=7ec2e6a8&lang=scss&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./apps/theming/src/components/BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss&":
+/*!**********************************************************************************************************************!*\
+  !*** ./apps/theming/src/components/BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss& ***!
+  \**********************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_BackgroundSettings_vue_vue_type_style_index_0_id_2cb9c9e7_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/sass-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/BackgroundSettings.vue?vue&type=style&index=0&id=2cb9c9e7&scoped=true&lang=scss&");
+
+
+/***/ }),
+
+/***/ "./apps/theming/src/components/ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true&":
+/*!***************************************************************************************************************!*\
+  !*** ./apps/theming/src/components/ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true& ***!
+  \***************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_sass_loader_dist_cjs_js_node_modules_vue_loader_lib_index_js_vue_loader_options_ItemPreview_vue_vue_type_style_index_0_id_5d6fc2af_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/sass-loader/dist/cjs.js!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./apps/theming/src/components/ItemPreview.vue?vue&type=style&index=0&id=5d6fc2af&lang=scss&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _vue_loader_lib_index_js_vue_loader_options_ImageEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../vue-loader/lib/index.js??vue-loader-options!./ImageEdit.vue?vue&type=script&lang=js& */ "./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_vue_loader_lib_index_js_vue_loader_options_ImageEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=template&id=112051ee&":
+/*!*********************************************************************************************!*\
+  !*** ./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=template&id=112051ee& ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* reexport safe */ _vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_vue_loader_lib_index_js_vue_loader_options_ImageEdit_vue_vue_type_template_id_112051ee___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   staticRenderFns: () => (/* reexport safe */ _vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_vue_loader_lib_index_js_vue_loader_options_ImageEdit_vue_vue_type_template_id_112051ee___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_3_vue_loader_lib_index_js_vue_loader_options_ImageEdit_vue_vue_type_template_id_112051ee___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!../vue-loader/lib/index.js??vue-loader-options!./ImageEdit.vue?vue&type=template&id=112051ee& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=template&id=112051ee&");
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=template&id=112051ee&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./node_modules/vue-material-design-icons/ImageEdit.vue?vue&type=template&id=112051ee& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   render: () => (/* binding */ render),
+/* harmony export */   staticRenderFns: () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c
+  return _c(
+    "span",
+    _vm._b(
+      {
+        staticClass: "material-design-icon image-edit-icon",
+        attrs: {
+          "aria-hidden": !_vm.title,
+          "aria-label": _vm.title,
+          role: "img",
+        },
+        on: {
+          click: function ($event) {
+            return _vm.$emit("click", $event)
+          },
+        },
+      },
+      "span",
+      _vm.$attrs,
+      false
+    ),
+    [
+      _c(
+        "svg",
+        {
+          staticClass: "material-design-icon__svg",
+          attrs: {
+            fill: _vm.fillColor,
+            width: _vm.size,
+            height: _vm.size,
+            viewBox: "0 0 24 24",
+          },
+        },
+        [
+          _c(
+            "path",
+            {
+              attrs: {
+                d: "M22.7 14.3L21.7 15.3L19.7 13.3L20.7 12.3C20.8 12.2 20.9 12.1 21.1 12.1C21.2 12.1 21.4 12.2 21.5 12.3L22.8 13.6C22.9 13.8 22.9 14.1 22.7 14.3M13 19.9V22H15.1L21.2 15.9L19.2 13.9L13 19.9M21 5C21 3.9 20.1 3 19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H11V19.1L12.1 18H5L8.5 13.5L11 16.5L14.5 12L16.1 14.1L21 9.1V5Z",
+              },
+            },
+            [_vm.title ? _c("title", [_vm._v(_vm._s(_vm.title))]) : _vm._e()]
+          ),
+        ]
+      ),
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "?4f7e":
+/*!********************************!*\
+  !*** ./util.inspect (ignored) ***!
+  \********************************/
+/***/ (() => {
+
+/* (ignored) */
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var chunkIds = deferred[i][0];
+/******/ 				var fn = deferred[i][1];
+/******/ 				var priority = deferred[i][2];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"theming-personal-theming": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var chunkIds = data[0];
+/******/ 			var moreModules = data[1];
+/******/ 			var runtime = data[2];
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunknextcloud"] = self["webpackChunknextcloud"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["core-common"], () => (__webpack_require__("./apps/theming/src/personal-settings.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=theming-personal-theming.js.map?v=0e4dafd064ac2d45c234
