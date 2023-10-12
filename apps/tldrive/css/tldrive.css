@@ -1,0 +1,20 @@
+.showtitle-visually {
+	width: -webkit-fill-available;
+	position: absolute;
+	z-index: 1;
+}
+.showtitle-visually h1 {
+	color: #fff;
+	font-size: 23px;
+	line-height: 30px;
+	text-align: center;
+}
+.header-left #nextcloud {
+	z-index: 99;
+}
+.header-left .app-menu {
+	z-index: 99;
+}
+#header #header-right, #header .header-right {
+	z-index: 99;
+}
