@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <!--
+    SPDX-FileCopyrightText: TlDrive <ashokbc@teamlocus.net>
+    SPDX-License-Identifier: CC0-1.0
+    -->
+    <id>tldrive</id>
+    <name>Tl Drive</name>
+    <summary>TlDrive</summary>
+    <description><![CDATA[TlDrive]]></description>
+    <version>0.0.1</version>
+    <licence>agpl</licence>
+    <author mail="ashokbc@teamlocus.net" >SNDK Corp</author>
+    <namespace>TlDrive</namespace>
+    <category>tools</category>
+    <bugs>https://github.com/deepkiraninc/tldrive/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="27" max-version="28"/>
+    </dependencies>
+    <!--navigations>
+        <navigation>
+            <name>Tl Drive</name>
+            <route>tldrive.page.index</route>
+        </navigation>
+    </navigations -->
+</info>
