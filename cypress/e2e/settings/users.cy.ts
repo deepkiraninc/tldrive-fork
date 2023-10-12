@@ -81,7 +81,7 @@ describe('Settings: Create and delete users', function() {
 		})
 
 		// see that the created user is in the list
-		cy.get(`tbody.user-list__body tr td[data-test="john"]`).parents('tr').within(() => {
+		cy.get('tbody.user-list__body tr[data-test="john"]').within(() => {
 			// see that the list of users contains the user john
 			cy.contains('john').should('exist')
 		})
@@ -126,7 +126,7 @@ describe('Settings: Create and delete users', function() {
 		})
 
 		// see that the created user is in the list
-		cy.get(`tbody.user-list__body tr td[data-test="john"]`).parents('tr').within(() => {
+		cy.get('tbody.user-list__body tr[data-test="john"]').within(() => {
 			// see that the list of users contains the user john
 			cy.contains('john').should('exist')
 		})
@@ -139,7 +139,7 @@ describe('Settings: Create and delete users', function() {
 		cy.reload().login(admin)
 
 		// see that the user is in the list
-		cy.get(`tbody.user-list__body tr td[data-test="${jdoe.userId}"]`).parents('tr').within(() => {
+		cy.get(`tbody.user-list__body tr[data-test="${jdoe.userId}"]`).within(() => {
 			// see that the list of users contains the user jdoe
 			cy.contains(jdoe.userId).should('exist')
 			// open the actions menu for the user
@@ -150,7 +150,21 @@ describe('Settings: Create and delete users', function() {
 		cy.get('.action-item__popper .action').contains('Delete user').should('exist').click()
 		// And confirmation dialog accepted
 		cy.get('.oc-dialog button').contains(`Delete ${jdoe.userId}`).click()
+
+		// Ignore failure if modal is not shown
+		cy.once('fail', (error) => {
+			expect(error.name).to.equal('AssertionError')
+			expect(error).to.have.property('node', '.modal-container')
+		})
+		// Make sure no confirmation modal is shown
+		cy.get('body').find('.modal-container').then(($modal) => {
+			if ($modal.length > 0) {
+				cy.wrap($modal).find('input[type="password"]').type(admin.password)
+				cy.wrap($modal).find('button').contains('Confirm').click()
+			}
+		})
+
 		// deleted clicked the user is not shown anymore
-		cy.get(`tbody.user-list__body tr td[data-test="${jdoe.userId}"]`).parents('tr').should('not.be.visible')
+		cy.get(`tbody.user-list__body tr[data-test="${jdoe.userId}"]`).should('not.exist')
 	})
 })

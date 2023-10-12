@@ -57,9 +57,9 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue'
 import { formatFileSize } from '@nextcloud/files'
 import { translate } from '@nextcloud/l10n'
-import Vue from 'vue'
 
 import { useFilesStore } from '../store/files.ts'
 import { usePathsStore } from '../store/paths.ts'
@@ -159,7 +159,6 @@ export default Vue.extend({
 <style scoped lang="scss">
 // Scoped row
 tr {
-	padding-bottom: 300px;
 	border-top: 1px solid var(--color-border);
 	// Prevent hover effect on the whole row
 	background-color: transparent !important;

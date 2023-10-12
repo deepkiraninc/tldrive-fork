@@ -66,6 +66,8 @@ class TextProcessingApiController extends \OCP\AppFramework\OCSController {
 	 * This endpoint returns all available LanguageModel task types
 	 *
 	 * @return DataResponse<Http::STATUS_OK, array{types: array{id: string, name: string, description: string}[]}, array{}>
+	 *
+	 * 200: Task types returned
 	 */
 	#[PublicPage]
 	public function taskTypes(): DataResponse {
@@ -190,8 +192,8 @@ class TextProcessingApiController extends \OCP\AppFramework\OCSController {
 	 * This endpoint returns a list of tasks of a user that are related
 	 * with a specific appId and optionally with an identifier
 	 *
-	 * @param string $appId
-	 * @param string|null $identifier
+	 * @param string $appId ID of the app
+	 * @param string|null $identifier An arbitrary identifier for the task
 	 * @return DataResponse<Http::STATUS_OK, array{tasks: CoreTextProcessingTask[]}, array{}>|DataResponse<Http::STATUS_INTERNAL_SERVER_ERROR, array{message: string}, array{}>
 	 *
 	 *  200: Task list returned
